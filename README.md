@@ -1,5 +1,7 @@
 # Awesome WeRead Skills [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+[![Featured on ToolFame](https://toolfame.com/badge-light.svg)](https://toolfame.com/item/awesome-weread-skills)
+
 > 精选「微信读书」官方 Agent Skill，以及一切基于它的二创项目。
 
 **语言**: **简体中文** · [English](./README.en.md)
