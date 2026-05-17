@@ -1,1 +1,224 @@
-[]
+[
+  {
+    "repo": "BENZEMA216/awesome-weread",
+    "decision": "llm_error",
+    "reason": "got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"* GenerateContentRequest.generation_config.response_schema.properties[category].enum[6]: cannot be empty\\n\",\"status\":\"INVALID_ARGUMENT\"}}",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "rayford295/rayford-knowledge-atlas",
+    "decision": "llm_error",
+    "reason": "got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"* GenerateContentRequest.generation_config.response_schema.properties[category].enum[6]: cannot be empty\\n\",\"status\":\"INVALID_ARGUMENT\"}}",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "jerlinn/jerlin-weread",
+    "decision": "llm_error",
+    "reason": "got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"* GenerateContentRequest.generation_config.response_schema.properties[category].enum[6]: cannot be empty\\n\",\"status\":\"INVALID_ARGUMENT\"}}",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "summerxcode26/weread-notes",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "fakechris/douban-books-next",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "blessonism/weread2flomo",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "Prudential-flathead401/Notion2API",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "zhaohongxuan/obsidian-weread-plugin",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "ipfans/weread-cli",
+    "decision": "llm_error",
+    "reason": "got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"* GenerateContentRequest.generation_config.response_schema.properties[category].enum[6]: cannot be empty\\n\",\"status\":\"INVALID_ARGUMENT\"}}",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "charleschen2426-maker/weread-screensaver-cards",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "chenriwei/MarginSync",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "zzylanmengqingchuan/weread-tools",
+    "decision": "llm_error",
+    "reason": "got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"* GenerateContentRequest.generation_config.response_schema.properties[category].enum[6]: cannot be empty\\n\",\"status\":\"INVALID_ARGUMENT\"}}",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "gerrywingfield-pixel/weread-canvas-exporter",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "AstrophelXD/WeReadAura",
+    "decision": "llm_error",
+    "reason": "got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"* GenerateContentRequest.generation_config.response_schema.properties[category].enum[6]: cannot be empty\\n\",\"status\":\"INVALID_ARGUMENT\"}}",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "KANIKIG/wechat-search-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "gnixner/weread-import",
+    "decision": "llm_error",
+    "reason": "got status: 400 Bad Request. {\"error\":{\"code\":400,\"message\":\"* GenerateContentRequest.generation_config.response_schema.properties[category].enum[6]: cannot be empty\\n\",\"status\":\"INVALID_ARGUMENT\"}}",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "EastSlavs/weread-auto",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "chieeh/WereadCheckin",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "Longwind1984/prac_weread_quote",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "mochou-Y/weread-notes-insight",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "uuaki/halo-weread-plugin",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "Yant2023/WeRead2Note",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "ylw1997/touchFish",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "wangjianghu/VSCode-WeRead",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "rachelos/we-mp-rss",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "k190513120/weread-bitable-sync-plugin",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "Vanyoo/weread-cli",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "Glaube-TY/siyuan-douban",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "ColorlessBoy/weread-dl",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "Sonic012/No-Read",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "yejinshengge/Weread2Notion",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "jeszhou/weread-reading-note-skill",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "buyi06/weread-challenge-hf",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "zhao922-bot/weread-companion-flutter",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "zhangshenxiang644-debug/weread-book-grabber",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "yuanyang1991/weread-shelf-skill",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  },
+  {
+    "repo": "unix2dos/eye-care-extension",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-17T16:40:31.239Z"
+  }
+]
