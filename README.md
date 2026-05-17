@@ -1,6 +1,8 @@
 # Awesome WeRead Skills [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-[![Featured on ToolFame](https://toolfame.com/badge-light.svg)](https://toolfame.com/item/awesome-weread-skills)
+<a href="https://toolfame.com/item/awesome-weread-skills" target="_blank" rel="noopener noreferrer">
+  <img src="https://toolfame.com/badge-light.svg" alt="Featured on toolfame.com" style="height: 54px; width: auto;" />
+</a>
 
 > 精选「微信读书」官方 Agent Skill，以及一切基于它的二创项目。
 
