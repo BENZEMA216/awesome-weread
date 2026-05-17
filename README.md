@@ -1,106 +1,106 @@
 # Awesome WeRead Skills [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of WeRead's official Agent Skill and the community projects built on top of it.
+> 精选「微信读书」官方 Agent Skill，以及一切基于它的二创项目。
 
-**Languages**: **English** · [简体中文](./README.zh-CN.md)
+**语言**: **简体中文** · [English](./README.en.md)
 
-On 2026-05-17, WeRead (微信读书) released its [official Agent Skill](https://cdn.weread.qq.com/skills/weread-skills.zip) — an `Agent Gateway` reachable with a personal API Key (`wrk-...`) that exposes bookshelf, reading stats, highlights, thoughts, and book search. Within 48 hours, a wave of community projects appeared on top of it.
+2026 年 5 月 17 日，微信读书发布了[官方 Agent Skill](https://cdn.weread.qq.com/skills/weread-skills.zip) —— 一个用个人 API Key（`wrk-...`）即可访问的 `Agent Gateway`，提供书架、阅读统计、划线、想法、书籍搜索等能力。48 小时内，社区已经在它之上长出一波二创项目。
 
-This list tracks them.
+这个清单收录的就是它们。
 
-**Inclusion criteria.** A project belongs here if it is **built on top of the official Agent Gateway / API Key** released on 2026-05-17. Projects that rely on cookie scraping, browser automation, or other unofficial WeRead access methods are out of scope — many predate the official Skill and have their own communities elsewhere.
+**收录标准。** 项目必须**基于 2026-05-17 发布的官方 Agent Gateway / API Key**。依赖 cookie 抓取、浏览器自动化或其他非官方接口的项目不在范围内 —— 这些大多早于官方 Skill 出现，有自己独立的生态。
 
-## Contents
+## 目录
 
-- [Official](#official)
-- [Skill Bundles](#skill-bundles)
-- [Workflows & Assistants](#workflows--assistants)
-- [CLIs & Libraries](#clis--libraries)
-- [MCP Servers](#mcp-servers)
-- [Third-Party Sync](#third-party-sync)
-- [Widgets & Visualizations](#widgets--visualizations)
-- [Contributing](#contributing)
-- [License](#license)
+- [官方资源](#官方资源)
+- [Skill 安装包](#skill-安装包)
+- [工作流与助手](#工作流与助手)
+- [命令行与 SDK](#命令行与-sdk)
+- [MCP 服务](#mcp-服务)
+- [第三方同步](#第三方同步)
+- [桌面挂件与可视化](#桌面挂件与可视化)
+- [贡献指南](#贡献指南)
+- [许可](#许可)
 
-## Official
+## 官方资源
 
-| Resource | Type | What it is |
-|----------|------|-----------|
-| [WeRead Skills (zip)](https://cdn.weread.qq.com/skills/weread-skills.zip) | Skill bundle | Official Skill package: bookshelf, reading progress, reading stats, highlights & thoughts, book search. |
-| [WeRead Skill landing page](https://weread.qq.com/r/weread-skills) | Docs | Install instructions, API Key onboarding (QR-code login → `wrk-...`), capability reference. |
-| [WeRead Team Blog](https://wereadteam.github.io/) | Blog | Engineering blog from the WeRead team. |
+| 资源 | 类型 | 介绍 |
+|------|------|------|
+| [WeRead Skills (zip 下载)](https://cdn.weread.qq.com/skills/weread-skills.zip) | Skill 安装包 | 官方 Skill 包：书架、阅读进度、阅读统计、划线与想法、书籍搜索。 |
+| [微信读书 Skill 介绍页](https://weread.qq.com/r/weread-skills) | 文档 | 安装说明、API Key 申请流程（扫码登录拿到 `wrk-...`）、能力清单。 |
+| [WeRead 团队博客](https://wereadteam.github.io/) | 博客 | 微信读书团队的技术博客。 |
 
-## Skill Bundles
+## Skill 安装包
 
-Drop-in Skill packages — install once, every Skill-aware agent can use them.
+可以直接装进 Skill-aware Agent 的 Skill 包 —— 一次安装，到处可用。
 
-| Project | Runtime | What it does |
-|---------|---------|--------------|
-| [gandli/weread-skills](https://github.com/gandli/weread-skills) | Multi-runtime | Auto-synced mirror of the official Skill bundle. Easiest way to vendor the Skill into your agent. |
-| [ChenyqThu/openclaw-weread-skill](https://github.com/ChenyqThu/openclaw-weread-skill) | OpenClaw | Canonical OpenClaw port: bookshelf, notes, highlights, reading stats. |
-| [zhongyi-byte/openclaw-weread-skill](https://github.com/zhongyi-byte/openclaw-weread-skill) | OpenClaw | OpenClaw Skill that exports highlights, thoughts, and reviews to Markdown / Obsidian. |
-| [lovekeji-ai/agent-weread-skill](https://github.com/lovekeji-ai/agent-weread-skill) | Hermes / OpenClaw | Note export Skill with recent-day filtering and safe defaults for routine "sync the last N days" runs. |
-| [taxueseek/taxue-weread](https://github.com/taxueseek/taxue-weread) | Multi-runtime | Agent-optimized rebuild of the official Skill: CLI + local caching + merged commands tuned for agent token budgets. |
+| 项目 | 运行环境 | 介绍 |
+|------|---------|------|
+| [gandli/weread-skills](https://github.com/gandli/weread-skills) | 跨 runtime | 官方 Skill 包的自动同步镜像。最简单的方式把官方 Skill 引入自己的 Agent。 |
+| [ChenyqThu/openclaw-weread-skill](https://github.com/ChenyqThu/openclaw-weread-skill) | OpenClaw | OpenClaw 标准移植版：书架、笔记、划线、阅读统计。 |
+| [zhongyi-byte/openclaw-weread-skill](https://github.com/zhongyi-byte/openclaw-weread-skill) | OpenClaw | 把划线、想法、书评导出到 Markdown / Obsidian 的 OpenClaw Skill。 |
+| [lovekeji-ai/agent-weread-skill](https://github.com/lovekeji-ai/agent-weread-skill) | Hermes / OpenClaw | 带「最近 N 天过滤」和安全默认值的笔记导出 Skill，专门为日常增量同步打磨。 |
+| [taxueseek/taxue-weread](https://github.com/taxueseek/taxue-weread) | 跨 runtime | 官方 Skill 的 Agent 优化版：CLI + 本地缓存 + 合并命令，针对 Agent 上下文预算调优。 |
 
-## Workflows & Assistants
+## 工作流与助手
 
-Opinionated workflows layered on top of the raw Skill — recommendations, reviews, study paths.
+在 Skill 基础能力之上做了一层「读书顾问 / 推荐 / 复盘」类工作流的项目。
 
-| Project | Runtime | What it does |
-|---------|---------|--------------|
-| [alchaincyf/huashu-weread](https://github.com/alchaincyf/huashu-weread) | Claude Code | "Reading advisor" by 花叔. Four workflows on top of the official Skill: `advisor` / `path` / `alchemy` / `review`, with bookshelf × notes cross-analysis. |
-| [ColorlessBoy/weread-dl-skill](https://github.com/ColorlessBoy/weread-dl-skill) | Generic Agent Skill | AI reading assistant: QR-code login, chapter decoding, reading-progress tracking, in-Skill AI chat. |
+| 项目 | 运行环境 | 介绍 |
+|------|---------|------|
+| [alchaincyf/huashu-weread](https://github.com/alchaincyf/huashu-weread) | Claude Code | 花叔的「读书顾问」Skill。在官方 Skill 之上加了 4 个 workflow：`advisor` / `path` / `alchemy` / `review`，做书架 × 笔记交叉分析。 |
+| [ColorlessBoy/weread-dl-skill](https://github.com/ColorlessBoy/weread-dl-skill) | 通用 Agent Skill | AI 阅读助手：扫码登录、章节解码、阅读进度跟踪、Skill 内 AI 对话。 |
 
-## CLIs & Libraries
+## 命令行与 SDK
 
-Command-line and SDK wrappers around the Agent Gateway — usable by humans and by other tools.
+封装 Agent Gateway 的 CLI 和 SDK —— 人类能用，其他工具也能调。
 
-| Project | Language | What it does |
-|---------|----------|--------------|
-| [shiquda/weread-cli](https://github.com/shiquda/weread-cli) | Python | Official-API-based CLI with a bundled Agent Skill manifest. Designed for both humans and agents. |
-| [nlimpid/weread](https://github.com/nlimpid/weread) | Rust | LLM-friendly CLI and Rust library for the WeRead Agent Gateway. |
+| 项目 | 语言 | 介绍 |
+|------|------|------|
+| [shiquda/weread-cli](https://github.com/shiquda/weread-cli) | Python | 基于官方 API 的 CLI，附带 Agent Skill manifest。同时面向人与 Agent。 |
+| [nlimpid/weread](https://github.com/nlimpid/weread) | Rust | 面向 LLM 友好的 CLI 和 Rust 库，封装微信读书 Agent Gateway。 |
 
-## MCP Servers
+## MCP 服务
 
-MCP servers that expose the Agent Gateway as MCP tools — for Cursor, Claude Desktop, ChatGPT, etc.
+把 Agent Gateway 包装成 MCP 工具，给 Cursor、Claude Desktop、ChatGPT 等 MCP 客户端用。
 
-| Project | Hosting | What it does |
-|---------|---------|--------------|
-| [wong2/weread-mcp](https://github.com/wong2/weread-mcp) | Remote | Remote MCP server for WeRead, built on the Agent Gateway with Bearer auth. |
-| [xJogger/weread-mcp-worker](https://github.com/xJogger/weread-mcp-worker) | Cloudflare Workers | Single-user WeRead MCP server for ChatGPT, deployed on Cloudflare Workers. |
+| 项目 | 部署方式 | 介绍 |
+|------|---------|------|
+| [wong2/weread-mcp](https://github.com/wong2/weread-mcp) | 远程 MCP | 基于 Agent Gateway + Bearer 鉴权的远程 MCP 服务。 |
+| [xJogger/weread-mcp-worker](https://github.com/xJogger/weread-mcp-worker) | Cloudflare Workers | 部署在 Cloudflare Workers 上的单用户 WeRead MCP，面向 ChatGPT。 |
 
-## Third-Party Sync
+## 第三方同步
 
-Apps that pull from the Agent Gateway and push into another note-taking tool.
+从 Agent Gateway 拉数据，推到别的笔记工具里。
 
-| Project | Target | What it does |
-|---------|--------|--------------|
-| [ZhongJiaqi/weread-to-obsidian](https://github.com/ZhongJiaqi/weread-to-obsidian) | Obsidian | Convert WeRead highlights and thoughts into Obsidian notes with Dataview-friendly frontmatter and deep links back to WeRead. |
-| [uuavv/weread-notion-worker](https://github.com/uuavv/weread-notion-worker) | Notion | Sync WeRead bookshelf and highlights into a Notion database, using `WEREAD_API_KEY`. |
-| [huangcheng/weread-to-flomo](https://github.com/huangcheng/weread-to-flomo) | flomo | Export each WeRead highlight or thought as its own flomo memo, via the flomo MCP. |
+| 项目 | 目标平台 | 介绍 |
+|------|---------|------|
+| [ZhongJiaqi/weread-to-obsidian](https://github.com/ZhongJiaqi/weread-to-obsidian) | Obsidian | 把划线和想法转成 Obsidian 笔记，附 Dataview 友好的 frontmatter 和回跳微信读书的深链。 |
+| [uuavv/weread-notion-worker](https://github.com/uuavv/weread-notion-worker) | Notion | 用 `WEREAD_API_KEY` 把书架和划线同步进 Notion 数据库。 |
+| [huangcheng/weread-to-flomo](https://github.com/huangcheng/weread-to-flomo) | flomo | 把每条微信读书划线 / 想法作为独立的 flomo memo 导出，走 flomo MCP。 |
 
-## Widgets & Visualizations
+## 桌面挂件与可视化
 
-Apps that render reading data into something you can hang on your desktop, wallpaper, or screensaver.
+把阅读数据渲染成桌面 widget、壁纸、屏保的可视化项目。
 
-| Project | Platform | What it does |
-|---------|----------|--------------|
-| [TinaDu-AI/reading-widget](https://github.com/TinaDu-AI/reading-widget) | macOS (Übersicht) | Desktop widget for WeRead reading stats — streak, today / month time, current book, year quote — refreshed every 5 minutes. Built explicitly as a "rendering shell" on top of the official Skill. |
-| [Kalmaegi/weread-analyzer](https://github.com/Kalmaegi/weread-analyzer) | Web | Reading-profile analyzer built on the official WeRead API Key. |
+| 项目 | 平台 | 介绍 |
+|------|------|------|
+| [TinaDu-AI/reading-widget](https://github.com/TinaDu-AI/reading-widget) | macOS (Übersicht) | 微信读书阅读统计桌面挂件 —— 连续天数、今日 / 本月时长、当前在读、年度金句 —— 每 5 分钟刷新。明确定位为「官方 Skill 之上的一层渲染壳」。 |
+| [Kalmaegi/weread-analyzer](https://github.com/Kalmaegi/weread-analyzer) | Web | 基于微信读书官方 API Key 的阅读画像分析项目。 |
 
-## Contributing
+## 贡献指南
 
-Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+欢迎贡献 —— 详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-In short:
+简版规则：
 
-- **Official-Skill-only.** The project must use the official Agent Gateway / API Key (`wrk-...`). Cookie scraping and browser automation are out of scope.
-- **State the runtime / target.** Claude Code, OpenClaw, Hermes, Cursor, Cloudflare Workers, macOS, etc. — whatever the right axis is for the table.
-- **One row per project.** Pick the right table; if no table fits, propose a new section in your PR.
-- **Working & documented.** Public repo, working README, last commit within ~12 months.
+- **只收基于官方 Skill 的二创。** 项目必须使用官方 Agent Gateway / API Key（`wrk-...`）。Cookie 抓取和浏览器自动化不在范围内。
+- **写清楚 runtime / 目标平台。** Claude Code、OpenClaw、Hermes、Cursor、Cloudflare Workers、macOS 等 —— 选择对应表格最重要的那一列。
+- **一个项目一行。** 选合适的表格；如果都不合适，PR 里提出新加一节。
+- **可用且有文档。** 公开仓库、README 能跑通、最近一年内有提交。
 
-## License
+## 许可
 
 [![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-To the extent possible under law, the authors have waived all copyright and related or neighboring rights to this work.
+在法律允许的范围内，作者已放弃本作品的所有版权及相关权利。

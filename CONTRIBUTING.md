@@ -27,7 +27,7 @@ These projects are valuable — they just belong in a different list (e.g. the `
    ```
    | [owner/repo](https://github.com/owner/repo) | <column 2 value> | One factual sentence, ≤ 140 chars. |
    ```
-3. **Update both READMEs** — `README.md` (English) and `README.zh-CN.md` (Simplified Chinese). Keep them in sync.
+3. **Update both READMEs** — `README.md` (Simplified Chinese) and `README.en.md` (English). Keep them in sync.
 4. **State the runtime / target.** For Skills: Claude Code, OpenClaw, Hermes, Cursor, generic Agent Skill manifest, multi-runtime. For sync apps: Notion, Obsidian, flomo, etc.
 
 ## Quality bar
