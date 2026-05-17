@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 // Discovery bot for awesome-weread.
 // Searches GitHub for new WeRead repos, keyword-filters for official-Skill usage,
-// then asks Claude Haiku 4.5 to make a final in-scope judgment.
+// then asks Gemini 2.0 Flash to make a final in-scope judgment.
 // Outputs:
 //   - seen.json: appended with all evaluated repos (skip on next run)
 //   - pr_body.md: PR description if any candidates were accepted (else not written)
 
-import Anthropic from "@anthropic-ai/sdk";
+import { GoogleGenAI, Type } from "@google/genai";
 import { execSync } from "node:child_process";
 import { readFileSync, writeFileSync, existsSync, unlinkSync } from "node:fs";
 import { resolve, dirname } from "node:path";
@@ -21,7 +21,7 @@ const README_EN_PATH = resolve(ROOT, "README.en.md");
 
 const MAX_LLM_CALLS = 20;
 const SEARCH_LIMIT = 50;
-const MODEL = "claude-haiku-4-5-20251001";
+const MODEL = "gemini-2.0-flash-001";
 
 // Keywords that indicate official-Skill usage. README must contain at least one
 // (case-insensitive) to even reach the LLM judgment step.
@@ -51,17 +51,27 @@ const SYSTEM_PROMPT = `你是 BENZEMA216/awesome-weread 仓库的策展助手。
   - sync: 把 weread 数据同步到 Notion / Obsidian / flomo / Feishu / 思源等
   - widgets: 桌面挂件、可视化、屏保、阅读画像
 
-【输出格式 — 严格 JSON，不要任何其他文本】
-{
-  "in_scope": true | false,
-  "evidence": "<=200 字。从 README 引用最有说服力的关键句子，证明你的判断>",
-  "reason": "<=80 字。一句话判断依据>",
-  "category": "skill-bundles" | "workflows" | "clis" | "mcp-servers" | "sync" | "widgets" | null,
-  "runtime_or_target": "<=20 字。比如 'Claude Code' / 'OpenClaw' / 'Obsidian' / 'macOS' / '跨 runtime'>",
-  "description_zh": "<=80 字符。建议的中文描述>",
-  "description_en": "<=140 chars. English description>"
-}
-in_scope=false 时 category / runtime_or_target / description_* 全部填 null。`;
+注意：in_scope=false 时，category / runtime_or_target / description_zh / description_en 填空字符串。
+evidence 必须是 README 里的原文引用（不要改写、不要翻译），即便 in_scope=false 也要给出关键否定证据。`;
+
+const RESPONSE_SCHEMA = {
+  type: Type.OBJECT,
+  properties: {
+    in_scope: { type: Type.BOOLEAN, description: "是否符合收录标准" },
+    evidence: { type: Type.STRING, description: "<=200 字。README 原文引用，证明你的判断" },
+    reason: { type: Type.STRING, description: "<=80 字。一句话判断依据" },
+    category: {
+      type: Type.STRING,
+      enum: ["skill-bundles", "workflows", "clis", "mcp-servers", "sync", "widgets", ""],
+      description: "分类。in_scope=false 时填空字符串",
+    },
+    runtime_or_target: { type: Type.STRING, description: "<=20 字。运行环境或目标平台。in_scope=false 时填空字符串" },
+    description_zh: { type: Type.STRING, description: "<=80 字符建议中文描述。in_scope=false 时填空字符串" },
+    description_en: { type: Type.STRING, description: "<=140 chars suggested English description. Empty string if in_scope=false" },
+  },
+  required: ["in_scope", "evidence", "reason", "category", "runtime_or_target", "description_zh", "description_en"],
+  propertyOrdering: ["in_scope", "evidence", "reason", "category", "runtime_or_target", "description_zh", "description_en"],
+};
 
 function loadJson(path, fallback) {
   try { return JSON.parse(readFileSync(path, "utf8")); } catch { return fallback; }
@@ -82,7 +92,7 @@ function ghJson(args) {
 
 async function fetchReadme(fullName) {
   try {
-    const info = ghJson(`api repos/${fullName}/readme --jq '{download_url: .download_url, encoding: .encoding}'`);
+    const info = ghJson(`api repos/${fullName}/readme --jq '{download_url: .download_url}'`);
     if (info.download_url) {
       const res = await fetch(info.download_url);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -94,34 +104,32 @@ async function fetchReadme(fullName) {
   }
 }
 
-async function judge(client, candidate, readme) {
+async function judge(ai, candidate, readme) {
   const userPrompt = `仓库：${candidate.fullName}\n描述：${candidate.description || "(无)"}\nStars：${candidate.stargazersCount}\n推送时间：${candidate.pushedAt}\n\nREADME 内容（最多 8000 字符）:\n${readme.slice(0, 8000)}`;
-  const msg = await client.messages.create({
+
+  const response = await ai.models.generateContent({
     model: MODEL,
-    max_tokens: 700,
-    system: [{ type: "text", text: SYSTEM_PROMPT, cache_control: { type: "ephemeral" } }],
-    messages: [
-      { role: "user", content: userPrompt },
-      { role: "assistant", content: "{" },
-    ],
+    contents: userPrompt,
+    config: {
+      systemInstruction: SYSTEM_PROMPT,
+      responseMimeType: "application/json",
+      responseSchema: RESPONSE_SCHEMA,
+      maxOutputTokens: 800,
+      temperature: 0.1,
+    },
   });
-  const raw = "{" + (msg.content[0]?.text ?? "");
-  // Sometimes the model continues past the closing brace; chop at the matching one.
-  let depth = 0, end = -1;
-  for (let i = 0; i < raw.length; i++) {
-    if (raw[i] === "{") depth++;
-    else if (raw[i] === "}") { depth--; if (depth === 0) { end = i + 1; break; } }
-  }
-  const json = end > 0 ? raw.slice(0, end) : raw;
-  return JSON.parse(json);
+
+  const text = response.text;
+  if (!text) throw new Error(`Empty response from Gemini (finishReason: ${response.candidates?.[0]?.finishReason})`);
+  return JSON.parse(text);
 }
 
 async function main() {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    console.error("ANTHROPIC_API_KEY not set");
+  if (!process.env.GOOGLE_API_KEY) {
+    console.error("GOOGLE_API_KEY not set. Get a free key at https://aistudio.google.com/apikey");
     process.exit(1);
   }
-  const client = new Anthropic();
+  const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY });
 
   const seen = loadJson(SEEN_PATH, []);
   const seenSet = new Set(seen.map(s => s.repo.toLowerCase()));
@@ -160,14 +168,13 @@ async function main() {
 
     if (llmCalls >= MAX_LLM_CALLS) {
       console.log(`Hit LLM call cap (${MAX_LLM_CALLS}), deferring ${candidate.fullName}`);
-      // Don't mark as seen — try again next run.
       continue;
     }
 
     llmCalls++;
     let result;
     try {
-      result = await judge(client, candidate, readme);
+      result = await judge(ai, candidate, readme);
     } catch (e) {
       console.error(`LLM error on ${candidate.fullName}: ${e.message}`);
       newSeen.push({ repo: candidate.fullName, decision: "llm_error", reason: e.message.slice(0, 200), date: nowIso });
@@ -178,7 +185,7 @@ async function main() {
       repo: candidate.fullName,
       decision: result.in_scope ? "accepted" : "out_of_scope_llm",
       reason: result.reason,
-      category: result.category,
+      category: result.category || null,
       date: nowIso,
     });
 
@@ -190,17 +197,14 @@ async function main() {
     }
   }
 
-  // Save updated seen.json
   const updatedSeen = [...seen, ...newSeen];
   writeFileSync(SEEN_PATH, JSON.stringify(updatedSeen, null, 2) + "\n");
   console.log(`Updated seen.json (+${newSeen.length} entries, ${updatedSeen.length} total). LLM calls: ${llmCalls}`);
 
-  // Clean up any stale PR body from previous runs
   if (existsSync(PR_BODY_PATH)) unlinkSync(PR_BODY_PATH);
 
   if (accepted.length > 0) {
-    const body = renderPrBody(accepted);
-    writeFileSync(PR_BODY_PATH, body);
+    writeFileSync(PR_BODY_PATH, renderPrBody(accepted));
     console.log(`Wrote pr_body.md with ${accepted.length} candidate(s)`);
   } else {
     console.log("No new in-scope candidates this run.");
@@ -213,10 +217,10 @@ function renderPrBody(accepted) {
     `## 🤖 自动发现 ${accepted.length} 个候选项目 / ${accepted.length} candidate(s) discovered`,
     "",
     `**Run at:** ${ts}`,
-    `**Judge model:** \`${MODEL}\``,
+    `**Judge model:** \`${MODEL}\` (Google AI Studio, free tier)`,
     "",
-    "> 这是 discovery bot 的自动建议。Review 每条证据，把同意收录的复制到两个 README 对应表格里，然后 merge / close 本 PR。"
-    , "",
+    "> 这是 discovery bot 的自动建议。Review 每条证据，把同意收录的复制到两个 README 对应表格里，然后 merge / close 本 PR。",
+    "",
     "---",
     "",
   ];

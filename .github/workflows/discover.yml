@@ -33,7 +33,7 @@ jobs:
 
       - name: Run discovery
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/discover.mjs
 

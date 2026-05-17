@@ -1,13 +1,13 @@
 {
   "name": "awesome-weread-discover",
-  "version": "0.1.0",
-  "description": "Auto-discovery bot for awesome-weread — searches GitHub for new WeRead repos, filters by official-Skill keywords, and asks Claude Haiku to judge in-scope.",
+  "version": "0.2.0",
+  "description": "Auto-discovery bot for awesome-weread — searches GitHub for new WeRead repos, filters by official-Skill keywords, and asks Gemini 2.0 Flash to judge in-scope.",
   "type": "module",
   "private": true,
   "scripts": {
     "discover": "node discover.mjs"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.40.0"
+    "@google/genai": "^0.10.0"
   }
 }
