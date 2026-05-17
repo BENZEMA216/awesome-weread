@@ -1,0 +1,76 @@
+name: Discover new candidates
+
+on:
+  schedule:
+    # Every 6 hours. Adjust to "0 */2 * * *" for every 2h, "0 6 * * *" for daily.
+    - cron: "0 */6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: discover
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install discovery deps
+        working-directory: scripts
+        run: npm install --no-audit --no-fund
+
+      - name: Run discovery
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/discover.mjs
+
+      - name: Commit seen.json updates to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain seen.json)" ]; then
+            git add seen.json
+            git commit -m "chore(bot): update seen.json"
+            git push origin HEAD:main
+          else
+            echo "seen.json unchanged"
+          fi
+
+      - name: Open PR if candidates were found
+        if: ${{ hashFiles('pr_body.md') != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          # Skip if a bot PR is already open — avoid stacking duplicates.
+          existing=$(gh pr list --state open --author "app/github-actions" \
+            --json number,title \
+            --jq '.[] | select(.title | startswith("[bot] discover")) | .number' | head -1)
+          if [ -n "$existing" ]; then
+            echo "Existing bot PR #$existing still open. Skipping new PR."
+            exit 0
+          fi
+          ts=$(date -u +%Y%m%d-%H%M)
+          branch="bot/discover-$ts"
+          git checkout -b "$branch"
+          mkdir -p candidates
+          mv pr_body.md "candidates/$ts.md"
+          git add "candidates/$ts.md"
+          git commit -m "bot: discover candidates [$ts]"
+          git push origin "$branch"
+          gh pr create --base main --head "$branch" \
+            --title "[bot] discover: $ts" \
+            --body-file "candidates/$ts.md"
