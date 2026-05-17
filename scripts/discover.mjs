@@ -51,7 +51,7 @@ const SYSTEM_PROMPT = `你是 BENZEMA216/awesome-weread 仓库的策展助手。
   - sync: 把 weread 数据同步到 Notion / Obsidian / flomo / Feishu / 思源等
   - widgets: 桌面挂件、可视化、屏保、阅读画像
 
-注意：in_scope=false 时，category / runtime_or_target / description_zh / description_en 填空字符串。
+注意：in_scope=false 时，category 填 "none"，runtime_or_target / description_zh / description_en 填空字符串。
 evidence 必须是 README 里的原文引用（不要改写、不要翻译），即便 in_scope=false 也要给出关键否定证据。`;
 
 const RESPONSE_SCHEMA = {
@@ -62,7 +62,7 @@ const RESPONSE_SCHEMA = {
     reason: { type: Type.STRING, description: "<=80 字。一句话判断依据" },
     category: {
       type: Type.STRING,
-      enum: ["skill-bundles", "workflows", "clis", "mcp-servers", "sync", "widgets", ""],
+      enum: ["skill-bundles", "workflows", "clis", "mcp-servers", "sync", "widgets", "none"],
       description: "分类。in_scope=false 时填空字符串",
     },
     runtime_or_target: { type: Type.STRING, description: "<=20 字。运行环境或目标平台。in_scope=false 时填空字符串" },
