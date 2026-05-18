@@ -292,5 +292,35 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-18T15:24:19.769Z"
+  },
+  {
+    "repo": "TianLanhe/weread-readtime-for-tencent-doc",
+    "decision": "llm_error",
+    "reason": "got status: 403 Forbidden. {\"error\":{\"code\":403,\"message\":\"Your API key was reported as leaked. Please use another API key.\",\"status\":\"PERMISSION_DENIED\"}}",
+    "date": "2026-05-18T19:41:34.805Z"
+  },
+  {
+    "repo": "TianLanhe/weread-readtime-for-lark",
+    "decision": "llm_error",
+    "reason": "got status: 403 Forbidden. {\"error\":{\"code\":403,\"message\":\"Your API key was reported as leaked. Please use another API key.\",\"status\":\"PERMISSION_DENIED\"}}",
+    "date": "2026-05-18T19:41:34.805Z"
+  },
+  {
+    "repo": "TianLanhe/weread-readdata-for-tencent-doc",
+    "decision": "llm_error",
+    "reason": "got status: 403 Forbidden. {\"error\":{\"code\":403,\"message\":\"Your API key was reported as leaked. Please use another API key.\",\"status\":\"PERMISSION_DENIED\"}}",
+    "date": "2026-05-18T19:41:34.805Z"
+  },
+  {
+    "repo": "duyi2076/duyi-night-read-workflow",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-18T19:41:34.805Z"
+  },
+  {
+    "repo": "DOGOGOD/WeRead",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-18T19:41:34.805Z"
   }
 ]
