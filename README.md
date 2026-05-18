@@ -41,6 +41,7 @@
 | [zhongyi-byte/openclaw-weread-skill](https://github.com/zhongyi-byte/openclaw-weread-skill) | OpenClaw | 把划线、想法、书评导出到 Markdown / Obsidian 的 OpenClaw Skill。 |
 | [lovekeji-ai/agent-weread-skill](https://github.com/lovekeji-ai/agent-weread-skill) | Hermes / OpenClaw | 带「最近 N 天过滤」和安全默认值的笔记导出 Skill，专门为日常增量同步打磨。 |
 | [taxueseek/taxue-weread](https://github.com/taxueseek/taxue-weread) | 跨 runtime | 官方 Skill 的 Agent 优化版：CLI + 本地缓存 + 合并命令，针对 Agent 上下文预算调优。 |
+| [jerlinn/jerlin-weread](https://github.com/jerlinn/jerlin-weread) | 跨 runtime | 官方 Skill 的重构版：让 Agent 通过 CLI 按需查询单个接口，不用每轮重读整个 Skill 文档。 |
 
 ## 工作流与助手
 
@@ -59,6 +60,7 @@
 |------|------|------|
 | [shiquda/weread-cli](https://github.com/shiquda/weread-cli) | Python | 基于官方 API 的 CLI，附带 Agent Skill manifest。同时面向人与 Agent。 |
 | [nlimpid/weread](https://github.com/nlimpid/weread) | Rust | 面向 LLM 友好的 CLI 和 Rust 库，封装微信读书 Agent Gateway。 |
+| [ipfans/weread-cli](https://github.com/ipfans/weread-cli) | Python | 命令行客户端 + Claude Code 等 Agent 插件：搜书、管理书架、看划线笔记、阅读统计、推荐。 |
 
 ## MCP 服务
 
@@ -78,6 +80,7 @@
 | [ZhongJiaqi/weread-to-obsidian](https://github.com/ZhongJiaqi/weread-to-obsidian) | Obsidian | 把划线和想法转成 Obsidian 笔记，附 Dataview 友好的 frontmatter 和回跳微信读书的深链。 |
 | [uuavv/weread-notion-worker](https://github.com/uuavv/weread-notion-worker) | Notion | 用 `WEREAD_API_KEY` 把书架和划线同步进 Notion 数据库。 |
 | [huangcheng/weread-to-flomo](https://github.com/huangcheng/weread-to-flomo) | flomo | 把每条微信读书划线 / 想法作为独立的 flomo memo 导出，走 flomo MCP。 |
+| [gnixner/weread-import](https://github.com/gnixner/weread-import) | Markdown / Obsidian | 默认走官方 Gateway 把划线和想法导出为 Markdown，可写进 Obsidian vault 或任意本地目录（也支持 cookie fallback）。 |
 
 ## 桌面挂件与可视化
 
@@ -87,6 +90,9 @@
 |------|------|------|
 | [TinaDu-AI/reading-widget](https://github.com/TinaDu-AI/reading-widget) | macOS (Übersicht) | 微信读书阅读统计桌面挂件 —— 连续天数、今日 / 本月时长、当前在读、年度金句 —— 每 5 分钟刷新。明确定位为「官方 Skill 之上的一层渲染壳」。 |
 | [Kalmaegi/weread-analyzer](https://github.com/Kalmaegi/weread-analyzer) | Web | 基于微信读书官方 API Key 的阅读画像分析项目。 |
+| [AstrophelXD/WeReadAura](https://github.com/AstrophelXD/WeReadAura) | Web | 只读 dashboard，把书架、阅读时长、划线、推荐汇总成 neo-brutalism 风格界面。仅供个人学习使用。 |
+| [alexsowake/weread_personality_summery](https://github.com/alexsowake/weread_personality_summery) | Web (EdgeOne) | 用 DeepSeek AI 把你的笔记和划线生成「阅读人格」画像，不存储用户数据。 |
+| [zzylanmengqingchuan/weread-tools](https://github.com/zzylanmengqingchuan/weread-tools) | Web | 微信读书工具集：书单诚实报告 + 阅读人格画像。 |
 
 ## 贡献指南
 

@@ -41,6 +41,7 @@ Drop-in Skill packages — install once, every Skill-aware agent can use them.
 | [zhongyi-byte/openclaw-weread-skill](https://github.com/zhongyi-byte/openclaw-weread-skill) | OpenClaw | OpenClaw Skill that exports highlights, thoughts, and reviews to Markdown / Obsidian. |
 | [lovekeji-ai/agent-weread-skill](https://github.com/lovekeji-ai/agent-weread-skill) | Hermes / OpenClaw | Note export Skill with recent-day filtering and safe defaults for routine "sync the last N days" runs. |
 | [taxueseek/taxue-weread](https://github.com/taxueseek/taxue-weread) | Multi-runtime | Agent-optimized rebuild of the official Skill: CLI + local caching + merged commands tuned for agent token budgets. |
+| [jerlinn/jerlin-weread](https://github.com/jerlinn/jerlin-weread) | Multi-runtime | Refactored fork of the official Skill: agents query individual endpoints via CLI on demand, so they don't have to reload the full Skill doc every turn. |
 
 ## Workflows & Assistants
 
@@ -59,6 +60,7 @@ Command-line and SDK wrappers around the Agent Gateway — usable by humans and 
 |---------|----------|--------------|
 | [shiquda/weread-cli](https://github.com/shiquda/weread-cli) | Python | Official-API-based CLI with a bundled Agent Skill manifest. Designed for both humans and agents. |
 | [nlimpid/weread](https://github.com/nlimpid/weread) | Rust | LLM-friendly CLI and Rust library for the WeRead Agent Gateway. |
+| [ipfans/weread-cli](https://github.com/ipfans/weread-cli) | Python | CLI client and Claude Code-style agent plugin: book search, bookshelf management, highlights, notes, reading stats, recommendations. |
 
 ## MCP Servers
 
@@ -78,6 +80,7 @@ Apps that pull from the Agent Gateway and push into another note-taking tool.
 | [ZhongJiaqi/weread-to-obsidian](https://github.com/ZhongJiaqi/weread-to-obsidian) | Obsidian | Convert WeRead highlights and thoughts into Obsidian notes with Dataview-friendly frontmatter and deep links back to WeRead. |
 | [uuavv/weread-notion-worker](https://github.com/uuavv/weread-notion-worker) | Notion | Sync WeRead bookshelf and highlights into a Notion database, using `WEREAD_API_KEY`. |
 | [huangcheng/weread-to-flomo](https://github.com/huangcheng/weread-to-flomo) | flomo | Export each WeRead highlight or thought as its own flomo memo, via the flomo MCP. |
+| [gnixner/weread-import](https://github.com/gnixner/weread-import) | Markdown / Obsidian | Exports highlights and thoughts to Markdown via the official Gateway by default, writable to any Obsidian vault or local directory (cookie fallback also supported). |
 
 ## Widgets & Visualizations
 
@@ -87,6 +90,9 @@ Apps that render reading data into something you can hang on your desktop, wallp
 |---------|----------|--------------|
 | [TinaDu-AI/reading-widget](https://github.com/TinaDu-AI/reading-widget) | macOS (Übersicht) | Desktop widget for WeRead reading stats — streak, today / month time, current book, year quote — refreshed every 5 minutes. Built explicitly as a "rendering shell" on top of the official Skill. |
 | [Kalmaegi/weread-analyzer](https://github.com/Kalmaegi/weread-analyzer) | Web | Reading-profile analyzer built on the official WeRead API Key. |
+| [AstrophelXD/WeReadAura](https://github.com/AstrophelXD/WeReadAura) | Web | Read-only analytics dashboard aggregating bookshelf, reading time, highlights, and recommendations into a neo-brutalism web interface. Personal use only. |
+| [alexsowake/weread_personality_summery](https://github.com/alexsowake/weread_personality_summery) | Web (EdgeOne) | Generates a "reading personality" portrait from your WeRead notes and highlights using DeepSeek AI; stores no user data. |
+| [zzylanmengqingchuan/weread-tools](https://github.com/zzylanmengqingchuan/weread-tools) | Web | WeRead toolkit: honest-bookshelf report and reading-personality profile generator. |
 
 ## Contributing
 
