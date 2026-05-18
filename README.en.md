@@ -61,6 +61,7 @@ Command-line and SDK wrappers around the Agent Gateway — usable by humans and 
 | [shiquda/weread-cli](https://github.com/shiquda/weread-cli) | Python | Official-API-based CLI with a bundled Agent Skill manifest. Designed for both humans and agents. |
 | [nlimpid/weread](https://github.com/nlimpid/weread) | Rust | LLM-friendly CLI and Rust library for the WeRead Agent Gateway. |
 | [ipfans/weread-cli](https://github.com/ipfans/weread-cli) | Python | CLI client and Claude Code-style agent plugin: book search, bookshelf management, highlights, notes, reading stats, recommendations. |
+| [Ceelog/OpenWeRead](https://github.com/Ceelog/OpenWeRead) | TypeScript | TypeScript SDK + npm CLI (`openweread`) on top of the official Skill — search, books, shelf, stats, notes, reviews, recommendations, profile. The most comprehensive SDK option so far. |
 
 ## MCP Servers
 

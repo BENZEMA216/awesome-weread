@@ -61,6 +61,7 @@
 | [shiquda/weread-cli](https://github.com/shiquda/weread-cli) | Python | 基于官方 API 的 CLI，附带 Agent Skill manifest。同时面向人与 Agent。 |
 | [nlimpid/weread](https://github.com/nlimpid/weread) | Rust | 面向 LLM 友好的 CLI 和 Rust 库，封装微信读书 Agent Gateway。 |
 | [ipfans/weread-cli](https://github.com/ipfans/weread-cli) | Python | 命令行客户端 + Claude Code 等 Agent 插件：搜书、管理书架、看划线笔记、阅读统计、推荐。 |
+| [Ceelog/OpenWeRead](https://github.com/Ceelog/OpenWeRead) | TypeScript | 官方 Skill 之上的 SDK + npm CLI (`openweread`)：搜书、书架、阅读统计、笔记划线、公开点评、推荐、用户概况全覆盖，是目前覆盖最完整的 SDK 选项。 |
 
 ## MCP 服务
 
