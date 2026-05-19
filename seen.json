@@ -322,5 +322,41 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-18T19:41:34.805Z"
+  },
+  {
+    "repo": "Nickilism/weread2anki",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-19T02:53:40.989Z"
+  },
+  {
+    "repo": "malinkang/weread2notion",
+    "decision": "llm_error",
+    "reason": "got status: 403 Forbidden. {\"error\":{\"code\":403,\"message\":\"Your API key was reported as leaked. Please use another API key.\",\"status\":\"PERMISSION_DENIED\"}}",
+    "date": "2026-05-19T02:53:40.989Z"
+  },
+  {
+    "repo": "e5145/weread-link-notion",
+    "decision": "llm_error",
+    "reason": "got status: 403 Forbidden. {\"error\":{\"code\":403,\"message\":\"Your API key was reported as leaked. Please use another API key.\",\"status\":\"PERMISSION_DENIED\"}}",
+    "date": "2026-05-19T02:53:40.989Z"
+  },
+  {
+    "repo": "hujianfei1989/jianfei-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-19T02:53:40.989Z"
+  },
+  {
+    "repo": "zephyrwang6/space-weread",
+    "decision": "llm_error",
+    "reason": "got status: 403 Forbidden. {\"error\":{\"code\":403,\"message\":\"Your API key was reported as leaked. Please use another API key.\",\"status\":\"PERMISSION_DENIED\"}}",
+    "date": "2026-05-19T02:53:40.989Z"
+  },
+  {
+    "repo": "shawnshaw/obsidian-readflow",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-19T02:53:40.989Z"
   }
 ]
