@@ -358,5 +358,47 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-19T02:53:40.989Z"
+  },
+  {
+    "repo": "CPythoner/weread-researcher",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-19T09:37:32.315Z"
+  },
+  {
+    "repo": "KingJing1/memo-capsule",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-19T09:37:32.315Z"
+  },
+  {
+    "repo": "Yant2023/weread-obsidian",
+    "decision": "llm_error",
+    "reason": "got status: 403 Forbidden. {\"error\":{\"code\":403,\"message\":\"Your API key was reported as leaked. Please use another API key.\",\"status\":\"PERMISSION_DENIED\"}}",
+    "date": "2026-05-19T09:37:32.315Z"
+  },
+  {
+    "repo": "SpaceTrave1/weread-deep-insights",
+    "decision": "llm_error",
+    "reason": "got status: 403 Forbidden. {\"error\":{\"code\":403,\"message\":\"Your API key was reported as leaked. Please use another API key.\",\"status\":\"PERMISSION_DENIED\"}}",
+    "date": "2026-05-19T09:37:32.315Z"
+  },
+  {
+    "repo": "dengxuhui/weread-tui",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-19T09:37:32.315Z"
+  },
+  {
+    "repo": "xinrufu166-dev/weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-19T09:37:32.315Z"
+  },
+  {
+    "repo": "stefanxfy/weread-essay-skill",
+    "decision": "llm_error",
+    "reason": "got status: 403 Forbidden. {\"error\":{\"code\":403,\"message\":\"Your API key was reported as leaked. Please use another API key.\",\"status\":\"PERMISSION_DENIED\"}}",
+    "date": "2026-05-19T09:37:32.315Z"
   }
 ]
