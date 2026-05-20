@@ -106,7 +106,7 @@ async function fetchReadme(fullName) {
   }
 }
 
-const TRANSIENT_RE = /UNAVAILABLE|RESOURCE_EXHAUSTED|high demand|\b50[023]\b|\b429\b/i;
+const TRANSIENT_RE = /UNAVAILABLE|RESOURCE_EXHAUSTED|high demand|\b50[023]\b|\b429\b|Unterminated string|Unexpected end of JSON|Unexpected token|retriable|MAX_TOKENS/i;
 
 async function callModel(ai, model, userPrompt) {
   const MAX_ATTEMPTS = 3; // per-model
@@ -120,12 +120,15 @@ async function callModel(ai, model, userPrompt) {
           systemInstruction: SYSTEM_PROMPT,
           responseMimeType: "application/json",
           responseSchema: RESPONSE_SCHEMA,
-          maxOutputTokens: 800,
+          maxOutputTokens: 2500, // bumped from 800 — gemini-2.5-flash CJK + structured output needs headroom
           temperature: 0.1,
+          // gemini-2.5-flash has reasoning ON by default and silently eats output budget;
+          // turn it off so all 2500 tokens go to the actual JSON response.
+          thinkingConfig: { thinkingBudget: 0 },
         },
       });
       const text = response.text;
-      if (!text) throw new Error(`Empty response from Gemini (finishReason: ${response.candidates?.[0]?.finishReason})`);
+      if (!text) throw new Error(`Empty response from Gemini (finishReason: ${response.candidates?.[0]?.finishReason}) [retriable]`);
       return { result: JSON.parse(text), model_used: model, attempts: attempt };
     } catch (e) {
       lastErr = e;
