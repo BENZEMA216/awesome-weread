@@ -424,5 +424,18 @@
     "decision": "llm_error",
     "reason": "Unterminated string in JSON at position 37",
     "date": "2026-05-20T08:06:41.535Z"
+  },
+  {
+    "repo": "peihaojie/weRead-to-html",
+    "decision": "llm_error",
+    "reason": "Unterminated string in JSON at position 37",
+    "date": "2026-05-20T08:10:37.834Z"
+  },
+  {
+    "repo": "monsignorlaw1015/weread-report",
+    "decision": "accepted",
+    "reason": "项目明确要求安装微信读书 Skills 并使用 wrk- 格式的 API Key，符合官方 Agent Gateway / API Key 构建标准。",
+    "category": "workflows",
+    "date": "2026-05-20T08:10:37.834Z"
   }
 ]
