@@ -424,5 +424,17 @@
     "decision": "llm_error",
     "reason": "got status: 404 Not Found. {\"error\":{\"code\":404,\"message\":\"This model models/gemini-2.0-flash-001 is no longer available to new users. Please update your code to use a newer model for the latest featu",
     "date": "2026-05-20T07:26:43.884Z"
+  },
+  {
+    "repo": "peihaojie/weRead-to-html",
+    "decision": "llm_error",
+    "reason": "got status: 404 Not Found. {\"error\":{\"code\":404,\"message\":\"This model models/gemini-2.0-flash-001 is no longer available to new users. Please update your code to use a newer model for the latest featu",
+    "date": "2026-05-20T07:30:09.539Z"
+  },
+  {
+    "repo": "monsignorlaw1015/weread-report",
+    "decision": "llm_error",
+    "reason": "got status: 404 Not Found. {\"error\":{\"code\":404,\"message\":\"This model models/gemini-2.0-flash-001 is no longer available to new users. Please update your code to use a newer model for the latest featu",
+    "date": "2026-05-20T07:30:09.539Z"
   }
 ]
