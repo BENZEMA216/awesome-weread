@@ -51,6 +51,10 @@ Opinionated workflows layered on top of the raw Skill — recommendations, revie
 |---------|---------|--------------|
 | [alchaincyf/huashu-weread](https://github.com/alchaincyf/huashu-weread) | Claude Code | "Reading advisor" by 花叔. Four workflows on top of the official Skill: `advisor` / `path` / `alchemy` / `review`, with bookshelf × notes cross-analysis. |
 | [ColorlessBoy/weread-dl-skill](https://github.com/ColorlessBoy/weread-dl-skill) | Generic Agent Skill | AI reading assistant: QR-code login, chapter decoding, reading-progress tracking, in-Skill AI chat. |
+| [monsignorlaw1015/weread-report](https://github.com/monsignorlaw1015/weread-report) | Skill | "You think you're reading books — really, books are reading you." Generates a private reading self-portrait from your highlights. |
+| [zephyrwang6/space-weread](https://github.com/zephyrwang6/space-weread) | Skill | Workflow that wraps your shelf and notes into a personalized "reading space" theme. |
+| [LearnPrompt/carl-weread](https://github.com/LearnPrompt/carl-weread) | Skill | LearnPrompt's carl-style reading advisor workflow, built on the official API Key. |
+| [stefanxfy/weread-essay-skill](https://github.com/stefanxfy/weread-essay-skill) | Skill | A Skill that turns your shelf and highlights into an essay, built on the official weread-skills package. |
 
 ## CLIs & Libraries
 
@@ -62,6 +66,7 @@ Command-line and SDK wrappers around the Agent Gateway — usable by humans and 
 | [nlimpid/weread](https://github.com/nlimpid/weread) | Rust | LLM-friendly CLI and Rust library for the WeRead Agent Gateway. |
 | [ipfans/weread-cli](https://github.com/ipfans/weread-cli) | Python | CLI client and Claude Code-style agent plugin: book search, bookshelf management, highlights, notes, reading stats, recommendations. |
 | [Ceelog/OpenWeRead](https://github.com/Ceelog/OpenWeRead) | TypeScript | TypeScript SDK + npm CLI (`openweread`) on top of the official Skill — search, books, shelf, stats, notes, reviews, recommendations, profile. The most comprehensive SDK option so far. |
+| [lucis-yg/weread-skill-api](https://github.com/lucis-yg/weread-skill-api) | Node.js / Express | Local API gateway that exposes the official weread-skills as 17 REST endpoints (shelf, notes, highlights, recommendations, stats). Pairs with weread-dashboard. |
 
 ## MCP Servers
 
@@ -82,6 +87,13 @@ Apps that pull from the Agent Gateway and push into another note-taking tool.
 | [uuavv/weread-notion-worker](https://github.com/uuavv/weread-notion-worker) | Notion | Sync WeRead bookshelf and highlights into a Notion database, using `WEREAD_API_KEY`. |
 | [huangcheng/weread-to-flomo](https://github.com/huangcheng/weread-to-flomo) | flomo | Export each WeRead highlight or thought as its own flomo memo, via the flomo MCP. |
 | [gnixner/weread-import](https://github.com/gnixner/weread-import) | Markdown / Obsidian | Exports highlights and thoughts to Markdown via the official Gateway by default, writable to any Obsidian vault or local directory (cookie fallback also supported). |
+| [Yant2023/weread-obsidian](https://github.com/Yant2023/weread-obsidian) | Obsidian | Exports highlights and thoughts to an Obsidian vault; a Python re-implementation of the official Skill API. |
+| [f1603206034/weread-notes](https://github.com/f1603206034/weread-notes) | GitHub + Notion / GitHub Actions | Syncs notes to both a GitHub repo and Notion database with incremental + full sync modes plus cron via GitHub Actions. |
+| [e5145/weread-link-notion](https://github.com/e5145/weread-link-notion) | Notion | A WeRead ↔ Notion link bridge using the official Skill API Key (no cookies). |
+| [KevinChen1994/weread2notion](https://github.com/KevinChen1994/weread2notion) | Notion | WeRead → Notion sync tool, authenticated with a wrk- API Key. |
+| [TianLanhe/weread-readdata-for-tencent-doc](https://github.com/TianLanhe/weread-readdata-for-tencent-doc) | Tencent Docs (smart table) | A Skill that upserts your bookshelf data into a Tencent Docs smart table, via the Tencent Docs MCP. |
+| [TianLanhe/weread-readtime-for-tencent-doc](https://github.com/TianLanhe/weread-readtime-for-tencent-doc) | Tencent Docs (smart table) | Upserts daily reading time into the "reading-time" sheet of a Tencent Docs smart table. Sibling Skill of the same author. |
+| [TianLanhe/weread-readtime-for-lark](https://github.com/TianLanhe/weread-readtime-for-lark) | Feishu Base | Syncs daily reading time into a Feishu Base "reading-time" table, using lark-cli. |
 
 ## Widgets & Visualizations
 
@@ -94,6 +106,10 @@ Apps that render reading data into something you can hang on your desktop, wallp
 | [AstrophelXD/WeReadAura](https://github.com/AstrophelXD/WeReadAura) | Web | Read-only analytics dashboard aggregating bookshelf, reading time, highlights, and recommendations into a neo-brutalism web interface. Personal use only. |
 | [alexsowake/weread_personality_summery](https://github.com/alexsowake/weread_personality_summery) | Web (EdgeOne) | Generates a "reading personality" portrait from your WeRead notes and highlights using DeepSeek AI; stores no user data. |
 | [zzylanmengqingchuan/weread-tools](https://github.com/zzylanmengqingchuan/weread-tools) | Web | WeRead toolkit: honest-bookshelf report and reading-personality profile generator. |
+| [ZiGmaX809/Weread_ReadTime_Heatmap](https://github.com/ZiGmaX809/Weread_ReadTime_Heatmap) | Web (heatmap) | ★ Paints reading time as a GitHub-style heatmap — at-a-glance daily/weekly/monthly intensity over the year. The most striking visualization in this list. |
+| [SpaceTrave1/weread-deep-insights](https://github.com/SpaceTrave1/weread-deep-insights) | Web | A "deep insights" reading analytics tool — surfaces patterns hidden in your shelf and notes. |
+| [lucis-yg/weread-dashboard](https://github.com/lucis-yg/weread-dashboard) | Vue 3 / Web | An elegant WeRead data dashboard (shelf, notes, reading stats). **Pairs with lucis-yg/weread-skill-api as the backend.** |
+| [ktKongTong/wereto](https://github.com/ktKongTong/wereto) | Cloudflare Workers | One-click Cloudflare deploy for a public "reading homepage" page; minimal `fetch` + `ky` wrapper around the Agent Gateway. |
 
 ## Contributing
 
