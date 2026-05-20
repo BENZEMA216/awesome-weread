@@ -21,7 +21,7 @@ const README_EN_PATH = resolve(ROOT, "README.en.md");
 
 const MAX_LLM_CALLS = 20;
 const SEARCH_LIMIT = 50;
-const MODEL = "gemini-2.0-flash-001";
+const MODEL = "gemini-2.5-flash";
 
 // Keywords that indicate official-Skill usage. README must contain at least one
 // (case-insensitive) to even reach the LLM judgment step.
@@ -178,7 +178,7 @@ async function main() {
     } catch (e) {
       console.error(`LLM error on ${candidate.fullName}: ${e.message}`);
       // Detect broken API key (401/403/PERMISSION_DENIED/leaked) and stop the run
-      if (/PERMISSION_DENIED|reported as leaked|API key not valid|\b40[13]\b/i.test(e.message)) {
+      if (/PERMISSION_DENIED|reported as leaked|API key not valid|no longer available|deprecated|unregistered callers|RESOURCE_EXHAUSTED|quota|\b40[134]\b|\b429\b|\b50[023]\b/i.test(e.message)) {
         const marker = {
           error: e.message.slice(0, 800),
           first_candidate: candidate.fullName,
