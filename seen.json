@@ -463,5 +463,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-20T12:24:29.895Z"
+  },
+  {
+    "repo": "littlechul/weread-report",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-20T15:36:16.569Z"
   }
 ]
