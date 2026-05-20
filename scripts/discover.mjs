@@ -107,21 +107,37 @@ async function fetchReadme(fullName) {
 async function judge(ai, candidate, readme) {
   const userPrompt = `仓库：${candidate.fullName}\n描述：${candidate.description || "(无)"}\nStars：${candidate.stargazersCount}\n推送时间：${candidate.pushedAt}\n\nREADME 内容（最多 8000 字符）:\n${readme.slice(0, 8000)}`;
 
-  const response = await ai.models.generateContent({
-    model: MODEL,
-    contents: userPrompt,
-    config: {
-      systemInstruction: SYSTEM_PROMPT,
-      responseMimeType: "application/json",
-      responseSchema: RESPONSE_SCHEMA,
-      maxOutputTokens: 800,
-      temperature: 0.1,
-    },
-  });
-
-  const text = response.text;
-  if (!text) throw new Error(`Empty response from Gemini (finishReason: ${response.candidates?.[0]?.finishReason})`);
-  return JSON.parse(text);
+  const MAX_ATTEMPTS = 4;
+  const TRANSIENT_RE = /UNAVAILABLE|RESOURCE_EXHAUSTED|high demand|\b50[023]\b|\b429\b/i;
+  let lastErr;
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      const response = await ai.models.generateContent({
+        model: MODEL,
+        contents: userPrompt,
+        config: {
+          systemInstruction: SYSTEM_PROMPT,
+          responseMimeType: "application/json",
+          responseSchema: RESPONSE_SCHEMA,
+          maxOutputTokens: 800,
+          temperature: 0.1,
+        },
+      });
+      const text = response.text;
+      if (!text) throw new Error(`Empty response from Gemini (finishReason: ${response.candidates?.[0]?.finishReason})`);
+      return JSON.parse(text);
+    } catch (e) {
+      lastErr = e;
+      if (attempt < MAX_ATTEMPTS && TRANSIENT_RE.test(e.message)) {
+        const waitMs = 1500 * Math.pow(2, attempt - 1); // 1.5s, 3s, 6s
+        console.log(`  retry ${attempt}/${MAX_ATTEMPTS - 1} after ${waitMs}ms (transient): ${e.message.slice(0, 100)}`);
+        await new Promise(r => setTimeout(r, waitMs));
+        continue;
+      }
+      throw e;
+    }
+  }
+  throw lastErr;
 }
 
 async function main() {
@@ -178,7 +194,7 @@ async function main() {
     } catch (e) {
       console.error(`LLM error on ${candidate.fullName}: ${e.message}`);
       // Detect broken API key (401/403/PERMISSION_DENIED/leaked) and stop the run
-      if (/PERMISSION_DENIED|reported as leaked|API key not valid|no longer available|deprecated|unregistered callers|RESOURCE_EXHAUSTED|quota|\b40[134]\b|\b429\b|\b50[023]\b/i.test(e.message)) {
+      if (/PERMISSION_DENIED|reported as leaked|API key not valid|no longer available|deprecated|unregistered callers|\b40[134]\b/i.test(e.message)) {
         const marker = {
           error: e.message.slice(0, 800),
           first_candidate: candidate.fullName,
