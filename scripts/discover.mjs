@@ -21,7 +21,9 @@ const README_EN_PATH = resolve(ROOT, "README.en.md");
 
 const MAX_LLM_CALLS = 20;
 const SEARCH_LIMIT = 50;
-const MODEL = "gemini-2.5-flash";
+const MODEL_PRIMARY = "gemini-2.5-flash";
+const MODEL_FALLBACK = "gemini-2.5-flash-lite";
+const MODEL = MODEL_PRIMARY;  // back-compat for any other references (e.g. PR body)
 
 // Keywords that indicate official-Skill usage. README must contain at least one
 // (case-insensitive) to even reach the LLM judgment step.
@@ -104,16 +106,15 @@ async function fetchReadme(fullName) {
   }
 }
 
-async function judge(ai, candidate, readme) {
-  const userPrompt = `仓库：${candidate.fullName}\n描述：${candidate.description || "(无)"}\nStars：${candidate.stargazersCount}\n推送时间：${candidate.pushedAt}\n\nREADME 内容（最多 8000 字符）:\n${readme.slice(0, 8000)}`;
+const TRANSIENT_RE = /UNAVAILABLE|RESOURCE_EXHAUSTED|high demand|\b50[023]\b|\b429\b/i;
 
-  const MAX_ATTEMPTS = 4;
-  const TRANSIENT_RE = /UNAVAILABLE|RESOURCE_EXHAUSTED|high demand|\b50[023]\b|\b429\b/i;
+async function callModel(ai, model, userPrompt) {
+  const MAX_ATTEMPTS = 3; // per-model
   let lastErr;
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     try {
       const response = await ai.models.generateContent({
-        model: MODEL,
+        model,
         contents: userPrompt,
         config: {
           systemInstruction: SYSTEM_PROMPT,
@@ -125,12 +126,12 @@ async function judge(ai, candidate, readme) {
       });
       const text = response.text;
       if (!text) throw new Error(`Empty response from Gemini (finishReason: ${response.candidates?.[0]?.finishReason})`);
-      return JSON.parse(text);
+      return { result: JSON.parse(text), model_used: model, attempts: attempt };
     } catch (e) {
       lastErr = e;
       if (attempt < MAX_ATTEMPTS && TRANSIENT_RE.test(e.message)) {
-        const waitMs = 1500 * Math.pow(2, attempt - 1); // 1.5s, 3s, 6s
-        console.log(`  retry ${attempt}/${MAX_ATTEMPTS - 1} after ${waitMs}ms (transient): ${e.message.slice(0, 100)}`);
+        const waitMs = 1500 * Math.pow(2, attempt - 1); // 1.5s, 3s
+        console.log(`  [${model}] retry ${attempt}/${MAX_ATTEMPTS - 1} after ${waitMs}ms (transient): ${e.message.slice(0, 80)}`);
         await new Promise(r => setTimeout(r, waitMs));
         continue;
       }
@@ -138,6 +139,27 @@ async function judge(ai, candidate, readme) {
     }
   }
   throw lastErr;
+}
+
+async function judge(ai, candidate, readme) {
+  const userPrompt = `仓库：${candidate.fullName}\n描述：${candidate.description || "(无)"}\nStars：${candidate.stargazersCount}\n推送时间：${candidate.pushedAt}\n\nREADME 内容（最多 8000 字符）:\n${readme.slice(0, 8000)}`;
+
+  try {
+    const { result, model_used, attempts } = await callModel(ai, MODEL_PRIMARY, userPrompt);
+    if (attempts > 1) console.log(`  ✓ [${model_used}] succeeded on attempt ${attempts}`);
+    return result;
+  } catch (primaryErr) {
+    // Primary exhausted retries — only fall back if it was transient.
+    // Structural errors (auth / model deprecated) should bubble up to the
+    // marker handler, since the fallback model would just give the same error.
+    if (TRANSIENT_RE.test(primaryErr.message)) {
+      console.log(`  ⚠ ${MODEL_PRIMARY} exhausted on transient — falling back to ${MODEL_FALLBACK}`);
+      const { result, model_used, attempts } = await callModel(ai, MODEL_FALLBACK, userPrompt);
+      console.log(`  ✓ [${model_used}] fallback succeeded (attempt ${attempts})`);
+      return result;
+    }
+    throw primaryErr;
+  }
 }
 
 async function main() {
