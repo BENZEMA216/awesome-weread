@@ -451,5 +451,17 @@
     "reason": "项目明确基于微信读书官方 Skill API Key (wrk- 格式) 进行鉴权和数据同步，符合收录标准。",
     "category": "sync",
     "date": "2026-05-20T08:13:43.283Z"
+  },
+  {
+    "repo": "darling0107/weixin-library-api",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-20T12:24:29.895Z"
+  },
+  {
+    "repo": "yangminggulab/dx-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-20T12:24:29.895Z"
   }
 ]
