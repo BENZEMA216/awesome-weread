@@ -340,5 +340,23 @@
     "decision": "llm_error",
     "reason": "Unterminated string in JSON at position 39",
     "date": "2026-05-20T07:32:23.211Z"
+  },
+  {
+    "repo": "rayford295/rayford-knowledge-atlas",
+    "decision": "llm_error",
+    "reason": "Unterminated string in JSON at position 44",
+    "date": "2026-05-20T07:34:54.443Z"
+  },
+  {
+    "repo": "Yant2023/weread-obsidian",
+    "decision": "llm_error",
+    "reason": "Unterminated string in JSON at position 45",
+    "date": "2026-05-20T07:34:54.443Z"
+  },
+  {
+    "repo": "koftfun/weread-web-y",
+    "decision": "llm_error",
+    "reason": "Unterminated string in JSON at position 39",
+    "date": "2026-05-20T07:34:54.443Z"
   }
 ]
