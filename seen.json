@@ -424,5 +424,17 @@
     "decision": "llm_error",
     "reason": "Unterminated string in JSON at position 33",
     "date": "2026-05-20T07:36:40.788Z"
+  },
+  {
+    "repo": "peihaojie/weRead-to-html",
+    "decision": "llm_error",
+    "reason": "Unterminated string in JSON at position 43",
+    "date": "2026-05-20T08:04:50.920Z"
+  },
+  {
+    "repo": "monsignorlaw1015/weread-report",
+    "decision": "llm_error",
+    "reason": "Unterminated string in JSON at position 39",
+    "date": "2026-05-20T08:04:50.920Z"
   }
 ]
