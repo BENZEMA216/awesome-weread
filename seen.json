@@ -466,5 +466,11 @@
     "decision": "llm_error",
     "reason": "got status: 403 Forbidden. {\"error\":{\"code\":403,\"message\":\"Your API key was reported as leaked. Please use another API key.\",\"status\":\"PERMISSION_DENIED\"}}",
     "date": "2026-05-19T19:48:58.711Z"
+  },
+  {
+    "repo": "hoteymaks/weready-nfactorial",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-20T02:53:50.118Z"
   }
 ]
