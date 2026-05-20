@@ -177,6 +177,19 @@ async function main() {
       result = await judge(ai, candidate, readme);
     } catch (e) {
       console.error(`LLM error on ${candidate.fullName}: ${e.message}`);
+      // Detect broken API key (401/403/PERMISSION_DENIED/leaked) and stop the run
+      if (/PERMISSION_DENIED|reported as leaked|API key not valid|\b40[13]\b/i.test(e.message)) {
+        const marker = {
+          error: e.message.slice(0, 800),
+          first_candidate: candidate.fullName,
+          ts: nowIso,
+          deferred_count: candidates.length - candidates.indexOf(candidate),
+        };
+        writeFileSync(resolve(ROOT, ".api-key-broken"), JSON.stringify(marker, null, 2));
+        console.error(`>>> API key appears broken. Stopping LLM calls and writing .api-key-broken. <<<`);
+        // Don't mark this candidate as seen — let it be re-evaluated once the key is fixed.
+        break;
+      }
       newSeen.push({ repo: candidate.fullName, decision: "llm_error", reason: e.message.slice(0, 200), date: nowIso });
       continue;
     }
