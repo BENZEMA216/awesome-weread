@@ -487,5 +487,18 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-05-21T04:13:56.128Z"
+  },
+  {
+    "repo": "viewer12/weread-mirror",
+    "decision": "accepted",
+    "reason": "项目明确指出使用微信读书官方 AI Skill和WEREAD_API_KEY，并基于此生成阅读画像。",
+    "category": "workflows",
+    "date": "2026-05-21T09:53:34.813Z"
+  },
+  {
+    "repo": "userWang123541/weRead",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-21T09:53:34.813Z"
   }
 ]
