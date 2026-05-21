@@ -500,5 +500,17 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-05-21T09:53:34.813Z"
+  },
+  {
+    "repo": "bababababamulovedrink/weread-pdf-exporter",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-21T15:40:21.930Z"
+  },
+  {
+    "repo": "sunriverhzy/weread_knowledge",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-21T15:40:21.930Z"
   }
 ]
