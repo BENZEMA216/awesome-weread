@@ -52,6 +52,7 @@
 | [alchaincyf/huashu-weread](https://github.com/alchaincyf/huashu-weread) | Claude Code | 花叔的「读书顾问」Skill。在官方 Skill 之上加了 4 个 workflow：`advisor` / `path` / `alchemy` / `review`，做书架 × 笔记交叉分析。 |
 | [ColorlessBoy/weread-dl-skill](https://github.com/ColorlessBoy/weread-dl-skill) | 通用 Agent Skill | AI 阅读助手：扫码登录、章节解码、阅读进度跟踪、Skill 内 AI 对话。 |
 | [monsignorlaw1015/weread-report](https://github.com/monsignorlaw1015/weread-report) | Skill | 「你以为你在读书，其实书一直在读你」基于微信读书数据生成私人阅读自画像，从笔记里挖出真正的「你」。 |
+| [viewer12/weread-mirror](https://github.com/viewer12/weread-mirror) | Claude Code | 用官方 Skill 拉书架、统计和笔记，生成单文件 HTML 私人读书画像。 |
 | [zephyrwang6/space-weread](https://github.com/zephyrwang6/space-weread) | Skill | 「space」主题读书 workflow，把书架 / 笔记包装成「太空舱内」式的私人阅读空间。 |
 | [LearnPrompt/carl-weread](https://github.com/LearnPrompt/carl-weread) | Skill | LearnPrompt 出品的 carl 风格读书顾问 workflow，基于官方 API Key 构建。 |
 | [stefanxfy/weread-essay-skill](https://github.com/stefanxfy/weread-essay-skill) | Skill | 把书架与笔记输入，生成读书 essay 的 Skill —— 基于官方 weread-skills 包。 |

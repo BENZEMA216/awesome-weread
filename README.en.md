@@ -52,6 +52,7 @@ Opinionated workflows layered on top of the raw Skill — recommendations, revie
 | [alchaincyf/huashu-weread](https://github.com/alchaincyf/huashu-weread) | Claude Code | "Reading advisor" by 花叔. Four workflows on top of the official Skill: `advisor` / `path` / `alchemy` / `review`, with bookshelf × notes cross-analysis. |
 | [ColorlessBoy/weread-dl-skill](https://github.com/ColorlessBoy/weread-dl-skill) | Generic Agent Skill | AI reading assistant: QR-code login, chapter decoding, reading-progress tracking, in-Skill AI chat. |
 | [monsignorlaw1015/weread-report](https://github.com/monsignorlaw1015/weread-report) | Skill | "You think you're reading books — really, books are reading you." Generates a private reading self-portrait from your highlights. |
+| [viewer12/weread-mirror](https://github.com/viewer12/weread-mirror) | Claude Code | Generates a single-file private reading portrait from official Skill bookshelf, stats, and notes data. |
 | [zephyrwang6/space-weread](https://github.com/zephyrwang6/space-weread) | Skill | Workflow that wraps your shelf and notes into a personalized "reading space" theme. |
 | [LearnPrompt/carl-weread](https://github.com/LearnPrompt/carl-weread) | Skill | LearnPrompt's carl-style reading advisor workflow, built on the official API Key. |
 | [stefanxfy/weread-essay-skill](https://github.com/stefanxfy/weread-essay-skill) | Skill | A Skill that turns your shelf and highlights into an essay, built on the official weread-skills package. |
