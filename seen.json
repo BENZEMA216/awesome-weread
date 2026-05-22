@@ -512,5 +512,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-21T15:40:21.930Z"
+  },
+  {
+    "repo": "Lin0u0/TrimUI-WeRead",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-22T04:08:36.848Z"
   }
 ]
