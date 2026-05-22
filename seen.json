@@ -530,5 +530,24 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-22T09:38:39.747Z"
+  },
+  {
+    "repo": "kejixiaoliang/read-persona",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Skill 和 wrk- 格式的 API Key 构建，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-05-22T14:49:41.038Z"
+  },
+  {
+    "repo": "Xin-Jiaqi/weread-calendar",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-22T14:49:41.038Z"
+  },
+  {
+    "repo": "hurrypeter02-cmd/weread-psychoanalysis",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-22T14:49:41.038Z"
   }
 ]
