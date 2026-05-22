@@ -54,9 +54,9 @@ This repo runs an automated discovery bot every 6 hours via [`.github/workflows/
 1. Searches GitHub for recently updated `weread` repos.
 2. Filters out anything already listed or previously evaluated (`seen.json`).
 3. Keyword-filters for official-Skill signals (`wrk-`, `WEREAD_API_KEY`, `weread-skills`, `Agent Gateway`).
-4. Asks Claude Haiku 4.5 to make the final in-scope judgment with an evidence quote and a suggested category.
+4. Asks Gemini (`gemini-2.5-flash`, fallback `gemini-2.5-flash-lite`) to make the final in-scope judgment with an evidence quote and a suggested category.
 5. Opens a PR with the suggestions if anything was accepted. The PR is **never auto-merged** — a human curator reviews the evidence and copies the suggested row into both READMEs before merging.
 
 Out-of-scope evaluations are appended to `seen.json` so we don't re-judge the same repo. If a previously rejected project later switches to the official Skill, you can manually remove its line from `seen.json` to give it a fresh look.
 
-Requires repo secret `ANTHROPIC_API_KEY`. Workflow can also be triggered manually from the Actions tab.
+Requires repo secret `GOOGLE_API_KEY`. Workflow can also be triggered manually from the Actions tab.
