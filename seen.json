@@ -518,5 +518,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-22T04:08:36.848Z"
+  },
+  {
+    "repo": "myrichhub/weread-personal",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-22T09:38:39.747Z"
+  },
+  {
+    "repo": "githubhxd1995/wereadScript",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-22T09:38:39.747Z"
   }
 ]
