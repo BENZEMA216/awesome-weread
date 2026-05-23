@@ -568,5 +568,11 @@
     "reason": "项目明确要求使用 WEREAD_API_KEY 环境变量，并提供了详细的同步逻辑和数据格式，符合基于官方 API 的标准。",
     "category": "sync",
     "date": "2026-05-23T08:26:28.288Z"
+  },
+  {
+    "repo": "RHZHZ/wereadmaster",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-23T13:48:25.257Z"
   }
 ]
