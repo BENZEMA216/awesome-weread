@@ -574,5 +574,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-23T13:48:25.257Z"
+  },
+  {
+    "repo": "lujun723-win/weread_receipt",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Skill API 和 Agent Gateway，并使用 wrk- 格式的 API Key。",
+    "category": "widgets",
+    "date": "2026-05-24T04:07:31.796Z"
   }
 ]
