@@ -54,6 +54,7 @@ Opinionated workflows layered on top of the raw Skill — recommendations, revie
 | [monsignorlaw1015/weread-report](https://github.com/monsignorlaw1015/weread-report) | Skill | "You think you're reading books — really, books are reading you." Generates a private reading self-portrait from your highlights. |
 | [viewer12/weread-mirror](https://github.com/viewer12/weread-mirror) | Claude Code | Generates a single-file private reading portrait from official Skill bookshelf, stats, and notes data. |
 | [kejixiaoliang/read-persona](https://github.com/kejixiaoliang/read-persona) | Codex Skill | Generates a polished HTML reading-persona report from official WeRead Skill data. |
+| [cocovs/weread-agent-chat](https://github.com/cocovs/weread-agent-chat) | Web | A Pi Agent chat app that analyzes WeRead data through a user-provided API Key and reports in natural language. |
 | [zephyrwang6/space-weread](https://github.com/zephyrwang6/space-weread) | Skill | Workflow that wraps your shelf and notes into a personalized "reading space" theme. |
 | [LearnPrompt/carl-weread](https://github.com/LearnPrompt/carl-weread) | Skill | LearnPrompt's carl-style reading advisor workflow, built on the official API Key. |
 | [stefanxfy/weread-essay-skill](https://github.com/stefanxfy/weread-essay-skill) | Skill | A Skill that turns your shelf and highlights into an essay, built on the official weread-skills package. |
