@@ -587,5 +587,18 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-24T08:36:54.551Z"
+  },
+  {
+    "repo": "dwssef/weread-cli",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-24T13:46:54.828Z"
+  },
+  {
+    "repo": "cocovs/weread-agent-chat",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书 API Key，并列出了多个官方 API 调用的能力，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-05-24T13:46:54.828Z"
   }
 ]
