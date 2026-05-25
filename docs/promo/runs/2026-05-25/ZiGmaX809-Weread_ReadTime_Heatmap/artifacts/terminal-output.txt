@@ -1,0 +1,17 @@
+/Users/benzema/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+使用 API Key 认证（Agent API Gateway）
+测试 Gateway 连通性...
+Gateway 连通正常
+认证成功
+正在获取 2026–2026 年阅读数据...
+2026 年: 累计 51 天
+共获取 51 天的阅读记录
+主题: 微信读书蓝
+原始数据已保存到: awesome-weread-heatmap.json
+热力图已生成: awesome-weread-heatmap.svg
+
+2026 年统计:
+  阅读天数: 51
+  总时长: 21小时30分钟
+  日均: 25分钟

@@ -1,0 +1,47 @@
+
+> wereadaura@1.0.0 build
+> next build
+
+▲ Next.js 16.2.6 (Turbopack)
+- Experiments (use with caution):
+  ✓ externalDir
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.0s
+  Running TypeScript ...
+  Finished TypeScript in 3.6s ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/11) ...
+  Generating static pages using 9 workers (2/11) 
+  Generating static pages using 9 workers (5/11) 
+  Generating static pages using 9 workers (8/11) 
+✓ Generating static pages using 9 workers (11/11) in 141ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ƒ /
+├ ƒ /_not-found
+├ ƒ /api/assistant/chat
+├ ƒ /api/assistant/chat/stream
+├ ƒ /api/books/[bookId]
+├ ƒ /api/bookshelf
+├ ƒ /api/dashboard
+├ ƒ /api/discover/books/[bookId]
+├ ƒ /api/discover/recommendations
+├ ƒ /api/discover/search
+├ ƒ /api/insights
+├ ƒ /api/notes
+├ ƒ /api/settings
+├ ƒ /api/stats
+├ ƒ /api/sync
+├ ƒ /assistant
+├ ƒ /books/[bookId]
+├ ƒ /bookshelf
+├ ƒ /discover
+├ ƒ /notes
+├ ƒ /settings
+└ ƒ /stats
+
+
+ƒ  (Dynamic)  server-rendered on demand
+

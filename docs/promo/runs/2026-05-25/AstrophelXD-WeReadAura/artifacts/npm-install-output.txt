@@ -1,0 +1,8 @@
+
+> wereadaura@1.0.0 postinstall
+> node scripts/setup-neobrutalism.mjs
+
+Cloning neobrutalism-components into neobrutalism-components-local …
+Cloning into 'neobrutalism-components-local'...
+
+added 568 packages in 16s
