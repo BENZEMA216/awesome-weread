@@ -606,5 +606,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-25T04:19:00.505Z"
+  },
+  {
+    "repo": "countryLane/weread",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-25T10:20:26.063Z"
   }
 ]
