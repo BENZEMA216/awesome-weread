@@ -90,6 +90,7 @@
 | [uuavv/weread-notion-worker](https://github.com/uuavv/weread-notion-worker) | Notion | 用 `WEREAD_API_KEY` 把书架和划线同步进 Notion 数据库。 |
 | [huangcheng/weread-to-flomo](https://github.com/huangcheng/weread-to-flomo) | flomo | 把每条微信读书划线 / 想法作为独立的 flomo memo 导出，走 flomo MCP。 |
 | [gnixner/weread-import](https://github.com/gnixner/weread-import) | Markdown / Obsidian | 默认走官方 Gateway 把划线和想法导出为 Markdown，可写进 Obsidian vault 或任意本地目录（也支持 cookie fallback）。 |
+| [rayford295/rayford-knowledge-atlas](https://github.com/rayford295/rayford-knowledge-atlas) | Web / Obsidian | 个人知识图谱：把微信读书阅读输入与论文、仓库和工作流等产出连接起来（基于 `WEREAD_API_KEY` 刷新）。 |
 | [Yant2023/weread-obsidian](https://github.com/Yant2023/weread-obsidian) | Obsidian | 把划线 / 想法导出到 Obsidian 笔记库，复刻官方 Skill 接口的 Python 实现。 |
 | [f1603206034/weread-notes](https://github.com/f1603206034/weread-notes) | GitHub + Notion / GitHub Actions | 笔记同步到 GitHub repo + Notion 数据库，支持增量 / 全量 + 定时任务（GitHub Actions cron）。 |
 | [e5145/weread-link-notion](https://github.com/e5145/weread-link-notion) | Notion | 微信读书 ↔ Notion 链接桥，基于官方 Skill API Key，不依赖 cookie。 |

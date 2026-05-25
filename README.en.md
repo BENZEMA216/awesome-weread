@@ -90,6 +90,7 @@ Apps that pull from the Agent Gateway and push into another note-taking tool.
 | [uuavv/weread-notion-worker](https://github.com/uuavv/weread-notion-worker) | Notion | Sync WeRead bookshelf and highlights into a Notion database, using `WEREAD_API_KEY`. |
 | [huangcheng/weread-to-flomo](https://github.com/huangcheng/weread-to-flomo) | flomo | Export each WeRead highlight or thought as its own flomo memo, via the flomo MCP. |
 | [gnixner/weread-import](https://github.com/gnixner/weread-import) | Markdown / Obsidian | Exports highlights and thoughts to Markdown via the official Gateway by default, writable to any Obsidian vault or local directory (cookie fallback also supported). |
+| [rayford295/rayford-knowledge-atlas](https://github.com/rayford295/rayford-knowledge-atlas) | Web / Obsidian | A personal knowledge atlas connecting WeRead reading inputs with papers, repositories, and workflows (refreshed via `WEREAD_API_KEY`). |
 | [Yant2023/weread-obsidian](https://github.com/Yant2023/weread-obsidian) | Obsidian | Exports highlights and thoughts to an Obsidian vault; a Python re-implementation of the official Skill API. |
 | [f1603206034/weread-notes](https://github.com/f1603206034/weread-notes) | GitHub + Notion / GitHub Actions | Syncs notes to both a GitHub repo and Notion database with incremental + full sync modes plus cron via GitHub Actions. |
 | [e5145/weread-link-notion](https://github.com/e5145/weread-link-notion) | Notion | A WeRead ↔ Notion link bridge using the official Skill API Key (no cookies). |
