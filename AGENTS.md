@@ -80,6 +80,7 @@ When a new in-scope project is found, the maintenance workflow should run it and
 - Capture concrete outputs: screenshots, generated reports, exported markdown/JSON summaries, or terminal output that proves what the project does with real WeRead data.
 - Save every picked project's experience run under `docs/promo/runs/YYYY-MM-DD/<owner-repo>/`.
 - Put final screenshots, generated pages, JSON metadata, markdown exports, or other concrete outputs under `docs/promo/runs/YYYY-MM-DD/<owner-repo>/artifacts/`.
+- For UI, dashboard, report, generated HTML, widget, or visualization surfaces, screenshots must default to full-page/complete captures, not just the first viewport. If only a partial screenshot is possible, explain the blocker in the Chinese summary.
 - For each run, produce a short Simplified Chinese `summary.md` with: project URL, category, setup command used, what data was exercised, output artifacts, observed value, limitations/errors, and 3-5 Xiaohongshu-ready talking points.
 - Before considering a newly picked project archived, run `node scripts/check-experience-runs.mjs --repo owner/repo`.
 - If a project cannot be run after a reasonable attempt, still record why and what would be needed next. Do not silently skip it.

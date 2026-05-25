@@ -76,7 +76,7 @@ For every newly accepted project:
      summary.md
      artifacts/
    ```
-4. Put screenshots, generated HTML/Markdown/JSON metadata, exported files, or terminal summaries in `artifacts/`.
+4. Put screenshots, generated HTML/Markdown/JSON metadata, exported files, or terminal summaries in `artifacts/`. UI screenshots should be full-page captures by default, not just the first viewport; document any unavoidable partial screenshot in `summary.md`.
 5. Write `summary.md` in Simplified Chinese with project URL, category, commands, data exercised, artifact links, observed value, limitations, and Xiaohongshu-ready talking points.
 
 Run this check before considering a new pick archived:

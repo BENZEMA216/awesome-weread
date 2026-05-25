@@ -24,7 +24,7 @@ python3 scripts/generate_report.py exports/persona-data.json --output exports/re
 已提交产物：
 
 - [完整 HTML 阅读人格报告](./artifacts/read-persona-report.html)
-- [报告首屏截图](./artifacts/read-persona-report.jpg)
+- [完整报告长截图](./artifacts/read-persona-report.jpg)
 
 这个项目会生成完整 HTML 阅读人格报告，包含指标概览、人格卡片、阅读 DNA、时间节律、笔记行为、代表性书目、推荐和数据说明。
 

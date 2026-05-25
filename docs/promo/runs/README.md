@@ -18,7 +18,7 @@ docs/promo/runs/YYYY-MM-DD/<owner-repo>/
 - `summary.md` 必须使用简体中文。
 - `summary.md` 必须包含项目 URL、分类、运行方式、调用的数据、最终产物、体验判断、限制与小红书角度。
 - `artifacts/` 至少要有一个真实产物：截图、HTML、Markdown、JSON metadata、导出文件或能证明运行结果的终端摘要。
-- 有 UI 或可视化页面时必须提交截图。
+- 有 UI 或可视化页面时必须提交截图；截图默认必须是完整页面长截图，不只截首屏。只有在页面本身没有滚动、或完整结果依赖额外账号 / 模型 key / 第三方服务无法产生时，才允许提交局部截图，并必须在 Summary 里写明原因。
 - 可以提交用户授权的阅读相关产物，包括书名、阅读统计、阅读画像、生成页面和截图。
 - 不能提交任何密钥、Authorization header、`.env`、GitHub token、模型 API key，或大段原始版权划线合集。
 
