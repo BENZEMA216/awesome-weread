@@ -1,13 +1,13 @@
-# rayford295/rayford-knowledge-atlas experience run
+# rayford295/rayford-knowledge-atlas 体验记录
 
-- Project: https://github.com/rayford295/rayford-knowledge-atlas
-- Category: Third-Party Sync
-- Runtime: Static web atlas plus Obsidian-ready markdown vault
-- Run date: 2026-05-25
+- 项目：https://github.com/rayford295/rayford-knowledge-atlas
+- 分类：第三方同步
+- 运行环境：静态知识图谱网站 + Obsidian 风格 Markdown vault
+- 运行日期：2026-05-25
 
-## Setup and run
+## 运行方式
 
-Temporary workspace:
+临时工作目录：
 
 ```bash
 git clone https://github.com/rayford295/rayford-knowledge-atlas /tmp/rayford-knowledge-atlas-run
@@ -15,58 +15,65 @@ cd /tmp/rayford-knowledge-atlas-run
 npm run weread:update
 npm run build
 npm run verify
+python3 -m http.server 8127 --bind 127.0.0.1
 ```
 
-The WeRead key was passed through the existing `WEREAD_API_KEY` environment variable only. No API key was printed, copied into this repo, or committed.
+微信读书 AK 只通过已有的 `WEREAD_API_KEY` 环境变量传入。没有打印、复制到仓库或提交 AK。
 
-## Exercised data
+## 最终产物
 
-The project ran its documented `scripts/fetch-weread.js` path against the official Agent Gateway and generated its public-safe reading layer.
+这次补充了可直接查看的公开安全截图：
 
-Tested WeRead APIs:
+- [首页知识图谱截图](./artifacts/screenshot-home.jpg)
+- [阅读输入页截图](./artifacts/screenshot-readings.jpg)
+- [阅读顾问页截图](./artifacts/screenshot-advisor.jpg)
 
-- `/shelf/sync`
-- `/user/notebooks`
-- `/readdata/detail`
-
-Sanitized aggregate metrics from the run:
-
-- Visible shelf records: 118 ebooks, 0 audiobooks, plus 1 public-account shelf bucket
-- Notebook overview: 40 notebook-bearing books, 949 total notes/highlights
-- Public reading nodes written by the project: 12
-- Public index note signals: 872 total note signals, 3 bookmark signals
-- Reading intelligence totals: 17 true reads, 81 shelf-only items, 0 hidden deep reads
-- Year-to-date reading signal in this run: 42 reading days, 21h 30m
-- Depth bands: 9 heavy, 1 committed, 14 light, 16 skim
-- Atlas build output: 34 graph nodes, including 17 output nodes, 12 input nodes, and 5 bridge-question nodes
-
-## Output artifacts
-
-Private local workspace, not committed:
+私有本地产物未提交：
 
 - `/tmp/rayford-knowledge-atlas-run/raw/weread/public-reading-index.json`
 - `/tmp/rayford-knowledge-atlas-run/raw/weread/reading-intelligence.json`
 - `/tmp/rayford-knowledge-atlas-run/wiki/readings/*.md`
 - `/tmp/rayford-knowledge-atlas-run/data.js`
 
-The generated data was not copied into this Awesome repo because it contains the user's personal reading metadata, even though the upstream project intentionally keeps it public-safe.
+这些文件虽然是项目设计上的 public-safe 数据，但仍然反映真实阅读历史，所以不直接复制进 Awesome 仓库。
 
-## Observed value
+## 调用的数据
 
-This project is not a simple notes exporter. It turns WeRead into the input side of an input-output knowledge atlas: reading records become graph nodes, then connect to questions, papers, repositories, and public workflows.
+项目通过 `scripts/fetch-weread.js` 调用官方 Agent Gateway，生成公开安全的阅读输入层。
 
-The strongest product angle is the "reading as research infrastructure" framing. It is useful for people who want to show how their books, papers, projects, and long-term questions shape each other.
+实际调用的微信读书接口：
 
-## Limitations and notes
+- `/shelf/sync`
+- `/user/notebooks`
+- `/readdata/detail`
 
-- The project writes public-safe reading metadata, but the generated files still reflect a real user's reading history. They should be reviewed before publishing.
-- `npm run verify` passed with warnings about some bridge questions lacking input-side or output-side connections. The structural verification still reported `PASS`.
-- The theme inference is heuristic and tuned to the author's atlas. Forks will need to adjust the theme rules to match their own fields.
+脱敏聚合结果：
 
-## Xiaohongshu-ready talking points
+- 可见书架记录：118 本电子书、0 本有声书、1 个公众号书架桶
+- 笔记本概览：40 本有笔记的书，949 条笔记/划线信号
+- 项目生成的公开阅读节点：12 个
+- public index 里的笔记信号：872 条 note signal，3 条 bookmark signal
+- reading intelligence：17 个 true reads，81 个 shelf-only items，0 个 hidden deep reads
+- 本次年内阅读信号：42 天，21h 30m
+- 阅读深度分层：9 个 heavy、1 个 committed、14 个 light、16 个 skim
+- atlas build 输出：34 个图谱节点，其中 17 个 output、12 个 input、5 个 bridge-question
 
-- "这个项目把微信读书变成知识图谱的输入层，而不是只导出笔记。"
-- "书、论文、仓库、研究问题可以放在一张图里看：哪些阅读在塑造你的输出。"
-- "它刻意不发布原始划线和私密想法，只保留元数据、数量和主题信号。"
-- "适合做个人主页、研究主页、创作者知识库，而不是传统读书报告。"
-- "Awesome WeRead 这类收录可以分成两类：数据同步型和个人知识系统型。"
+## 体验判断
+
+这个项目不是普通的笔记导出器。它把微信读书变成一个 input-output 知识图谱的输入层：阅读记录先变成图谱节点，再连接到问题、论文、仓库和公开工作流。
+
+最强的产品角度是“阅读作为研究基础设施”。它适合把书、论文、项目和长期问题放到一个公开主页里，展示一个人的输入如何塑造输出。
+
+## 限制与注意
+
+- 项目写出的数据是 public-safe metadata，但依然是用户真实阅读历史，发布前需要人工审一遍。
+- `npm run verify` 结构校验通过，但会提示部分 bridge question 还缺 input/output 连接；这属于内容完整度问题，不是运行失败。
+- 主题推断规则偏作者个人知识图谱，fork 后需要改成自己的领域词表。
+
+## 小红书可用角度
+
+- “这个项目把微信读书变成知识图谱的输入层，而不是只导出笔记。”
+- “书、论文、仓库、研究问题可以放在一张图里看：哪些阅读在塑造你的输出。”
+- “它刻意不发布原始划线和私密想法，只保留元数据、数量和主题信号。”
+- “适合做个人主页、研究主页、创作者知识库，而不是传统读书报告。”
+- “Awesome WeRead 这类收录可以分成两类：数据同步型和个人知识系统型。”

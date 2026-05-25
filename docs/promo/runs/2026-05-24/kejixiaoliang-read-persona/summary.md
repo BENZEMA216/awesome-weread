@@ -1,13 +1,13 @@
-# kejixiaoliang/read-persona experience run
+# kejixiaoliang/read-persona 体验记录
 
-- Project: https://github.com/kejixiaoliang/read-persona
-- Category: Workflows & Assistants
-- Runtime: Codex Skill plus Python helper scripts
-- Run date: 2026-05-24
+- 项目：https://github.com/kejixiaoliang/read-persona
+- 分类：工作流与助手
+- 运行环境：Codex Skill + Python 辅助脚本
+- 运行日期：2026-05-24
 
-## Setup and run
+## 运行方式
 
-Temporary workspace:
+临时工作目录：
 
 ```bash
 git clone https://github.com/kejixiaoliang/read-persona /tmp/read-persona-run
@@ -17,49 +17,51 @@ python3 scripts/fetch_persona_data.py --output exports/persona-data.json --recom
 python3 scripts/generate_report.py exports/persona-data.json --output exports/read-persona-report.html --theme classic
 ```
 
-The WeRead key was passed through the existing `WEREAD_API_KEY` environment variable only. No API key was printed, copied into this repo, or committed.
+微信读书 AK 只通过已有的 `WEREAD_API_KEY` 环境变量传入。没有打印、复制到仓库或提交 AK。
 
-## Exercised data
+## 最终产物
 
-- `/shelf/sync`: 118 ebook records, 0 audiobook records, and 1 public-account shelf bucket were fetched.
-- `/readdata/detail`: overall, annual, monthly, and weekly reading statistics were fetched.
-- `/user/notebooks`: 40 notebook-bearing books and 949 total notes/highlights were detected in 1 page; the notebook fetch was not truncated.
-- `/book/recommend`: 6 recommendation records were fetched.
-
-Sanitized aggregate metrics from the run:
-
-- Visible shelf items: 119
-- Total reading time: 3,765,957 seconds, about 1046 hours 5 minutes
-- Effective reading days: 1797
-- Read stats reported by WeRead: 86 read, 41 finished, 949 notes/highlights
-- Generated private JSON size: 259 KB
-- Generated private HTML report size: 15 KB
-
-## Output artifacts
-
-Private local artifacts, not committed:
+私有本地产物未提交：
 
 - `/tmp/read-persona-run/exports/persona-data.json`
 - `/tmp/read-persona-run/exports/read-persona-report.html`
 
-The HTML report rendered a complete reading-persona page with overview metrics, persona cards, category/DNA analysis, time rhythm, note-behavior analysis, representative-book section, recommendation section, and data notes.
+这个项目会生成完整 HTML 阅读人格报告，包含指标概览、人格卡片、阅读 DNA、时间节律、笔记行为、代表性书目、推荐和数据说明。
 
-## Observed value
+之前没有把截图放进公开 repo，原因是这份 HTML 报告会直接暴露真实阅读画像和书目。后续如果你明确允许公开某一版截图，我会把截图放到本目录 `artifacts/` 下；否则默认只记录脱敏指标和私有产物路径。
 
-This project is a strong "shareable result" layer on top of the official WeRead Skill. It turns raw shelf, reading-time, notebook, and recommendation data into a single polished HTML report that is easier to screenshot or adapt into social content than raw API output.
+## 调用的数据
 
-The main value is packaging: the scripts are dependency-light, use the official Agent Gateway directly, and produce a readable artifact in one command pair. It is a good fit for users who want a personal reading profile rather than a sync pipeline.
+- `/shelf/sync`：拉取 118 本电子书、0 本有声书、1 个公众号书架桶。
+- `/readdata/detail`：拉取 overall、annual、monthly、weekly 阅读统计。
+- `/user/notebooks`：检测到 40 本有笔记的书，949 条笔记/划线，1 页完成，没有截断。
+- `/book/recommend`：拉取 6 条推荐记录。
 
-## Limitations and notes
+脱敏聚合结果：
 
-- The generated report contains private reading data and should be treated as a local artifact unless the user explicitly reviews and approves publishing specific screenshots.
-- The current report template is mostly static analysis logic; richer LLM-written commentary could make the persona copy less repetitive.
-- The fetch script writes full source JSON locally, so downstream usage should keep it outside public repos by default.
+- 可见书架条目：119
+- 累计阅读时长：3,765,957 秒，约 1046 小时 5 分钟
+- 有效阅读天数：1797 天
+- 微信读书统计：86 本读过、41 本读完、949 条笔记/划线
+- 私有 JSON 大小：259 KB
+- 私有 HTML 报告大小：15 KB
 
-## Xiaohongshu-ready talking points
+## 体验判断
 
-- "微信读书官方 Skill 不只能查数据，还能一键生成阅读人格报告。"
-- "这类二创最适合做可视化：书架、阅读时长、笔记量和推荐都能变成一张可分享页面。"
-- "这个项目没有走 cookie 抓取，直接用官方 `WEREAD_API_KEY` 和 Agent Gateway。"
-- "跑出来的不是表格，而是一份完整 HTML 报告，后续可以截屏、改模板、做成小红书图文。"
-- "Awesome WeRead 现在会把新项目分成两步处理：先收录，再真实跑一遍看结果。"
+这个项目是官方 WeRead Skill 上很强的“可分享结果层”。它把书架、阅读时长、笔记和推荐数据包装成单页 HTML，比 raw API 输出更容易截图或改造成社交内容。
+
+它的核心价值是包装能力：脚本依赖轻，直接调用官方 Agent Gateway，两条命令就能产出可读报告。适合想要私人阅读画像，而不是同步管线的用户。
+
+## 限制与注意
+
+- 生成报告包含私人阅读数据，默认只作为本地产物保存。
+- 当前模板里的分析逻辑偏静态，如果加入 LLM 生成评论，画像文本会更有变化。
+- fetch 脚本会在本地写完整源 JSON，公开仓库里不应该提交这类文件。
+
+## 小红书可用角度
+
+- “微信读书官方 Skill 不只能查数据，还能一键生成阅读人格报告。”
+- “这类二创最适合做可视化：书架、阅读时长、笔记量和推荐都能变成一张可分享页面。”
+- “这个项目没有走 cookie 抓取，直接用官方 `WEREAD_API_KEY` 和 Agent Gateway。”
+- “跑出来的不是表格，而是一份完整 HTML 报告，后续可以截屏、改模板、做成小红书图文。”
+- “Awesome WeRead 现在会把新项目分成两步处理：先收录，再真实跑一遍看结果。”
