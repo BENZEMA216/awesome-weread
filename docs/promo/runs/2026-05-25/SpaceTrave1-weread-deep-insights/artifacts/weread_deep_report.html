@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awesome WeRead 深度阅读画像（公开安全版）</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --paper: #ffffff;
+      --paper-2: #f9fbfb;
+      --ink: #17211f;
+      --muted: #64706f;
+      --line: #dfe7e5;
+      --accent: #0f766e;
+      --accent-2: #d65f42;
+      --accent-3: #4f46e5;
+      --soft: #eaf7f4;
+      --warm: #fff4ec;
+      --warn: #fff5d8;
+      --shadow: 0 14px 36px rgba(23, 33, 31, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      background:
+        linear-gradient(180deg, #eef3f6 0, #f5f7fb 260px, #f8faf9 100%),
+        repeating-linear-gradient(90deg, rgba(15,118,110,.05) 0 1px, transparent 1px 42px);
+      color: var(--ink);
+      line-height: 1.68;
+    }
+    main {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+    header {
+      position: relative;
+      overflow: hidden;
+      min-height: 316px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      gap: 28px;
+      align-items: end;
+      padding: 36px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, rgba(16,86,78,.98), rgba(27,39,36,.97) 58%, rgba(110,54,46,.95)),
+        linear-gradient(90deg, rgba(255,255,255,.12), transparent);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+    header::after {
+      content: "READING PROFILE";
+      position: absolute;
+      right: 28px;
+      top: 24px;
+      max-width: 620px;
+      color: rgba(255,255,255,.08);
+      font-size: 74px;
+      font-weight: 900;
+      line-height: .86;
+      text-align: right;
+      letter-spacing: 0;
+    }
+    .hero-content,
+    .hero-profile {
+      position: relative;
+      z-index: 1;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 6px 10px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 8px;
+      background: rgba(255,255,255,.10);
+      color: rgba(255,255,255,.86);
+      font-size: 13px;
+    }
+    h1 {
+      margin: 0 0 14px;
+      max-width: 820px;
+      font-size: 54px;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      max-width: 760px;
+      color: rgba(255,255,255,.78);
+      font-size: 16px;
+    }
+    .hero-profile {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-left: 1px solid rgba(255,255,255,.18);
+      padding-left: 24px;
+    }
+    .hero-profile span {
+      color: rgba(255,255,255,.64);
+      font-size: 13px;
+    }
+    .hero-profile strong {
+      display: block;
+      margin: 6px 0 10px;
+      color: #fff5d9;
+      font-size: 42px;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+    .hero-profile p {
+      margin: 0;
+      color: rgba(255,255,255,.78);
+      font-size: 15px;
+    }
+    .toc {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 16px 0 18px;
+      padding: 10px 0;
+      background: rgba(245,247,251,.92);
+      backdrop-filter: blur(14px);
+    }
+    .toc a {
+      color: #24423f;
+      text-decoration: none;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,255,255,.82);
+      font-size: 13px;
+    }
+    section {
+      margin: 16px 0;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 8px 26px rgba(23, 33, 31, .045);
+    }
+    section.featured {
+      background: linear-gradient(135deg, #ffffff, #f4fbf8);
+      border-color: rgba(15,118,110,.22);
+    }
+    section.roast {
+      background: linear-gradient(135deg, #fff7ed, #ffffff 62%, #fbf3f0);
+      border-color: rgba(214,95,66,.28);
+    }
+    section.cocoon {
+      background: linear-gradient(135deg, #ffffff, #f7f7ff);
+      border-color: rgba(79,70,229,.22);
+    }
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .section-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      flex: 0 0 32px;
+      border-radius: 8px;
+      background: var(--icon-bg, #e2e8f0);
+      color: var(--icon-color, #475569);
+      border: 1px solid color-mix(in srgb, var(--icon-color, #475569) 18%, transparent);
+      font-weight: 800;
+      font-size: 15px;
+    }
+    .section-icon svg {
+      width: 19px;
+      height: 19px;
+      display: block;
+    }
+    h2 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 17px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+    p { margin: 8px 0; }
+    ul { padding-left: 20px; margin: 8px 0; }
+    li { margin: 6px 0; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+    }
+    .metric-stack {
+      display: grid;
+      gap: 10px;
+    }
+    .metric-grid {
+      display: grid;
+      gap: 10px;
+    }
+    .metric-grid-primary {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .metric-grid-secondary {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .metric {
+      position: relative;
+      min-height: 92px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, #ffffff, #f7faf9);
+    }
+    .metric-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      background: var(--soft);
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 13px;
+    }
+    .metric strong {
+      display: block;
+      color: var(--accent);
+      font-size: 25px;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+    .metric span:last-child {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .chart-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .donut-card {
+      display: grid;
+      grid-template-columns: 112px minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+      min-height: 160px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, #fff, #f8fbfa);
+    }
+    .donut {
+      position: relative;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 1px rgba(23,33,31,.06);
+    }
+    .donut::after {
+      content: "";
+      position: absolute;
+      inset: 20px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 0 1px rgba(23,33,31,.06);
+    }
+    .donut span {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      color: var(--ink);
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    .donut-copy h3 {
+      margin: 0 0 4px;
+    }
+    .chart-note {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .legend {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .legend li {
+      display: grid;
+      grid-template-columns: 10px minmax(0, 1fr) auto;
+      gap: 8px;
+      align-items: center;
+      margin: 6px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .legend i {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+    }
+    .legend strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .section-overview,
+    .thinking-overview {
+      display: grid;
+      grid-template-columns: minmax(240px, .8fr) minmax(280px, 1fr);
+      gap: 14px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+    .section-overview .donut-card {
+      margin: 0;
+    }
+    .overview-copy {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, #ffffff, #f8fbfb);
+    }
+    .overview-copy h3 {
+      margin-top: 0;
+    }
+    .style-meter-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .style-meter-card {
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+    .style-meter-card div:first-child {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .style-meter-card span {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .style-meter {
+      height: 10px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #eef2f1;
+    }
+    .style-meter i {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+    }
+    .value-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .value-card {
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, #fff, #fafafa);
+    }
+    .value-orbit {
+      position: relative;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at center, #fff 0 50%, transparent 51%),
+        conic-gradient(var(--value-color) var(--value-pct, 0%), #edf2f1 0);
+      box-shadow: inset 0 0 0 1px rgba(23,33,31,.06);
+    }
+    .value-orbit span {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: var(--ink);
+      font-weight: 900;
+      font-size: 18px;
+    }
+    .value-card-copy strong {
+      display: block;
+      line-height: 1.35;
+    }
+    .value-card-copy em {
+      display: block;
+      margin: 3px 0 9px;
+      color: var(--muted);
+      font-style: normal;
+      font-size: 12px;
+    }
+    .value-track {
+      height: 10px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #eef2f1;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,.04);
+    }
+    .value-track div {
+      height: 100%;
+      border-radius: 999px;
+    }
+    .people-visual {
+      display: grid;
+      grid-template-columns: minmax(320px, 1fr) minmax(260px, .8fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+    .people-rank {
+      display: grid;
+      gap: 8px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+    .people-rank span {
+      display: grid;
+      grid-template-columns: 30px minmax(0, 1fr) auto;
+      gap: 9px;
+      align-items: center;
+      padding: 7px 0;
+      border-bottom: 1px solid #eef2f1;
+    }
+    .people-rank span:last-child {
+      border-bottom: 0;
+    }
+    .people-rank b {
+      display: inline-grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      background: var(--soft);
+      color: var(--accent);
+      font-size: 12px;
+    }
+    .people-rank em {
+      color: var(--muted);
+      font-style: normal;
+      font-size: 13px;
+    }
+    .bar {
+      display: grid;
+      grid-template-columns: minmax(132px, 220px) 1fr auto;
+      gap: 12px;
+      align-items: center;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+    .track,
+    .mini-track {
+      height: 10px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #e8eeec;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
+    }
+    .fill,
+    .mini-track > div {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), #39a894 68%, var(--accent-2));
+    }
+    .quote {
+      margin: 12px 0;
+      padding: 12px 14px;
+      border-left: 4px solid var(--accent-2);
+      border-radius: 0 8px 8px 0;
+      background: var(--warm);
+      color: #3f342f;
+    }
+    .quote small {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+    }
+    .tag-list,
+    .profile-keywords,
+    .bubble-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag,
+    .profile-keywords span,
+    .bubble-cloud span {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(15,118,110,.18);
+      border-radius: 8px;
+      background: var(--soft);
+      color: #23534f;
+      padding: 5px 9px;
+      font-size: 13px;
+    }
+    .portrait-shell {
+      display: grid;
+      grid-template-columns: minmax(260px, .9fr) minmax(0, 1.1fr);
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    .portrait-lead,
+    .viz-panel,
+    .mini-card,
+    .book-card,
+    .advice-group {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,255,255,.72);
+      padding: 16px;
+    }
+    .profile-label {
+      color: var(--accent);
+      font-size: 34px;
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    .score-board {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .score-tile {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 12px;
+    }
+    .score-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .score-head span {
+      color: var(--accent-2);
+      font-weight: 800;
+    }
+    .score-tile p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 8px 0 0;
+    }
+    .portrait-viz-grid,
+    .two-col,
+    .advice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .bubble-cloud {
+      align-items: center;
+      min-height: 130px;
+      padding-top: 8px;
+    }
+    .bubble-cloud span {
+      background: #f4f4ff;
+      border-color: rgba(79,70,229,.16);
+      color: #38307b;
+    }
+    .portrait-copy {
+      margin-top: 14px;
+      color: #2e3a37;
+    }
+    .roast-note {
+      margin-bottom: 14px;
+      padding: 14px 16px;
+      border: 1px solid rgba(214,95,66,.22);
+      border-radius: 8px;
+      background: rgba(214,95,66,.08);
+      color: #65372e;
+      font-weight: 700;
+    }
+    .mini-card.compact {
+      background: rgba(255,255,255,.80);
+    }
+    .cocoon-panel {
+      display: grid;
+      grid-template-columns: 1fr 180px;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 14px;
+      padding: 16px;
+      border: 1px solid rgba(79,70,229,.18);
+      border-radius: 8px;
+      background: #fbfbff;
+    }
+    .risk-label {
+      display: inline-flex;
+      padding: 5px 9px;
+      border-radius: 8px;
+      background: #eef2ff;
+      color: #3d35a7;
+      font-weight: 800;
+      font-size: 13px;
+    }
+    .risk-meter strong {
+      color: var(--accent-3);
+      font-size: 36px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    .risk-meter span {
+      color: var(--muted);
+    }
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .book-card span {
+      display: inline-flex;
+      margin-bottom: 8px;
+      padding: 4px 8px;
+      border-radius: 8px;
+      background: var(--warn);
+      color: #73511b;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .book-card h3 {
+      margin: 0 0 4px;
+      font-size: 18px;
+    }
+    .book-card small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .muted {
+      color: var(--muted);
+    }
+    footer {
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+      padding: 18px 0 0;
+    }
+    @media (max-width: 840px) {
+      main {
+        width: min(100% - 20px, 760px);
+        padding-top: 12px;
+      }
+      header {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding: 24px 18px;
+      }
+      header::after {
+        font-size: 42px;
+      }
+      h1 {
+        font-size: 36px;
+      }
+      .hero-profile {
+        border-left: 0;
+        border-top: 1px solid rgba(255,255,255,.18);
+        padding-left: 0;
+        padding-top: 18px;
+      }
+      .hero-profile strong {
+        font-size: 32px;
+      }
+      section {
+        padding: 18px;
+      }
+      .toc {
+        display: none;
+      }
+      .bar,
+      .portrait-shell,
+      .portrait-viz-grid,
+      .two-col,
+      .advice-grid,
+      .cocoon-panel,
+      .section-overview,
+      .thinking-overview,
+      .people-visual {
+        grid-template-columns: 1fr;
+      }
+      .metric-grid-primary,
+      .metric-grid-secondary,
+      .style-meter-grid {
+        grid-template-columns: 1fr;
+      }
+      .score-board {
+        grid-template-columns: 1fr;
+      }
+      .donut-card {
+        grid-template-columns: 96px minmax(0, 1fr);
+      }
+      .donut {
+        width: 96px;
+        height: 96px;
+      }
+      .donut::after {
+        inset: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div style="position:sticky;top:0;z-index:100;background:#fff7ed;border-bottom:1px solid #fed7aa;padding:10px 18px;color:#9a3412;font-size:14px;text-align:center">公开归档版：长划线原文已省略，保留统计、分析结论、来源书名与项目体验结果。</div>
+  <main>
+    <header>
+      <div class="hero-content">
+        <div class="eyebrow">微信读书 · 深度阅读画像</div>
+        <h1>Awesome WeRead 深度阅读画像</h1>
+        <div class="subtitle">生成时间：2026-05-25T21:49:26+08:00。基于全量个人阅读记录和笔记内容。</div>
+      </div>
+      <aside class="hero-profile">
+        <span>读者画像</span>
+        <strong>现实解释者</strong>
+        <p>个人成长与行动原则、经济发展与地方现实驱动，常以现实导向、理性分析处理文本。主线很强，容易形成稳定解释框架。划线多于自我判断，后续可增加自己的结论。</p>
+      </aside>
+    </header>
+    <nav class="toc">
+      <a href="#basis">数据基础</a>
+      <a href="#map">阅读地图</a>
+      <a href="#themes">主题问题</a>
+      <a href="#thinking">思考方式</a>
+      <a href="#portrait">读者画像</a>
+      <a href="#cocoon">信息茧房</a>
+      <a href="#books">推荐书单</a>
+      <a href="#roast">严格诊断</a>
+      <a href="#advice">建议</a>
+    </nav>
+    <section id="basis" class="featured"><div class="section-heading"><span class="section-icon" style="--icon-bg:#dcfce7;--icon-color:#15803d"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M7 15l3-3 3 2 4-6"></path></svg></span><h2>数据基础</h2></div><div class="metric-stack"><div class="metric-grid metric-grid-primary">
+<div class="metric"><strong>1046 小时 9 分钟</strong><span>累计阅读</span></div>
+<div class="metric"><strong>1798</strong><span>有效阅读天数</span></div>
+<div class="metric"><strong>86 / 41</strong><span>读过/读完</span></div>
+<div class="metric"><strong>949</strong><span>官方笔记口径</span></div>
+</div><div class="metric-grid metric-grid-secondary">
+<div class="metric"><strong>119</strong><span>书架可见条目</span></div>
+<div class="metric"><strong>897 / 19</strong><span>导出划线/想法</span></div>
+<div class="metric"><strong>0 / 0</strong><span>进度/书籍详情</span></div>
+</div></div>
+<div class="chart-row"><article class="donut-card"><div class="donut" style="background:conic-gradient(#0f766e 0.00% 47.67%, #d65f42 47.67% 100.00%)"><span>48%</span></div><div class="donut-copy"><h3>完读结构</h3><p class="chart-note">衡量阅读闭环，不评价阅读质量。</p><ul class="legend"><li><i style="background:#0f766e"></i><span>已读完</span><strong>41 本</strong></li><li><i style="background:#d65f42"></i><span>待读完/未完读</span><strong>45 本</strong></li></ul></div></article>
+<article class="donut-card"><div class="donut" style="background:conic-gradient(#4f46e5 0.00% 97.93%, #d97706 97.93% 100.00%)"><span>2%</span></div><div class="donut-copy"><h3>笔记构成</h3><p class="chart-note">中心值为个人想法占比。</p><ul class="legend"><li><i style="background:#4f46e5"></i><span>划线</span><strong>897 条</strong></li><li><i style="background:#d97706"></i><span>个人想法</span><strong>19 条</strong></li></ul></div></article>
+<article class="donut-card"><div class="donut" style="background:conic-gradient(#2563eb 0.00% 99.16%, #64748b 99.16% 100.00%)"><span>书架</span></div><div class="donut-copy"><h3>书架构成</h3><p class="chart-note">展示可见条目的类型分布。</p><ul class="legend"><li><i style="background:#2563eb"></i><span>电子书</span><strong>118 本</strong></li><li><i style="background:#64748b"></i><span>文章入口</span><strong>1 个</strong></li></ul></div></article></div></section>
+<section id="map"><div class="section-heading"><span class="section-icon" style="--icon-bg:#dbeafe;--icon-color:#2563eb"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"></path><path d="M9 3v15"></path><path d="M15 6v15"></path></svg></span><h2>阅读地图</h2></div><div class="chart-row map-charts"><article class="donut-card"><div class="donut" style="background:conic-gradient(#0f766e 0.00% 58.11%, #d65f42 58.11% 79.83%, #4f46e5 79.83% 85.56%, #d97706 85.56% 89.81%, #2563eb 89.81% 93.34%, #7c3aed 93.34% 96.23%, #64748b 96.23% 100.00%)"><span>分类</span></div><div class="donut-copy"><h3>分类阅读占比</h3><p class="chart-note">最高分类：男生小说。</p><ul class="legend"><li><i style="background:#0f766e"></i><span>男生小说</span><strong>731.7h</strong></li><li><i style="background:#d65f42"></i><span>影视原著</span><strong>273.4h</strong></li><li><i style="background:#4f46e5"></i><span>经济理财</span><strong>72.2h</strong></li><li><i style="background:#d97706"></i><span>历史架空</span><strong>53.5h</strong></li><li><i style="background:#2563eb"></i><span>文学</span><strong>44.5h</strong></li><li><i style="background:#7c3aed"></i><span>社会小说</span><strong>36.3h</strong></li><li><i style="background:#64748b"></i><span>其他</span><strong>47.5h</strong></li></ul></div></article>
+<article class="donut-card"><div class="donut" style="background:conic-gradient(#0f766e 0.00% 35.78%, #d65f42 35.78% 52.09%, #4f46e5 52.09% 64.02%, #d97706 64.02% 75.73%, #2563eb 75.73% 84.12%, #7c3aed 84.12% 90.34%, #64748b 90.34% 100.00%)"><span>2020</span></div><div class="donut-copy"><h3>年度阅读占比</h3><p class="chart-note">中心值为阅读时长最高的年份。</p><ul class="legend"><li><i style="background:#0f766e"></i><span>2020</span><strong>374.1h</strong></li><li><i style="background:#d65f42"></i><span>2025</span><strong>170.6h</strong></li><li><i style="background:#4f46e5"></i><span>2021</span><strong>124.7h</strong></li><li><i style="background:#d97706"></i><span>2019</span><strong>122.4h</strong></li><li><i style="background:#2563eb"></i><span>2023</span><strong>87.8h</strong></li><li><i style="background:#7c3aed"></i><span>2018</span><strong>65h</strong></li><li><i style="background:#64748b"></i><span>其他</span><strong>101.0h</strong></li></ul></div></article>
+<article class="donut-card"><div class="donut" style="background:conic-gradient(#0f766e 0.00% 36.00%, #d65f42 36.00% 52.40%, #4f46e5 52.40% 67.20%, #d97706 67.20% 77.44%, #2563eb 77.44% 86.07%, #64748b 86.07% 100.00%)"><span>笔记</span></div><div class="donut-copy"><h3>高笔记书籍分布</h3><p class="chart-note">展示笔记最集中的几本书。</p><ul class="legend"><li><i style="background:#0f766e"></i><span>社会心理学（第8版）</span><strong>292 条</strong></li><li><i style="background:#d65f42"></i><span>第一本经济学</span><strong>133 条</strong></li><li><i style="background:#4f46e5"></i><span>原则</span><strong>120 条</strong></li><li><i style="background:#d97706"></i><span>幕后产品：打造突破式产品思维（全彩）</span><strong>83 条</strong></li><li><i style="background:#2563eb"></i><span>大问题: 简明哲学导论</span><strong>70 条</strong></li><li><i style="background:#64748b"></i><span>其他</span><strong>113 条</strong></li></ul></div></article></div>
+<h3>年度阅读</h3>
+<div class="bar"><div>2018</div><div class="track"><div class="fill" style="width:17%"></div></div><div>65.0h</div></div>
+<div class="bar"><div>2019</div><div class="track"><div class="fill" style="width:33%"></div></div><div>122.4h</div></div>
+<div class="bar"><div>2020</div><div class="track"><div class="fill" style="width:100%"></div></div><div>374.1h</div></div>
+<div class="bar"><div>2021</div><div class="track"><div class="fill" style="width:33%"></div></div><div>124.7h</div></div>
+<div class="bar"><div>2022</div><div class="track"><div class="fill" style="width:10%"></div></div><div>37.5h</div></div>
+<div class="bar"><div>2023</div><div class="track"><div class="fill" style="width:23%"></div></div><div>87.8h</div></div>
+<div class="bar"><div>2024</div><div class="track"><div class="fill" style="width:11%"></div></div><div>42.0h</div></div>
+<div class="bar"><div>2025</div><div class="track"><div class="fill" style="width:46%"></div></div><div>170.6h</div></div>
+<div class="bar"><div>2026</div><div class="track"><div class="fill" style="width:6%"></div></div><div>21.5h</div></div>
+<h3>分类偏好</h3>
+<div class="bar"><div>男生小说</div><div class="track"><div class="fill" style="width:100%"></div></div><div>731.7h</div></div>
+<div class="bar"><div>影视原著</div><div class="track"><div class="fill" style="width:37%"></div></div><div>273.4h</div></div>
+<div class="bar"><div>经济理财</div><div class="track"><div class="fill" style="width:10%"></div></div><div>72.2h</div></div>
+<div class="bar"><div>历史架空</div><div class="track"><div class="fill" style="width:7%"></div></div><div>53.5h</div></div>
+<div class="bar"><div>文学</div><div class="track"><div class="fill" style="width:6%"></div></div><div>44.5h</div></div>
+<div class="bar"><div>社会小说</div><div class="track"><div class="fill" style="width:5%"></div></div><div>36.3h</div></div>
+<div class="bar"><div>心理</div><div class="track"><div class="fill" style="width:4%"></div></div><div>24.4h</div></div>
+<div class="bar"><div>政治军事</div><div class="track"><div class="fill" style="width:4%"></div></div><div>23.1h</div></div>
+<h3>笔记最多的书</h3><ul>
+<li>社会心理学（第8版）：292 条</li>
+<li>第一本经济学：133 条</li>
+<li>原则：120 条</li>
+<li>幕后产品：打造突破式产品思维（全彩）：83 条</li>
+<li>大问题: 简明哲学导论：70 条</li>
+<li>计算广告：互联网商业变现的市场与技术（第2版）：48 条</li>
+<li>小米创业思考：40 条</li>
+<li>从0到1：开启商业与未来的秘密：25 条</li>
+</ul></section>
+<section id="themes"><div class="section-heading"><span class="section-icon" style="--icon-bg:#fef3c7;--icon-color:#d97706"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.6 2.6 0 0 1 5 1.2c0 1.8-2.5 2-2.5 3.8"></path><path d="M12 17h.01"></path></svg></span><h2>主题与问题意识</h2></div><div class="section-overview">
+<div class="overview-copy">
+<h3>本节会展开这些问题</h3>
+<p>核心主题集中在 个人成长与行动原则、经济发展与地方现实、信息环境与公共表达、家庭、关系与情感连接 等方向。下面每个主题都会给出核心问题和代表性笔记证据。</p>
+</div>
+<article class="donut-card"><div class="donut" style="background:conic-gradient(#0f766e 0.00% 21.45%, #d65f42 21.45% 40.89%, #4f46e5 40.89% 58.99%, #d97706 58.99% 73.18%, #2563eb 73.18% 86.82%, #7c3aed 86.82% 100.00%)"><span>主题</span></div><div class="donut-copy"><h3>主题信号分布</h3><p class="chart-note">用于概览本节展开的主要问题，不代表价值排序。</p><ul class="legend"><li><i style="background:#0f766e"></i><span>个人成长与行动原则</span><strong>信号 192</strong></li><li><i style="background:#d65f42"></i><span>经济发展与地方现实</span><strong>信号 174</strong></li><li><i style="background:#4f46e5"></i><span>信息环境与公共表达</span><strong>信号 162</strong></li><li><i style="background:#d97706"></i><span>家庭、关系与情感连接</span><strong>信号 127</strong></li><li><i style="background:#2563eb"></i><span>文学、人性与存在感受</span><strong>信号 122</strong></li><li><i style="background:#7c3aed"></i><span>制度、权力与社会运行</span><strong>信号 118</strong></li></ul></div></article>
+</div>
+<h3>个人成长与行动原则</h3>
+<div class="bar"><div>信号强度</div><div class="track"><div class="fill" style="width:100%"></div></div><div>192</div></div>
+<p><strong>核心问题：</strong>个体如何在不确定环境里保持能动性和持续成长？</p>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>社会心理学（第8版） · 划线</small></div>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>幕后产品：打造突破式产品思维（全彩） · 划线</small></div>
+<h3>经济发展与地方现实</h3>
+<div class="bar"><div>信号强度</div><div class="track"><div class="fill" style="width:91%"></div></div><div>174</div></div>
+<p><strong>核心问题：</strong>发展如何发生，代价由谁承担，收益如何分配？</p>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>第一本经济学 · 划线</small></div>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>第一本经济学 · 划线</small></div>
+<h3>信息环境与公共表达</h3>
+<div class="bar"><div>信号强度</div><div class="track"><div class="fill" style="width:84%"></div></div><div>162</div></div>
+<p><strong>核心问题：</strong>在复杂信息环境里，怎样接近事实并保持判断力？</p>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>社会心理学（第8版） · 划线</small></div>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>社会心理学（第8版） · 划线</small></div>
+<h3>家庭、关系与情感连接</h3>
+<div class="bar"><div>信号强度</div><div class="track"><div class="fill" style="width:66%"></div></div><div>127</div></div>
+<p><strong>核心问题：</strong>亲密关系、家庭记忆和沟通方式如何影响一个人？</p>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>社会心理学（第8版） · 划线</small></div>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>大问题: 简明哲学导论 · 划线</small></div>
+<h3>文学、人性与存在感受</h3>
+<div class="bar"><div>信号强度</div><div class="track"><div class="fill" style="width:64%"></div></div><div>122</div></div>
+<p><strong>核心问题：</strong>文学如何照见人性、孤独、尊严和时代？</p>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>大问题: 简明哲学导论 · 划线</small></div>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>幕后产品：打造突破式产品思维（全彩） · 想法</small></div>
+<h3>制度、权力与社会运行</h3>
+<div class="bar"><div>信号强度</div><div class="track"><div class="fill" style="width:61%"></div></div><div>118</div></div>
+<p><strong>核心问题：</strong>制度如何塑造普通人的选择，权力如何在现实中运作？</p>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>第一本经济学 · 划线</small></div>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>毛泽东选集（全四卷） · 想法</small></div>
+<h3>科学、技术与文明探索</h3>
+<div class="bar"><div>信号强度</div><div class="track"><div class="fill" style="width:46%"></div></div><div>89</div></div>
+<p><strong>核心问题：</strong>技术进步和科学探索会把人类带向哪里？</p>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>大问题: 简明哲学导论 · 划线</small></div>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>大问题: 简明哲学导论 · 划线</small></div>
+<h3>身体健康与生活秩序</h3>
+<div class="bar"><div>信号强度</div><div class="track"><div class="fill" style="width:30%"></div></div><div>58</div></div>
+<p><strong>核心问题：</strong>如何把认知和生活方式落到稳定、健康的日常里？</p>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>社会心理学（第8版） · 划线</small></div>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>社会心理学（第8版） · 划线</small></div></section>
+<section id="thinking"><div class="section-heading"><span class="section-icon" style="--icon-bg:#ede9fe;--icon-color:#7c3aed"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="8" r="2"></circle><circle cx="17" cy="8" r="2"></circle><circle cx="12" cy="17" r="2"></circle><path d="M9 9.5l2 5"></path><path d="M15 9.5l-2 5"></path><path d="M9 8h6"></path></svg></span><h2>思考方式</h2></div><div class="thinking-overview">
+<div class="overview-copy">
+<h3>思考方式概览</h3>
+<p>当前最突出的处理文本方式是 现实导向、理性分析、成长导向。下面的可视化只展示信号强弱，详细例证放在后文。</p>
+</div>
+<div class="style-meter-grid">
+<article class="style-meter-card"><div><strong>现实导向</strong><span>强信号</span></div><div class="style-meter"><i style="width:100%;background:#0f766e"></i></div></article>
+<article class="style-meter-card"><div><strong>理性分析</strong><span>中信号</span></div><div class="style-meter"><i style="width:71%;background:#d65f42"></i></div></article>
+<article class="style-meter-card"><div><strong>成长导向</strong><span>中信号</span></div><div class="style-meter"><i style="width:57%;background:#4f46e5"></i></div></article>
+<article class="style-meter-card"><div><strong>技术/科学导向</strong><span>弱信号</span></div><div class="style-meter"><i style="width:42%;background:#d97706"></i></div></article>
+<article class="style-meter-card"><div><strong>情感共鸣</strong><span>弱信号</span></div><div class="style-meter"><i style="width:40%;background:#2563eb"></i></div></article>
+<article class="style-meter-card"><div><strong>批判辨析</strong><span>弱信号</span></div><div class="style-meter"><i style="width:17%;background:#7c3aed"></i></div></article>
+</div></div>
+<h3>现实导向</h3>
+<div class="bar"><div>强信号 · 信号强度</div><div class="track"><div class="fill" style="width:100%"></div></div><div>187</div></div>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>原则 · 划线</small></div>
+<h3>理性分析</h3>
+<div class="bar"><div>中信号 · 信号强度</div><div class="track"><div class="fill" style="width:71%"></div></div><div>133</div></div>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>毛泽东选集 · 想法</small></div>
+<h3>成长导向</h3>
+<div class="bar"><div>中信号 · 信号强度</div><div class="track"><div class="fill" style="width:57%"></div></div><div>107</div></div>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>社会心理学（第8版） · 划线</small></div>
+<h3>技术/科学导向</h3>
+<div class="bar"><div>弱信号 · 信号强度</div><div class="track"><div class="fill" style="width:42%"></div></div><div>78</div></div>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>大问题: 简明哲学导论 · 划线</small></div>
+<h3>情感共鸣</h3>
+<div class="bar"><div>弱信号 · 信号强度</div><div class="track"><div class="fill" style="width:40%"></div></div><div>75</div></div>
+<div class="quote">（公开归档版已省略长划线原文，仅保留分析结论与来源信息。）<small>社会心理学（第8版） · 划线</small></div></section>
+<section id="values"><div class="section-heading"><span class="section-icon" style="--icon-bg:#fee2e2;--icon-color:#dc2626"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M5 7h14"></path><path d="M6 7l-3 7h6l-3-7z"></path><path d="M18 7l-3 7h6l-3-7z"></path></svg></span><h2>价值观、焦虑与长期方向</h2></div><div class="value-summary">
+<article class="value-card"><div class="value-orbit" style="--value-color:#0f766e;--value-pct:100%"><span>100</span></div><div class="value-card-copy"><strong>真相与独立判断</strong><em>信号强度 144</em><div class="value-track"><div style="width:100%;background:#0f766e"></div></div></div></article>
+<article class="value-card"><div class="value-orbit" style="--value-color:#d65f42;--value-pct:92%"><span>92</span></div><div class="value-card-copy"><strong>公共生活与国家发展</strong><em>信号强度 132</em><div class="value-track"><div style="width:92%;background:#d65f42"></div></div></div></article>
+<article class="value-card"><div class="value-orbit" style="--value-color:#4f46e5;--value-pct:61%"><span>61</span></div><div class="value-card-copy"><strong>责任与主观能动性</strong><em>信号强度 88</em><div class="value-track"><div style="width:61%;background:#4f46e5"></div></div></div></article>
+<article class="value-card"><div class="value-orbit" style="--value-color:#d97706;--value-pct:41%"><span>41</span></div><div class="value-card-copy"><strong>科学精神与长期探索</strong><em>信号强度 59</em><div class="value-track"><div style="width:41%;background:#d97706"></div></div></div></article>
+<article class="value-card"><div class="value-orbit" style="--value-color:#2563eb;--value-pct:41%"><span>41</span></div><div class="value-card-copy"><strong>关系中的真诚沟通</strong><em>信号强度 59</em><div class="value-track"><div style="width:41%;background:#2563eb"></div></div></div></article>
+<article class="value-card"><div class="value-orbit" style="--value-color:#7c3aed;--value-pct:19%"><span>19</span></div><div class="value-card-copy"><strong>健康稳定的生活秩序</strong><em>信号强度 27</em><div class="value-track"><div style="width:19%;background:#7c3aed"></div></div></div></article>
+</div></section>
+<section id="people"><div class="section-heading"><span class="section-icon" style="--icon-bg:#cffafe;--icon-color:#0891b2"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg></span><h2>人物/作者线索</h2></div><div class="people-visual"><article class="donut-card"><div class="donut" style="background:conic-gradient(#0f766e 0.00% 25.84%, #d65f42 25.84% 46.07%, #4f46e5 46.07% 61.80%, #d97706 61.80% 71.91%, #2563eb 71.91% 80.90%, #7c3aed 80.90% 87.64%, #64748b 87.64% 94.38%, #0f766e 94.38% 100.00%)"><span>人物</span></div><div class="donut-copy"><h3>人物/作者关注分布</h3><p class="chart-note">代表阅读关注度，不等同于价值认同。</p><ul class="legend"><li><i style="background:#0f766e"></i><span>金庸</span><strong>23</strong></li><li><i style="background:#d65f42"></i><span>爱潜水的乌贼</span><strong>18</strong></li><li><i style="background:#4f46e5"></i><span>东野圭吾</span><strong>14</strong></li><li><i style="background:#d97706"></i><span>许先哲</span><strong>9</strong></li><li><i style="background:#2563eb"></i><span>猫腻</span><strong>8</strong></li><li><i style="background:#7c3aed"></i><span>加西亚·马尔克斯</span><strong>6</strong></li><li><i style="background:#64748b"></i><span>二混子</span><strong>6</strong></li><li><i style="background:#0f766e"></i><span>老鹰吃小鸡</span><strong>5</strong></li></ul></div></article><div class="people-rank">
+<span><b>1</b>金庸<em>23</em></span>
+<span><b>2</b>爱潜水的乌贼<em>18</em></span>
+<span><b>3</b>东野圭吾<em>14</em></span>
+<span><b>4</b>许先哲<em>9</em></span>
+<span><b>5</b>猫腻<em>8</em></span>
+<span><b>6</b>加西亚·马尔克斯<em>6</em></span>
+<span><b>7</b>二混子<em>6</em></span>
+<span><b>8</b>老鹰吃小鸡<em>5</em></span>
+</div></div></section>
+<section id="portrait" class="featured"><div class="section-heading"><span class="section-icon" style="--icon-bg:#e0e7ff;--icon-color:#4f46e5"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5a2 2 0 0 1 2-2h2"></path><path d="M16 3h2a2 2 0 0 1 2 2v2"></path><path d="M20 17v2a2 2 0 0 1-2 2h-2"></path><path d="M8 21H6a2 2 0 0 1-2-2v-2"></path><circle cx="12" cy="10" r="3"></circle><path d="M7 17a5 5 0 0 1 10 0"></path></svg></span><h2>读者画像</h2></div><div class="portrait-shell">
+<div class="portrait-lead">
+<div class="profile-label">现实解释者</div>
+<p>个人成长与行动原则、经济发展与地方现实驱动，常以现实导向、理性分析处理文本。主线很强，容易形成稳定解释框架。划线多于自我判断，后续可增加自己的结论。</p>
+<div class="profile-keywords">
+<span>现实解释者</span>
+<span>现实导向</span>
+<span>理性分析</span>
+<span>个人成长与行动原则</span>
+<span>经济发展与地方现实</span>
+</div>
+</div>
+<div class="score-board">
+<div class="score-tile"><div class="score-head"><strong>问题意识</strong><span>95</span></div><div class="mini-track"><div style="width:95%"></div></div><p>能从文本里抽出问题，而不是只摘漂亮句子。</p></div>
+<div class="score-tile"><div class="score-head"><strong>现实敏感度</strong><span>91</span></div><div class="mini-track"><div style="width:91%"></div></div><p>会把阅读连接到政策、经济、家庭和日常处境。</p></div>
+<div class="score-tile"><div class="score-head"><strong>表达密度</strong><span>37</span></div><div class="mini-track"><div style="width:37%"></div></div><p>个人想法越多，说明越愿意和作者对话；但密度不等于成熟度。</p></div>
+<div class="score-tile"><div class="score-head"><strong>收尾纪律</strong><span>48</span></div><div class="mini-track"><div style="width:48%"></div></div><p>衡量阅读闭环，不衡量聪明程度。</p></div>
+<div class="score-tile"><div class="score-head"><strong>知识均衡</strong><span>28</span></div><div class="mini-track"><div style="width:28%"></div></div><p>主题越集中，越需要主动补盲区。</p></div>
+<div class="score-tile"><div class="score-head"><strong>行动落地</strong><span>62</span></div><div class="mini-track"><div style="width:62%"></div></div><p>笔记能看出行动意识，但真实执行只能初步推测。</p></div>
+</div>
+</div>
+<div class="portrait-viz-grid">
+<div class="viz-panel"><h3>思考方式雷达</h3>
+<div class="bar"><div>现实导向</div><div class="track"><div class="fill" style="width:100%"></div></div><div>187</div></div>
+<div class="bar"><div>理性分析</div><div class="track"><div class="fill" style="width:71%"></div></div><div>133</div></div>
+<div class="bar"><div>成长导向</div><div class="track"><div class="fill" style="width:57%"></div></div><div>107</div></div>
+<div class="bar"><div>技术/科学导向</div><div class="track"><div class="fill" style="width:42%"></div></div><div>78</div></div>
+<div class="bar"><div>情感共鸣</div><div class="track"><div class="fill" style="width:40%"></div></div><div>75</div></div>
+</div>
+<div class="viz-panel"><h3>主题星图</h3><div class="bubble-cloud">
+<span style="font-size:24px">个人成长与行动原则</span>
+<span style="font-size:23px">经济发展与地方现实</span>
+<span style="font-size:22px">信息环境与公共表达</span>
+<span style="font-size:20px">家庭、关系与情感连接</span>
+<span style="font-size:20px">文学、人性与存在感受</span>
+<span style="font-size:19px">制度、权力与社会运行</span>
+<span style="font-size:17px">科学、技术与文明探索</span>
+<span style="font-size:15px">身体健康与生活秩序</span>
+</div></div>
+</div>
+<div class="portrait-copy">
+<p>你更像一个“现实解释者”：阅读不是单纯消遣，更像是在搭建一套解释世界和校准自我的个人系统。高频主题集中在个人成长与行动原则、经济发展与地方现实、信息环境与公共表达。</p>
+<p>从笔记表达看，你较常使用现实导向、理性分析、成长导向的方式处理文本：会把书中观点拉回现实案例、个人经验或其他知识来源。</p>
+<p>如果只看当前数据，关于人格类型或稳定性格只能初步推测；更可靠的说法是，你在阅读中表现出较强的问题意识、公共议题敏感度和自我修正倾向。</p>
+</div></section>
+<section id="cocoon" class="cocoon"><div class="section-heading"><span class="section-icon" style="--icon-bg:#f3e8ff;--icon-color:#9333ea"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><path d="M4 12h16"></path><path d="M12 4v16"></path></svg></span><h2>信息茧房</h2></div><div class="cocoon-panel">
+<div>
+<div class="risk-label">风险等级：偏高</div>
+<p>信息茧房风险为偏高。这不是说你读得窄，而是提醒你：高频主题越能解释世界，越容易变成默认答案。</p>
+</div>
+<div class="risk-meter">
+<strong>84</strong><span>/100</span>
+<div class="mini-track"><div style="width:84%"></div></div>
+</div>
+</div>
+<div class="two-col">
+<div class="mini-card compact"><h3>证据</h3><ul>
+<li>最高阅读分类：男生小说，约占分类阅读时长 58%。</li>
+<li>最高主题：个人成长与行动原则，约占主题信号 18%。</li>
+<li>个人想法占比较低（约 2%），风险不是观点过强，而是输入很多、输出判断偏少。</li>
+</ul></div><div class="mini-card compact"><h3>破茧动作</h3><ul>
+<li>给最高频主题配一本真正反对它或绕开它的书，而不是只找补充材料。</li>
+<li>每月安排一次“异质阅读”：文学、自然科学、艺术、身体经验任选其一，目的不是有用，而是打断惯性。</li>
+<li>写笔记时加入一句“这条判断可能错在哪里”，让阅读系统自带反证入口。</li>
+</ul></div></div></section>
+<section id="books" class="books"><div class="section-heading"><span class="section-icon" style="--icon-bg:#ffedd5;--icon-color:#ea580c"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path d="M9 7h7"></path><path d="M9 11h6"></path></svg></span><h2>推荐书单</h2></div><div class="book-grid">
+<article class="book-card"><span>宏观补课</span><h3>《繁荣与衰退》</h3><small>艾伦·格林斯潘 / 阿德里安·伍德里奇</small><p>补充经济增长、制度和创新之间的宏观解释。</p></article>
+<article class="book-card"><span>补结构</span><h3>《乡土中国》</h3><small>费孝通</small><p>用极短篇幅建立社会结构和基层秩序的基本框架。</p></article>
+<article class="book-card"><span>反直觉</span><h3>《叫魂》</h3><small>孔飞力</small><p>适合训练从事件进入制度、地方治理和群体心理的能力。</p></article>
+<article class="book-card"><span>拉长尺度</span><h3>《政治秩序与政治衰败》</h3><small>弗朗西斯·福山</small><p>把制度、国家能力和现代化放到更长周期里比较。</p></article>
+<article class="book-card"><span>关系练习</span><h3>《非暴力沟通》</h3><small>马歇尔·卢森堡</small><p>把理解、表达和冲突处理从观念拉回具体话语。</p></article>
+<article class="book-card"><span>历史切片</span><h3>《万历十五年》</h3><small>黄仁宇</small><p>补盲用： 用一年观察制度惯性、人物处境和时代结构。</p></article>
+<article class="book-card"><span>反省历史感</span><h3>《历史的运用与滥用》</h3><small>尼采</small><p>补盲用： 提醒历史阅读不要只服务现实解释，也要警惕被历史感吞没。</p></article>
+<article class="book-card"><span>科学视角</span><h3>《复杂》</h3><small>梅拉妮·米歇尔</small><p>补盲用： 适合把复杂系统思维引入社会、技术和个体问题。</p></article>
+</div></section>
+<section id="roast" class="roast"><div class="section-heading"><span class="section-icon" style="--icon-bg:#ffe4e6;--icon-color:#e11d48"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 4.3l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-2.7l-8-14a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg></span><h2>温馨提示：下面可能有一点刺耳</h2></div><div class="roast-note">温馨提示：下面进入审稿人模式。若读到某句觉得刺耳，请先别急着反驳，它可能只是把你笔记里的潜台词念出了声。</div>
+<div class="two-col">
+<div class="mini-card"><h3>严格诊断</h3><ul>
+<li>完读率约 47.7%：兴趣启动很快，但收尾纪律偏弱。你不是没耐心，而是容易在一本书完成“解释价值”后提前撤退。</li>
+<li>个人想法占导出内容约 2%：摘抄多于自我表达。你可能读得认真，但真正属于你的判断还可以更密。</li>
+<li>第一分类占比约 58%：主线清晰，同时有知识偏食风险。你对熟悉议题会越挖越深，对陌生领域可能只是礼貌性路过。</li>
+<li>你很容易把文本拉回制度、利益、舆论和现实案例。这是强项，但副作用是审美阅读和纯粹感受可能会被你过早审讯。</li>
+<li>你很爱给自己立原则，这很好；问题是原则如果不进入日程表，就只是穿着西装的愿望。</li>
+</ul></div>
+<div class="mini-card"><h3>可能的盲区</h3><ul>
+<li>把复杂问题解释得太快：你擅长从机制和利益切入，但要小心把人的偶然、脆弱和荒诞压扁成结构图。</li>
+<li>公共议题摄入偏多时，情绪会伪装成理性判断。建议区分“我有证据”和“我只是看不惯”。</li>
+<li>待读完/未完读约 45 本。阅读野心很足，但如果不定期清理，书架会变成精神待办墓园。</li>
+<li>你对成长、自律、行动的语言很熟，下一阶段要少写一点人生方法论，多提交一点可验证结果。</li>
+</ul></div></div>
+<h3>维度打分</h3>
+<div class="bar"><div>问题意识</div><div class="track"><div class="fill" style="width:95%"></div></div><div>95/100</div></div>
+<p class="muted">能从文本里抽出问题，而不是只摘漂亮句子。</p>
+<div class="bar"><div>现实敏感度</div><div class="track"><div class="fill" style="width:91%"></div></div><div>91/100</div></div>
+<p class="muted">会把阅读连接到政策、经济、家庭和日常处境。</p>
+<div class="bar"><div>表达密度</div><div class="track"><div class="fill" style="width:37%"></div></div><div>37/100</div></div>
+<p class="muted">个人想法越多，说明越愿意和作者对话；但密度不等于成熟度。</p>
+<div class="bar"><div>收尾纪律</div><div class="track"><div class="fill" style="width:48%"></div></div><div>48/100</div></div>
+<p class="muted">衡量阅读闭环，不衡量聪明程度。</p>
+<div class="bar"><div>知识均衡</div><div class="track"><div class="fill" style="width:28%"></div></div><div>28/100</div></div>
+<p class="muted">主题越集中，越需要主动补盲区。</p>
+<div class="bar"><div>行动落地</div><div class="track"><div class="fill" style="width:62%"></div></div><div>62/100</div></div>
+<p class="muted">笔记能看出行动意识，但真实执行只能初步推测。</p></section>
+<section id="advice"><div class="section-heading"><span class="section-icon" style="--icon-bg:#ccfbf1;--icon-color:#0f766e"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.6 4.2L18.5 21 12 16.7 5.5 21l2.1-7.8L2 9h7l3-7z"></path></svg></span><h2>建议</h2></div><div class="advice-group"><h3>阅读建议</h3><ul>
+<li>围绕“个人成长与行动原则”保留一条主线，但每 3 本同向书后插入 1 本异质书，专门挑战当前解释框架。</li>
+<li>给最高频主题配一本真正反对它或绕开它的书，而不是只找补充材料。</li>
+</ul></div>
+<div class="advice-group"><h3>写作建议</h3><ul>
+<li>把笔记整理成“原文触发-我的判断-证据-反例-暂时结论”五段式，尤其适合你当前的现实导向。</li>
+<li>每读完一章至少写一句自己的判断，哪怕粗糙；输入很多但不下注，判断力不会自动生长。</li>
+</ul></div>
+<div class="advice-group"><h3>思考方式建议</h3><ul>
+<li>强判断前先写一句反方最强版本；如果写不出来，说明暂时还没有资格下重判。</li>
+<li>区分事实、机制和价值选择，避免把“我不喜欢”包装成“这不合理”。</li>
+</ul></div>
+<div class="advice-group"><h3>个人成长建议</h3><ul>
+<li>把阅读后的自我要求改成一个 48 小时内能完成的小动作，否则它只是漂亮的精神库存。</li>
+<li>每月清理一次未读完书：停读、跳读、精读、重读四选一，别让书架替你背负焦虑。</li>
+</ul></div>
+<h3>更严格的执行建议</h3>
+<div class="advice-grid">
+<div class="mini-card compact"><h3>认知校准</h3><ul>
+<li>把现实导向当工具，不要当身份。工具要接受反证，身份只会保护自尊。</li>
+<li>写笔记时加入一句“这条判断可能错在哪里”，让阅读系统自带反证入口。</li>
+</ul></div>
+<div class="mini-card compact"><h3>行动转化</h3><ul>
+<li>每月只保留一个阅读转化任务：一篇文章、一次沟通、一个习惯或一次复盘。</li>
+<li>所有读书计划都配一个删除规则；没有退出机制的计划，本质上是焦虑容器。</li>
+</ul></div>
+<div class="mini-card compact"><h3>表达升级</h3><ul>
+<li>减少宏大词汇密度，增加具体场景密度。观点越大，越需要小证据落地。</li>
+<li>每篇长评最后加一个反例段，没有反例的判断通常比较爽，但不够硬。</li>
+</ul></div>
+</div></section>
+    <footer>Generated by weread-deep-insights. Evidence-backed analysis, not a psychological diagnosis.</footer>
+  </main>
+</body>
+</html>

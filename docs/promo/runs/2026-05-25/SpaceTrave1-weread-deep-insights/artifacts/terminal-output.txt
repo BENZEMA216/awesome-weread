@@ -1,0 +1,45 @@
+fetching reading statistics...
+fetching shelf...
+fetching notebooks...
+[1/40] fetching notes: 社会心理学（第8版）
+[2/40] fetching notes: 第一本经济学
+[3/40] fetching notes: 原则
+[4/40] fetching notes: 幕后产品：打造突破式产品思维（全彩）
+[5/40] fetching notes: 大问题: 简明哲学导论
+[6/40] fetching notes: 计算广告：互联网商业变现的市场与技术（第2版）
+[7/40] fetching notes: 小米创业思考
+[8/40] fetching notes: 从0到1：开启商业与未来的秘密
+[9/40] fetching notes: 上瘾：让用户养成使用习惯的四大产品逻辑
+[10/40] fetching notes: 精力管理
+[11/40] fetching notes: 百年孤独
+[12/40] fetching notes: 纳瓦尔宝典
+[13/40] fetching notes: 毛泽东选集
+[14/40] fetching notes: 毛泽东选集（全四卷）
+[15/40] fetching notes: 一桩事先张扬的凶杀案
+[16/40] fetching notes: 人人都是产品经理
+[17/40] fetching notes: 龙族Ⅴ：悼亡者的归来
+[18/40] fetching notes: 那不勒斯四部曲
+[19/40] fetching notes: 美国大城市的死与生：纪念版
+[20/40] fetching notes: 诡秘之主（同名动画原著）
+[21/40] fetching notes: 涛动周期论：经济周期决定人生财富命运
+[22/40] fetching notes: 穷查理宝典：查理·芒格智慧箴言录（全新增订本）
+[23/40] fetching notes: 一世之尊
+[24/40] fetching notes: 凡人修仙之仙界篇
+[25/40] fetching notes: 雪球专刊·特别版：段永平投资问答录投资逻辑篇
+[26/40] fetching notes: 直击本质：洞察事物底层逻辑的思考方法
+[27/40] fetching notes: 悉达多（果麦经典）
+[28/40] fetching notes: 赘婿（郭麒麟 、宋轶主演影视剧同名原著）
+[29/40] fetching notes: 万族之劫
+[30/40] fetching notes: 鲁迅全集（全20卷）
+[31/40] fetching notes: 庆余年（同名电视剧原著）
+[32/40] fetching notes: 心智社会：从细胞到人工智能，人类思维的优雅解读
+[33/40] fetching notes: 挽救计划（同名电影原著）
+[34/40] fetching notes: 神秘复苏
+[35/40] fetching notes: 绍宋
+[36/40] fetching notes: 战国纵横：鬼谷子的局（1—15卷）
+[37/40] fetching notes: 长夜余火
+[38/40] fetching notes: 毛泽东传（全6卷）
+[39/40] fetching notes: 鹿鼎记(四)插图版
+[40/40] fetching notes: 秘密
+/Users/benzema/awesome-weread/docs/promo/runs/2026-05-25/SpaceTrave1-weread-deep-insights/artifacts/weread_deep_report.md
+/Users/benzema/awesome-weread/docs/promo/runs/2026-05-25/SpaceTrave1-weread-deep-insights/artifacts/weread_deep_report.html

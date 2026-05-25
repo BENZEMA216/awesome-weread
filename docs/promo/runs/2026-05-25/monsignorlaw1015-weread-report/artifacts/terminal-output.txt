@@ -1,0 +1,7 @@
+fetch overall
+fetch annual 2017-2026
+fetch shelf
+fetch notebooks
+fetch top bookmark counts
+overall=1046 小时 9 分钟 readDays=1798 shelf=119 notebooks=40 signals=928
+topKeywords=产品:71, 用户:62, 社会:49, 经济:41, 市场:38, 行动:25, 心理:24, 决策:22, 原则:17, 表达:14

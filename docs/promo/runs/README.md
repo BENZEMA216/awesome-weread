@@ -31,12 +31,15 @@ docs/promo/runs/YYYY-MM-DD/<owner-repo>/
 | [viewer12/weread-mirror](https://github.com/viewer12/weread-mirror) | 工作流与助手 | [summary.md](./2026-05-21/viewer12-weread-mirror/summary.md) | [HTML](./2026-05-21/viewer12-weread-mirror/artifacts/weread-mirror-portrait.html) · [截图](./2026-05-21/viewer12-weread-mirror/artifacts/weread-mirror-portrait.jpg) |
 | [kejixiaoliang/read-persona](https://github.com/kejixiaoliang/read-persona) | 工作流与助手 | [summary.md](./2026-05-24/kejixiaoliang-read-persona/summary.md) | [HTML](./2026-05-24/kejixiaoliang-read-persona/artifacts/read-persona-report.html) · [截图](./2026-05-24/kejixiaoliang-read-persona/artifacts/read-persona-report.jpg) |
 | [cocovs/weread-agent-chat](https://github.com/cocovs/weread-agent-chat) | 工作流与助手 | [summary.md](./2026-05-25/cocovs-weread-agent-chat/summary.md) | [UI 截图](./2026-05-25/cocovs-weread-agent-chat/artifacts/weread-agent-chat-ui.jpg) |
+| [monsignorlaw1015/weread-report](https://github.com/monsignorlaw1015/weread-report) | 工作流与助手 | [summary.md](./2026-05-25/monsignorlaw1015-weread-report/summary.md) | [HTML](./2026-05-25/monsignorlaw1015-weread-report/artifacts/shuduni-report.html) · [截图](./2026-05-25/monsignorlaw1015-weread-report/artifacts/shuduni-report-screenshot.jpg) · [指标](./2026-05-25/monsignorlaw1015-weread-report/artifacts/public-metrics.json) |
+| [zephyrwang6/space-weread](https://github.com/zephyrwang6/space-weread) | 工作流与助手 | [summary.md](./2026-05-25/zephyrwang6-space-weread/summary.md) | [预览 HTML](./2026-05-25/zephyrwang6-space-weread/artifacts/space-weread-preview.html) · [截图](./2026-05-25/zephyrwang6-space-weread/artifacts/space-weread-preview-screenshot.jpg) · [指标](./2026-05-25/zephyrwang6-space-weread/artifacts/public-metrics.json) |
 | [rayford295/rayford-knowledge-atlas](https://github.com/rayford295/rayford-knowledge-atlas) | 第三方同步 | [summary.md](./2026-05-25/rayford295-rayford-knowledge-atlas/summary.md) | [首页截图](./2026-05-25/rayford295-rayford-knowledge-atlas/artifacts/screenshot-home.jpg) · [阅读页截图](./2026-05-25/rayford295-rayford-knowledge-atlas/artifacts/screenshot-readings.jpg) · [数据](./2026-05-25/rayford295-rayford-knowledge-atlas/artifacts/data/public-reading-index.json) |
 | [AstrophelXD/WeReadAura](https://github.com/AstrophelXD/WeReadAura) | 桌面挂件与可视化 | [summary.md](./2026-05-25/AstrophelXD-WeReadAura/summary.md) | [首页截图](./2026-05-25/AstrophelXD-WeReadAura/artifacts/screenshot-home.jpg) · [书架截图](./2026-05-25/AstrophelXD-WeReadAura/artifacts/screenshot-bookshelf.jpg) · [公开 metadata](./2026-05-25/AstrophelXD-WeReadAura/artifacts/data/public-metadata.json) |
 | [ZiGmaX809/Weread_ReadTime_Heatmap](https://github.com/ZiGmaX809/Weread_ReadTime_Heatmap) | 桌面挂件与可视化 | [summary.md](./2026-05-25/ZiGmaX809-Weread_ReadTime_Heatmap/summary.md) | [SVG](./2026-05-25/ZiGmaX809-Weread_ReadTime_Heatmap/artifacts/awesome-weread-heatmap.svg) · [截图](./2026-05-25/ZiGmaX809-Weread_ReadTime_Heatmap/artifacts/awesome-weread-heatmap-screenshot.jpg) · [JSON](./2026-05-25/ZiGmaX809-Weread_ReadTime_Heatmap/artifacts/awesome-weread-heatmap.json) |
 | [TinaDu-AI/reading-widget](https://github.com/TinaDu-AI/reading-widget) | 桌面挂件与可视化 | [summary.md](./2026-05-25/TinaDu-AI-reading-widget/summary.md) | [HTML](./2026-05-25/TinaDu-AI-reading-widget/artifacts/reading-widget.html) · [截图](./2026-05-25/TinaDu-AI-reading-widget/artifacts/reading-widget-screenshot.jpg) |
 | [Kalmaegi/weread-analyzer](https://github.com/Kalmaegi/weread-analyzer) | 桌面挂件与可视化 | [summary.md](./2026-05-25/Kalmaegi-weread-analyzer/summary.md) | [报告 HTML](./2026-05-25/Kalmaegi-weread-analyzer/artifacts/weread-analyzer-report.html) · [截图](./2026-05-25/Kalmaegi-weread-analyzer/artifacts/weread-analyzer-report-screenshot.jpg) · [指标](./2026-05-25/Kalmaegi-weread-analyzer/artifacts/public-metrics.json) |
 | [zzylanmengqingchuan/weread-tools](https://github.com/zzylanmengqingchuan/weread-tools) | 桌面挂件与可视化 | [summary.md](./2026-05-25/zzylanmengqingchuan-weread-tools/summary.md) | [诚实报告截图](./2026-05-25/zzylanmengqingchuan-weread-tools/artifacts/weread-report-screenshot.jpg) · [人格画像截图](./2026-05-25/zzylanmengqingchuan-weread-tools/artifacts/reading-persona-screenshot.jpg) |
+| [SpaceTrave1/weread-deep-insights](https://github.com/SpaceTrave1/weread-deep-insights) | 桌面挂件与可视化 | [summary.md](./2026-05-25/SpaceTrave1-weread-deep-insights/summary.md) | [HTML](./2026-05-25/SpaceTrave1-weread-deep-insights/artifacts/weread_deep_report.html) · [截图](./2026-05-25/SpaceTrave1-weread-deep-insights/artifacts/weread_deep_report-screenshot.jpg) |
 
 ## 已尝试但未跑通（不计入完成）
 
@@ -61,8 +64,6 @@ docs/promo/runs/YYYY-MM-DD/<owner-repo>/
 | [jerlinn/jerlin-weread](https://github.com/jerlinn/jerlin-weread) | Skill 安装包 |
 | [alchaincyf/huashu-weread](https://github.com/alchaincyf/huashu-weread) | 工作流与助手 |
 | [ColorlessBoy/weread-dl-skill](https://github.com/ColorlessBoy/weread-dl-skill) | 工作流与助手 |
-| [monsignorlaw1015/weread-report](https://github.com/monsignorlaw1015/weread-report) | 工作流与助手 |
-| [zephyrwang6/space-weread](https://github.com/zephyrwang6/space-weread) | 工作流与助手 |
 | [LearnPrompt/carl-weread](https://github.com/LearnPrompt/carl-weread) | 工作流与助手 |
 | [stefanxfy/weread-essay-skill](https://github.com/stefanxfy/weread-essay-skill) | 工作流与助手 |
 | [shiquda/weread-cli](https://github.com/shiquda/weread-cli) | 命令行与 SDK |
@@ -84,7 +85,6 @@ docs/promo/runs/YYYY-MM-DD/<owner-repo>/
 | [TianLanhe/weread-readtime-for-tencent-doc](https://github.com/TianLanhe/weread-readtime-for-tencent-doc) | 第三方同步 |
 | [TianLanhe/weread-readtime-for-lark](https://github.com/TianLanhe/weread-readtime-for-lark) | 第三方同步 |
 | [alexsowake/weread_personality_summery](https://github.com/alexsowake/weread_personality_summery) | 桌面挂件与可视化 |
-| [SpaceTrave1/weread-deep-insights](https://github.com/SpaceTrave1/weread-deep-insights) | 桌面挂件与可视化 |
 | [lucis-yg/weread-dashboard](https://github.com/lucis-yg/weread-dashboard) | 桌面挂件与可视化 |
 | [ktKongTong/wereto](https://github.com/ktKongTong/wereto) | 桌面挂件与可视化 |
 
