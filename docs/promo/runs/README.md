@@ -34,6 +34,9 @@ docs/promo/runs/YYYY-MM-DD/<owner-repo>/
 | [rayford295/rayford-knowledge-atlas](https://github.com/rayford295/rayford-knowledge-atlas) | 第三方同步 | [summary.md](./2026-05-25/rayford295-rayford-knowledge-atlas/summary.md) | [首页截图](./2026-05-25/rayford295-rayford-knowledge-atlas/artifacts/screenshot-home.jpg) · [阅读页截图](./2026-05-25/rayford295-rayford-knowledge-atlas/artifacts/screenshot-readings.jpg) · [数据](./2026-05-25/rayford295-rayford-knowledge-atlas/artifacts/data/public-reading-index.json) |
 | [AstrophelXD/WeReadAura](https://github.com/AstrophelXD/WeReadAura) | 桌面挂件与可视化 | [summary.md](./2026-05-25/AstrophelXD-WeReadAura/summary.md) | [首页截图](./2026-05-25/AstrophelXD-WeReadAura/artifacts/screenshot-home.jpg) · [书架截图](./2026-05-25/AstrophelXD-WeReadAura/artifacts/screenshot-bookshelf.jpg) · [公开 metadata](./2026-05-25/AstrophelXD-WeReadAura/artifacts/data/public-metadata.json) |
 | [ZiGmaX809/Weread_ReadTime_Heatmap](https://github.com/ZiGmaX809/Weread_ReadTime_Heatmap) | 桌面挂件与可视化 | [summary.md](./2026-05-25/ZiGmaX809-Weread_ReadTime_Heatmap/summary.md) | [SVG](./2026-05-25/ZiGmaX809-Weread_ReadTime_Heatmap/artifacts/awesome-weread-heatmap.svg) · [截图](./2026-05-25/ZiGmaX809-Weread_ReadTime_Heatmap/artifacts/awesome-weread-heatmap-screenshot.jpg) · [JSON](./2026-05-25/ZiGmaX809-Weread_ReadTime_Heatmap/artifacts/awesome-weread-heatmap.json) |
+| [TinaDu-AI/reading-widget](https://github.com/TinaDu-AI/reading-widget) | 桌面挂件与可视化 | [summary.md](./2026-05-25/TinaDu-AI-reading-widget/summary.md) | [HTML](./2026-05-25/TinaDu-AI-reading-widget/artifacts/reading-widget.html) · [截图](./2026-05-25/TinaDu-AI-reading-widget/artifacts/reading-widget-screenshot.jpg) |
+| [Kalmaegi/weread-analyzer](https://github.com/Kalmaegi/weread-analyzer) | 桌面挂件与可视化 | [summary.md](./2026-05-25/Kalmaegi-weread-analyzer/summary.md) | [报告 HTML](./2026-05-25/Kalmaegi-weread-analyzer/artifacts/weread-analyzer-report.html) · [截图](./2026-05-25/Kalmaegi-weread-analyzer/artifacts/weread-analyzer-report-screenshot.jpg) · [指标](./2026-05-25/Kalmaegi-weread-analyzer/artifacts/public-metrics.json) |
+| [zzylanmengqingchuan/weread-tools](https://github.com/zzylanmengqingchuan/weread-tools) | 桌面挂件与可视化 | [summary.md](./2026-05-25/zzylanmengqingchuan-weread-tools/summary.md) | [诚实报告截图](./2026-05-25/zzylanmengqingchuan-weread-tools/artifacts/weread-report-screenshot.jpg) · [人格画像截图](./2026-05-25/zzylanmengqingchuan-weread-tools/artifacts/reading-persona-screenshot.jpg) |
 
 ## 已尝试但未跑通（不计入完成）
 
@@ -80,10 +83,7 @@ docs/promo/runs/YYYY-MM-DD/<owner-repo>/
 | [TianLanhe/weread-readdata-for-tencent-doc](https://github.com/TianLanhe/weread-readdata-for-tencent-doc) | 第三方同步 |
 | [TianLanhe/weread-readtime-for-tencent-doc](https://github.com/TianLanhe/weread-readtime-for-tencent-doc) | 第三方同步 |
 | [TianLanhe/weread-readtime-for-lark](https://github.com/TianLanhe/weread-readtime-for-lark) | 第三方同步 |
-| [TinaDu-AI/reading-widget](https://github.com/TinaDu-AI/reading-widget) | 桌面挂件与可视化 |
-| [Kalmaegi/weread-analyzer](https://github.com/Kalmaegi/weread-analyzer) | 桌面挂件与可视化 |
 | [alexsowake/weread_personality_summery](https://github.com/alexsowake/weread_personality_summery) | 桌面挂件与可视化 |
-| [zzylanmengqingchuan/weread-tools](https://github.com/zzylanmengqingchuan/weread-tools) | 桌面挂件与可视化 |
 | [SpaceTrave1/weread-deep-insights](https://github.com/SpaceTrave1/weread-deep-insights) | 桌面挂件与可视化 |
 | [lucis-yg/weread-dashboard](https://github.com/lucis-yg/weread-dashboard) | 桌面挂件与可视化 |
 | [ktKongTong/wereto](https://github.com/ktKongTong/wereto) | 桌面挂件与可视化 |

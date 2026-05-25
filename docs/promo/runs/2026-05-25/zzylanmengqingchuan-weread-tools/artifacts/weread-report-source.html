@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>书单诚实报告 · 微信读书</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0c0c0e;--surface:#16161a;--surface2:#1e1e26;--border:#2a2a38;
+  --text:#dddde0;--muted:#62627a;--accent:#ff6b35;--accent-dim:rgba(255,107,53,.14);
+  --green:#4ade80;--green-dim:rgba(74,222,128,.1);--yellow:#fbbf24;--red:#f87171;
+  --font:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+  --r:12px;--rs:8px;
+}
+html{font-size:16px}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
+
+/* ── SCREENS ── */
+.screen{min-height:100vh}
+.container{max-width:880px;margin:0 auto;padding:0 1.5rem}
+
+/* ── AUTH ── */
+#auth-screen{display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:100vh;padding:2rem;text-align:center}
+.auth-logo{font-size:2.8rem;margin-bottom:.5rem}
+.auth-title{font-size:1.9rem;font-weight:800;margin-bottom:.4rem;letter-spacing:-.02em}
+.auth-sub{color:var(--muted);font-size:.95rem;margin-bottom:2.5rem}
+.auth-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:2rem;width:100%;max-width:440px}
+.form-label{display:block;font-size:.82rem;color:var(--muted);margin-bottom:.45rem;text-align:left}
+.form-input{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--rs);padding:.72rem 1rem;color:var(--text);font-size:.95rem;font-family:var(--font);outline:none;transition:border-color .2s}
+.form-input:focus{border-color:var(--accent)}
+.form-hint{font-size:.78rem;color:var(--muted);margin-top:.45rem;text-align:left;line-height:1.5}
+.form-hint a{color:var(--accent);text-decoration:none}
+.btn-main{width:100%;margin-top:1.2rem;padding:.85rem;background:var(--accent);color:#fff;border:none;border-radius:var(--rs);font-size:1rem;font-weight:700;font-family:var(--font);cursor:pointer;transition:opacity .18s}
+.btn-main:hover{opacity:.88}
+.btn-main:disabled{opacity:.45;cursor:not-allowed}
+.last-used-hint{margin-top:.9rem;font-size:.78rem;color:var(--muted)}
+.inline-err{margin-top:1rem;padding:.8rem 1rem;background:rgba(248,113,113,.1);border:1px solid var(--red);border-radius:var(--rs);text-align:left}
+.inline-err-title{color:var(--red);font-weight:600;font-size:.88rem}
+.inline-err-detail{color:var(--muted);font-size:.8rem;margin-top:.25rem;line-height:1.5}
+
+/* ── LOADING ── */
+#loading-screen{display:none;align-items:center;justify-content:center;flex-direction:column;min-height:100vh;gap:1.25rem;text-align:center;padding:2rem}
+.spinner{width:44px;height:44px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .75s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.load-title{font-size:1.05rem;font-weight:600}
+.load-status{color:var(--muted);font-size:.88rem}
+.load-bar-wrap{width:240px;height:4px;background:var(--surface2);border-radius:2px;overflow:hidden}
+.load-bar{height:100%;background:var(--accent);border-radius:2px;transition:width .35s;width:0}
+
+/* ── REPORT ── */
+#report-screen{display:none;padding:2.5rem 0 5rem}
+.report-hd{text-align:center;padding:2.5rem 0 1.5rem}
+.rpt-badge{display:inline-block;background:var(--accent-dim);color:var(--accent);border:1px solid rgba(255,107,53,.45);border-radius:100px;padding:.22rem .8rem;font-size:.75rem;font-weight:700;letter-spacing:.06em;margin-bottom:.9rem}
+.rpt-title{font-size:2.2rem;font-weight:900;letter-spacing:-.03em;margin-bottom:.4rem}
+.rpt-sub{color:var(--muted);font-size:.95rem}
+.rpt-meta{margin-top:.6rem;font-size:.78rem;color:var(--muted)}
+
+/* summary row */
+.sum-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:1.75rem 0}
+.sum-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rs);padding:1.2rem;text-align:center}
+.sum-num{font-size:2rem;font-weight:900;line-height:1}
+.sum-lbl{font-size:.78rem;color:var(--muted);margin-top:.3rem}
+
+/* section */
+.divider{border:none;border-top:1px solid var(--border);margin:2.25rem 0}
+.section{margin:2rem 0}
+.sec-hd{margin-bottom:1.2rem}
+.sec-num{font-size:.72rem;color:var(--accent);font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.sec-title{font-size:1.35rem;font-weight:800;margin-top:.2rem;letter-spacing:-.02em}
+.sec-desc{color:var(--muted);font-size:.88rem;margin-top:.2rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:1.75rem}
+
+/* module 1 conversion */
+.conv-wrap{display:flex;align-items:center;gap:2rem;margin-bottom:1.5rem}
+.conv-big{flex-shrink:0;text-align:center;min-width:100px}
+.conv-ratio{font-size:3.8rem;font-weight:900;color:var(--accent);line-height:1}
+.conv-lbl{font-size:.75rem;color:var(--muted);margin-top:.2rem}
+.conv-text{flex:1}
+.conv-sentence{font-size:1.05rem;font-weight:600;line-height:1.55}
+.conv-comment{margin-top:.8rem;padding:.7rem 1rem;background:var(--accent-dim);border-left:3px solid var(--accent);border-radius:0 var(--rs) var(--rs) 0;font-size:.88rem;color:var(--accent);font-style:italic}
+.bar-meta{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);margin-bottom:.4rem}
+.bar-track{height:9px;background:var(--surface2);border-radius:5px;overflow:hidden;display:flex}
+.bar-seg{height:100%}
+
+/* module 2 abandoned */
+.ab-list{display:flex;flex-direction:column;gap:.85rem}
+.ab-item{display:flex;gap:1rem;align-items:flex-start;padding:.95rem;background:var(--surface2);border-radius:var(--rs);border:1px solid var(--border)}
+.bk-cover{width:50px;height:67px;border-radius:4px;flex-shrink:0;background:var(--border) center/cover no-repeat;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.bk-info{flex:1;min-width:0}
+.bk-title{font-weight:600;font-size:.93rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bk-author{font-size:.78rem;color:var(--muted);margin-top:.15rem}
+.tag-eternal{display:inline-block;background:rgba(248,113,113,.15);color:var(--red);border:1px solid rgba(248,113,113,.5);font-size:.68rem;padding:.08rem .45rem;border-radius:100px;margin-left:.4rem;font-weight:700;vertical-align:middle}
+.prog-row{margin-top:.75rem}
+.prog-meta{display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:.32rem}
+.prog-pct{color:var(--yellow);font-weight:700}
+.prog-idle{color:var(--muted)}
+.prog-track{height:5px;background:var(--surface);border-radius:3px;overflow:hidden}
+.prog-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--yellow),var(--accent))}
+.empty-note{text-align:center;padding:1.5rem;color:var(--muted);font-size:.9rem}
+
+/* module 3 unread */
+.unread-count-line{font-size:.88rem;color:var(--muted);margin-bottom:1.2rem}
+.unread-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:1rem}
+.ur-item{text-align:center}
+.ur-cover{width:100%;aspect-ratio:3/4;border-radius:6px;background:var(--surface2) center/cover no-repeat;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:.5rem}
+.ur-title{font-size:.78rem;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ur-author{font-size:.7rem;color:var(--muted);margin-top:.15rem}
+.ur-tag{font-size:.68rem;color:var(--accent);font-weight:600;margin-top:.2rem}
+.more-note{text-align:center;margin-top:1rem;font-size:.82rem;color:var(--muted)}
+
+/* module 4 category */
+.cat-list{display:flex;flex-direction:column;gap:.9rem}
+.cat-item{}
+.cat-hd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.38rem}
+.cat-name{font-size:.9rem;font-weight:500}
+.cat-stat{font-size:.78rem;color:var(--muted)}
+.cat-rate{font-weight:700}
+.cat-bar{height:6px;background:var(--surface2);border-radius:3px;overflow:hidden}
+.cat-fill{height:100%;border-radius:3px;transition:width .8s}
+.trap-box{margin-top:1.25rem;padding:.9rem 1.1rem;background:var(--accent-dim);border:1px solid rgba(255,107,53,.3);border-radius:var(--rs);font-size:.88rem;line-height:1.6}
+.trap-box strong{color:var(--accent)}
+
+/* module 5 opportunity */
+.opp-list{display:flex;flex-direction:column;gap:.85rem}
+.opp-item{display:flex;gap:.9rem;align-items:center;padding:.95rem;background:var(--surface2);border-radius:var(--rs);border:1px solid var(--border)}
+.opp-rank{font-size:1.2rem;font-weight:900;color:var(--muted);width:26px;text-align:center;flex-shrink:0}
+.opp-rank.hi{color:var(--green)}
+.opp-info{flex:1;min-width:0}
+.opp-prog{font-size:.8rem;margin-top:.3rem}
+.pct-hi{color:var(--green);font-weight:700}
+.opp-btn{display:inline-block;padding:.32rem .7rem;background:var(--green-dim);color:var(--green);border:1px solid rgba(74,222,128,.5);border-radius:6px;font-size:.78rem;font-weight:700;text-decoration:none;flex-shrink:0;white-space:nowrap}
+
+/* reset btn */
+.reset-link{background:none;border:none;color:var(--muted);font-size:.78rem;cursor:pointer;text-decoration:underline;font-family:var(--font)}
+.footer-note{text-align:center;padding-top:2rem;color:var(--muted);font-size:.78rem;line-height:1.8}
+
+@media(max-width:640px){
+  .sum-row{grid-template-columns:repeat(2,1fr)}
+  .conv-wrap{flex-direction:column;text-align:center}
+  .rpt-title{font-size:1.75rem}
+  .unread-grid{grid-template-columns:repeat(3,1fr)}
+  .conv-text{width:100%}
+}
+</style>
+</head>
+<body>
+
+<!-- AUTH -->
+<div id="auth-screen">
+  <div class="auth-logo">📚</div>
+  <h1 class="auth-title">书单诚实报告</h1>
+  <p class="auth-sub">告诉你那些微信读书不会说的真相</p>
+  <div class="auth-card">
+    <label class="form-label" for="api-key-input">微信读书 API Key</label>
+    <input class="form-input" type="password" id="api-key-input" placeholder="wrk-xxxxxxxxxxxxxxxx" autocomplete="off" />
+    <p class="form-hint">
+      还没有 Key？前往
+      <a href="https://weread.qq.com/r/weread-skills" target="_blank" rel="noopener">weread.qq.com/r/weread-skills</a>
+      登录后点击「获取 API Key」，复制粘贴到这里即可。数据仅在你的浏览器中处理，不上传任何服务器。
+    </p>
+    <button class="btn-main" id="gen-btn" onclick="startGenerate()">生成我的诚实报告</button>
+    <p class="last-used-hint" id="last-used-hint"></p>
+    <div id="inline-err" style="display:none" class="inline-err">
+      <p class="inline-err-title" id="err-title"></p>
+      <p class="inline-err-detail" id="err-detail"></p>
+    </div>
+  </div>
+</div>
+
+<!-- LOADING -->
+<div id="loading-screen">
+  <div class="spinner"></div>
+  <p class="load-title">正在调取你的真相档案…</p>
+  <p class="load-status" id="load-status">连接微信读书</p>
+  <div class="load-bar-wrap"><div class="load-bar" id="load-bar"></div></div>
+</div>
+
+<!-- REPORT -->
+<div id="report-screen">
+  <div class="container">
+    <div class="report-hd">
+      <div class="rpt-badge">书单诚实报告</div>
+      <h1 class="rpt-title">你的阅读真相档案</h1>
+      <p class="rpt-sub">以下数据可能会让你有点不舒服，但这就是你的书架真相。</p>
+      <p class="rpt-meta" id="rpt-meta"></p>
+    </div>
+
+    <div class="sum-row" id="sum-row"></div>
+    <hr class="divider">
+
+    <div class="section">
+      <div class="sec-hd">
+        <div class="sec-num">CHAPTER 01</div>
+        <h2 class="sec-title">书架转化率</h2>
+        <p class="sec-desc">你加入书架的书，真正被打开的有几本？</p>
+      </div>
+      <div class="card" id="mod-conv"></div>
+    </div>
+
+    <div class="section">
+      <div class="sec-hd">
+        <div class="sec-num">CHAPTER 02</div>
+        <h2 class="sec-title">弃读图鉴</h2>
+        <p class="sec-desc">它们等着你回来，可你已经把它们忘了。</p>
+      </div>
+      <div class="card" id="mod-ab"></div>
+    </div>
+
+    <div class="section">
+      <div class="sec-hd">
+        <div class="sec-num">CHAPTER 03</div>
+        <h2 class="sec-title">积灰排行榜</h2>
+        <p class="sec-desc">这些书，你加了，但从来没翻过第一页。</p>
+      </div>
+      <div class="card" id="mod-unread"></div>
+    </div>
+
+    <div class="section">
+      <div class="sec-hd">
+        <div class="sec-num">CHAPTER 04</div>
+        <h2 class="sec-title">品类陷阱</h2>
+        <p class="sec-desc">你以为自己在某个领域很有积累，其实只是在囤书。</p>
+      </div>
+      <div class="card" id="mod-cat"></div>
+    </div>
+
+    <div class="section">
+      <div class="sec-hd">
+        <div class="sec-num">BONUS</div>
+        <h2 class="sec-title">机会榜</h2>
+        <p class="sec-desc">这些书你快读完了，就差那么一点点——还在等什么？</p>
+      </div>
+      <div class="card" id="mod-opp"></div>
+    </div>
+
+    <div class="footer-note">
+      <p>数据来自微信读书开放 API · 仅在浏览器中处理 · 不上传任何服务器</p>
+      <p><button class="reset-link" onclick="resetToAuth()">重新生成 / 切换账号</button></p>
+    </div>
+  </div>
+</div>
+
+<script>
+const API_BASE = 'https://weread-proxy.zhuzhaoyu73.workers.dev';
+const SKILL_VER = '1.0.3';
+const LS_KEY = 'wreport_apikey';
+const LS_LAST = 'wreport_last';
+
+let apiKey = '';
+
+// ── INIT ──
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem(LS_KEY);
+  if (saved) document.getElementById('api-key-input').value = saved;
+  const last = localStorage.getItem(LS_LAST);
+  if (last) {
+    const d = new Date(+last);
+    document.getElementById('last-used-hint').textContent =
+      '上次生成：' + d.toLocaleDateString('zh-CN') + ' ' +
+      d.toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit'});
+  }
+  document.getElementById('api-key-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') startGenerate();
+  });
+});
+
+function showScreen(id) {
+  const ids = ['auth-screen','loading-screen','report-screen'];
+  ids.forEach(s => {
+    const el = document.getElementById(s);
+    el.style.display = s === id ? (s === 'loading-screen' ? 'flex' : 'block') : 'none';
+  });
+}
+
+function resetToAuth() { showScreen('auth-screen'); }
+
+function setLoad(text, pct) {
+  document.getElementById('load-status').textContent = text;
+  document.getElementById('load-bar').style.width = pct + '%';
+}
+
+// ── API ──
+async function api(name, params) {
+  const body = Object.assign({ api_name: name, skill_version: SKILL_VER }, params || {});
+  const res = await fetch(API_BASE, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + apiKey },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  const data = await res.json();
+  if (data.upgrade_info) throw new Error('Skill 需要升级：' + (data.upgrade_info.message || '请访问微信读书技能页面更新'));
+  if (data.errcode && data.errcode !== 0) throw new Error(data.errmsg || 'errcode ' + data.errcode);
+  return data;
+}
+
+// ── MAIN ──
+async function startGenerate() {
+  const key = document.getElementById('api-key-input').value.trim();
+  if (!key) { alert('请输入 API Key'); return; }
+  apiKey = key;
+  localStorage.setItem(LS_KEY, key);
+
+  document.getElementById('inline-err').style.display = 'none';
+  document.getElementById('gen-btn').disabled = true;
+  showScreen('loading-screen');
+
+  try {
+    setLoad('获取书架数据…', 40);
+    const shelf = await api('/shelf/sync');
+    const allBooks = (shelf.books || []);
+
+    setLoad('获取阅读统计…', 80);
+    const stats = await api('/readdata/detail', { mode: 'overall' });
+
+    setLoad('生成报告…', 97);
+    localStorage.setItem(LS_LAST, Date.now().toString());
+
+    renderReport(allBooks, stats);
+
+    setLoad('完成', 100);
+    showScreen('report-screen');
+    window.scrollTo(0, 0);
+  } catch (err) {
+    showScreen('auth-screen');
+    document.getElementById('gen-btn').disabled = false;
+    showErr(err.message || String(err));
+  }
+}
+
+function showErr(msg) {
+  let detail = '请检查 API Key 是否正确，或稍后重试。';
+  if (/fetch|network|cors/i.test(msg)) {
+    detail = '网络请求失败，可能存在跨域（CORS）限制。请尝试在微信读书 App 内的浏览器打开，或联系开发者。';
+  } else if (/401|403|invalid/i.test(msg)) {
+    detail = 'API Key 无效或已过期，请重新获取。';
+  } else if (/升级/i.test(msg)) {
+    detail = msg;
+    msg = 'Skill 版本过旧';
+  }
+  document.getElementById('err-title').textContent = '生成失败：' + msg;
+  document.getElementById('err-detail').textContent = detail;
+  document.getElementById('inline-err').style.display = 'block';
+}
+
+// ── PROCESS ──
+function processBooks(allBooks) {
+  const now = Date.now() / 1000;
+  return allBooks.map(b => {
+    const lastTs = b.readUpdateTime || 0;
+    const daysSince = lastTs ? Math.floor((now - lastTs) / 86400) : null;
+    const neverOpened = !lastTs;
+    return {
+      bookId: b.bookId,
+      title: b.title || '未知书名',
+      author: b.author || '',
+      cover: b.cover || '',
+      category: b.category || '其他',
+      isFinished: b.finishReading === 1,
+      lastTs,
+      daysSince,
+      neverOpened,
+      isEternal: !neverOpened && b.finishReading !== 1 && daysSince !== null && daysSince >= 90,
+      isActive: !neverOpened && b.finishReading !== 1 && daysSince !== null && daysSince <= 30,
+    };
+  });
+}
+
+// ── RENDER ──
+function renderReport(allBooks, stats) {
+  const books = processBooks(allBooks);
+  const finished = books.filter(b => b.isFinished);
+  const opened = books.filter(b => !b.neverOpened);
+  const abandoned = books.filter(b => !b.isFinished && !b.neverOpened);
+  const unread = books.filter(b => b.neverOpened);
+  const total = books.length;
+  const now = new Date();
+
+  document.getElementById('rpt-meta').textContent =
+    '生成于 ' + now.toLocaleDateString('zh-CN') + ' ' +
+    now.toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit'});
+
+  // Summary
+  const totalSec = stats.totalReadTime || 0;
+  const hrs = Math.floor(totalSec / 3600);
+  document.getElementById('sum-row').innerHTML =
+    sumCard(total, '书架总量', '') +
+    sumCard(finished.length, '已读完', 'var(--green)') +
+    sumCard(unread.length, '从未打开', 'var(--accent)') +
+    sumCard(hrs + 'h', '累计阅读', '');
+
+  renderConv(total, opened.length, unread.length);
+  renderAbandoned(abandoned);
+  renderUnread(unread);
+  renderCategory(books);
+  renderOpportunity(abandoned);
+}
+
+function sumCard(num, lbl, color) {
+  return '<div class="sum-card"><div class="sum-num"' + (color ? ' style="color:' + color + '"' : '') + '>' + esc(String(num)) + '</div><div class="sum-lbl">' + esc(lbl) + '</div></div>';
+}
+
+function renderConv(total, opened, neverCount) {
+  if (total === 0) { document.getElementById('mod-conv').innerHTML = '<p class="empty-note">书架是空的</p>'; return; }
+  const pct = Math.round(opened / total * 100);
+  const per10 = (opened / total * 10).toFixed(1);
+  const comments = [
+    [80, '还不错，你比大多数人都自律。但那未读的书，还在等你。'],
+    [60, '超过一半被打开了，在这个时代已经难得。'],
+    [40, '买书如山倒，读书如抽丝。这话像是为你写的。'],
+    [20, '你的书架，更像一个收藏夹，而不是书架。'],
+    [0,  '加入书架这个动作，大概就是你与这些书的全部缘分了。'],
+  ];
+  const comment = comments.find(([t]) => pct >= t)[1];
+  const unopenedPct = 100 - pct;
+
+  document.getElementById('mod-conv').innerHTML =
+    '<div class="conv-wrap">' +
+      '<div class="conv-big"><div class="conv-ratio">' + pct + '%</div><div class="conv-lbl">打开率</div></div>' +
+      '<div class="conv-text">' +
+        '<p class="conv-sentence">你书架里每 10 本书，有 <strong style="color:var(--accent)">' + per10 + ' 本</strong>真正被打开过。</p>' +
+        '<div class="conv-comment">' + esc(comment) + '</div>' +
+      '</div>' +
+    '</div>' +
+    '<div><div class="bar-meta"><span>已打开 ' + opened + ' 本</span><span>从未打开 ' + neverCount + ' 本</span></div>' +
+    '<div class="bar-track">' +
+      '<div class="bar-seg" style="width:' + pct + '%;background:var(--green)"></div>' +
+      '<div class="bar-seg" style="width:' + unopenedPct + '%;background:var(--accent)"></div>' +
+    '</div></div>';
+}
+
+function renderAbandoned(abandoned) {
+  const el = document.getElementById('mod-ab');
+  if (abandoned.length === 0) {
+    el.innerHTML = '<div class="empty-note">🎉 你没有弃读的书——真的很厉害。</div>';
+    return;
+  }
+  const sorted = [...abandoned].sort((a, b) => {
+    if (a.isEternal !== b.isEternal) return a.isEternal ? -1 : 1;
+    return (b.daysSince || 0) - (a.daysSince || 0);
+  }).slice(0, 10);
+
+  const items = sorted.map(b => {
+    const bg = b.cover ? 'background-image:url(' + JSON.stringify(b.cover) + ')' : '';
+    const coverEl = '<div class="bk-cover" style="' + bg + '">' + (b.cover ? '' : '📖') + '</div>';
+    const eTag = b.isEternal ? '<span class="tag-eternal">永久书签</span>' : '';
+    const days = b.daysSince;
+    let idleLabel, idleColor;
+    if (days === null) { idleLabel = '阅读时间未知'; idleColor = 'var(--muted)'; }
+    else if (days >= 365) { idleLabel = Math.floor(days/365) + ' 年前最后打开'; idleColor = 'var(--red)'; }
+    else if (days >= 90)  { idleLabel = Math.floor(days/30) + ' 个月前最后打开'; idleColor = 'var(--accent)'; }
+    else { idleLabel = days + ' 天前最后打开'; idleColor = 'var(--yellow)'; }
+    return '<div class="ab-item">' + coverEl +
+      '<div class="bk-info">' +
+        '<div class="bk-title">' + esc(b.title) + eTag + '</div>' +
+        '<div class="bk-author">' + esc(b.author) + '</div>' +
+        '<div style="margin-top:.6rem;font-size:.82rem;font-weight:600;color:' + idleColor + '">' + esc(idleLabel) + '</div>' +
+      '</div></div>';
+  }).join('');
+
+  const note = abandoned.length > 10 ? '，展示搁置最久的 10 本' : '';
+  el.innerHTML = '<p style="font-size:.85rem;color:var(--muted);margin-bottom:.9rem">共 <strong style="color:var(--accent)">' + abandoned.length + '</strong> 本书在等你回来' + note + '。</p>' +
+    '<div class="ab-list">' + items + '</div>';
+}
+
+function renderUnread(unread) {
+  const el = document.getElementById('mod-unread');
+  if (unread.length === 0) {
+    el.innerHTML = '<div class="empty-note">你书架里的书都打开过了，赞。</div>';
+    return;
+  }
+  const shown = unread.slice(0, 18);
+  const grid = shown.map(b => {
+    const bg = b.cover ? 'background-image:url(' + JSON.stringify(b.cover) + ')' : '';
+    return '<div class="ur-item">' +
+      '<div class="ur-cover" style="' + bg + '">' + (b.cover ? '' : '📚') + '</div>' +
+      '<div class="ur-title">' + esc(b.title) + '</div>' +
+      '<div class="ur-author">' + esc(b.author) + '</div>' +
+      '<div class="ur-tag">从未打开</div>' +
+    '</div>';
+  }).join('');
+  const more = unread.length > 18 ? '<p class="more-note">还有 ' + (unread.length - 18) + ' 本未展示</p>' : '';
+  el.innerHTML =
+    '<p class="unread-count-line">共 <strong style="color:var(--accent)">' + unread.length + '</strong> 本书从未被打开过，就在那里静静等着你。</p>' +
+    '<div class="unread-grid">' + grid + '</div>' + more;
+}
+
+function renderCategory(books) {
+  const el = document.getElementById('mod-cat');
+  if (books.length === 0) { el.innerHTML = ''; return; }
+
+  const catMap = {};
+  books.forEach(b => {
+    const c = b.category || '其他';
+    if (!catMap[c]) catMap[c] = { total: 0, finished: 0 };
+    catMap[c].total++;
+    if (b.isFinished) catMap[c].finished++;
+  });
+
+  const cats = Object.entries(catMap)
+    .filter(([, v]) => v.total >= 2)
+    .sort((a, b) => b[1].total - a[1].total)
+    .slice(0, 8);
+
+  if (cats.length === 0) {
+    el.innerHTML = '<p class="empty-note">分类数据不足</p>';
+    return;
+  }
+
+  const trap = cats.filter(([, v]) => v.total >= 3).reduce((worst, cur) => {
+    if (!worst) return cur;
+    return (cur[1].finished / cur[1].total) < (worst[1].finished / worst[1].total) ? cur : worst;
+  }, null);
+
+  const rows = cats.map(([cat, v]) => {
+    const rate = Math.round(v.finished / v.total * 100);
+    const isTrap = trap && cat === trap[0];
+    const col = rate >= 60 ? 'var(--green)' : rate >= 30 ? 'var(--yellow)' : 'var(--accent)';
+    const trapTag = isTrap ? ' <span style="color:var(--accent);font-size:.7rem">▲ 重灾区</span>' : '';
+    return '<div class="cat-item">' +
+      '<div class="cat-hd"><span class="cat-name">' + esc(cat) + trapTag + '</span>' +
+      '<span class="cat-stat">' + v.finished + '/' + v.total + ' 本 · <span class="cat-rate" style="color:' + col + '">' + rate + '%</span></span></div>' +
+      '<div class="cat-bar"><div class="cat-fill" style="width:' + rate + '%;background:' + col + '"></div></div>' +
+    '</div>';
+  }).join('');
+
+  const trapBox = trap
+    ? '<div class="trap-box">你在 <strong>' + esc(trap[0]) + '</strong> 上欺骗自己最深：书架里有 ' + trap[1].total + ' 本，读完了 ' + trap[1].finished + ' 本，完读率仅 ' + Math.round(trap[1].finished / trap[1].total * 100) + '%。</div>'
+    : '';
+
+  el.innerHTML = '<div class="cat-list">' + rows + '</div>' + trapBox;
+}
+
+function renderOpportunity(abandoned) {
+  const el = document.getElementById('mod-opp');
+  // 最近 30 天内有阅读记录、但未读完的书，按最近阅读排序
+  const active = [...abandoned]
+    .filter(b => b.isActive)
+    .sort((a, b) => (b.lastTs || 0) - (a.lastTs || 0))
+    .slice(0, 5);
+
+  if (active.length === 0) {
+    el.innerHTML = '<div class="empty-note">最近 30 天内没有在读的书。先从弃读图鉴里挑一本重新开始吧。</div>';
+    return;
+  }
+
+  const items = active.map((b, i) => {
+    const idleText = b.daysSince === 0 ? '今天读过' : (b.daysSince + ' 天前读过');
+    const link = 'weread://reading?bId=' + encodeURIComponent(b.bookId);
+    return '<div class="opp-item">' +
+      '<div class="opp-rank' + (i < 3 ? ' hi' : '') + '">' + (i + 1) + '</div>' +
+      '<div class="opp-info">' +
+        '<div class="bk-title">' + esc(b.title) + '</div>' +
+        '<div class="bk-author" style="font-size:.78rem;color:var(--muted)">' + esc(b.author) + '</div>' +
+        '<div class="opp-prog"><span class="pct-hi">' + esc(idleText) + '</span> · 尚未读完，继续冲</div>' +
+      '</div>' +
+      '<a class="opp-btn" href="' + esc(link) + '">继续读 →</a>' +
+    '</div>';
+  }).join('');
+
+  el.innerHTML = '<p style="font-size:.85rem;color:var(--muted);margin-bottom:.9rem">你最近 30 天内在读的书，别放弃。</p>' +
+    '<div class="opp-list">' + items + '</div>';
+}
+
+function esc(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+</body>
+</html>

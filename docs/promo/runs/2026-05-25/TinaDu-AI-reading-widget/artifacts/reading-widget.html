@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="300">
+<title>Reading</title>
+<style>
+  .r-card, .r-card * { box-sizing: border-box; font-family: -apple-system, "SF Pro Display", "PingFang SC", sans-serif; }
+  .r-card {
+    color: #e8dcc8;
+    width: 228px;
+    background: rgba(28, 22, 18, 0.85);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255, 220, 180, 0.12);
+    border-radius: 15px;
+    padding: 13px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08);
+    transform: scale(1.02);
+    transform-origin: top left;
+  }
+  .header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+  .title { font-size: 11px; font-weight: 600; color: #e8dcc8; letter-spacing: 0.4px; }
+  .date { font-size: 9px; color: rgba(232, 220, 200, 0.5); font-variant-numeric: tabular-nums; }
+
+  .streak { display: flex; align-items: baseline; gap: 6px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,220,180,0.08); }
+  .streak-num { font-size: 32px; font-weight: 700; color: #ffb86c; font-variant-numeric: tabular-nums; line-height: 1; }
+  .streak-label { font-size: 10px; color: rgba(232,220,200,0.6); }
+  .streak-fire { margin-left: auto; font-size: 18px; }
+
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+  .stat { background: rgba(255,220,180,0.04); border-radius: 10px; padding: 9px 10px; }
+  .stat-label { font-size: 9px; color: rgba(232,220,200,0.5); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 3px; }
+  .stat-value { font-size: 16px; font-weight: 600; color: #e8dcc8; font-variant-numeric: tabular-nums; }
+  .stat-unit { font-size: 10px; font-weight: 400; color: rgba(232,220,200,0.5); }
+  .stat-sub { font-size: 9px; color: rgba(232,220,200,0.4); margin-top: 1px; }
+
+  .progress-section { margin-bottom: 12px; }
+  .progress-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
+  .progress-title { font-size: 10px; color: rgba(232,220,200,0.65); }
+  .progress-pct { font-size: 10px; color: #ffb86c; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .bar { height: 5px; background: rgba(255,220,180,0.08); border-radius: 2.5px; overflow: hidden; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, #ffb86c, #ff9854); border-radius: 2.5px; transition: width 0.3s; }
+
+  .goal-input { background: transparent; border: none; color: inherit; font: inherit; width: 28px; text-align: center; padding: 0 2px; border-bottom: 1px dashed rgba(255,184,108,0.4); font-variant-numeric: tabular-nums; outline: none; cursor: text; }
+  .goal-input:focus { border-bottom-color: #ffb86c; color: #ffb86c; }
+  .goal-input::-webkit-inner-spin-button, .goal-input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+
+  .current { background: rgba(255,220,180,0.05); border-radius: 10px; padding: 10px; margin-bottom: 12px; display: flex; gap: 10px; }
+  .cover { width: 34px; height: 46px; background: linear-gradient(135deg, #6b4423, #4a2e18); border-radius: 3px; flex-shrink: 0; box-shadow: 0 3px 8px rgba(0,0,0,0.4); background-size: cover; background-position: center; }
+  .current-info { flex: 1; min-width: 0; }
+  .current-label { font-size: 9px; color: rgba(232,220,200,0.45); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 3px; }
+  .current-title { font-size: 12px; font-weight: 600; color: #e8dcc8; margin-bottom: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .current-author { font-size: 10px; color: rgba(232,220,200,0.55); margin-bottom: 6px; }
+  .current-bar { height: 3px; background: rgba(255,220,180,0.08); border-radius: 1.5px; overflow: hidden; margin-bottom: 3px; }
+  .current-bar-fill { height: 100%; background: #ffb86c; border-radius: 1.5px; }
+  .current-meta { display: flex; justify-content: flex-end; font-size: 9px; color: rgba(232,220,200,0.5); font-variant-numeric: tabular-nums; }
+
+  .finished { display: flex; justify-content: space-between; align-items: center; padding: 9px 11px; background: rgba(255,220,180,0.04); border-radius: 10px; margin-bottom: 12px; }
+  .finished-left { display: flex; align-items: baseline; gap: 6px; }
+  .finished-num { font-size: 22px; font-weight: 700; color: #e8dcc8; font-variant-numeric: tabular-nums; }
+  .finished-label { font-size: 10px; color: rgba(232,220,200,0.6); }
+  .finished-meta { font-size: 9px; color: rgba(232,220,200,0.45); text-align: right; line-height: 1.4; }
+
+  .quote { font-size: 10px; color: rgba(232,220,200,0.55); line-height: 1.4; padding: 9px 11px; margin-bottom: 12px; background: rgba(255,220,180,0.03); border-left: 2px solid rgba(255,184,108,0.4); border-radius: 0 6px 6px 0; }
+  .quote:empty { display: none; }
+
+  .footer { display: flex; justify-content: space-between; align-items: center; font-size: 9px; color: rgba(232,220,200,0.35); }
+  .last-read { display: flex; align-items: center; gap: 4px; }
+  .dot { width: 6px; height: 6px; background: #4ade80; border-radius: 50%; box-shadow: 0 0 8px #4ade80; }
+</style>
+</head>
+<body>
+  <div class="r-card">
+    <div class="header">
+      <div class="title">📖 阅读</div>
+      <div class="date">2026.05.25 周一</div>
+    </div>
+
+    <div class="streak">
+      <div class="streak-num">16</div>
+      <div class="streak-label">连续阅读天数</div>
+      <div class="streak-fire">🔥</div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-label">今日</div>
+        <div class="stat-value">3<span class="stat-unit"> 分</span></div>
+        <div class="stat-sub">日均 17m</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">本月</div>
+        <div class="stat-value">7<span class="stat-unit"> 小时</span></div>
+        <div class="stat-sub">上月 9h</div>
+      </div>
+    </div>
+
+    <div class="progress-section">
+      <div class="progress-row">
+        <div class="progress-title">本月目标 · <input class="goal-input" id="goalInput" type="number" min="1" max="999" value="50" oninput="var g=Math.max(1,parseInt(this.value)||1),p=Math.min(100,Math.round(7/g*100));document.getElementById('goalBar').style.width=p+'%';document.getElementById('goalPct').textContent=p+'%';"> 小时</div>
+        <div class="progress-pct" id="goalPct">14%</div>
+      </div>
+      <div class="bar"><div class="bar-fill" id="goalBar" style="width:14%"></div></div>
+    </div>
+
+    <div class="current">
+      <div class="cover" style="background-image:url('https://cdn.weread.qq.com/weread/cover/37/cpplatform_gmaqcuuuamjkvu7knomjim/t6_cpplatform_gmaqcuuuamjkvu7knomjim1703077934.jpg')"></div>
+      <div class="current-info">
+        <div class="current-label">正在读</div>
+        <div class="current-title">埃隆·马斯克传</div>
+        <div class="current-author">沃尔特·艾萨克森</div>
+        <div class="current-bar"><div class="current-bar-fill" style="width:0%"></div></div>
+        <div class="current-meta"><span>0%</span></div>
+      </div>
+    </div>
+
+    <div class="finished">
+      <div class="finished-left">
+        <div class="finished-num">2</div>
+        <div class="finished-label">今年读完</div>
+      </div>
+      <div class="finished-meta">
+        累计 21 小时<br>
+        29 条笔记
+      </div>
+    </div>
+
+    <div class="quote">这些年来，每当他身处绝境或感受到威胁时，他就会回想起在操场上被欺凌的恐怖经历。现在他有机会坐拥整个操场了。</div>
+
+    <div class="footer">
+      <div class="last-read"><span class="dot"></span>20 小时前在读</div>
+      <div>21:27 更新</div>
+    </div>
+  </div>
+
+  <script>
+    const CURRENT_HOURS = 7;
+    const input = document.getElementById('goalInput');
+    const bar = document.getElementById('goalBar');
+    const pct = document.getElementById('goalPct');
+    // persist goal locally so manual edits survive auto-refresh
+    const saved = localStorage.getItem('readingGoalHours');
+    if (saved) { input.value = saved; recompute(); }
+    function recompute() {
+      const goal = Math.max(1, parseInt(input.value) || 1);
+      const p = Math.min(100, Math.round((CURRENT_HOURS / goal) * 100));
+      bar.style.width = p + '%';
+      pct.textContent = p + '%';
+    }
+    input.addEventListener('input', () => {
+      localStorage.setItem('readingGoalHours', input.value);
+      recompute();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-05-25T13:37:14.022Z",
+  "totalBooks": 118,
+  "finishedBooks": 35,
+  "readingBooks": 0,
+  "unreadBooks": 118,
+  "finishRate": 0.2966101694915254,
+  "unreadRate": 1,
+  "averageProgress": 0,
+  "tags": [
+    "中度书架收藏者",
+    "高收藏低完成型读者",
+    "待读清单型书架使用者",
+    "思想探索型读者",
+    "问题解决型读者",
+    "文学审美型读者"
+  ],
+  "topCategories": [
+    {
+      "category": "社会文化-社科",
+      "count": 9,
+      "ratio": 0.07627118644067797,
+      "finishedCount": 0,
+      "finishRate": 0,
+      "averageProgress": 0
+    },
+    {
+      "category": "经济理财-财经",
+      "count": 8,
+      "ratio": 0.06779661016949153,
+      "finishedCount": 1,
+      "finishRate": 0.125,
+      "averageProgress": 0
+    },
+    {
+      "category": "精品小说-悬疑推理",
+      "count": 7,
+      "ratio": 0.059322033898305086,
+      "finishedCount": 5,
+      "finishRate": 0.7142857142857143,
+      "averageProgress": 0
+    },
+    {
+      "category": "经济理财-商业",
+      "count": 7,
+      "ratio": 0.059322033898305086,
+      "finishedCount": 2,
+      "finishRate": 0.2857142857142857,
+      "averageProgress": 0
+    },
+    {
+      "category": "未知分类",
+      "count": 7,
+      "ratio": 0.059322033898305086,
+      "finishedCount": 0,
+      "finishRate": 0,
+      "averageProgress": 0
+    }
+  ]
+}

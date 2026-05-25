@@ -1,0 +1,23 @@
+
+> weread-analyzer@0.1.0 build /private/tmp/awesome-weread-runs.AuGRSv/Kalmaegi-weread-analyzer
+> next build
+
+▲ Next.js 16.2.6 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1669ms
+  Running TypeScript ...
+Failed to type check.
+
+./src/app/page.tsx:141:7
+Type error: Type 'unknown' is not assignable to type 'ReactNode'.
+
+  [90m139 |[0m       </section>
+  [90m140 |[0m
+[31m[1m>[0m [90m141 |[0m       {rawShelf && (
+  [90m    |[0m       [31m[1m^[0m
+  [90m142 |[0m         <>
+  [90m143 |[0m           <section className=[32m"mt-8 grid gap-4 md:grid-cols-4"[0m>
+  [90m144 |[0m             <[33mMetricCard[0m title=[32m"书架总数"[0m value={[32m`[0m${basic.totalBooks[32m} 本`[0m} />
+Next.js build worker exited with code: 1 and signal: null
+ ELIFECYCLE  Command failed with exit code 1.

@@ -1,0 +1,1584 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>微信读书人格画像｜阿川的知识管理</title>
+  <link rel="icon" href="data:," />
+  <style>
+    :root {
+      --ink: #17211c;
+      --muted: #66736c;
+      --paper: #f6f1e7;
+      --paper-2: #fffaf0;
+      --line: rgba(23, 33, 28, 0.14);
+      --green: #1f6b4f;
+      --green-2: #2f8d68;
+      --red: #a94535;
+      --blue: #244f73;
+      --gold: #b57a2a;
+      --shadow: 0 24px 70px rgba(23, 33, 28, 0.14);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(181, 122, 42, 0.13), transparent 28rem),
+        radial-gradient(circle at 90% 22%, rgba(31, 107, 79, 0.13), transparent 26rem),
+        linear-gradient(135deg, #f7f0e4 0%, #eef4ee 52%, #f6efe5 100%);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.38;
+      background-image:
+        linear-gradient(rgba(23, 33, 28, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23, 33, 28, 0.025) 1px, transparent 1px);
+      background-size: 26px 26px;
+      mix-blend-mode: multiply;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 34px 0 56px;
+      position: relative;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(31, 107, 79, 0.3);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 250, 240, 0.68);
+      font-family: Georgia, serif;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    .ghost-btn, .main-btn, .danger-btn {
+      border: 0;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      white-space: nowrap;
+    }
+
+    .ghost-btn {
+      background: rgba(255, 250, 240, 0.72);
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .main-btn {
+      background: var(--green);
+      color: #fffaf0;
+      box-shadow: 0 12px 30px rgba(31, 107, 79, 0.22);
+      font-weight: 700;
+    }
+
+    .danger-btn {
+      background: rgba(169, 69, 53, 0.1);
+      color: var(--red);
+      border: 1px solid rgba(169, 69, 53, 0.25);
+    }
+
+    button:hover { transform: translateY(-1px); }
+    button:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .intro {
+      padding: 38px 0 18px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--red);
+      font-weight: 700;
+      letter-spacing: 0;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", "Songti SC", serif;
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: 0.96;
+      margin: 0 0 20px;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      font-size: 18px;
+      line-height: 1.85;
+      color: #3f4b45;
+      max-width: 680px;
+      margin: 0;
+    }
+
+    .hero-notes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 30px;
+      max-width: 680px;
+    }
+
+    .note-chip {
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .note-chip strong {
+      display: block;
+      color: var(--ink);
+      font-size: 17px;
+      margin-bottom: 2px;
+    }
+
+    .panel {
+      background: rgba(255, 250, 240, 0.82);
+      border: 1px solid rgba(23, 33, 28, 0.12);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .form-panel {
+      padding: 24px;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .form-panel h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      font-family: Georgia, "Songti SC", serif;
+    }
+
+    .hint {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .input-row {
+      margin: 22px 0 12px;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .key-input {
+      width: 100%;
+      height: 52px;
+      border-radius: 8px;
+      border: 1px solid rgba(23, 33, 28, 0.16);
+      padding: 0 14px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.65);
+      outline: none;
+    }
+
+    .key-input:focus {
+      border-color: rgba(31, 107, 79, 0.65);
+      box-shadow: 0 0 0 4px rgba(31, 107, 79, 0.1);
+    }
+
+    .check-line {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 12px 0 18px;
+    }
+
+    .check-line input {
+      margin-top: 4px;
+    }
+
+    .button-stack {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .button-stack .main-btn {
+      grid-column: span 2;
+    }
+
+    .privacy {
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+      display: grid;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .privacy strong { color: var(--green); }
+
+    .status {
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.45);
+      display: none;
+    }
+
+    .status.is-visible { display: block; }
+
+    .bar {
+      height: 8px;
+      background: rgba(23, 33, 28, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 12px;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--green), var(--gold));
+      transition: width 0.24s ease;
+    }
+
+    .error {
+      margin-top: 12px;
+      color: var(--red);
+      line-height: 1.65;
+      font-size: 14px;
+      display: none;
+    }
+
+    .error.is-visible { display: block; }
+
+    .result-wrap {
+      margin-top: 32px;
+      display: none;
+    }
+
+    .result-wrap.is-visible { display: block; }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .result-card {
+      padding: 28px;
+      position: sticky;
+      top: 18px;
+      overflow: hidden;
+    }
+
+    .result-card::after {
+      content: "";
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 220px;
+      height: 220px;
+      border: 1px solid rgba(31, 107, 79, 0.18);
+      border-radius: 50%;
+    }
+
+    .code {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 72px;
+      line-height: 0.9;
+      color: var(--green);
+      margin: 10px 0 8px;
+    }
+
+    .persona-name {
+      font-family: Georgia, "Songti SC", serif;
+      font-size: 34px;
+      margin: 0 0 12px;
+    }
+
+    .manifesto {
+      color: #3f4b45;
+      line-height: 1.85;
+      margin: 0 0 20px;
+      font-size: 17px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0;
+    }
+
+    .tag {
+      border: 1px solid rgba(31, 107, 79, 0.18);
+      color: var(--green);
+      background: rgba(31, 107, 79, 0.06);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .share-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .data-panel {
+      padding: 24px;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .section-title h3 {
+      margin: 0;
+      font-size: 22px;
+      font-family: Georgia, "Songti SC", serif;
+    }
+
+    .section-title span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.42);
+      min-height: 94px;
+    }
+
+    .metric b {
+      display: block;
+      font-size: 23px;
+      line-height: 1.15;
+      margin-bottom: 8px;
+      color: var(--ink);
+      word-break: break-word;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .dimension-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .warm-reading {
+      margin-top: 22px;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .warm-reading h4 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      font-family: Georgia, "Songti SC", serif;
+    }
+
+    .warm-reading p {
+      margin: 0;
+      color: #3f4b45;
+      line-height: 1.9;
+      font-size: 15px;
+    }
+
+    .dim {
+      display: grid;
+      gap: 7px;
+    }
+
+    .dim-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: #34413b;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .track {
+      height: 10px;
+      background: rgba(23, 33, 28, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .fill {
+      display: block;
+      height: 100%;
+      width: 50%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--blue), var(--green-2), var(--gold));
+    }
+
+    .books-list {
+      margin-top: 20px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .book-item {
+      display: grid;
+      grid-template-columns: 44px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      padding-top: 10px;
+    }
+
+    .book-cover {
+      width: 44px;
+      height: 58px;
+      object-fit: cover;
+      border-radius: 4px;
+      background: rgba(23, 33, 28, 0.08);
+    }
+
+    .book-title {
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .book-sub {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .canvas-preview {
+      margin-top: 24px;
+      display: none;
+    }
+
+    .canvas-preview.is-visible { display: block; }
+
+    #shareCanvas {
+      width: min(100%, 360px);
+      height: auto;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      background: var(--paper-2);
+    }
+
+    .preview-note {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .guide {
+      margin-top: 34px;
+      padding: 24px;
+    }
+
+    .guide h3 {
+      margin: 0 0 18px;
+      font-size: 24px;
+      font-family: Georgia, "Songti SC", serif;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .step {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.38);
+    }
+
+    .step-num {
+      display: inline-grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--paper-2);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .step strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0 0 14px;
+      font-size: 14px;
+    }
+
+    .step a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(31, 107, 79, 0.09);
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid rgba(31, 107, 79, 0.18);
+    }
+
+    details {
+      margin-top: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--ink);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      color: var(--muted);
+      text-align: center;
+      margin-top: 28px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .page { width: min(100% - 22px, 680px); padding-top: 20px; }
+      .topbar { align-items: flex-start; }
+      .hero, .result-grid, .steps { grid-template-columns: 1fr; }
+      .intro { padding-top: 16px; }
+      .hero-notes, .metric-grid { grid-template-columns: 1fr; }
+      .form-panel { min-height: auto; }
+      .result-card { position: relative; top: auto; }
+      .code { font-size: 58px; }
+      .persona-name { font-size: 29px; }
+      .button-stack, .share-actions { grid-template-columns: 1fr; }
+      .button-stack .main-btn { grid-column: auto; }
+      .book-item { grid-template-columns: 38px 1fr; }
+      .book-item > span:last-child { grid-column: 2; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand" aria-label="微信读书人格画像">
+        <span class="brand-mark">A</span>
+        <span>微信读书人格画像</span>
+      </div>
+      <div class="nav-actions">
+        <button class="ghost-btn" type="button" id="scrollGuideBtn">获取 API Key</button>
+        <button class="ghost-btn" type="button" id="clearBtn">清除本机数据</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="intro">
+        <div class="eyebrow">微信读书人格画像</div>
+        <h1>你的阅读，<br>有自己的星相。</h1>
+        <p class="lead">输入微信读书 API Key，用你的书架、阅读时段、笔记划线和听读比例，生成一张可以下载分享的阅读人格卡片。</p>
+        <div class="hero-notes">
+          <div class="note-chip"><strong>不收集密钥</strong>API Key 只在你的浏览器里使用。</div>
+          <div class="note-chip"><strong>单页可部署</strong>整页只有一个 HTML 文件。</div>
+          <div class="note-chip"><strong>可下载图片</strong>生成 PNG，方便分享到社群。</div>
+        </div>
+      </div>
+
+      <section class="panel form-panel" aria-label="生成阅读人格">
+        <div>
+          <h2>开始生成</h2>
+          <p class="hint">如果你已经有 API Key，直接粘贴即可。还没有的话，页面底部有两步引导。</p>
+
+          <form id="keyForm">
+            <div class="input-row">
+              <label for="apiKey">微信读书 API Key</label>
+              <input class="key-input" id="apiKey" type="password" autocomplete="off" placeholder="wrk-xxxxxxxx" />
+            </div>
+          </form>
+
+          <label class="check-line">
+            <input id="rememberKey" type="checkbox" />
+            <span>仅在这台设备记住 API Key。默认不保存，勾选后才会写入浏览器本地存储。</span>
+          </label>
+
+          <div class="button-stack">
+            <button class="main-btn" id="generateBtn" type="button">生成我的阅读人格</button>
+            <button class="ghost-btn" id="demoBtn" type="button">先看示例</button>
+            <button class="ghost-btn" id="showKeyBtn" type="button">显示/隐藏 Key</button>
+          </div>
+
+          <div class="status" id="statusBox">
+            <div id="statusText">准备读取数据</div>
+            <div class="bar"><span id="progressBar"></span></div>
+          </div>
+
+          <div class="error" id="errorBox"></div>
+        </div>
+
+        <div class="privacy">
+          <div><strong>隐私说明：</strong>本页面不会把 API Key 发给阿川或任何第三方服务器。它只会在你的浏览器里用于请求微信读书接口。</div>
+          <div>分享图只包含画像结果和统计摘要，不包含 API Key、原始笔记全文或完整书架。</div>
+        </div>
+      </section>
+    </section>
+
+    <section class="result-wrap" id="resultWrap" aria-live="polite">
+      <div class="result-grid">
+        <article class="panel result-card">
+          <div class="eyebrow">你的阅读人格</div>
+          <div class="code" id="personaCode">EMAT</div>
+          <h2 class="persona-name" id="personaName">晨星采撷者</h2>
+          <p class="manifesto" id="personaText">你在清醒的时段收集不同领域的微光，并用划线把它们固定成自己的星图。</p>
+          <div class="tag-row" id="tagRow"></div>
+          <div class="share-actions">
+            <button class="main-btn" id="downloadBtn" type="button">下载结果图片</button>
+            <button class="ghost-btn" id="rerunBtn" type="button">重新生成</button>
+          </div>
+          <div class="canvas-preview" id="canvasPreview">
+            <canvas id="shareCanvas" width="2160" height="2880"></canvas>
+            <p class="preview-note">这里是缩略预览，下载按钮会导出高清 PNG。</p>
+          </div>
+        </article>
+
+        <section class="panel data-panel">
+          <div class="section-title">
+            <h3>画像依据</h3>
+            <span id="dataSourceLabel">来自微信读书数据</span>
+          </div>
+          <div class="metric-grid" id="metricGrid"></div>
+          <div class="warm-reading">
+            <h4>你的阅读样子</h4>
+            <p id="warmReadingText"></p>
+          </div>
+          <div class="dimension-list" id="dimensionList"></div>
+          <div class="books-list" id="booksList"></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="panel guide" id="guide">
+      <h3>第一次使用？从这里开始</h3>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <strong>复制微信读书 Skill</strong>
+          <p>先打开微信读书提供的 Skill 页面，按页面说明复制或启用 Skill。</p>
+          <a href="https://weread.qq.com/r/weread-skills" target="_blank" rel="noreferrer">打开 Skill 页面</a>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <strong>获取 API Key</strong>
+          <p>完成 Skill 配置后，获取以 <b>wrk-</b> 开头的 API Key，再回到本页粘贴生成画像。</p>
+          <a href="https://weread.qq.com/r/weread-skills" target="_blank" rel="noreferrer">去获取 API Key</a>
+        </div>
+      </div>
+      <details>
+        <summary>数据口径说明</summary>
+        书架总数会同时计算电子书、专辑/有声书和文章收藏入口。阅读时长按秒换算。笔记数量来自微信读书笔记本概览，包含想法/点评、划线和书签数量。
+      </details>
+    </section>
+
+    <p class="footer">由「阿川的知识管理」发起。你的 API Key 不会进入分享图，也不会被本页面收集。</p>
+  </main>
+
+  <script>
+    const API_URL = "https://weread-proxy.zhuzhaoyu73.workers.dev";
+    const SKILL_VERSION = "1.0.3";
+    const skillLink = "https://weread.qq.com/r/weread-skills";
+
+    const els = {
+      apiKey: document.getElementById("apiKey"),
+      rememberKey: document.getElementById("rememberKey"),
+      generateBtn: document.getElementById("generateBtn"),
+      demoBtn: document.getElementById("demoBtn"),
+      showKeyBtn: document.getElementById("showKeyBtn"),
+      clearBtn: document.getElementById("clearBtn"),
+      scrollGuideBtn: document.getElementById("scrollGuideBtn"),
+      statusBox: document.getElementById("statusBox"),
+      statusText: document.getElementById("statusText"),
+      progressBar: document.getElementById("progressBar"),
+      errorBox: document.getElementById("errorBox"),
+      resultWrap: document.getElementById("resultWrap"),
+      personaCode: document.getElementById("personaCode"),
+      personaName: document.getElementById("personaName"),
+      personaText: document.getElementById("personaText"),
+      tagRow: document.getElementById("tagRow"),
+      metricGrid: document.getElementById("metricGrid"),
+      dimensionList: document.getElementById("dimensionList"),
+      warmReadingText: document.getElementById("warmReadingText"),
+      booksList: document.getElementById("booksList"),
+      dataSourceLabel: document.getElementById("dataSourceLabel"),
+      downloadBtn: document.getElementById("downloadBtn"),
+      rerunBtn: document.getElementById("rerunBtn"),
+      canvas: document.getElementById("shareCanvas"),
+      canvasPreview: document.getElementById("canvasPreview"),
+      guide: document.getElementById("guide")
+    };
+
+    const personas = [
+      {
+        code: "EMAT",
+        name: "晨星采撷者",
+        line: "你在清醒的时段收集不同领域的微光，并用划线把它们固定成自己的星图。",
+        vector: { e: 0.86, m: 0.78, a: 0.82, t: 0.82 },
+        tags: ["读得很广", "偏爱白天", "常做笔记", "偏文字阅读"]
+      },
+      {
+        code: "ENIT",
+        name: "夜航藏书家",
+        line: "你在夜里打开一片海，读得广，也读得安静，很多书像暗处的灯塔。",
+        vector: { e: 0.88, m: 0.18, a: 0.22, t: 0.78 },
+        tags: ["读得很广", "偏爱夜晚", "沉浸阅读", "偏文字阅读"]
+      },
+      {
+        code: "DMAT",
+        name: "井边校注人",
+        line: "你不急着赶路，更愿意守着少数几本书，一层层读下去，留下清晰的注脚。",
+        vector: { e: 0.18, m: 0.74, a: 0.86, t: 0.82 },
+        tags: ["读得很深", "偏爱白天", "常做笔记", "偏文字阅读"]
+      },
+      {
+        code: "DNIT",
+        name: "深夜潜读者",
+        line: "你把阅读当作下潜：安静、缓慢、少言，但会在长时间里改变自己的密度。",
+        vector: { e: 0.16, m: 0.14, a: 0.18, t: 0.84 },
+        tags: ["读得很深", "偏爱夜晚", "沉浸阅读", "偏文字阅读"]
+      },
+      {
+        code: "DNAT",
+        name: "夜灯校注者",
+        line: "你在夜色里读得很深，也读得很认真；那些划线像灯下的针脚，把一本书慢慢缝进生活。",
+        vector: { e: 0.18, m: 0.15, a: 0.86, t: 0.86 },
+        tags: ["读得很深", "偏爱夜晚", "常做笔记", "偏文字阅读"]
+      },
+      {
+        code: "EMAV",
+        name: "耳畔巡游者",
+        line: "你用声音穿过许多主题，像带着一只随身电台，在生活缝隙里完成探索。",
+        vector: { e: 0.85, m: 0.68, a: 0.72, t: 0.18 },
+        tags: ["读得很广", "偏爱白天", "常做笔记", "常听书"]
+      },
+      {
+        code: "DNAV",
+        name: "暗河听书人",
+        line: "你偏爱夜间与声音，阅读像一条暗河，在不被打扰的时候缓慢流动。",
+        vector: { e: 0.2, m: 0.16, a: 0.68, t: 0.14 },
+        tags: ["读得很深", "偏爱夜晚", "常做笔记", "常听书"]
+      },
+      {
+        code: "EDAT",
+        name: "星图编目员",
+        line: "你的阅读横跨许多分类，但并不散乱，划线和笔记是你给知识世界做的索引。",
+        vector: { e: 0.76, m: 0.52, a: 0.88, t: 0.7 },
+        tags: ["读得很广", "时间均衡", "常做笔记", "偏文字阅读"]
+      },
+      {
+        code: "DMIT",
+        name: "纸页隐修士",
+        line: "你选择不多，但每一本都读得很深；你不急于表达，更在意被书改变。",
+        vector: { e: 0.15, m: 0.58, a: 0.14, t: 0.9 },
+        tags: ["读得很深", "时间均衡", "沉浸阅读", "偏文字阅读"]
+      },
+      {
+        code: "ENAV",
+        name: "午夜信号员",
+        line: "你在夜里接收来自不同书本的信号，愿意标记、转译，也愿意把它们分享出去。",
+        vector: { e: 0.82, m: 0.15, a: 0.82, t: 0.26 },
+        tags: ["读得很广", "偏爱夜晚", "常做笔记", "常听书"]
+      },
+      {
+        code: "DVIT",
+        name: "声流漫步者",
+        line: "你的阅读常和行动并行，声音替你把书带进通勤、散步和日常空隙。",
+        vector: { e: 0.36, m: 0.48, a: 0.22, t: 0.12 },
+        tags: ["读得很深", "时间均衡", "沉浸阅读", "常听书"]
+      }
+    ];
+
+    let currentResult = null;
+
+    function setStatus(text, progress) {
+      els.statusBox.classList.add("is-visible");
+      els.statusText.textContent = text;
+      els.progressBar.style.width = `${Math.max(0, Math.min(100, progress))}%`;
+    }
+
+    function showError(message) {
+      els.errorBox.textContent = message;
+      els.errorBox.classList.add("is-visible");
+    }
+
+    function clearError() {
+      els.errorBox.textContent = "";
+      els.errorBox.classList.remove("is-visible");
+    }
+
+    function clamp(value, min = 0, max = 1) {
+      return Math.max(min, Math.min(max, value));
+    }
+
+    function fmtTime(seconds) {
+      const total = Number(seconds || 0);
+      if (!total) return "0 分钟";
+      const hours = Math.floor(total / 3600);
+      const minutes = Math.round((total % 3600) / 60);
+      if (hours <= 0) return `${minutes} 分钟`;
+      if (minutes <= 0) return `${hours} 小时`;
+      return `${hours} 小时 ${minutes} 分钟`;
+    }
+
+    function safeText(value, fallback = "暂无") {
+      if (value === null || value === undefined || value === "") return fallback;
+      return String(value);
+    }
+
+    async function callApi(apiKey, apiName, params = {}) {
+      let response;
+      try {
+        response = await fetch(API_URL, {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${apiKey}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            api_name: apiName,
+            skill_version: SKILL_VERSION,
+            ...params
+          })
+        });
+      } catch (err) {
+        throw new Error("浏览器拦截了微信读书接口请求。当前微信读书接口只允许指定网页来源访问，file://、本地页面或普通公网单页可能无法直连。这不是 API Key 错误。");
+      }
+
+      if (!response.ok) {
+        throw new Error(`接口请求失败：HTTP ${response.status}`);
+      }
+
+      const data = await response.json();
+      if (data && data.upgrade_info) {
+        throw new Error(data.upgrade_info.message || "当前 Skill 版本需要升级，请先按微信读书提示更新。");
+      }
+      if (data && data.errcode && data.errcode !== 0) {
+        throw new Error(data.errmsg || `接口返回错误：${data.errcode}`);
+      }
+      return data;
+    }
+
+    async function fetchNotebooks(apiKey) {
+      const all = [];
+      let lastSort;
+      let guard = 0;
+      while (guard < 8) {
+        const params = { count: 50 };
+        if (lastSort) params.lastSort = lastSort;
+        const page = await callApi(apiKey, "/user/notebooks", params);
+        const books = Array.isArray(page.books) ? page.books : [];
+        all.push(...books);
+        if (!page.hasMore || !books.length) {
+          return {
+            books: all,
+            totalBookCount: page.totalBookCount || all.length,
+            totalNoteCount: page.totalNoteCount || all.reduce((sum, item) => sum + noteTotal(item), 0)
+          };
+        }
+        lastSort = books[books.length - 1].sort;
+        guard += 1;
+      }
+      return {
+        books: all,
+        totalBookCount: all.length,
+        totalNoteCount: all.reduce((sum, item) => sum + noteTotal(item), 0)
+      };
+    }
+
+    function noteTotal(item) {
+      return Number(item.reviewCount || 0) + Number(item.noteCount || 0) + Number(item.bookmarkCount || 0);
+    }
+
+    async function collectData(apiKey) {
+      setStatus("正在读取书架", 12);
+      const shelf = await callApi(apiKey, "/shelf/sync");
+
+      setStatus("正在分析阅读统计", 32);
+      const [overall, annual] = await Promise.all([
+        callApi(apiKey, "/readdata/detail", { mode: "overall" }),
+        callApi(apiKey, "/readdata/detail", { mode: "annually", baseTime: Math.floor(Date.now() / 1000) })
+      ]);
+
+      setStatus("正在整理笔记划线", 62);
+      let notebooks = { books: [], totalBookCount: 0, totalNoteCount: 0 };
+      try {
+        notebooks = await fetchNotebooks(apiKey);
+      } catch (err) {
+        notebooks.error = err.message;
+      }
+
+      setStatus("正在匹配阅读人格", 86);
+      const result = analyzeData({ shelf, overall, annual, notebooks }, "微信读书数据");
+      setStatus("画像生成完成", 100);
+      return result;
+    }
+
+    function analyzeData(raw, sourceLabel) {
+      const shelf = raw.shelf || {};
+      const overall = raw.overall || {};
+      const annual = raw.annual || {};
+      const notebooks = raw.notebooks || {};
+
+      const books = Array.isArray(shelf.books) ? shelf.books : [];
+      const albums = Array.isArray(shelf.albums) ? shelf.albums : [];
+      const hasMp = shelf.mp ? 1 : 0;
+      const totalShelf = books.length + albums.length + hasMp;
+      const finishedBooks = books.filter(book => Number(book.finishReading) === 1).length;
+      const startedBooks = books.filter(book => Number(book.readUpdateTime || 0) > 0 || Number(book.finishReading) === 1).length;
+      const finishRate = books.length ? finishedBooks / books.length : 0;
+      const categories = categoryStats(books, annual.preferCategory || overall.preferCategory || []);
+      const topCategories = categories.slice(0, 3);
+      const topBooks = normalizeTopBooks(annual.readLongest || overall.readLongest || []);
+      const totalReadTime = Number(annual.totalReadTime || overall.totalReadTime || 0);
+      const readDays = Number(annual.readDays || overall.readDays || 0);
+      const noteBooks = Array.isArray(notebooks.books) ? notebooks.books : [];
+      const totalNoteCount = Number(notebooks.totalNoteCount || noteBooks.reduce((sum, item) => sum + noteTotal(item), 0));
+      const noteDensity = startedBooks ? totalNoteCount / Math.max(startedBooks, 1) : 0;
+      const preferTime = Array.isArray(annual.preferTime) ? annual.preferTime : (Array.isArray(overall.preferTime) ? overall.preferTime : []);
+      const timeProfile = analyzeTime(preferTime, annual.preferTimeWord || overall.preferTimeWord);
+      const textRate = getTextRate(overall, annual, books, albums);
+      const categoryDiversity = categories.length ? Math.min(categories.length / 8, 1) : 0;
+      const unfinishedRate = books.length ? 1 - finishRate : 0;
+      const e = clamp(categoryDiversity * 0.44 + unfinishedRate * 0.3 + clamp(totalShelf / 120) * 0.26);
+      const m = timeProfile.morningScore;
+      const a = clamp(clamp(noteDensity / 16) * 0.7 + clamp(totalNoteCount / 500) * 0.3);
+      const t = textRate;
+
+      const vector = { e, m, a, t };
+      const persona = matchPersona(vector);
+      const metrics = [
+        { label: "书架条目", value: `${totalShelf}`, note: `${books.length} 本电子书，${albums.length} 个有声书/专辑` },
+        { label: "今年阅读", value: fmtTime(totalReadTime), note: readDays ? `${readDays} 个阅读日` : "阅读日暂无数据" },
+        { label: "笔记痕迹", value: `${totalNoteCount}`, note: notebooks.error ? "笔记接口读取失败，已降级" : `${noteBooks.length || notebooks.totalBookCount || 0} 本书有笔记` },
+        { label: "偏好分类", value: topCategories.map(item => item.name).join(" / ") || "暂无", note: categories.length ? `共 ${categories.length} 个分类` : "分类数据不足" },
+        { label: "阅读时段", value: timeProfile.label, note: timeProfile.note },
+        { label: "媒介倾向", value: t >= 0.5 ? "纸页阅读" : "声流阅读", note: textRateNote(overall, annual, books, albums) }
+      ];
+
+      return {
+        sourceLabel,
+        persona,
+        vector,
+        dimensions: buildDimensions(vector),
+        warmText: buildWarmReadingText(vector, {
+          topCategories: topCategories.map(item => item.name),
+          timeLabel: timeProfile.label,
+          totalNoteCount,
+          totalReadTime,
+          totalShelf,
+          t
+        }),
+        metrics,
+        topBooks,
+        tags: persona.tags,
+        rawSummary: {
+          totalShelf,
+          totalReadTime,
+          readDays,
+          totalNoteCount,
+          topCategories: topCategories.map(item => item.name),
+          timeLabel: timeProfile.label
+        }
+      };
+    }
+
+    function categoryStats(books, preferCategory) {
+      const map = new Map();
+      books.forEach(book => {
+        const name = book.category || "未分类";
+        map.set(name, (map.get(name) || 0) + 1);
+      });
+      const shelfCategories = Array.from(map.entries()).map(([name, count]) => ({ name, count, val: count }));
+      const prefer = preferCategory
+        .filter(item => item.categoryTitle || item.parentCategoryTitle)
+        .map(item => ({
+          name: item.categoryTitle || item.parentCategoryTitle,
+          count: item.readingCount || 0,
+          val: item.readingTime || item.val || 0
+        }));
+      const merged = prefer.length ? prefer : shelfCategories;
+      return merged.sort((a, b) => Number(b.val || b.count || 0) - Number(a.val || a.count || 0));
+    }
+
+    function normalizeTopBooks(items) {
+      return (Array.isArray(items) ? items : []).slice(0, 5).map(item => {
+        const book = item.book || item.albumInfo || {};
+        return {
+          title: book.title || book.name || "未命名书籍",
+          author: book.author || book.authorName || "未知作者",
+          cover: book.cover || "",
+          readTime: item.readTime || 0
+        };
+      });
+    }
+
+    function analyzeTime(preferTime, word) {
+      if (!preferTime.length) {
+        return {
+          label: word || "时段未明",
+          note: "时段数据不足",
+          morningScore: word && word.includes("夜") ? 0.15 : 0.52
+        };
+      }
+      const hourValues = {};
+      preferTime.forEach((value, index) => {
+        const hour = (index + 6) % 24;
+        hourValues[hour] = Number(value || 0);
+      });
+      const sumRange = hours => hours.reduce((sum, hour) => sum + Number(hourValues[hour] || 0), 0);
+      const morning = sumRange([6, 7, 8, 9, 10, 11]);
+      const night = sumRange([18, 19, 20, 21, 22, 23, 0, 1]);
+      const total = preferTime.reduce((sum, value) => sum + Number(value || 0), 0) || 1;
+      const score = clamp((morning + (total - night) * 0.18) / (morning + night + total * 0.18));
+      const label = word || (morning >= night ? "晨间偏好" : "夜间偏好");
+      return {
+        label,
+        note: `晨间 ${fmtTime(morning)}，夜间 ${fmtTime(night)}`,
+        morningScore: score
+      };
+    }
+
+    function getTextRate(overall, annual, books, albums) {
+      const source = overall.readRate !== undefined ? overall : annual;
+      if (source.readRate !== undefined) {
+        return clamp(Number(source.readRate) / 100);
+      }
+      const readTime = Number(source.wrReadTime || annual.wrReadTime || 0);
+      const listenTime = Number(source.wrListenTime || annual.wrListenTime || 0);
+      if (readTime + listenTime > 0) {
+        return clamp(readTime / (readTime + listenTime));
+      }
+      return books.length + albums.length ? clamp(books.length / (books.length + albums.length)) : 0.82;
+    }
+
+    function textRateNote(overall, annual, books, albums) {
+      const source = overall.readRate !== undefined ? overall : annual;
+      if (source.readRate !== undefined) return `文字阅读约 ${Math.round(Number(source.readRate))}%`;
+      const readTime = Number(source.wrReadTime || annual.wrReadTime || 0);
+      const listenTime = Number(source.wrListenTime || annual.wrListenTime || 0);
+      if (readTime + listenTime > 0) return `文字 ${fmtTime(readTime)}，听书 ${fmtTime(listenTime)}`;
+      return `${books.length} 本电子书，${albums.length} 个有声书/专辑`;
+    }
+
+    function buildDimensions(vector) {
+      return [
+        { name: "选书方式", left: "专注少数书", right: "探索很多主题", value: vector.e, desc: vector.e >= 0.5 ? "喜欢不断发现新主题" : "更愿意把少数书读深" },
+        { name: "阅读时间", left: "夜里更有状态", right: "白天更有状态", value: vector.m, desc: vector.m >= 0.5 ? "白天更容易进入阅读" : "夜晚更容易进入阅读" },
+        { name: "读书习惯", left: "安静读完", right: "常划线写想法", value: vector.a, desc: vector.a >= 0.5 ? "喜欢留下划线和想法" : "更喜欢沉浸地读" },
+        { name: "阅读媒介", left: "常听书", right: "偏文字阅读", value: vector.t, desc: vector.t >= 0.5 ? "更偏文字阅读" : "常用声音完成阅读" }
+      ];
+    }
+
+    function buildWarmReadingText(vector, info) {
+      const category = info.topCategories && info.topCategories.length
+        ? `你常去的阅读地带是${info.topCategories.slice(0, 2).join("和")}，`
+        : "你的阅读兴趣不急着给自己贴标签，";
+      const depth = vector.e >= 0.5
+        ? "你愿意把注意力投向不同主题，像是在给自己的世界多开几扇窗。"
+        : "你不太追求把书架堆得很满，更在意一本书有没有真的进入你的生活。";
+      const time = vector.m >= 0.5
+        ? "白天的阅读对你来说更像整理秩序，把念头一点点放回合适的位置。"
+        : "夜晚的阅读对你来说更像一段安静的自处，周围慢下来之后，书里的声音会更清楚。";
+      const note = vector.a >= 0.5
+        ? "你读书时会留下痕迹，划线和想法不是为了证明读过，而是给以后的自己留一盏灯。"
+        : "你读书时不一定急着记录，很多东西会先沉到心里，过一阵子再慢慢长出来。";
+      const medium = vector.t >= 0.5
+        ? "你更习惯和文字正面相遇，一页一页地看，节奏由自己掌握。"
+        : "你也擅长让书进入路上、散步和生活间隙，用声音把阅读延展开。";
+      return `${category}${depth}${time}${note}${medium}`;
+    }
+
+    function matchPersona(vector) {
+      let best = personas[0];
+      let bestScore = Infinity;
+      personas.forEach(persona => {
+        const score = Math.pow(vector.e - persona.vector.e, 2)
+          + Math.pow(vector.m - persona.vector.m, 2)
+          + Math.pow(vector.a - persona.vector.a, 2)
+          + Math.pow(vector.t - persona.vector.t, 2);
+        if (score < bestScore) {
+          best = persona;
+          bestScore = score;
+        }
+      });
+      return best;
+    }
+
+    function renderResult(result) {
+      currentResult = result;
+      els.resultWrap.classList.add("is-visible");
+      els.dataSourceLabel.textContent = result.sourceLabel;
+      els.personaCode.textContent = result.persona.code;
+      els.personaName.textContent = result.persona.name;
+      els.personaText.textContent = result.persona.line;
+      els.warmReadingText.textContent = result.warmText;
+
+      els.tagRow.innerHTML = "";
+      result.tags.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        els.tagRow.appendChild(span);
+      });
+
+      els.metricGrid.innerHTML = "";
+      result.metrics.forEach(metric => {
+        const div = document.createElement("div");
+        div.className = "metric";
+        div.innerHTML = `<b>${escapeHtml(metric.value)}</b><span>${escapeHtml(metric.label)} · ${escapeHtml(metric.note)}</span>`;
+        els.metricGrid.appendChild(div);
+      });
+
+      els.dimensionList.innerHTML = "";
+      result.dimensions.forEach(dim => {
+        const div = document.createElement("div");
+        div.className = "dim";
+        div.innerHTML = `
+          <div class="dim-head"><span>${escapeHtml(dim.name)}</span><span>${escapeHtml(dim.desc)}</span></div>
+          <div class="track"><span class="fill" style="width:${Math.round(dim.value * 100)}%"></span></div>
+          <div class="dim-head"><span>${escapeHtml(dim.left)}</span><span>${escapeHtml(dim.right)}</span></div>
+        `;
+        els.dimensionList.appendChild(div);
+      });
+
+      els.booksList.innerHTML = "";
+      result.topBooks.forEach(book => {
+        const row = document.createElement("div");
+        row.className = "book-item";
+        row.innerHTML = `
+          ${book.cover ? `<img class="book-cover" src="${escapeAttr(book.cover)}" alt="">` : `<div class="book-cover"></div>`}
+          <div>
+            <div class="book-title">${escapeHtml(book.title)}</div>
+            <div class="book-sub">${escapeHtml(book.author)}</div>
+          </div>
+          <span class="book-sub">${escapeHtml(fmtTime(book.readTime))}</span>
+        `;
+        els.booksList.appendChild(row);
+      });
+
+      drawShareCanvas(result);
+      els.canvasPreview.classList.add("is-visible");
+      els.resultWrap.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      }[char]));
+    }
+
+    function escapeAttr(value) {
+      return escapeHtml(value).replace(/"/g, "&quot;");
+    }
+
+    function drawShareCanvas(result) {
+      const canvas = els.canvas;
+      const ctx = canvas.getContext("2d");
+      const scale = canvas.width / 1080;
+      const w = 1080;
+      const h = 1440;
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.setTransform(scale, 0, 0, scale, 0, 0);
+      ctx.imageSmoothingEnabled = true;
+      ctx.fillStyle = "#f7f0e4";
+      ctx.fillRect(0, 0, w, h);
+
+      ctx.fillStyle = "rgba(31, 107, 79, 0.1)";
+      ctx.beginPath();
+      ctx.arc(890, 160, 210, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = "rgba(23, 33, 28, 0.08)";
+      for (let x = 0; x < w; x += 36) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, h);
+        ctx.stroke();
+      }
+      for (let y = 0; y < h; y += 36) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(w, y);
+        ctx.stroke();
+      }
+
+      roundRect(ctx, 90, 90, 900, 1260, 26, "#fffaf0", "rgba(23, 33, 28, 0.13)");
+
+      ctx.fillStyle = "#1f6b4f";
+      ctx.font = "700 32px PingFang SC, Microsoft YaHei, sans-serif";
+      ctx.fillText("微信读书人格画像", 135, 160);
+      ctx.fillStyle = "#66736c";
+      ctx.font = "24px PingFang SC, Microsoft YaHei, sans-serif";
+      ctx.fillText("由你的微信读书数据生成", 135, 198);
+
+      ctx.fillStyle = "#1f6b4f";
+      ctx.font = "104px Georgia, Times New Roman, serif";
+      ctx.fillText(result.persona.code, 135, 330);
+      ctx.fillStyle = "#17211c";
+      ctx.font = "700 66px Songti SC, STSong, serif";
+      ctx.fillText(result.persona.name, 135, 410);
+
+      drawWrappedText(ctx, result.persona.line, 135, 475, 800, 42, "30px PingFang SC, Microsoft YaHei, sans-serif", "#34413b");
+
+      let tagX = 135;
+      result.tags.forEach(tag => {
+        const width = ctx.measureText(tag).width + 46;
+        roundRect(ctx, tagX, 610, width, 50, 25, "rgba(31, 107, 79, 0.08)", "rgba(31, 107, 79, 0.22)");
+        ctx.fillStyle = "#1f6b4f";
+        ctx.font = "700 24px PingFang SC, Microsoft YaHei, sans-serif";
+        ctx.fillText(tag, tagX + 23, 643);
+        tagX += width + 16;
+      });
+
+      ctx.fillStyle = "#17211c";
+      ctx.font = "700 31px PingFang SC, Microsoft YaHei, sans-serif";
+      ctx.fillText("画像依据", 135, 720);
+
+      const metricItems = result.metrics.slice(0, 6);
+      metricItems.forEach((metric, index) => {
+        const col = index % 2;
+        const row = Math.floor(index / 2);
+        const x = 135 + col * 410;
+        const y = 755 + row * 94;
+        roundRect(ctx, x, y, 365, 76, 12, "rgba(255,255,255,0.52)", "rgba(23,33,28,0.12)");
+        ctx.fillStyle = "#17211c";
+        ctx.font = "700 25px PingFang SC, Microsoft YaHei, sans-serif";
+        fitText(ctx, metric.value, x + 20, y + 31, 318, 25);
+        ctx.fillStyle = "#66736c";
+        ctx.font = "19px PingFang SC, Microsoft YaHei, sans-serif";
+        fitText(ctx, metric.label, x + 20, y + 59, 318, 19);
+      });
+
+      ctx.fillStyle = "#17211c";
+      ctx.font = "700 30px PingFang SC, Microsoft YaHei, sans-serif";
+      ctx.fillText("你的阅读样子", 135, 1058);
+      drawWrappedText(ctx, result.warmText, 135, 1110, 800, 34, "23px PingFang SC, Microsoft YaHei, sans-serif", "#3f4b45", 5);
+
+      ctx.strokeStyle = "rgba(23, 33, 28, 0.1)";
+      ctx.beginPath();
+      ctx.moveTo(135, 1280);
+      ctx.lineTo(945, 1280);
+      ctx.stroke();
+      ctx.fillStyle = "#a94535";
+      ctx.font = "700 17px PingFang SC, Microsoft YaHei, sans-serif";
+      ctx.fillText("项目由「阿川的知识管理」制作", 135, 1312);
+      ctx.fillStyle = "#66736c";
+      ctx.font = "15px PingFang SC, Microsoft YaHei, sans-serif";
+      ctx.fillText("图片不包含 API Key 或原始笔记全文 · weread.qq.com/r/weread-skills", 135, 1338);
+    }
+
+    function fitText(ctx, text, x, y, maxWidth, size) {
+      const value = String(text);
+      let fontSize = size;
+      while (ctx.measureText(value).width > maxWidth && fontSize > 16) {
+        fontSize -= 1;
+        ctx.font = ctx.font.replace(/\d+px/, `${fontSize}px`);
+      }
+      ctx.fillText(value, x, y);
+    }
+
+    function drawWrappedText(ctx, text, x, y, maxWidth, lineHeight, font, color, maxLines) {
+      ctx.font = font;
+      ctx.fillStyle = color;
+      const chars = String(text).split("");
+      let line = "";
+      let currentY = y;
+      let lines = 0;
+      chars.forEach(char => {
+        if (maxLines && lines >= maxLines) return;
+        const test = line + char;
+        if (ctx.measureText(test).width > maxWidth && line) {
+          lines += 1;
+          if (maxLines && lines >= maxLines) {
+            let clipped = line;
+            while (ctx.measureText(clipped + "…").width > maxWidth && clipped.length > 0) {
+              clipped = clipped.slice(0, -1);
+            }
+            ctx.fillText(clipped + "…", x, currentY);
+            line = "";
+            return;
+          }
+          ctx.fillText(line, x, currentY);
+          line = char;
+          currentY += lineHeight;
+        } else {
+          line = test;
+        }
+      });
+      if (line && (!maxLines || lines < maxLines)) ctx.fillText(line, x, currentY);
+    }
+
+    function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
+      const r = Math.min(radius, width / 2, height / 2);
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.arcTo(x + width, y, x + width, y + height, r);
+      ctx.arcTo(x + width, y + height, x, y + height, r);
+      ctx.arcTo(x, y + height, x, y, r);
+      ctx.arcTo(x, y, x + width, y, r);
+      ctx.closePath();
+      if (fill) {
+        ctx.fillStyle = fill;
+        ctx.fill();
+      }
+      if (stroke) {
+        ctx.strokeStyle = stroke;
+        ctx.stroke();
+      }
+    }
+
+    function downloadCanvas() {
+      if (!currentResult) return;
+      drawShareCanvas(currentResult);
+      const link = document.createElement("a");
+      link.download = `微信读书人格画像-${currentResult.persona.code}.png`;
+      link.href = els.canvas.toDataURL("image/png");
+      link.click();
+    }
+
+    function storageGet(key) {
+      try {
+        return window.localStorage ? window.localStorage.getItem(key) : null;
+      } catch (err) {
+        return null;
+      }
+    }
+
+    function storageSet(key, value) {
+      try {
+        if (window.localStorage) window.localStorage.setItem(key, value);
+        return true;
+      } catch (err) {
+        return false;
+      }
+    }
+
+    function storageRemove(key) {
+      try {
+        if (window.localStorage) window.localStorage.removeItem(key);
+        return true;
+      } catch (err) {
+        return false;
+      }
+    }
+
+    function getDemoData() {
+      return analyzeData({
+        shelf: {
+          books: [
+            { title: "置身事内", author: "兰小欢", category: "经济理财", finishReading: 1, readUpdateTime: 1718800000 },
+            { title: "可能性的艺术", author: "刘瑜", category: "政治社会", finishReading: 1, readUpdateTime: 1717800000 },
+            { title: "纳瓦尔宝典", author: "埃里克·乔根森", category: "个人成长", finishReading: 0, readUpdateTime: 1716200000 },
+            { title: "始于极限", author: "上野千鹤子", category: "社会文化", finishReading: 1, readUpdateTime: 1715200000 },
+            { title: "长安的荔枝", author: "马伯庸", category: "小说", finishReading: 0, readUpdateTime: 1714200000 },
+            { title: "卡片笔记写作法", author: "申克·阿伦斯", category: "学习方法", finishReading: 1, readUpdateTime: 1713200000 }
+          ],
+          albums: [{ albumInfo: { name: "苏东坡传", authorName: "林语堂" }, albumInfoExtra: {} }],
+          mp: {}
+        },
+        annual: {
+          totalReadTime: 186400,
+          readDays: 96,
+          preferCategory: [
+            { categoryTitle: "社会文化", readingTime: 82000, readingCount: 8 },
+            { categoryTitle: "个人成长", readingTime: 52000, readingCount: 6 },
+            { categoryTitle: "文学小说", readingTime: 36000, readingCount: 5 }
+          ],
+          preferTimeWord: "偏好夜间阅读",
+          preferTime: [0,0,600,900,1200,500,200,100,0,0,0,0,0,300,900,3600,4200,3900,2200,900,400,100,0,0],
+          readLongest: [
+            { book: { title: "置身事内", author: "兰小欢" }, readTime: 32400 },
+            { book: { title: "可能性的艺术", author: "刘瑜" }, readTime: 26800 },
+            { book: { title: "始于极限", author: "上野千鹤子" }, readTime: 18800 }
+          ]
+        },
+        overall: {
+          readRate: 91,
+          totalReadTime: 520000,
+          readDays: 320
+        },
+        notebooks: {
+          totalBookCount: 24,
+          totalNoteCount: 486,
+          books: [
+            { reviewCount: 40, noteCount: 82, bookmarkCount: 3 },
+            { reviewCount: 30, noteCount: 64, bookmarkCount: 2 }
+          ]
+        }
+      }, "示例数据");
+    }
+
+    async function handleGenerate() {
+      clearError();
+      const apiKey = els.apiKey.value.trim();
+      if (!apiKey) {
+        showError("请先输入微信读书 API Key。页面底部有获取入口。");
+        return;
+      }
+      if (!apiKey.startsWith("wrk-")) {
+        showError("这个 API Key 看起来不像 wrk- 开头。你仍然可以继续尝试，但建议先检查一下。");
+      }
+      els.generateBtn.disabled = true;
+      try {
+        if (els.rememberKey.checked) {
+          const saved = storageSet("weread_api_key", apiKey);
+          if (!saved) {
+            els.rememberKey.checked = false;
+          }
+        } else {
+          storageRemove("weread_api_key");
+        }
+        const result = await collectData(apiKey);
+        renderResult(result);
+      } catch (err) {
+        showError(`${err.message || err} 可以先用「先看示例」查看完整效果；如果要让真实数据自动生成，需要把调用放在微信读书允许的网页来源，或增加一个不保存密钥的中转方案。`);
+      } finally {
+        els.generateBtn.disabled = false;
+      }
+    }
+
+    function boot() {
+      const saved = storageGet("weread_api_key");
+      if (saved) {
+        els.apiKey.value = saved;
+        els.rememberKey.checked = true;
+      }
+      els.generateBtn.addEventListener("click", handleGenerate);
+      document.getElementById("keyForm").addEventListener("submit", event => {
+        event.preventDefault();
+        handleGenerate();
+      });
+      els.demoBtn.addEventListener("click", () => {
+        clearError();
+        setStatus("已载入示例数据", 100);
+        renderResult(getDemoData());
+      });
+      els.showKeyBtn.addEventListener("click", () => {
+        els.apiKey.type = els.apiKey.type === "password" ? "text" : "password";
+      });
+      els.clearBtn.addEventListener("click", () => {
+        storageRemove("weread_api_key");
+        els.apiKey.value = "";
+        els.rememberKey.checked = false;
+        clearError();
+        setStatus("本机保存的 API Key 已清除", 0);
+      });
+      els.scrollGuideBtn.addEventListener("click", () => {
+        els.guide.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+      els.downloadBtn.addEventListener("click", downloadCanvas);
+      els.rerunBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        els.apiKey.focus();
+      });
+    }
+
+    boot();
+  </script>
+</body>
+</html>
