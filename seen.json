@@ -612,5 +612,12 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-05-25T10:20:26.063Z"
+  },
+  {
+    "repo": "LoloChak/weread-golden-quotes",
+    "decision": "accepted",
+    "reason": "项目明确指出使用微信读书 Agent Gateway API (wrk-xxxxxxxx 格式的 API Key)，并通过 WorkBuddy 或浏览器开发者工具获取，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-05-25T19:48:52.000Z"
   }
 ]
