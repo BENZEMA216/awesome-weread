@@ -1,0 +1,3 @@
+$ git clone https://github.com/wong2/weread-mcp.git
+Cloning into '/private/tmp/awesome-weread-maintenance-2026-05-25/wong2-weread-mcp'...
+fatal: unable to access 'https://github.com/wong2/weread-mcp.git/': Failed to connect to 127.0.0.1 port 7897 after 0 ms: Couldn't connect to server

@@ -1,0 +1,3 @@
+$ git clone https://github.com/lucis-yg/weread-dashboard.git
+Cloning into '/private/tmp/awesome-weread-maintenance-2026-05-25/lucis-yg-weread-dashboard'...
+fatal: unable to access 'https://github.com/lucis-yg/weread-dashboard.git/': Failed to connect to 127.0.0.1 port 7897 after 0 ms: Couldn't connect to server

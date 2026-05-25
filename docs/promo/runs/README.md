@@ -35,6 +35,15 @@ docs/promo/runs/YYYY-MM-DD/<owner-repo>/
 | [AstrophelXD/WeReadAura](https://github.com/AstrophelXD/WeReadAura) | 桌面挂件与可视化 | [summary.md](./2026-05-25/AstrophelXD-WeReadAura/summary.md) | [首页截图](./2026-05-25/AstrophelXD-WeReadAura/artifacts/screenshot-home.jpg) · [书架截图](./2026-05-25/AstrophelXD-WeReadAura/artifacts/screenshot-bookshelf.jpg) · [公开 metadata](./2026-05-25/AstrophelXD-WeReadAura/artifacts/data/public-metadata.json) |
 | [ZiGmaX809/Weread_ReadTime_Heatmap](https://github.com/ZiGmaX809/Weread_ReadTime_Heatmap) | 桌面挂件与可视化 | [summary.md](./2026-05-25/ZiGmaX809-Weread_ReadTime_Heatmap/summary.md) | [SVG](./2026-05-25/ZiGmaX809-Weread_ReadTime_Heatmap/artifacts/awesome-weread-heatmap.svg) · [截图](./2026-05-25/ZiGmaX809-Weread_ReadTime_Heatmap/artifacts/awesome-weread-heatmap-screenshot.jpg) · [JSON](./2026-05-25/ZiGmaX809-Weread_ReadTime_Heatmap/artifacts/awesome-weread-heatmap.json) |
 
+## 已尝试但未跑通（不计入完成）
+
+这些项目已经创建了体验目录并记录了失败原因，但由于网络/依赖/账号等原因没有跑出可验证的最终效果，不算“已完成体验”。后续网络恢复后优先补跑并用真实产物替换。
+
+| 项目 | 分类 | Summary | 当前产物 |
+|------|------|---------|----------|
+| [wong2/weread-mcp](https://github.com/wong2/weread-mcp) | MCP 服务 | [summary.md](./2026-05-25/wong2-weread-mcp/summary.md) | [clone 日志](./2026-05-25/wong2-weread-mcp/artifacts/git-clone.txt) |
+| [lucis-yg/weread-dashboard](https://github.com/lucis-yg/weread-dashboard) | 桌面挂件与可视化 | [summary.md](./2026-05-25/lucis-yg-weread-dashboard/summary.md) | [clone 日志](./2026-05-25/lucis-yg-weread-dashboard/artifacts/git-clone.txt) |
+
 ## 待补历史项目
 
 下面是 README 里已经收录、但尚未真实跑出体验子目录的历史项目。不要用模板或推测内容伪造结果；后续维护任务需要逐个运行，成功后再从本表移到“已完成体验”。

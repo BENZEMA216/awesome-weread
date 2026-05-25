@@ -58,6 +58,7 @@ function extractRunRecords() {
   for (const summaryPath of summaries) {
     if (summaryPath.includes("/_template/")) continue;
     const text = readFileSync(summaryPath, "utf8");
+    const isBlocked = /未完成|网络受限|blocked/i.test(text.split(/\n/).slice(0, 20).join("\n"));
     const repoMatch = text.match(/github\.com\/([\w.-]+\/[\w.-]+)/i);
     if (!repoMatch) {
       records.push({
@@ -85,7 +86,7 @@ function extractRunRecords() {
       artifactDirRel: relative(ROOT, artifactDir),
       artifactCount: artifacts.length,
       imageCount: images.length,
-      problem: artifacts.length ? null : "missing_artifacts",
+      problem: isBlocked ? "blocked_run" : artifacts.length ? null : "missing_artifacts",
     });
   }
 
