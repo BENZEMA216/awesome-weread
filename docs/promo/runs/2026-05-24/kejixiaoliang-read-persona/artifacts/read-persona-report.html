@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>阅读人格报告｜微信读书画像</title>
+  <style>
+    :root {
+      --paper: #f7f0e6;
+      --paper-2: #fffaf1;
+      --ink: #211a16;
+      --muted: #6f6258;
+      --rule: #d8c7b0;
+      --accent: #8b3f2f;
+      --moss: #556b4e;
+      --brass: #a9783a;
+      --indigo: #26364f;
+      --surface-shadow: rgba(59, 38, 24, 0.12);
+      --sans: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+      --serif: "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height: 1.72;
+    }
+    body.theme-classic {
+      background:
+        linear-gradient(90deg, rgba(139, 63, 47, .05) 0 1px, transparent 1px 100%),
+        linear-gradient(180deg, rgba(139, 63, 47, .035) 0 1px, transparent 1px 100%),
+        var(--paper);
+      background-size: 44px 44px;
+    }
+    body.theme-modern {
+      --paper: #f8f8f5;
+      --paper-2: #ffffff;
+      --ink: #171717;
+      --muted: #62625d;
+      --rule: #deded8;
+      --accent: #111111;
+      --moss: #5f6f62;
+      --brass: #9a743e;
+      --indigo: #33415f;
+      --surface-shadow: rgba(18, 18, 18, 0.08);
+      background: var(--paper);
+      font-family: "Noto Serif SC", "Songti SC", Georgia, serif;
+    }
+    .page { max-width: 1120px; margin: 0 auto; padding: 48px 24px 72px; }
+    .report-shell {
+      background: color-mix(in srgb, var(--paper-2) 92%, white);
+      border: 1px solid var(--rule);
+      box-shadow: 0 22px 60px var(--surface-shadow);
+      padding: clamp(22px, 4vw, 42px);
+    }
+    .theme-modern .report-shell {
+      border-radius: 18px;
+      border-color: transparent;
+      box-shadow: 0 24px 80px var(--surface-shadow);
+    }
+    .hero { border-bottom: 1px solid var(--rule); padding-bottom: 30px; }
+    .eyebrow {
+      font: 800 12px/1.2 var(--sans);
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    h1 {
+      margin: 14px 0 16px;
+      font-size: clamp(38px, 7vw, 86px);
+      line-height: 1.02;
+      letter-spacing: 0;
+      font-weight: 800;
+    }
+    h2 {
+      margin: 52px 0 18px;
+      font-size: clamp(24px, 3vw, 38px);
+      line-height: 1.16;
+    }
+    h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.28; }
+    p { margin: 0 0 14px; }
+    .lede { max-width: 800px; font-size: 20px; color: var(--muted); }
+    .meta { margin-top: 22px; color: var(--muted); font-size: 14px; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+    .metric, .card {
+      background: color-mix(in srgb, var(--paper-2) 88%, white);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .theme-modern .metric,
+    .theme-modern .card {
+      border-radius: 14px;
+      background: #fff;
+    }
+    .metric { grid-column: span 3; min-height: 112px; }
+    .metric strong { display:block; font-size: 30px; line-height: 1.1; margin-bottom: 8px; }
+    .metric span, .label {
+      font: 800 12px/1.3 var(--sans);
+      color: var(--muted);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .card { grid-column: span 4; }
+    .wide { grid-column: span 8; }
+    .half { grid-column: span 6; }
+    .full { grid-column: 1 / -1; }
+    .chip {
+      display:inline-block;
+      margin: 0 8px 8px 0;
+      padding: 7px 11px;
+      border:1px solid var(--rule);
+      border-radius:999px;
+      font: 800 13px var(--sans);
+      color: var(--indigo);
+      background: rgba(255,255,255,.35);
+    }
+    .score {
+      display: grid;
+      grid-template-columns: 132px 1fr 44px;
+      gap: 12px;
+      align-items: center;
+      margin: 10px 0;
+      font: 700 13px var(--sans);
+    }
+    .bar { height: 10px; border-radius: 99px; background: #e5d5bf; overflow: hidden; }
+    .bar i { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
+    .bar.moss i { background: var(--moss); }
+    .bar.brass i { background: var(--brass); }
+    .bar.indigo i { background: var(--indigo); }
+    .list { padding-left: 1.1em; margin: 0; }
+    .list li { margin: 8px 0; }
+    .quote {
+      margin: 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--accent);
+      background: rgba(139, 63, 47, .06);
+      color: #3b2a22;
+      font-size: 18px;
+    }
+    .theme-modern .quote {
+      background: #f2f2ef;
+      color: var(--ink);
+    }
+    .table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    .table th, .table td { text-align: left; border-bottom: 1px solid var(--rule); padding: 10px 8px; vertical-align: top; }
+    .table th { color: var(--muted); font: 800 12px var(--sans); text-transform: uppercase; }
+    .timeline { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; align-items: end; min-height: 180px; }
+    .year { display: grid; grid-template-rows: 1fr auto auto; gap: 8px; height: 180px; }
+    .year .col { align-self: end; min-height: 2px; background: var(--indigo); border-radius: 6px 6px 2px 2px; }
+    .year b { font: 800 13px var(--sans); }
+    .year small { color: var(--muted); font: 700 11px var(--sans); }
+    .footer-note { color: var(--muted); font-size: 13px; border-top: 1px solid var(--rule); padding-top: 18px; }
+    @media (max-width: 760px) {
+      .page { padding: 24px 14px 48px; }
+      .report-shell { padding: 20px 16px; }
+      .metric, .card, .wide, .half { grid-column: 1 / -1; }
+      .score { grid-template-columns: 1fr; gap: 6px; }
+      .timeline { grid-template-columns: repeat(3, 1fr); }
+      .table { font-size: 14px; }
+    }
+  </style>
+</head>
+<body class="theme-classic">
+  <main class="page">
+    <article class="report-shell">
+      <header class="hero">
+        <div class="eyebrow">WeRead Persona · 2026-05-25 14:20:55</div>
+        <h1>阅读人格报告</h1>
+        <p class="lede">你的书架有清晰的知识重力，也保留着文学、历史、科幻和心理的侧翼。这份报告把微信读书数据转化为一张可阅读的个人画像。</p>
+        <p class="meta">累计阅读 1046小时9分钟，有效阅读 1798 天，笔记 949 条。</p>
+      </header>
+
+      
+      <section>
+        <h2>一眼看见你</h2>
+        <div class="grid"><div class="metric"><strong>119</strong><span>可见书架条目</span></div>
+<div class="metric"><strong>1046小时9分钟</strong><span>累计阅读时长</span></div>
+<div class="metric"><strong>1798</strong><span>有效阅读天数</span></div>
+<div class="metric"><strong>949</strong><span>笔记与标注</span></div>
+<div class="metric"><strong>86本</strong><span>读过</span></div>
+<div class="metric"><strong>41本</strong><span>读完</span></div>
+<div class="metric"><strong>113 / 6</strong><span>公开 / 私密</span></div>
+<div class="metric"><strong>118 / 0</strong><span>电子书 / 有声书</span></div></div>
+      </section>
+
+      <section>
+        <h2>你的阅读人格</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>技术建造者</h3>
+            <p>你的书架和累计偏好都显示出明显的计算机与工程取向。你读书时常在寻找可以落地的工具、方法和结构。</p>
+            <span class="chip">计算机偏好</span><span class="chip">工具型知识</span>
+          </div>
+          <div class="card">
+            <h3>系统观察者</h3>
+            <p>你会被流程、权力、成本、因果和执行链条吸引。对你来说，书里真正有意思的地方常常是“事情如何发生”。</p>
+            <span class="chip">流程</span><span class="chip">制度</span>
+          </div>
+          <div class="card">
+            <h3>夜间学者</h3>
+            <p>偏好下午与深夜阅读。你更像在安静时段回到书里处理问题。</p>
+            <span class="chip">时间节律</span><span class="chip">深读窗口</span>
+          </div>
+          <div class="card">
+            <h3>注释采集者</h3>
+            <p>你留下 949 条笔记与标注，约 0.9 条/小时。你的笔记不是装饰，而是理解支架。</p>
+            <span class="chip">高标注密度</span><span class="chip">主动加工</span>
+          </div>
+          <div class="card wide">
+            <h3>一句话画像</h3>
+            <blockquote class="quote">你是一个工程理性驱动、系统感强、在阶段性深读中用笔记建立理解结构的读者。</blockquote>
+          </div>
+        </div>
+      </section>
+
+      
+      <section>
+        <h2>阅读 DNA</h2>
+        <div class="grid">
+          <div class="card half">
+            <h3>藏书重力</h3>
+            <div class="score"><span>经济理财</span><div class="bar "><i style="width:100%"></i></div><b>23</b></div><div class="score"><span>精品小说</span><div class="bar indigo"><i style="width:91%"></i></div><b>21</b></div><div class="score"><span>男生小说</span><div class="bar brass"><i style="width:74%"></i></div><b>17</b></div><div class="score"><span>文学</span><div class="bar moss"><i style="width:52%"></i></div><b>12</b></div><div class="score"><span>社会文化</span><div class="bar "><i style="width:43%"></i></div><b>10</b></div><div class="score"><span>未分类/导入/公众号</span><div class="bar indigo"><i style="width:30%"></i></div><b>7</b></div><div class="score"><span>个人成长</span><div class="bar brass"><i style="width:26%"></i></div><b>6</b></div><div class="score"><span>政治军事</span><div class="bar moss"><i style="width:26%"></i></div><b>6</b></div>
+          </div>
+          <div class="card half">
+            <h3>实际阅读偏好</h3>
+            <table class="table">
+              <thead><tr><th>分类</th><th>本数</th><th>时长</th></tr></thead>
+              <tbody><tr><td>影视原著</td><td>11</td><td>273小时21分钟</td></tr><tr><td>男生小说</td><td>16</td><td>731小时43分钟</td></tr><tr><td>经济理财</td><td>13</td><td>72小时12分钟</td></tr><tr><td>历史架空</td><td>1</td><td>53小时30分钟</td></tr><tr><td>文学</td><td>12</td><td>44小时27分钟</td></tr><tr><td>社会小说</td><td>7</td><td>36小时15分钟</td></tr><tr><td>心理</td><td>1</td><td>24小时23分钟</td></tr><tr><td>政治军事</td><td>3</td><td>23小时6分钟</td></tr></tbody>
+            </table>
+          </div>
+          <div class="card full">
+            <h3>结构判断</h3>
+            <p>你的阅读结构不是单一工具型。技术书提供工具和实现能力，文学、历史、科幻与心理书则提供叙事、尺度、制度感和自我理解。</p>
+          </div>
+        </div>
+      </section>
+    
+
+      <section>
+        <h2>时间节律</h2>
+        <div class="grid">
+          <div class="card wide">
+            <h3>年度阅读曲线</h3>
+            <div class="timeline" aria-label="年度阅读时长"><div class="year"><div class="col" style="height:73%"></div><b>2021</b><small>124小时39分钟</small></div><div class="year"><div class="col" style="height:22%"></div><b>2022</b><small>37小时28分钟</small></div><div class="year"><div class="col" style="height:51%"></div><b>2023</b><small>87小时45分钟</small></div><div class="year"><div class="col" style="height:25%"></div><b>2024</b><small>42小时2分钟</small></div><div class="year"><div class="col" style="height:100%"></div><b>2025</b><small>170小时33分钟</small></div><div class="year"><div class="col" style="height:13%"></div><b>2026</b><small>21小时30分钟</small></div></div>
+          </div>
+          <div class="card">
+            <h3>当前季节</h3>
+            <p>今年：21小时30分钟；本月：7小时18分钟；本周：0小时3分钟。如果当前数据很少，应把判断重点放在长期模式上。</p>
+          </div>
+          <div class="card full">
+            <h3>节律判断</h3>
+            <p>你并不一定适合每日匀速打卡。更自然的方式是主题式阅读：围绕一个问题连续推进两周，再沉淀一份笔记。</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>注释里的心智</h2>
+        <div class="grid">
+          <div class="card half">
+            <h3>笔记行为</h3>
+            <ul class="list">
+              <li>有笔记的书：40 本。</li>
+              <li>笔记总数：949 条。</li>
+              <li>阅读日均强度：约 0小时34分钟 / 有效阅读日。</li>
+            </ul>
+          </div>
+          <div class="card half">
+            <h3>思考方式</h3>
+            <ul class="list">
+              <li>遇到技术内容时，你倾向于把它转化为可执行能力。</li>
+              <li>遇到历史叙事时，你会追问制度、权力和底层成本。</li>
+              <li>遇到心理与关系主题时，你在寻找自我解释和相处方法。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>代表性书目</h2>
+        <div class="grid"><div class="card"><h3>《诡秘之主（同名动画原著）》</h3><p>爱潜水的乌贼 · 115小时40分钟。这本书是你阅读画像里的强信号之一。</p></div><div class="card"><h3>《万族之劫》</h3><p>老鹰吃小鸡 · 107小时0分钟。这本书是你阅读画像里的强信号之一。</p></div><div class="card"><h3>《一世之尊》</h3><p>爱潜水的乌贼 · 71小时59分钟。这本书是你阅读画像里的强信号之一。</p></div><div class="card"><h3>《绍宋》</h3><p>榴弹怕水 · 53小时30分钟。这本书是你阅读画像里的强信号之一。</p></div><div class="card"><h3>《神秘复苏》</h3><p>佛前献花 · 52小时49分钟。这本书是你阅读画像里的强信号之一。</p></div><div class="card"><h3>《庆余年（同名电视剧原著）》</h3><p>猫腻 · 46小时26分钟。这本书是你阅读画像里的强信号之一。</p></div></div>
+      </section>
+
+      <section>
+        <h2>下一条阅读路径</h2>
+        <div class="grid">
+          <div class="card"><h3>小而美：持续盈利的经营法则</h3><p>[美]萨希尔·拉文吉亚 · 经济理财-管理。可作为下一阶段阅读候选。</p></div><div class="card"><h3>星辰之主</h3><p>减肥专家 · 男生小说-科幻未来。可作为下一阶段阅读候选。</p></div><div class="card"><h3>强风吹拂（2023版｜同名动画原著）</h3><p>三浦紫苑 · 文学-外国文学。可作为下一阶段阅读候选。</p></div><div class="card"><h3>我看见的世界：李飞飞自传</h3><p>[美]李飞飞 · 人物传记-传记综合。可作为下一阶段阅读候选。</p></div>
+          <div class="card full">
+            <h3>阅读任务建议</h3>
+            <p>选择一个主题，不要选择十本书。比如“嵌入式补骨架”“历史里的执行系统”或“科幻里的工程问题”，每天推进 20-40 分钟，两周后做一次复盘。</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>数据说明</h2>
+        <p class="footer-note">本报告使用微信读书书架、阅读统计、笔记本概览和推荐数据生成。阅读时长按秒转换；书架总量按电子书、有声书/专辑和文章收藏入口计算；当前周/月/年数据稀疏时，报告优先采用长期模式。</p>
+      </section>
+    
+    </article>
+  </main>
+</body>
+</html>

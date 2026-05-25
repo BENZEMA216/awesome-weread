@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>微信读书镜像画像 · Awesome WeRead Run</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f6f1e8;
+      --ink: #211c18;
+      --muted: #766b60;
+      --line: #d8cdbc;
+      --card: #fffaf0;
+      --accent: #31485f;
+      --accent-2: #865c37;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        linear-gradient(90deg, rgba(49, 72, 95, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(49, 72, 95, 0.05) 1px, transparent 1px),
+        var(--paper);
+      background-size: 28px 28px;
+      color: var(--ink);
+      font-family: "Songti SC", "Noto Serif SC", Georgia, serif;
+      line-height: 1.78;
+    }
+    .page {
+      width: min(1080px, calc(100vw - 40px));
+      margin: 40px auto;
+      background: rgba(255, 250, 240, 0.94);
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 80px rgba(56, 43, 29, 0.12);
+      padding: 56px;
+    }
+    .eyebrow {
+      color: var(--accent-2);
+      font: 700 12px/1.4 "Helvetica Neue", Arial, sans-serif;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 20px;
+    }
+    h1 {
+      font-size: clamp(48px, 7vw, 88px);
+      line-height: 1.02;
+      letter-spacing: 0;
+      margin: 0 0 18px;
+    }
+    .lead {
+      max-width: 820px;
+      color: #403832;
+      font-size: 21px;
+      margin: 0 0 34px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 0 0 42px;
+    }
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 13px;
+      color: var(--muted);
+      background: #fffdf7;
+      font: 500 13px/1 "Helvetica Neue", Arial, sans-serif;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 34px 0 46px;
+    }
+    .metric {
+      background: var(--card);
+      border: 1px solid var(--line);
+      min-height: 126px;
+      padding: 22px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .metric strong {
+      display: block;
+      font-size: 33px;
+      line-height: 1.05;
+      color: var(--accent);
+    }
+    .metric span {
+      color: var(--muted);
+      font: 500 13px/1.4 "Helvetica Neue", Arial, sans-serif;
+    }
+    section {
+      border-top: 1px solid var(--line);
+      padding-top: 36px;
+      margin-top: 36px;
+    }
+    h2 {
+      margin: 0 0 16px;
+      font-size: 31px;
+      line-height: 1.25;
+    }
+    p { margin: 0 0 16px; }
+    .two {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+    }
+    .panel {
+      background: rgba(255, 253, 247, 0.74);
+      border: 1px solid var(--line);
+      padding: 24px;
+    }
+    .panel h3 {
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-size: 20px;
+    }
+    .books {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .book {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      border-bottom: 1px solid #ece3d5;
+      padding: 0 0 9px;
+      color: #362f2a;
+      font-size: 15px;
+    }
+    .book small {
+      color: var(--muted);
+      white-space: nowrap;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+    .quote {
+      border-left: 4px solid var(--accent);
+      padding: 4px 0 4px 22px;
+      color: #302922;
+      font-size: 20px;
+      margin: 24px 0 0;
+    }
+    .bars {
+      display: grid;
+      gap: 13px;
+      margin-top: 12px;
+    }
+    .bar {
+      display: grid;
+      grid-template-columns: 92px 1fr 74px;
+      gap: 10px;
+      align-items: center;
+      font: 500 13px/1.3 "Helvetica Neue", Arial, sans-serif;
+      color: var(--muted);
+    }
+    .track {
+      height: 10px;
+      background: #ece3d5;
+      overflow: hidden;
+    }
+    .fill {
+      height: 100%;
+      background: var(--accent);
+    }
+    @media (max-width: 760px) {
+      .page { width: calc(100vw - 24px); padding: 30px 22px; margin: 12px auto; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .two { grid-template-columns: 1fr; }
+      .bar { grid-template-columns: 78px 1fr 54px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <p class="eyebrow">WEREAD MIRROR · AWESOME WEREAD EXPERIENCE ARTIFACT</p>
+    <h1>一个读者的<br>镜像画像</h1>
+    <p class="lead">这份页面按 viewer12/weread-mirror 的方法论生成：不评价读得好坏，只把书架、阅读时长、笔记密度和最长阅读书目放在一起，观察一个人和书之间真正发生过什么。</p>
+    <div class="meta">
+      <span class="pill">数据源：官方 Agent Gateway</span>
+      <span class="pill">生成日期：2026-05-25</span>
+      <span class="pill">不含 API Key</span>
+      <span class="pill">含真实阅读画像</span>
+    </div>
+
+    <div class="grid" aria-label="核心指标">
+      <div class="metric"><strong>119</strong><span>可见书架条目</span></div>
+      <div class="metric"><strong>1046h</strong><span>累计阅读时长</span></div>
+      <div class="metric"><strong>1798</strong><span>有效阅读天数</span></div>
+      <div class="metric"><strong>949</strong><span>笔记与划线信号</span></div>
+      <div class="metric"><strong>86</strong><span>读过书籍</span></div>
+      <div class="metric"><strong>41</strong><span>读完书籍</span></div>
+      <div class="metric"><strong>40</strong><span>有笔记的书</span></div>
+      <div class="metric"><strong>118 / 0</strong><span>电子书 / 有声书</span></div>
+    </div>
+
+    <section>
+      <h2>观察一：时间投给长篇叙事，笔记留给方法与判断。</h2>
+      <p>最长阅读书目集中在网文、影视原著和长篇小说上：它们占据大量沉浸时间。但笔记最密的书却转向心理学、经济学、原则、产品、哲学和商业。</p>
+      <p>这不是“娱乐”和“学习”的简单二分。更准确的说法是：叙事负责持续陪伴，方法书负责留下可复用的判断材料。</p>
+      <div class="two">
+        <div class="panel">
+          <h3>阅读时长最长</h3>
+          <div class="books">
+            <div class="book"><span>诡秘之主（同名动画原著） · 爱潜水的乌贼</span><small>115h40m</small></div>
+            <div class="book"><span>万族之劫 · 老鹰吃小鸡</span><small>107h00m</small></div>
+            <div class="book"><span>一世之尊 · 爱潜水的乌贼</span><small>71h59m</small></div>
+            <div class="book"><span>绍宋 · 榴弹怕水</span><small>53h30m</small></div>
+            <div class="book"><span>神秘复苏 · 佛前献花</span><small>52h49m</small></div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>笔记密度最高</h3>
+          <div class="books">
+            <div class="book"><span>社会心理学（第8版）</span><small>292</small></div>
+            <div class="book"><span>第一本经济学</span><small>133</small></div>
+            <div class="book"><span>原则</span><small>120</small></div>
+            <div class="book"><span>幕后产品</span><small>83</small></div>
+            <div class="book"><span>大问题：简明哲学导论</span><small>70</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>观察二：偏好不是一个标签，而是两个系统。</h2>
+      <p>阅读偏好显示出两套系统：第一套是长时间沉浸在男生小说、影视原著和历史架空中；第二套是在经济理财、心理、产品、哲学中提取可操作的框架。</p>
+      <div class="bars" aria-label="偏好分类">
+        <div class="bar"><span>男生小说</span><div class="track"><div class="fill" style="width:100%"></div></div><span>732h</span></div>
+        <div class="bar"><span>影视原著</span><div class="track"><div class="fill" style="width:37%"></div></div><span>273h</span></div>
+        <div class="bar"><span>经济理财</span><div class="track"><div class="fill" style="width:10%"></div></div><span>72h</span></div>
+        <div class="bar"><span>历史架空</span><div class="track"><div class="fill" style="width:7%"></div></div><span>53h</span></div>
+        <div class="bar"><span>文学</span><div class="track"><div class="fill" style="width:6%"></div></div><span>44h</span></div>
+      </div>
+      <p class="quote">真正稳定的不是某个类目，而是“先进入一个足够长的世界，再把可迁移的东西记下来”。</p>
+    </section>
+
+    <section>
+      <h2>观察三：读完不是核心指标，留下痕迹才是。</h2>
+      <p>微信读书返回 41 本读完，但这份画像不把“读完率”作为核心。更有解释力的是 40 本有笔记的书和 949 条笔记/划线信号：它们说明哪些书不只是被翻过，而是真的进入了思考流程。</p>
+      <p>这也是 weread-mirror 方法论最有价值的地方：把“书架意图”“阅读投入”“笔记痕迹”拆开看，矛盾本身就是画像。</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -21,14 +21,18 @@ python3 scripts/generate_report.py exports/persona-data.json --output exports/re
 
 ## 最终产物
 
-私有本地产物未提交：
+已提交产物：
 
-- `/tmp/read-persona-run/exports/persona-data.json`
-- `/tmp/read-persona-run/exports/read-persona-report.html`
+- [完整 HTML 阅读人格报告](./artifacts/read-persona-report.html)
+- [报告首屏截图](./artifacts/read-persona-report.jpg)
 
 这个项目会生成完整 HTML 阅读人格报告，包含指标概览、人格卡片、阅读 DNA、时间节律、笔记行为、代表性书目、推荐和数据说明。
 
-之前没有把截图放进公开 repo，原因是这份 HTML 报告会直接暴露真实阅读画像和书目。后续如果你明确允许公开某一版截图，我会把截图放到本目录 `artifacts/` 下；否则默认只记录脱敏指标和私有产物路径。
+用户已明确授权提交阅读相关产物，因此这次把真实阅读画像 HTML 与截图都放进了 `artifacts/`。仍然没有提交微信读书 AK、Authorization header 或 `.env`。
+
+私有本地产物：
+
+- `/tmp/read-persona-run/exports/persona-data.json`
 
 ## 调用的数据
 

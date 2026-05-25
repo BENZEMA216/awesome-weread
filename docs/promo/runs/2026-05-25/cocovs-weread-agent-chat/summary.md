@@ -21,7 +21,11 @@ npm run build --workspaces --if-present
 
 ## 最终产物
 
-这次没有产生完整聊天截图，原因是项目完整 Pi Agent 对话还需要额外的模型 API key；当前环境只有微信读书 AK，没有模型 key。
+已提交产物：
+
+- [WeRead Agent Chat UI 截图](./artifacts/weread-agent-chat-ui.jpg)
+
+这次没有产生完整聊天结果截图，原因是项目完整 Pi Agent 对话还需要额外的模型 API key；当前环境只有微信读书 AK，没有模型 key。
 
 已验证的产物是：
 

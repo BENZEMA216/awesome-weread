@@ -1,0 +1,474 @@
+{
+  "source": "huashu-weread-advisor public-safe intelligence layer",
+  "generatedAt": "2026-05-25T05:58:41.557Z",
+  "privacy": "No raw highlights, private comments, or long excerpts are committed. This file stores metadata-level signals for reading strategy.",
+  "method": {
+    "skill": "huashu-weread-advisor",
+    "inputs": [
+      "shelf/sync",
+      "user/notebooks",
+      "readdata/detail"
+    ],
+    "principle": "Cross the shelf with notebooks: shelf shows intention, notebooks show what was actually read deeply."
+  },
+  "totals": {
+    "shelfBookCount": 118,
+    "notebookBookCount": 40,
+    "notebookNoteCount": 949,
+    "trueReadCount": 17,
+    "hiddenDeepReadCount": 0,
+    "shelfOnlyCount": 81,
+    "yearlyReadDays": 42,
+    "yearlyReadTime": "21h 30m",
+    "depthBands": {
+      "heavy": 9,
+      "committed": 1,
+      "light": 14,
+      "skim": 16
+    }
+  },
+  "lenses": {
+    "deepReads": [
+      {
+        "bookId": "41452812",
+        "title": "社会心理学（第8版）",
+        "shortTitle": "社会心理学（第8版）",
+        "author": "[美]戴维·迈尔斯",
+        "readingProgress": 100,
+        "totalNoteCount": 292,
+        "underlineCount": 288,
+        "bookmarkCount": 0,
+        "thoughtCount": 4,
+        "lastActiveDate": "2022-12-28",
+        "wereadUrl": "weread://reading?bId=41452812",
+        "inShelf": true,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "23410531",
+        "title": "第一本经济学",
+        "shortTitle": "第一本经济学",
+        "author": "罗伯特·墨菲",
+        "readingProgress": 90,
+        "totalNoteCount": 133,
+        "underlineCount": 133,
+        "bookmarkCount": 0,
+        "thoughtCount": 0,
+        "lastActiveDate": "2020-10-21",
+        "wereadUrl": "weread://reading?bId=23410531",
+        "inShelf": true,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "921568",
+        "title": "原则",
+        "shortTitle": "原则",
+        "author": "瑞·达利欧",
+        "readingProgress": 100,
+        "totalNoteCount": 120,
+        "underlineCount": 116,
+        "bookmarkCount": 1,
+        "thoughtCount": 3,
+        "lastActiveDate": "2024-12-07",
+        "wereadUrl": "weread://reading?bId=921568",
+        "inShelf": true,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "25670948",
+        "title": "幕后产品：打造突破式产品思维（全彩）",
+        "shortTitle": "幕后产品：打造突破式产品思维（全彩）",
+        "author": "王诗沐",
+        "readingProgress": 99,
+        "totalNoteCount": 83,
+        "underlineCount": 80,
+        "bookmarkCount": 1,
+        "thoughtCount": 2,
+        "lastActiveDate": "2023-02-09",
+        "wereadUrl": "weread://reading?bId=25670948",
+        "inShelf": true,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "CB_ELx89x89AAqh6eZ6cL4ZbGaz",
+        "title": "大问题: 简明哲学导论",
+        "shortTitle": "大问题: 简明哲学导论",
+        "author": "[美]罗伯特•所罗门",
+        "readingProgress": 16,
+        "totalNoteCount": 70,
+        "underlineCount": 66,
+        "bookmarkCount": 0,
+        "thoughtCount": 4,
+        "lastActiveDate": "2023-03-09",
+        "wereadUrl": "weread://reading?bId=CB_ELx89x89AAqh6eZ6cL4ZbGaz",
+        "inShelf": true,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "39888693",
+        "title": "计算广告：互联网商业变现的市场与技术（第2版）",
+        "shortTitle": "计算广告：互联网商业变现的市场与技术...",
+        "author": "刘鹏 王超",
+        "readingProgress": 25,
+        "totalNoteCount": 48,
+        "underlineCount": 48,
+        "bookmarkCount": 0,
+        "thoughtCount": 0,
+        "lastActiveDate": "2023-02-09",
+        "wereadUrl": "weread://reading?bId=39888693",
+        "inShelf": true,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "3300024931",
+        "title": "小米创业思考",
+        "shortTitle": "小米创业思考",
+        "author": "雷军 徐洁云",
+        "readingProgress": 93,
+        "totalNoteCount": 40,
+        "underlineCount": 40,
+        "bookmarkCount": 0,
+        "thoughtCount": 0,
+        "lastActiveDate": "2024-06-10",
+        "wereadUrl": "weread://reading?bId=3300024931",
+        "inShelf": true,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "566431",
+        "title": "从0到1：开启商业与未来的秘密",
+        "shortTitle": "从0到1：开启商业与未来的秘密",
+        "author": "彼得·蒂尔 布莱克·马斯特斯",
+        "readingProgress": 100,
+        "totalNoteCount": 25,
+        "underlineCount": 24,
+        "bookmarkCount": 0,
+        "thoughtCount": 1,
+        "lastActiveDate": "2026-05-12",
+        "wereadUrl": "weread://reading?bId=566431",
+        "inShelf": true,
+        "signal": "heavy read"
+      },
+      {
+        "bookId": "857316",
+        "title": "上瘾：让用户养成使用习惯的四大产品逻辑",
+        "shortTitle": "上瘾：让用户养成使用习惯的四大产品逻...",
+        "author": "尼尔·埃亚尔 瑞安·胡佛",
+        "readingProgress": 91,
+        "totalNoteCount": 25,
+        "underlineCount": 25,
+        "bookmarkCount": 0,
+        "thoughtCount": 0,
+        "lastActiveDate": "2020-09-25",
+        "wereadUrl": "weread://reading?bId=857316",
+        "inShelf": true,
+        "signal": "heavy read"
+      }
+    ],
+    "activeNow": [
+      {
+        "bookId": "3300070929",
+        "title": "埃隆·马斯克传",
+        "author": "沃尔特·艾萨克森",
+        "readingProgress": null,
+        "totalNoteCount": 0,
+        "lastActiveDate": "2026-05-24",
+        "inShelf": true,
+        "hasNotes": false,
+        "wereadUrl": "weread://reading?bId=3300070929"
+      },
+      {
+        "bookId": "3300059686",
+        "title": "夜晚的潜水艇",
+        "author": "陈春成",
+        "readingProgress": null,
+        "totalNoteCount": 0,
+        "lastActiveDate": "2026-05-23",
+        "inShelf": true,
+        "hasNotes": false,
+        "wereadUrl": "weread://reading?bId=3300059686"
+      },
+      {
+        "bookId": "935536",
+        "title": "百年孤独",
+        "author": "[哥]加西亚•马尔克斯",
+        "readingProgress": 100,
+        "totalNoteCount": 9,
+        "lastActiveDate": "2026-05-19",
+        "inShelf": true,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=935536"
+      },
+      {
+        "bookId": "3300024284",
+        "title": "毛泽东选集（全四卷）",
+        "author": "",
+        "readingProgress": 7,
+        "totalNoteCount": 7,
+        "lastActiveDate": "2026-05-18",
+        "inShelf": true,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=3300024284"
+      },
+      {
+        "bookId": "3300128173",
+        "title": "心智社会：从细胞到人工智能，人类思维的优雅解读",
+        "author": "[美]马文·明斯基",
+        "readingProgress": 5,
+        "totalNoteCount": 1,
+        "lastActiveDate": "2026-05-18",
+        "inShelf": true,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=3300128173"
+      },
+      {
+        "bookId": "35679924",
+        "title": "雪球专刊·特别版：段永平投资问答录投资逻辑篇",
+        "author": "雪球专刊",
+        "readingProgress": 17,
+        "totalNoteCount": 2,
+        "lastActiveDate": "2026-05-18",
+        "inShelf": true,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=35679924"
+      },
+      {
+        "bookId": "566431",
+        "title": "从0到1：开启商业与未来的秘密",
+        "author": "彼得·蒂尔 布莱克·马斯特斯",
+        "readingProgress": 100,
+        "totalNoteCount": 25,
+        "lastActiveDate": "2026-05-17",
+        "inShelf": true,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=566431"
+      },
+      {
+        "bookId": "27773198",
+        "title": "社会学大纲",
+        "author": "李达",
+        "readingProgress": null,
+        "totalNoteCount": 0,
+        "lastActiveDate": "2026-05-12",
+        "inShelf": true,
+        "hasNotes": false,
+        "wereadUrl": "weread://reading?bId=27773198"
+      },
+      {
+        "bookId": "23640906",
+        "title": "毛泽东传（全6卷）",
+        "author": "中共中央文献研究室",
+        "readingProgress": 44,
+        "totalNoteCount": 1,
+        "lastActiveDate": "2026-05-12",
+        "inShelf": true,
+        "hasNotes": true,
+        "wereadUrl": "weread://reading?bId=23640906"
+      },
+      {
+        "bookId": "35276982",
+        "title": "组织的逻辑",
+        "author": "丛龙峰",
+        "readingProgress": null,
+        "totalNoteCount": 0,
+        "lastActiveDate": "2026-05-08",
+        "inShelf": true,
+        "hasNotes": false,
+        "wereadUrl": "weread://reading?bId=35276982"
+      }
+    ],
+    "hiddenDeepReads": [],
+    "shelfOnly": [
+      {
+        "bookId": "3300070929",
+        "title": "埃隆·马斯克传",
+        "author": "沃尔特·艾萨克森",
+        "category": "人物传记-财经人物",
+        "lastActiveDate": "2026-05-24",
+        "wereadUrl": "weread://reading?bId=3300070929",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "3300059686",
+        "title": "夜晚的潜水艇",
+        "author": "陈春成",
+        "category": "文学-经典作品",
+        "lastActiveDate": "2026-05-23",
+        "wereadUrl": "weread://reading?bId=3300059686",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "27773198",
+        "title": "社会学大纲",
+        "author": "李达",
+        "category": "社会文化-社科",
+        "lastActiveDate": "2026-05-12",
+        "wereadUrl": "weread://reading?bId=27773198",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "35276982",
+        "title": "组织的逻辑",
+        "author": "丛龙峰",
+        "category": "经济理财-商业",
+        "lastActiveDate": "2026-05-08",
+        "wereadUrl": "weread://reading?bId=35276982",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "3300075162",
+        "title": "平台革命：改变世界的商业模式",
+        "author": "杰奥夫雷G.帕克 马歇尔W.范·埃尔斯泰恩 桑基特·保罗·邱达利",
+        "category": "经济理财-管理",
+        "lastActiveDate": "2026-04-06",
+        "wereadUrl": "weread://reading?bId=3300075162",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "22478625",
+        "title": "镖人（卷二）",
+        "author": "许先哲",
+        "category": "漫画-经典改编",
+        "lastActiveDate": "2026-04-05",
+        "wereadUrl": "weread://reading?bId=22478625",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "3300050592",
+        "title": "小而美：持续盈利的经营法则",
+        "author": "[美]萨希尔·拉文吉亚",
+        "category": "经济理财-管理",
+        "lastActiveDate": "2026-01-11",
+        "wereadUrl": "weread://reading?bId=3300050592",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "674048",
+        "title": "邓小平时代",
+        "author": "傅高义",
+        "category": "政治军事-政治",
+        "lastActiveDate": "2025-12-15",
+        "wereadUrl": "weread://reading?bId=674048",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "26441414",
+        "title": "霍乱时期的爱情",
+        "author": "[哥]加西亚•马尔克斯",
+        "category": "文学-外国文学",
+        "lastActiveDate": "2025-12-15",
+        "wereadUrl": "weread://reading?bId=26441414",
+        "signal": "on shelf, no public note signal yet"
+      },
+      {
+        "bookId": "3300140838",
+        "title": "创意行为：存在即答案",
+        "author": "[美]里克·鲁宾",
+        "category": "个人成长-人生哲学",
+        "lastActiveDate": "2025-12-15",
+        "wereadUrl": "weread://reading?bId=3300140838",
+        "signal": "on shelf, no public note signal yet"
+      }
+    ]
+  },
+  "bridgeThemes": [
+    {
+      "theme": "Founder Judgment",
+      "label": "Founder judgment and timing",
+      "question": "founder-window-research-output",
+      "noteCount": 115,
+      "bookCount": 4,
+      "anchorBooks": [
+        {
+          "title": "计算广告：互联网商业变现的市场与技术...",
+          "notes": 48
+        },
+        {
+          "title": "小米创业思考",
+          "notes": 40
+        },
+        {
+          "title": "从0到1：开启商业与未来的秘密",
+          "notes": 25
+        }
+      ],
+      "suggestedMove": "Convert founder reading into research-to-product questions."
+    },
+    {
+      "theme": "AI Futures",
+      "label": "AI systems and human judgment",
+      "question": "ai-systems-human-judgment",
+      "noteCount": 26,
+      "bookCount": 2,
+      "anchorBooks": [
+        {
+          "title": "从0到1：开启商业与未来的秘密",
+          "notes": 25
+        },
+        {
+          "title": "心智社会：从细胞到人工智能，人类思维...",
+          "notes": 1
+        }
+      ],
+      "suggestedMove": "Use the path workflow to turn AI biography and future-risk reading into a research agenda."
+    },
+    {
+      "theme": "Human-AI Judgment",
+      "label": "AI systems and human judgment",
+      "question": "ai-systems-human-judgment",
+      "noteCount": 26,
+      "bookCount": 2,
+      "anchorBooks": [
+        {
+          "title": "从0到1：开启商业与未来的秘密",
+          "notes": 25
+        },
+        {
+          "title": "心智社会：从细胞到人工智能，人类思维...",
+          "notes": 1
+        }
+      ],
+      "suggestedMove": "Use the alchemy workflow to extract judgment principles from the marked AI books."
+    },
+    {
+      "theme": "Biography and Judgment",
+      "label": "Biography as judgment training",
+      "question": "biography-research-judgment",
+      "noteCount": 26,
+      "bookCount": 2,
+      "anchorBooks": [
+        {
+          "title": "从0到1：开启商业与未来的秘密",
+          "notes": 25
+        },
+        {
+          "title": "毛泽东传（全6卷）",
+          "notes": 1
+        }
+      ],
+      "suggestedMove": "Turn biography notes into a reusable taste and timing map."
+    }
+  ],
+  "advisorMoves": [
+    {
+      "workflow": "alchemy",
+      "title": "Turn 社会心理学（第8版） into a reusable synthesis note",
+      "evidence": "292 public-safe note signals make it the strongest candidate for note alchemy."
+    },
+    {
+      "workflow": "path",
+      "title": "Build a learning path around Founder judgment and timing",
+      "evidence": "4 books and 115 notes point to this as a real reading line."
+    },
+    {
+      "workflow": "review",
+      "title": "Create a year-to-date reading review",
+      "evidence": "42 reading days and 21h 30m of WeRead time are enough for a public-safe review."
+    },
+    {
+      "workflow": "advisor",
+      "title": "Use recent active books to choose the next reading branch",
+      "evidence": "Recent activity is a better signal than a static shelf when no topic is specified."
+    }
+  ]
+}

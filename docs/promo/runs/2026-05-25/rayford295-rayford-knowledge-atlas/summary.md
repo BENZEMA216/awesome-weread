@@ -28,14 +28,12 @@ python3 -m http.server 8127 --bind 127.0.0.1
 - [阅读输入页截图](./artifacts/screenshot-readings.jpg)
 - [阅读顾问页截图](./artifacts/screenshot-advisor.jpg)
 
-私有本地产物未提交：
+也提交了项目生成的阅读数据产物：
 
-- `/tmp/rayford-knowledge-atlas-run/raw/weread/public-reading-index.json`
-- `/tmp/rayford-knowledge-atlas-run/raw/weread/reading-intelligence.json`
-- `/tmp/rayford-knowledge-atlas-run/wiki/readings/*.md`
-- `/tmp/rayford-knowledge-atlas-run/data.js`
+- [public-reading-index.json](./artifacts/data/public-reading-index.json)
+- [reading-intelligence.json](./artifacts/data/reading-intelligence.json)
 
-这些文件虽然是项目设计上的 public-safe 数据，但仍然反映真实阅读历史，所以不直接复制进 Awesome 仓库。
+用户已明确授权提交阅读相关产物，因此这次把真实阅读 metadata 和 reading intelligence JSON 一并放进 `artifacts/data/`。仍然没有提交微信读书 AK、Authorization header 或 `.env`。
 
 ## 调用的数据
 

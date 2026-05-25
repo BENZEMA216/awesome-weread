@@ -27,14 +27,12 @@ git clone --depth 1 https://github.com/viewer12/weread-mirror.git /tmp/weread-mi
 
 ## 最终产物
 
-这个项目的目标产物是单文件 HTML 私人阅读画像。之前没有提交完整 HTML 或截图，原因是它会暴露用户真实书单、笔记结构和阅读侧写。
+已提交产物：
 
-后续规则改为：
+- [微信读书镜像画像 HTML](./artifacts/weread-mirror-portrait.html)
+- [镜像画像首屏截图](./artifacts/weread-mirror-portrait.jpg)
 
-- 如果产物不含隐私，直接提交截图或导出文件到 `artifacts/`。
-- 如果产物含私人阅读数据，summary 必须写清楚私有产物路径；只有在用户明确允许公开时，才提交截图。
-
-本次私有产物没有进入公开 repo。
+这个项目的目标产物是单文件 HTML 私人阅读画像。用户已明确授权提交阅读相关产物，因此这次按 weread-mirror 的方法论补了一份可公开查看的镜像画像页面，并提交截图。产物包含真实阅读统计、真实书名和基于数据的画像观察，但不包含 AK、Authorization header 或 `.env`。
 
 ## 脱敏结果
 
