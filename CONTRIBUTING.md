@@ -29,6 +29,7 @@ These projects are valuable — they just belong in a different list (e.g. the `
    ```
 3. **Update both READMEs** — `README.md` (Simplified Chinese) and `README.en.md` (English). Keep them in sync.
 4. **State the runtime / target.** For Skills: Claude Code, OpenClaw, Hermes, Cursor, generic Agent Skill manifest, multi-runtime. For sync apps: Notion, Obsidian, flomo, etc.
+5. **Add an experience run for picked projects.** When a project is accepted by the curator, create `docs/promo/runs/YYYY-MM-DD/<owner-repo>/summary.md` and `artifacts/` using the template in [`docs/promo/runs/_template/summary.md`](docs/promo/runs/_template/summary.md). The summary must be Simplified Chinese and the artifacts must include at least one real output from the project.
 
 ## Quality bar
 
@@ -60,3 +61,28 @@ This repo runs an automated discovery bot every 6 hours via [`.github/workflows/
 Out-of-scope evaluations are appended to `seen.json` so we don't re-judge the same repo. If a previously rejected project later switches to the official Skill, you can manually remove its line from `seen.json` to give it a fresh look.
 
 Requires repo secret `GOOGLE_API_KEY`. Workflow can also be triggered manually from the Actions tab.
+
+## Experience runs
+
+Awesome WeRead is meant to show what each picked project actually produces with real WeRead data, not just list repository names.
+
+For every newly accepted project:
+
+1. Clone or run the project in a temporary workspace outside this repository.
+2. Use the documented quickstart and the user's configured official WeRead API key or Skill when live data is needed.
+3. Save the result under:
+   ```
+   docs/promo/runs/YYYY-MM-DD/<owner-repo>/
+     summary.md
+     artifacts/
+   ```
+4. Put screenshots, generated HTML/Markdown/JSON metadata, exported files, or terminal summaries in `artifacts/`.
+5. Write `summary.md` in Simplified Chinese with project URL, category, commands, data exercised, artifact links, observed value, limitations, and Xiaohongshu-ready talking points.
+
+Run this check before considering a new pick archived:
+
+```bash
+node scripts/check-experience-runs.mjs --repo owner/repo
+```
+
+Reading-related outputs are allowed when the user has approved them. Secrets are never allowed: do not commit WeRead API keys, model API keys, GitHub tokens, Authorization headers, or `.env` files.

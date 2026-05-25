@@ -19,6 +19,7 @@ This list tracks them.
 - [MCP Servers](#mcp-servers)
 - [Third-Party Sync](#third-party-sync)
 - [Widgets & Visualizations](#widgets--visualizations)
+- [Experience Runs](#experience-runs)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -114,6 +115,12 @@ Apps that render reading data into something you can hang on your desktop, wallp
 | [SpaceTrave1/weread-deep-insights](https://github.com/SpaceTrave1/weread-deep-insights) | Web | A "deep insights" reading analytics tool — surfaces patterns hidden in your shelf and notes. |
 | [lucis-yg/weread-dashboard](https://github.com/lucis-yg/weread-dashboard) | Vue 3 / Web | An elegant WeRead data dashboard (shelf, notes, reading stats). **Pairs with lucis-yg/weread-skill-api as the backend.** |
 | [ktKongTong/wereto](https://github.com/ktKongTong/wereto) | Cloudflare Workers | One-click Cloudflare deploy for a public "reading homepage" page; minimal `fetch` + `ky` wrapper around the Agent Gateway. |
+
+## Experience Runs
+
+For picked projects, this repo keeps real trial outputs under `docs/promo/runs/YYYY-MM-DD/<owner-repo>/summary.md` plus an `artifacts/` folder. Summaries are written in Simplified Chinese, and artifacts hold screenshots, HTML, Markdown, JSON metadata, or other concrete outputs that show what the project produces with live WeRead data.
+
+See the current completed and backfill list: [project experience archive](docs/promo/runs/README.md).
 
 ## Contributing
 

@@ -19,6 +19,7 @@
 - [MCP 服务](#mcp-服务)
 - [第三方同步](#第三方同步)
 - [桌面挂件与可视化](#桌面挂件与可视化)
+- [体验归档](#体验归档)
 - [贡献指南](#贡献指南)
 - [许可](#许可)
 
@@ -114,6 +115,12 @@
 | [SpaceTrave1/weread-deep-insights](https://github.com/SpaceTrave1/weread-deep-insights) | Web | 「深度洞察」式阅读分析 —— 从书架 / 笔记里挖你的阅读 pattern。 |
 | [lucis-yg/weread-dashboard](https://github.com/lucis-yg/weread-dashboard) | Vue 3 / Web | 优雅的微信读书数据可视化 dashboard：书架 / 笔记 / 阅读统计。**配合 lucis-yg/weread-skill-api 使用**。 |
 | [ktKongTong/wereto](https://github.com/ktKongTong/wereto) | Cloudflare Workers | 一键部署到 Cloudflare 的阅读数据页 —— 公开个人阅读数据的「homepage」式展示。`fetch` + `ky` 简洁封装。 |
+
+## 体验归档
+
+本仓库会为被 pick 的项目补真实试用子目录：`docs/promo/runs/YYYY-MM-DD/<owner-repo>/summary.md` + `artifacts/`。Summary 使用中文，artifacts 保存截图、HTML、Markdown、JSON metadata 或其他能证明项目真实跑通的产物。
+
+查看当前已完成和待补清单：[项目体验归档](docs/promo/runs/README.md)。
 
 ## 贡献指南
 

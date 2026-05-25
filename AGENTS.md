@@ -78,8 +78,10 @@ When a new in-scope project is found, the maintenance workflow should run it and
 - Clone or run third-party projects in a temporary workspace outside this repo unless the project is already vendored here.
 - Prefer the project's documented quickstart. If there are several modes, choose the fastest one that demonstrates the core value.
 - Capture concrete outputs: screenshots, generated reports, exported markdown/JSON summaries, or terminal output that proves what the project does with real WeRead data.
-- Save user-facing promo artifacts under `docs/promo/runs/YYYY-MM-DD/<owner-repo>/` when editing this repo is appropriate.
-- For each run, produce a short `summary.md` with: project URL, category, setup command used, what data was exercised, output artifacts, observed value, limitations/errors, and 3-5 Xiaohongshu-ready talking points.
+- Save every picked project's experience run under `docs/promo/runs/YYYY-MM-DD/<owner-repo>/`.
+- Put final screenshots, generated pages, JSON metadata, markdown exports, or other concrete outputs under `docs/promo/runs/YYYY-MM-DD/<owner-repo>/artifacts/`.
+- For each run, produce a short Simplified Chinese `summary.md` with: project URL, category, setup command used, what data was exercised, output artifacts, observed value, limitations/errors, and 3-5 Xiaohongshu-ready talking points.
+- Before considering a newly picked project archived, run `node scripts/check-experience-runs.mjs --repo owner/repo`.
 - If a project cannot be run after a reasonable attempt, still record why and what would be needed next. Do not silently skip it.
 
 ## Current Known State
