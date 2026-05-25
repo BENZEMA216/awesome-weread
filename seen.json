@@ -600,5 +600,11 @@
     "reason": "项目明确基于微信读书 API Key，并列出了多个官方 API 调用的能力，符合收录标准。",
     "category": "workflows",
     "date": "2026-05-24T13:46:54.828Z"
+  },
+  {
+    "repo": "amyo2889-cloud/wereadtoo2",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-25T04:19:00.505Z"
   }
 ]
