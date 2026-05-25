@@ -1,0 +1,4 @@
+# git clone log for shiquda/weread-cli (2026-05-26)
+
+Cloning into '/private/tmp/shiquda-weread-cli-run'...
+fatal: unable to access 'https://github.com/shiquda/weread-cli.git/': Could not resolve host: github.com

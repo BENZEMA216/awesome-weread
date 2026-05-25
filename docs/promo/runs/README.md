@@ -49,6 +49,8 @@ docs/promo/runs/YYYY-MM-DD/<owner-repo>/
 |------|------|---------|----------|
 | [wong2/weread-mcp](https://github.com/wong2/weread-mcp) | MCP 服务 | [summary.md](./2026-05-25/wong2-weread-mcp/summary.md) | [clone 日志](./2026-05-25/wong2-weread-mcp/artifacts/git-clone.txt) |
 | [lucis-yg/weread-dashboard](https://github.com/lucis-yg/weread-dashboard) | 桌面挂件与可视化 | [summary.md](./2026-05-25/lucis-yg-weread-dashboard/summary.md) | [clone 日志](./2026-05-25/lucis-yg-weread-dashboard/artifacts/git-clone.txt) |
+| [shiquda/weread-cli](https://github.com/shiquda/weread-cli) | 命令行与 SDK | [summary.md](./2026-05-26/shiquda-weread-cli/summary.md) | [clone 日志](./2026-05-26/shiquda-weread-cli/artifacts/git-clone.txt) |
+| [Ceelog/OpenWeRead](https://github.com/Ceelog/OpenWeRead) | 命令行与 SDK | [summary.md](./2026-05-26/Ceelog-OpenWeRead/summary.md) | [clone 日志](./2026-05-26/Ceelog-OpenWeRead/artifacts/git-clone.txt) |
 
 ## 待补历史项目
 

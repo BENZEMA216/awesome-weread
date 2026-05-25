@@ -1,0 +1,4 @@
+# git clone log for Ceelog/OpenWeRead (2026-05-26)
+
+Cloning into '/private/tmp/Ceelog-OpenWeRead-run'...
+fatal: unable to access 'https://github.com/Ceelog/OpenWeRead.git/': Could not resolve host: github.com
