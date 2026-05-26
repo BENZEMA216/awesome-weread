@@ -5,7 +5,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "discover": "node discover.mjs"
+    "discover": "node discover.mjs",
+    "network:preflight": "bash network-preflight.sh"
   },
   "dependencies": {
     "@google/genai": "^0.10.0"

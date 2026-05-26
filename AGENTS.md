@@ -58,6 +58,22 @@ When reviewing a candidate, inspect its README for concrete evidence. Good evide
 - If it finds accepted candidates, it writes `pr_body.md`, then the workflow moves it into `candidates/<timestamp>.md` on a bot branch and opens a PR.
 - It must never auto-merge accepted candidates into the READMEs. Human curation decides.
 
+## Local Maintenance Network Preflight
+
+The Codex automation can inherit stale local proxy variables such as `HTTP_PROXY`, `HTTPS_PROXY`, or `ALL_PROXY` pointing at `127.0.0.1:7897`. Before any local GitHub network operation in the 6h maintenance job, run:
+
+```bash
+eval "$(scripts/network-preflight.sh --emit-env)"
+```
+
+This prefers direct GitHub connectivity when it works and clears stale local proxy variables for the current shell. If direct connectivity is unavailable but a configured local proxy is actually listening, the script keeps the proxy environment. After committing maintenance changes, prefer:
+
+```bash
+scripts/git-push-main-with-retry.sh
+```
+
+That wrapper retries once by re-running the network preflight, fetching `origin/main`, rebasing, and pushing again. Do not commit generated network logs that contain local machine paths unless they are part of a documented blocked experience run.
+
 ## Bot PR Review Workflow
 
 When the user asks to review a bot PR:
