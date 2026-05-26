@@ -619,5 +619,12 @@
     "reason": "项目明确指出使用微信读书 Agent Gateway API (wrk-xxxxxxxx 格式的 API Key)，并通过 WorkBuddy 或浏览器开发者工具获取，符合收录标准。",
     "category": "widgets",
     "date": "2026-05-25T19:48:52.000Z"
+  },
+  {
+    "repo": "j2st1n/weread-mcp",
+    "decision": "accepted",
+    "reason": "项目明确声明是微信读书 MCP Server，并指导用户获取 wrk- 格式的官方 API Key。",
+    "category": "mcp-servers",
+    "date": "2026-05-26T04:04:31.894Z"
   }
 ]
