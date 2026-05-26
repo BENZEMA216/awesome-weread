@@ -1,0 +1,12 @@
+# git clone log
+repo: https://github.com/xJogger/weread-mcp-worker
+date: 2026-05-26 18:10:27 +0800
+
+## network preflight
+[network-preflight] proxy env detected: 127.0.0.1:7897
+[network-preflight] direct GitHub connectivity failed within 10s
+[network-preflight] local proxy 127.0.0.1:7897 is not listening; clearing stale proxy env for clearer retries
+
+## git clone
+Cloning into '/tmp/xJogger-weread-mcp-worker-run'...
+fatal: unable to access 'https://github.com/xJogger/weread-mcp-worker/': Could not resolve host: github.com

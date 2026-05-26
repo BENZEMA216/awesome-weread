@@ -1,0 +1,12 @@
+# git clone log
+repo: https://github.com/gnixner/weread-import
+date: 2026-05-26 18:10:28 +0800
+
+## network preflight
+[network-preflight] no proxy env detected
+[network-preflight] direct GitHub connectivity failed within 10s
+[network-preflight] no working route detected
+
+## git clone
+Cloning into '/tmp/gnixner-weread-import-run'...
+fatal: unable to access 'https://github.com/gnixner/weread-import/': Could not resolve host: github.com

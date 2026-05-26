@@ -1,0 +1,12 @@
+# git clone log
+repo: https://github.com/f1603206034/weread-notes
+date: 2026-05-26 18:10:28 +0800
+
+## network preflight
+[network-preflight] no proxy env detected
+[network-preflight] direct GitHub connectivity failed within 10s
+[network-preflight] no working route detected
+
+## git clone
+Cloning into '/tmp/f1603206034-weread-notes-run'...
+fatal: unable to access 'https://github.com/f1603206034/weread-notes/': Could not resolve host: github.com

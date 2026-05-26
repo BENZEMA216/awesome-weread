@@ -1,0 +1,12 @@
+# git clone log
+repo: https://github.com/ZhongJiaqi/weread-to-obsidian
+date: 2026-05-26 18:10:27 +0800
+
+## network preflight
+[network-preflight] no proxy env detected
+[network-preflight] direct GitHub connectivity failed within 10s
+[network-preflight] no working route detected
+
+## git clone
+Cloning into '/tmp/ZhongJiaqi-weread-to-obsidian-run'...
+fatal: unable to access 'https://github.com/ZhongJiaqi/weread-to-obsidian/': Could not resolve host: github.com
