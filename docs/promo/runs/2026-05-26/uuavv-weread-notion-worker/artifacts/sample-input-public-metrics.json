@@ -1,0 +1,239 @@
+{
+  "generatedAt": "2026-05-25T13:54:07.165Z",
+  "totalReadTime": 3766196,
+  "readDays": 1798,
+  "shelfBooks": 118,
+  "notebooks": 40,
+  "noteCountOverall": 949,
+  "topNotebooks": [
+    {
+      "bookId": "41452812",
+      "title": "社会心理学（第8版）",
+      "author": "[美]戴维·迈尔斯",
+      "noteCount": 288,
+      "reviewCount": 4,
+      "readingProgress": 100,
+      "markedStatus": 4
+    },
+    {
+      "bookId": "23410531",
+      "title": "第一本经济学",
+      "author": "罗伯特·墨菲",
+      "noteCount": 133,
+      "reviewCount": 0,
+      "readingProgress": 90,
+      "markedStatus": 4
+    },
+    {
+      "bookId": "921568",
+      "title": "原则",
+      "author": "瑞·达利欧",
+      "noteCount": 116,
+      "reviewCount": 3,
+      "readingProgress": 100,
+      "markedStatus": 4
+    },
+    {
+      "bookId": "25670948",
+      "title": "幕后产品：打造突破式产品思维（全彩）",
+      "author": "王诗沐",
+      "noteCount": 80,
+      "reviewCount": 2,
+      "readingProgress": 99,
+      "markedStatus": 4
+    },
+    {
+      "bookId": "CB_ELx89x89AAqh6eZ6cL4ZbGaz",
+      "title": "大问题: 简明哲学导论",
+      "author": "[美]罗伯特•所罗门",
+      "noteCount": 66,
+      "reviewCount": 4,
+      "readingProgress": 16,
+      "markedStatus": 1
+    },
+    {
+      "bookId": "39888693",
+      "title": "计算广告：互联网商业变现的市场与技术（第2版）",
+      "author": "刘鹏 王超",
+      "noteCount": 48,
+      "reviewCount": 0,
+      "readingProgress": 25,
+      "markedStatus": 3
+    },
+    {
+      "bookId": "3300024931",
+      "title": "小米创业思考",
+      "author": "雷军 徐洁云",
+      "noteCount": 40,
+      "reviewCount": 0,
+      "readingProgress": 93,
+      "markedStatus": 4
+    },
+    {
+      "bookId": "566431",
+      "title": "从0到1：开启商业与未来的秘密",
+      "author": "彼得·蒂尔 布莱克·马斯特斯",
+      "noteCount": 24,
+      "reviewCount": 1,
+      "readingProgress": 100,
+      "markedStatus": 4
+    }
+  ],
+  "topKeywords": [
+    {
+      "keyword": "产品",
+      "count": 71
+    },
+    {
+      "keyword": "用户",
+      "count": 62
+    },
+    {
+      "keyword": "社会",
+      "count": 49
+    },
+    {
+      "keyword": "经济",
+      "count": 41
+    },
+    {
+      "keyword": "市场",
+      "count": 38
+    },
+    {
+      "keyword": "行动",
+      "count": 25
+    },
+    {
+      "keyword": "心理",
+      "count": 24
+    },
+    {
+      "keyword": "决策",
+      "count": 22
+    },
+    {
+      "keyword": "原则",
+      "count": 17
+    },
+    {
+      "keyword": "表达",
+      "count": 14
+    }
+  ],
+  "annualRows": [
+    {
+      "year": 2018,
+      "totalReadTime": 234117,
+      "readDays": 130
+    },
+    {
+      "year": 2019,
+      "totalReadTime": 440516,
+      "readDays": 359
+    },
+    {
+      "year": 2020,
+      "totalReadTime": 1346813,
+      "readDays": 261
+    },
+    {
+      "year": 2021,
+      "totalReadTime": 448786,
+      "readDays": 358
+    },
+    {
+      "year": 2022,
+      "totalReadTime": 134927,
+      "readDays": 227
+    },
+    {
+      "year": 2023,
+      "totalReadTime": 315936,
+      "readDays": 166
+    },
+    {
+      "year": 2024,
+      "totalReadTime": 151345,
+      "readDays": 138
+    },
+    {
+      "year": 2025,
+      "totalReadTime": 614018,
+      "readDays": 95
+    },
+    {
+      "year": 2026,
+      "totalReadTime": 77427,
+      "readDays": 42
+    }
+  ],
+  "topCategories": [
+    {
+      "category": "社会文化-社科",
+      "count": 9
+    },
+    {
+      "category": "经济理财-财经",
+      "count": 8
+    },
+    {
+      "category": "精品小说-悬疑推理",
+      "count": 7
+    },
+    {
+      "category": "经济理财-商业",
+      "count": 7
+    },
+    {
+      "category": "未知分类",
+      "count": 7
+    },
+    {
+      "category": "政治军事-政治",
+      "count": 6
+    },
+    {
+      "category": "男生小说-奇幻异界",
+      "count": 5
+    },
+    {
+      "category": "经济理财-管理",
+      "count": 5
+    }
+  ],
+  "topAuthors": [
+    {
+      "author": "东野圭吾",
+      "count": 4
+    },
+    {
+      "author": "爱潜水的乌贼",
+      "count": 4
+    },
+    {
+      "author": "江南",
+      "count": 3
+    },
+    {
+      "author": "[哥]加西亚•马尔克斯",
+      "count": 3
+    },
+    {
+      "author": "李诞",
+      "count": 3
+    },
+    {
+      "author": "马伯庸",
+      "count": 2
+    },
+    {
+      "author": "刘慈欣",
+      "count": 2
+    },
+    {
+      "author": "狐尾的笔",
+      "count": 2
+    }
+  ]
+}

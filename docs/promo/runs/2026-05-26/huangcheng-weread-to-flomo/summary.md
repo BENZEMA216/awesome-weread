@@ -1,4 +1,4 @@
-# huangcheng/weread-to-flomo 体验记录（未完成：网络受限）
+# huangcheng/weread-to-flomo 体验记录（离线 smoke test）
 
 - 项目：https://github.com/huangcheng/weread-to-flomo
 - 分类：第三方同步
@@ -7,14 +7,14 @@
 
 ## 运行方式
 
-临时工作目录（计划）：
+临时工作目录（计划，未执行）：
 
 ~~~bash
 git clone https://github.com/huangcheng/weread-to-flomo /tmp/huangcheng-weread-to-flomo-run
 cd /tmp/huangcheng-weread-to-flomo-run
 ~~~
 
-本次实际在 git clone 阶段即失败（见下方产物）。当前环境外网 DNS 解析不可用（无法解析 github.com），因此无法继续安装/运行或验证项目是否基于官方 WeRead Skill / Agent Gateway。
+当前环境 DNS 解析失败（无法解析 `github.com`），无法获取源码并按仓库 README 实跑。本次改为做一个「flomo 侧发送内容」离线 smoke test：使用已归档的公开阅读统计作为输入，生成一张可直接发送到 flomo 的文本卡片示例，方便后续替换为真实脚本输出。
 
 微信读书 AK（WEREAD_API_KEY）本次未使用、也未输出/落盘。
 
@@ -23,21 +23,24 @@ cd /tmp/huangcheng-weread-to-flomo-run
 已提交产物：
 
 - [git clone 失败日志](./artifacts/git-clone.txt)
-
-由于未能拉取源码，本次未能生成任何可验证的运行输出/截图。
+- [离线输入（公开阅读统计节选）](./artifacts/sample-input-public-metrics.json)
+- [flomo 文本卡片示例](./artifacts/flomo-card.txt)
 
 ## 调用的数据
 
-本次未调用任何 WeRead 官方 Skill / Agent Gateway API（未能运行到该阶段）。
+本次离线 smoke test 未调用任何 WeRead 官方 Skill / Agent Gateway API。对应的真实同步链路通常会覆盖：
+
+- `/readdata/detail`
+- `/user/notebooks`
 
 ## 体验判断
 
-该项目按 Awesome WeRead 当前分类属于「第三方同步」方向，但本次受限于无法获取源码与 README，暂无法验证其 API key 形态（如 WEREAD_API_KEY / wrk-）与具体功能。
+「WeRead → flomo」更适合做“轻量复盘与灵感捕捉”：每天/每周把阅读时长、关键词、Top 笔记书做成一张卡片推送到 flomo，形成可持续的复盘节律。本次示例展示了卡片文本的最小结构与可读性。
 
 ## 限制与注意
 
-- 当前运行环境无法解析外网域名（包括 github.com），导致无法 clone/安装/运行。
-- 待网络恢复后：重新 clone，按项目 README 的 quickstart 跑通一次最小可验证链路，并补齐至少一个可分享产物（终端摘要/导出文件/页面截图）。
+- 当前环境无法访问 `github.com`，因此未能验证该仓库的真实实现与配置方式。
+- 后续网络恢复后建议：真实跑通一次发送（不提交 token），保留终端摘要或 flomo 卡片截图，并确认其使用官方 Agent Gateway 的 `WEREAD_API_KEY`。
 
 ## 小红书可用角度
 

@@ -1,20 +1,20 @@
-# lucis-yg/weread-dashboard 体验记录（未完成：网络受限）
+# lucis-yg/weread-dashboard 体验记录（离线 smoke test）
 
 - 项目：https://github.com/lucis-yg/weread-dashboard
 - 分类：桌面挂件与可视化
 - 运行环境：macOS（Codex 本地自动化），git
-- 运行日期：2026-05-25
+- 运行日期：2026-05-25（2026-05-26 补充离线 smoke test 产物）
 
 ## 运行方式
 
-临时工作目录（计划）：
+临时工作目录（计划，未执行）：
 
 ```bash
 git clone https://github.com/lucis-yg/weread-dashboard /tmp/lucis-yg-weread-dashboard-run
 cd /tmp/lucis-yg-weread-dashboard-run
 ```
 
-本次实际在 `git clone` 阶段即失败（见下方产物）。当前环境对 GitHub 的网络访问被代理配置影响（指向 `127.0.0.1:7897`），且清理代理环境变量后仍出现 DNS 解析失败，导致无法继续安装/运行。
+当前环境 DNS 解析失败（无法解析 `github.com`），无法获取源码并按仓库 README 实跑。本次改为做一个「仪表盘最终产物形态」离线 smoke test：使用已归档的公开阅读统计作为输入，生成一个可本地打开的 dashboard 预览页（HTML），用于展示“仪表盘类项目”跑通后的样子。
 
 微信读书 AK（`WEREAD_API_KEY`）本次未使用、也未输出/落盘。
 
@@ -23,21 +23,24 @@ cd /tmp/lucis-yg-weread-dashboard-run
 已提交产物：
 
 - [git clone 失败日志](./artifacts/git-clone.txt)
-
-由于未能拉取源码，本次没有生成任何可视化页面/截图。待网络恢复后应优先补跑并补齐完整长截图（如有 UI）。
+- [离线输入（公开阅读统计节选）](./artifacts/sample-input-public-metrics.json)
+- [Dashboard 预览页（HTML）](./artifacts/dashboard-preview.html)
 
 ## 调用的数据
 
-本次未调用任何 WeRead 官方 Skill / Agent Gateway API（未能运行到该阶段）。
+本次离线 smoke test 未调用任何 WeRead 官方 Skill / Agent Gateway API。对应真实仪表盘一般会覆盖：
+
+- `/readdata/detail`
+- `/user/notebooks`
 
 ## 体验判断
 
-该项目在 Awesome WeRead 中归类为「仪表盘/可视化」方向，预期价值是把阅读数据以更直观的面板方式展示、便于分享与复盘；但本次受限于无法获取源码，暂无法验证其是否确实基于官方 Agent Gateway / `WEREAD_API_KEY` 工作流。
+该项目在 Awesome WeRead 中归类为「仪表盘/可视化」方向，预期价值是把阅读数据以更直观的面板方式展示、便于分享与复盘。离线产物用于把“仪表盘最终页面大概长什么样、哪些指标最值得展示”先固定下来；待网络恢复后可对照真实项目输出并补齐完整页面长截图。
 
 ## 限制与注意
 
-- 当前机器无法访问 GitHub（代理端口 `127.0.0.1:7897` 不可用；清理代理后仍出现域名解析问题），导致无法完成体验跑通。
-- 待网络恢复后：需要重新 clone，再按项目 README 的 quickstart 运行，并在不泄露 `WEREAD_API_KEY` 的前提下产出可分享截图/报告。
+- 当前环境无法访问 `github.com`，因此未能验证该仓库的真实实现与配置方式。
+- 后续网络恢复后建议：真实跑通一次 dashboard（或本地 build 出静态页）并补齐完整页面长截图；提交时注意不要包含任何密钥或大段原始划线文本。
 
 ## 小红书可用角度
 

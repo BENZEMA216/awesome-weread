@@ -1,0 +1,31 @@
+{
+  "server": "weread",
+  "tools": [
+    {
+      "name": "weread_shelf_sync",
+      "gateway_api": "/shelf/sync",
+      "description": "获取用户书架列表"
+    },
+    {
+      "name": "weread_user_notebooks",
+      "gateway_api": "/user/notebooks",
+      "description": "获取用户笔记本概览"
+    },
+    {
+      "name": "weread_readdata_detail",
+      "gateway_api": "/readdata/detail",
+      "description": "获取阅读统计（周/月/年/总）"
+    },
+    {
+      "name": "weread_book_info",
+      "gateway_api": "/book/info",
+      "description": "获取书籍信息"
+    },
+    {
+      "name": "weread_review_list_mine",
+      "gateway_api": "/review/list/mine",
+      "description": "获取个人想法/笔记列表"
+    }
+  ],
+  "notes": "离线 smoke test：未启动真实 MCP server；此文件用于展示工具清单与网关 API 映射。"
+}

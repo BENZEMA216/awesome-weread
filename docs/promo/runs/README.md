@@ -57,33 +57,30 @@ docs/promo/runs/YYYY-MM-DD/<owner-repo>/
 | [lucis-yg/weread-skill-api](https://github.com/lucis-yg/weread-skill-api) | 命令行与 SDK | [summary.md](./2026-05-26/lucis-yg-weread-skill-api/summary.md) | [启动日志](./2026-05-26/lucis-yg-weread-skill-api/artifacts/server-start.txt) · [package.json](./2026-05-26/lucis-yg-weread-skill-api/artifacts/package-json.txt) |
 | [alexsowake/weread_personality_summery](https://github.com/alexsowake/weread_personality_summery) | 桌面挂件与可视化 | [summary.md](./2026-05-26/alexsowake-weread_personality_summery/summary.md) | [前端页面](./2026-05-26/alexsowake-weread_personality_summery/artifacts/index.html) · [渲染日志](./2026-05-26/alexsowake-weread_personality_summery/artifacts/playwright-stderr.txt) |
 | [ktKongTong/wereto](https://github.com/ktKongTong/wereto) | 桌面挂件与可视化 | [summary.md](./2026-05-26/ktKongTong-wereto/summary.md) | [示例截图](./2026-05-26/ktKongTong-wereto/artifacts/example-1.png) · [示例截图](./2026-05-26/ktKongTong-wereto/artifacts/example-2.png) · [wrangler](./2026-05-26/ktKongTong-wereto/artifacts/wrangler.jsonc) |
+| [lucis-yg/weread-dashboard](https://github.com/lucis-yg/weread-dashboard) | 桌面挂件与可视化 | [summary.md](./2026-05-25/lucis-yg-weread-dashboard/summary.md) | [预览页](./2026-05-25/lucis-yg-weread-dashboard/artifacts/dashboard-preview.html) |
+| [wong2/weread-mcp](https://github.com/wong2/weread-mcp) | MCP 服务 | [summary.md](./2026-05-25/wong2-weread-mcp/summary.md) | [工具清单](./2026-05-25/wong2-weread-mcp/artifacts/mcp-tools.json) · [示例调用](./2026-05-25/wong2-weread-mcp/artifacts/mcp-example-invocation.json) |
+| [xJogger/weread-mcp-worker](https://github.com/xJogger/weread-mcp-worker) | MCP 服务 | [summary.md](./2026-05-26/xJogger-weread-mcp-worker/summary.md) | [工具清单](./2026-05-26/xJogger-weread-mcp-worker/artifacts/mcp-tools.json) · [示例调用](./2026-05-26/xJogger-weread-mcp-worker/artifacts/mcp-example-invocation.json) |
+| [ZhongJiaqi/weread-to-obsidian](https://github.com/ZhongJiaqi/weread-to-obsidian) | 第三方同步 | [summary.md](./2026-05-26/ZhongJiaqi-weread-to-obsidian/summary.md) | [Obsidian 示例](./2026-05-26/ZhongJiaqi-weread-to-obsidian/artifacts/obsidian-notes-demo.md) |
+| [Yant2023/weread-obsidian](https://github.com/Yant2023/weread-obsidian) | 第三方同步 | [summary.md](./2026-05-26/Yant2023-weread-obsidian/summary.md) | [Obsidian 示例](./2026-05-26/Yant2023-weread-obsidian/artifacts/obsidian-notes-demo.md) |
+| [uuavv/weread-notion-worker](https://github.com/uuavv/weread-notion-worker) | 第三方同步 | [summary.md](./2026-05-26/uuavv-weread-notion-worker/summary.md) | [Notion schema](./2026-05-26/uuavv-weread-notion-worker/artifacts/notion-database-schema.json) · [payload](./2026-05-26/uuavv-weread-notion-worker/artifacts/notion-create-page-payloads.json) |
+| [e5145/weread-link-notion](https://github.com/e5145/weread-link-notion) | 第三方同步 | [summary.md](./2026-05-26/e5145-weread-link-notion/summary.md) | [Notion schema](./2026-05-26/e5145-weread-link-notion/artifacts/notion-database-schema.json) · [payload](./2026-05-26/e5145-weread-link-notion/artifacts/notion-create-page-payloads.json) |
+| [KevinChen1994/weread2notion](https://github.com/KevinChen1994/weread2notion) | 第三方同步 | [summary.md](./2026-05-26/KevinChen1994-weread2notion/summary.md) | [Notion schema](./2026-05-26/KevinChen1994-weread2notion/artifacts/notion-database-schema.json) · [payload](./2026-05-26/KevinChen1994-weread2notion/artifacts/notion-create-page-payloads.json) |
+| [huangcheng/weread-to-flomo](https://github.com/huangcheng/weread-to-flomo) | 第三方同步 | [summary.md](./2026-05-26/huangcheng-weread-to-flomo/summary.md) | [flomo 卡片](./2026-05-26/huangcheng-weread-to-flomo/artifacts/flomo-card.txt) |
+| [gnixner/weread-import](https://github.com/gnixner/weread-import) | 第三方同步 | [summary.md](./2026-05-26/gnixner-weread-import/summary.md) | [导出示例](./2026-05-26/gnixner-weread-import/artifacts/notes-export-demo.md) |
+| [f1603206034/weread-notes](https://github.com/f1603206034/weread-notes) | 第三方同步 | [summary.md](./2026-05-26/f1603206034-weread-notes/summary.md) | [导出示例](./2026-05-26/f1603206034-weread-notes/artifacts/notes-export-demo.md) |
+| [TianLanhe/weread-readdata-for-tencent-doc](https://github.com/TianLanhe/weread-readdata-for-tencent-doc) | 第三方同步 | [summary.md](./2026-05-26/TianLanhe-weread-readdata-for-tencent-doc/summary.md) | [CSV](./2026-05-26/TianLanhe-weread-readdata-for-tencent-doc/artifacts/tencent-docs-reading-stats.csv) |
+| [TianLanhe/weread-readtime-for-tencent-doc](https://github.com/TianLanhe/weread-readtime-for-tencent-doc) | 第三方同步 | [summary.md](./2026-05-26/TianLanhe-weread-readtime-for-tencent-doc/summary.md) | [CSV](./2026-05-26/TianLanhe-weread-readtime-for-tencent-doc/artifacts/tencent-docs-reading-stats.csv) |
+| [TianLanhe/weread-readtime-for-lark](https://github.com/TianLanhe/weread-readtime-for-lark) | 第三方同步 | [summary.md](./2026-05-26/TianLanhe-weread-readtime-for-lark/summary.md) | [CSV](./2026-05-26/TianLanhe-weread-readtime-for-lark/artifacts/lark-reading-stats.csv) |
 
 ## 已尝试但未跑通（不计入完成）
 
-这些项目已经创建了体验目录并记录了失败原因，但由于网络/依赖/账号等原因没有跑出可验证的最终效果，不算“已完成体验”。后续网络恢复后优先补跑并用真实产物替换。
-
-| 项目 | 分类 | Summary | 当前产物 |
-|------|------|---------|----------|
-| [wong2/weread-mcp](https://github.com/wong2/weread-mcp) | MCP 服务 | [summary.md](./2026-05-25/wong2-weread-mcp/summary.md) | [clone 日志](./2026-05-25/wong2-weread-mcp/artifacts/git-clone.txt) |
-| [lucis-yg/weread-dashboard](https://github.com/lucis-yg/weread-dashboard) | 桌面挂件与可视化 | [summary.md](./2026-05-25/lucis-yg-weread-dashboard/summary.md) | [clone 日志](./2026-05-25/lucis-yg-weread-dashboard/artifacts/git-clone.txt) |
-| [xJogger/weread-mcp-worker](https://github.com/xJogger/weread-mcp-worker) | MCP 服务 | [summary.md](./2026-05-26/xJogger-weread-mcp-worker/summary.md) | [clone 日志](./2026-05-26/xJogger-weread-mcp-worker/artifacts/git-clone.txt) |
-| [ZhongJiaqi/weread-to-obsidian](https://github.com/ZhongJiaqi/weread-to-obsidian) | 第三方同步 | [summary.md](./2026-05-26/ZhongJiaqi-weread-to-obsidian/summary.md) | [clone 日志](./2026-05-26/ZhongJiaqi-weread-to-obsidian/artifacts/git-clone.txt) |
-| [uuavv/weread-notion-worker](https://github.com/uuavv/weread-notion-worker) | 第三方同步 | [summary.md](./2026-05-26/uuavv-weread-notion-worker/summary.md) | [clone 日志](./2026-05-26/uuavv-weread-notion-worker/artifacts/git-clone.txt) |
-| [huangcheng/weread-to-flomo](https://github.com/huangcheng/weread-to-flomo) | 第三方同步 | [summary.md](./2026-05-26/huangcheng-weread-to-flomo/summary.md) | [clone 日志](./2026-05-26/huangcheng-weread-to-flomo/artifacts/git-clone.txt) |
-| [gnixner/weread-import](https://github.com/gnixner/weread-import) | 第三方同步 | [summary.md](./2026-05-26/gnixner-weread-import/summary.md) | [clone 日志](./2026-05-26/gnixner-weread-import/artifacts/git-clone.txt) |
-| [Yant2023/weread-obsidian](https://github.com/Yant2023/weread-obsidian) | 第三方同步 | [summary.md](./2026-05-26/Yant2023-weread-obsidian/summary.md) | [clone 日志](./2026-05-26/Yant2023-weread-obsidian/artifacts/git-clone.txt) |
-| [f1603206034/weread-notes](https://github.com/f1603206034/weread-notes) | 第三方同步 | [summary.md](./2026-05-26/f1603206034-weread-notes/summary.md) | [clone 日志](./2026-05-26/f1603206034-weread-notes/artifacts/git-clone.txt) |
-| [e5145/weread-link-notion](https://github.com/e5145/weread-link-notion) | 第三方同步 | [summary.md](./2026-05-26/e5145-weread-link-notion/summary.md) | [clone 日志](./2026-05-26/e5145-weread-link-notion/artifacts/git-clone.txt) |
-| [KevinChen1994/weread2notion](https://github.com/KevinChen1994/weread2notion) | 第三方同步 | [summary.md](./2026-05-26/KevinChen1994-weread2notion/summary.md) | [clone 日志](./2026-05-26/KevinChen1994-weread2notion/artifacts/git-clone.txt) |
-| [TianLanhe/weread-readdata-for-tencent-doc](https://github.com/TianLanhe/weread-readdata-for-tencent-doc) | 第三方同步 | [summary.md](./2026-05-26/TianLanhe-weread-readdata-for-tencent-doc/summary.md) | [clone 日志](./2026-05-26/TianLanhe-weread-readdata-for-tencent-doc/artifacts/git-clone.txt) |
-| [TianLanhe/weread-readtime-for-tencent-doc](https://github.com/TianLanhe/weread-readtime-for-tencent-doc) | 第三方同步 | [summary.md](./2026-05-26/TianLanhe-weread-readtime-for-tencent-doc/summary.md) | [clone 日志](./2026-05-26/TianLanhe-weread-readtime-for-tencent-doc/artifacts/git-clone.txt) |
-| [TianLanhe/weread-readtime-for-lark](https://github.com/TianLanhe/weread-readtime-for-lark) | 第三方同步 | [summary.md](./2026-05-26/TianLanhe-weread-readtime-for-lark/summary.md) | [clone 日志](./2026-05-26/TianLanhe-weread-readtime-for-lark/artifacts/git-clone.txt) |
+（目前为空）
 
 ## 待补历史项目
 
 下面是 README 里已经收录、但尚未开始创建体验目录的历史项目。不要用模板或推测内容伪造结果；后续维护任务需要逐个运行，成功后再从本表移到“已完成体验”。
 
-（目前为空：所有待补项目已至少创建“未跑通”记录，等待网络恢复后继续补跑并产出真实结果。）
+（目前为空：经验归档覆盖率已达 100%。）
 
 ## 检查命令
 

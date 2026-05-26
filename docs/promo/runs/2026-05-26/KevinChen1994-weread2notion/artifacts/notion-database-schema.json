@@ -1,0 +1,34 @@
+{
+  "database": {
+    "name": "WeRead Notes",
+    "properties": {
+      "Name": {
+        "type": "title"
+      },
+      "Author": {
+        "type": "rich_text"
+      },
+      "BookId": {
+        "type": "rich_text"
+      },
+      "NoteCount": {
+        "type": "number"
+      },
+      "ReviewCount": {
+        "type": "number"
+      },
+      "ReadingProgress": {
+        "type": "number"
+      },
+      "Source": {
+        "type": "select",
+        "options": [
+          "WeRead"
+        ]
+      },
+      "SyncedAt": {
+        "type": "date"
+      }
+    }
+  }
+}

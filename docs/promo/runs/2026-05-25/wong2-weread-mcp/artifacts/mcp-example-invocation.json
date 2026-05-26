@@ -1,0 +1,15 @@
+{
+  "example": {
+    "tool": "weread_readdata_detail",
+    "input": {
+      "mode": "overall",
+      "baseTime": 0
+    },
+    "expected_fields": [
+      "totalReadTime",
+      "readDays",
+      "preferTimeWord",
+      "topKeywords"
+    ]
+  }
+}

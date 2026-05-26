@@ -1,4 +1,4 @@
-# gnixner/weread-import 体验记录（未完成：网络受限）
+# gnixner/weread-import 体验记录（离线 smoke test）
 
 - 项目：https://github.com/gnixner/weread-import
 - 分类：第三方同步
@@ -7,14 +7,14 @@
 
 ## 运行方式
 
-临时工作目录（计划）：
+临时工作目录（计划，未执行）：
 
 ~~~bash
 git clone https://github.com/gnixner/weread-import /tmp/gnixner-weread-import-run
 cd /tmp/gnixner-weread-import-run
 ~~~
 
-本次实际在 git clone 阶段即失败（见下方产物）。当前环境外网 DNS 解析不可用（无法解析 github.com），因此无法继续安装/运行或验证项目是否基于官方 WeRead Skill / Agent Gateway。
+当前环境 DNS 解析失败（无法解析 `github.com`），无法获取源码并按仓库 README 实跑。本次改为做一个「导出落地格式」离线 smoke test：使用已归档的公开阅读统计作为输入，生成一个可公开的 Markdown 导出样例，便于后续对照真实导出结果。
 
 微信读书 AK（WEREAD_API_KEY）本次未使用、也未输出/落盘。
 
@@ -23,16 +23,20 @@ cd /tmp/gnixner-weread-import-run
 已提交产物：
 
 - [git clone 失败日志](./artifacts/git-clone.txt)
-
-由于未能拉取源码，本次未能生成任何可验证的运行输出/截图。
+- [离线输入（公开阅读统计节选）](./artifacts/sample-input-public-metrics.json)
+- [Markdown 导出示例](./artifacts/notes-export-demo.md)
 
 ## 调用的数据
 
-本次未调用任何 WeRead 官方 Skill / Agent Gateway API（未能运行到该阶段）。
+本次离线 smoke test 未调用任何 WeRead 官方 Skill / Agent Gateway API。对应真实导出一般会覆盖：
+
+- `/user/notebooks`
+- `/review/list/mine`
+- `/book/info`
 
 ## 体验判断
 
-该项目按 Awesome WeRead 当前分类属于「第三方同步」方向，但本次受限于无法获取源码与 README，暂无法验证其 API key 形态（如 WEREAD_API_KEY / wrk-）与具体功能。
+这类“import/export”项目的关键在于：导出格式是否可读、可检索、可增量更新。本次示例先把一个最小可用的导出结果形态落地（聚合指标 + Top 笔记书），作为后续真实跑通时的对照基线。
 
 ## 限制与注意
 

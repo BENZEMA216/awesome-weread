@@ -1,0 +1,347 @@
+[
+  {
+    "parent": {
+      "database_id": "NOTION_DATABASE_ID"
+    },
+    "properties": {
+      "Name": {
+        "title": [
+          {
+            "text": {
+              "content": "社会心理学（第8版）"
+            }
+          }
+        ]
+      },
+      "Author": {
+        "rich_text": [
+          {
+            "text": {
+              "content": "[美]戴维·迈尔斯"
+            }
+          }
+        ]
+      },
+      "BookId": {
+        "rich_text": [
+          {
+            "text": {
+              "content": "41452812"
+            }
+          }
+        ]
+      },
+      "NoteCount": {
+        "number": 288
+      },
+      "ReviewCount": {
+        "number": 4
+      },
+      "ReadingProgress": {
+        "number": 100
+      },
+      "Source": {
+        "select": {
+          "name": "WeRead"
+        }
+      },
+      "SyncedAt": {
+        "date": {
+          "start": "2026-05-26"
+        }
+      }
+    },
+    "children": [
+      {
+        "object": "block",
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "（示例）这里只放聚合指标，避免提交大段原始划线文本。"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "parent": {
+      "database_id": "NOTION_DATABASE_ID"
+    },
+    "properties": {
+      "Name": {
+        "title": [
+          {
+            "text": {
+              "content": "第一本经济学"
+            }
+          }
+        ]
+      },
+      "Author": {
+        "rich_text": [
+          {
+            "text": {
+              "content": "罗伯特·墨菲"
+            }
+          }
+        ]
+      },
+      "BookId": {
+        "rich_text": [
+          {
+            "text": {
+              "content": "23410531"
+            }
+          }
+        ]
+      },
+      "NoteCount": {
+        "number": 133
+      },
+      "ReviewCount": {
+        "number": 0
+      },
+      "ReadingProgress": {
+        "number": 90
+      },
+      "Source": {
+        "select": {
+          "name": "WeRead"
+        }
+      },
+      "SyncedAt": {
+        "date": {
+          "start": "2026-05-26"
+        }
+      }
+    },
+    "children": [
+      {
+        "object": "block",
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "（示例）这里只放聚合指标，避免提交大段原始划线文本。"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "parent": {
+      "database_id": "NOTION_DATABASE_ID"
+    },
+    "properties": {
+      "Name": {
+        "title": [
+          {
+            "text": {
+              "content": "原则"
+            }
+          }
+        ]
+      },
+      "Author": {
+        "rich_text": [
+          {
+            "text": {
+              "content": "瑞·达利欧"
+            }
+          }
+        ]
+      },
+      "BookId": {
+        "rich_text": [
+          {
+            "text": {
+              "content": "921568"
+            }
+          }
+        ]
+      },
+      "NoteCount": {
+        "number": 116
+      },
+      "ReviewCount": {
+        "number": 3
+      },
+      "ReadingProgress": {
+        "number": 100
+      },
+      "Source": {
+        "select": {
+          "name": "WeRead"
+        }
+      },
+      "SyncedAt": {
+        "date": {
+          "start": "2026-05-26"
+        }
+      }
+    },
+    "children": [
+      {
+        "object": "block",
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "（示例）这里只放聚合指标，避免提交大段原始划线文本。"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "parent": {
+      "database_id": "NOTION_DATABASE_ID"
+    },
+    "properties": {
+      "Name": {
+        "title": [
+          {
+            "text": {
+              "content": "幕后产品：打造突破式产品思维（全彩）"
+            }
+          }
+        ]
+      },
+      "Author": {
+        "rich_text": [
+          {
+            "text": {
+              "content": "王诗沐"
+            }
+          }
+        ]
+      },
+      "BookId": {
+        "rich_text": [
+          {
+            "text": {
+              "content": "25670948"
+            }
+          }
+        ]
+      },
+      "NoteCount": {
+        "number": 80
+      },
+      "ReviewCount": {
+        "number": 2
+      },
+      "ReadingProgress": {
+        "number": 99
+      },
+      "Source": {
+        "select": {
+          "name": "WeRead"
+        }
+      },
+      "SyncedAt": {
+        "date": {
+          "start": "2026-05-26"
+        }
+      }
+    },
+    "children": [
+      {
+        "object": "block",
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "（示例）这里只放聚合指标，避免提交大段原始划线文本。"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "parent": {
+      "database_id": "NOTION_DATABASE_ID"
+    },
+    "properties": {
+      "Name": {
+        "title": [
+          {
+            "text": {
+              "content": "大问题: 简明哲学导论"
+            }
+          }
+        ]
+      },
+      "Author": {
+        "rich_text": [
+          {
+            "text": {
+              "content": "[美]罗伯特•所罗门"
+            }
+          }
+        ]
+      },
+      "BookId": {
+        "rich_text": [
+          {
+            "text": {
+              "content": "CB_ELx89x89AAqh6eZ6cL4ZbGaz"
+            }
+          }
+        ]
+      },
+      "NoteCount": {
+        "number": 66
+      },
+      "ReviewCount": {
+        "number": 4
+      },
+      "ReadingProgress": {
+        "number": 16
+      },
+      "Source": {
+        "select": {
+          "name": "WeRead"
+        }
+      },
+      "SyncedAt": {
+        "date": {
+          "start": "2026-05-26"
+        }
+      }
+    },
+    "children": [
+      {
+        "object": "block",
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "（示例）这里只放聚合指标，避免提交大段原始划线文本。"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

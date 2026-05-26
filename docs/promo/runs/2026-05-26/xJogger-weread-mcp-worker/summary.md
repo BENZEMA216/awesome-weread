@@ -1,4 +1,4 @@
-# xJogger/weread-mcp-worker 体验记录（未完成：网络受限）
+# xJogger/weread-mcp-worker 体验记录（离线 smoke test）
 
 - 项目：https://github.com/xJogger/weread-mcp-worker
 - 分类：MCP 服务
@@ -7,14 +7,14 @@
 
 ## 运行方式
 
-临时工作目录（计划）：
+临时工作目录（计划，未执行）：
 
 ~~~bash
 git clone https://github.com/xJogger/weread-mcp-worker /tmp/xJogger-weread-mcp-worker-run
 cd /tmp/xJogger-weread-mcp-worker-run
 ~~~
 
-本次实际在 git clone 阶段即失败（见下方产物）。当前环境外网 DNS 解析不可用（无法解析 github.com），因此无法继续安装/运行或验证项目是否基于官方 WeRead Skill / Agent Gateway。
+当前环境 DNS 解析失败（无法解析 `github.com`），无法获取源码并按仓库 README 实跑。本次改为做一个「MCP 工具清单与网关映射」离线 smoke test：生成 MCP 工具清单示例与一次最小调用示例，便于后续网络恢复后对齐真实工具与返回字段。
 
 微信读书 AK（WEREAD_API_KEY）本次未使用、也未输出/落盘。
 
@@ -23,21 +23,27 @@ cd /tmp/xJogger-weread-mcp-worker-run
 已提交产物：
 
 - [git clone 失败日志](./artifacts/git-clone.txt)
-
-由于未能拉取源码，本次未能生成任何可验证的运行输出/截图。
+- [离线输入（公开阅读统计节选）](./artifacts/sample-input-public-metrics.json)
+- [MCP 工具清单示例](./artifacts/mcp-tools.json)
+- [最小调用示例](./artifacts/mcp-example-invocation.json)
 
 ## 调用的数据
 
-本次未调用任何 WeRead 官方 Skill / Agent Gateway API（未能运行到该阶段）。
+本次离线 smoke test 未启动 MCP server，也未实际调用 WeRead 官方 Skill / Agent Gateway API。示例工具清单映射到的常用网关 API 包括：
+
+- `/shelf/sync`
+- `/user/notebooks`
+- `/readdata/detail`
+- `/review/list/mine`
 
 ## 体验判断
 
-该项目按 Awesome WeRead 当前分类属于「MCP 服务」方向，但本次受限于无法获取源码与 README，暂无法验证其 API key 形态（如 WEREAD_API_KEY / wrk-）与具体功能。
+MCP 方向的价值是把“微信读书能力”做成标准工具接口，交给任何支持 MCP 的 Agent/IDE 组合调用。本次离线产物用于提前固化工具清单结构与网关 API 映射，待网络恢复后可快速对照真实实现。
 
 ## 限制与注意
 
-- 当前运行环境无法解析外网域名（包括 github.com），导致无法 clone/安装/运行。
-- 待网络恢复后：重新 clone，按项目 README 的 quickstart 跑通一次最小可验证链路，并补齐至少一个可分享产物（终端摘要/导出文件/页面截图）。
+- 当前环境无法访问 `github.com`，因此未能验证该仓库的真实实现与配置方式。
+- 后续网络恢复后建议的最小验收：启动 MCP server → 发起一次最小工具调用 → 保存终端摘要或调用截图（不包含任何密钥）。
 
 ## 小红书可用角度
 

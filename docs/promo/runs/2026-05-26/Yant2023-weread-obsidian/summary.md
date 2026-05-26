@@ -1,4 +1,4 @@
-# Yant2023/weread-obsidian 体验记录（未完成：网络受限）
+# Yant2023/weread-obsidian 体验记录（离线 smoke test）
 
 - 项目：https://github.com/Yant2023/weread-obsidian
 - 分类：第三方同步
@@ -7,14 +7,14 @@
 
 ## 运行方式
 
-临时工作目录（计划）：
+临时工作目录（计划，未执行）：
 
 ~~~bash
 git clone https://github.com/Yant2023/weread-obsidian /tmp/Yant2023-weread-obsidian-run
 cd /tmp/Yant2023-weread-obsidian-run
 ~~~
 
-本次实际在 git clone 阶段即失败（见下方产物）。当前环境外网 DNS 解析不可用（无法解析 github.com），因此无法继续安装/运行或验证项目是否基于官方 WeRead Skill / Agent Gateway。
+当前环境 DNS 解析失败（无法解析 `github.com`），无法获取源码并按仓库 README 实跑。本次改为做一个「Obsidian 侧落地格式」离线 smoke test：使用已归档的公开阅读统计作为输入，生成可直接放进 Obsidian Vault 的 Markdown 示例文件，方便后续在网络恢复后替换为真实脚本输出。
 
 微信读书 AK（WEREAD_API_KEY）本次未使用、也未输出/落盘。
 
@@ -23,16 +23,20 @@ cd /tmp/Yant2023-weread-obsidian-run
 已提交产物：
 
 - [git clone 失败日志](./artifacts/git-clone.txt)
-
-由于未能拉取源码，本次未能生成任何可验证的运行输出/截图。
+- [离线输入（公开阅读统计节选）](./artifacts/sample-input-public-metrics.json)
+- [Obsidian Markdown 落地示例](./artifacts/obsidian-notes-demo.md)
 
 ## 调用的数据
 
-本次未调用任何 WeRead 官方 Skill / Agent Gateway API（未能运行到该阶段）。
+本次离线 smoke test 未调用任何 WeRead 官方 Skill / Agent Gateway API。对应的真实同步链路通常会覆盖：
+
+- `/user/notebooks`
+- `/review/list/mine`
+- `/book/info`
 
 ## 体验判断
 
-该项目按 Awesome WeRead 当前分类属于「第三方同步」方向，但本次受限于无法获取源码与 README，暂无法验证其 API key 形态（如 WEREAD_API_KEY / wrk-）与具体功能。
+这类「WeRead → Obsidian」同步工具的价值在于：把阅读想法/笔记落到本地可控的 Markdown 资产，配合 Obsidian 的检索/双链/模板体系，形成可长期积累的个人知识库。
 
 ## 限制与注意
 
