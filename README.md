@@ -51,7 +51,6 @@
 | 项目 | 运行环境 | 介绍 |
 |------|---------|------|
 | [alchaincyf/huashu-weread](https://github.com/alchaincyf/huashu-weread) | Claude Code | 花叔的「读书顾问」Skill。在官方 Skill 之上加了 4 个 workflow：`advisor` / `path` / `alchemy` / `review`，做书架 × 笔记交叉分析。 |
-| [ColorlessBoy/weread-dl-skill](https://github.com/ColorlessBoy/weread-dl-skill) | 通用 Agent Skill | AI 阅读助手：扫码登录、章节解码、阅读进度跟踪、Skill 内 AI 对话。 |
 | [monsignorlaw1015/weread-report](https://github.com/monsignorlaw1015/weread-report) | Skill | 「你以为你在读书，其实书一直在读你」基于微信读书数据生成私人阅读自画像，从笔记里挖出真正的「你」。 |
 | [viewer12/weread-mirror](https://github.com/viewer12/weread-mirror) | Claude Code | 用官方 Skill 拉书架、统计和笔记，生成单文件 HTML 私人读书画像。 |
 | [kejixiaoliang/read-persona](https://github.com/kejixiaoliang/read-persona) | Codex Skill | 基于微信读书官方 Skill，生成一份精美的 HTML 阅读人格画像报告。 |

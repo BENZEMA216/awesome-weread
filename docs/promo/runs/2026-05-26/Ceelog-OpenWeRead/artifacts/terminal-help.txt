@@ -1,0 +1,21 @@
+Usage: openweread [options] [command]
+
+微信读书开放 Skills 命令行工具
+
+Options:
+  -V, --version               output the version number
+  --json                      以 JSON 原始输出，便于脚本管道处理
+  --verbose                   打印 API 请求参数与响应结果，便于调试
+  -h, --help                  display help for command
+
+Commands:
+  search [options] <keyword>  在书城搜索
+  book                        书籍信息
+  shelf                       查看书架
+  stats [options]             阅读统计
+  notes                       笔记/划线
+  reviews [options] <bookId>  查看书籍公开点评
+  recommend [options]         个性化推荐
+  similar <bookId>            相似书推荐
+  profile [options]           阅读概况：书架 + 最近阅读进度
+  help [command]              display help for command

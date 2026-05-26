@@ -1,0 +1,18 @@
+total 2392
+drwxr-xr-x@ 16 benzema  wheel     512 May 25 21:25 .
+drwx------@  6 benzema  wheel     192 May 25 21:25 ..
+drwxr-xr-x@ 13 benzema  wheel     416 May 25 21:25 .git
+drwxr-xr-x@  3 benzema  wheel      96 May 25 21:25 .github
+-rw-r--r--@  1 benzema  wheel     491 May 25 21:25 .gitignore
+-rw-r--r--@  1 benzema  wheel    1206 May 25 21:25 README.md
+drwxr-xr-x@  3 benzema  wheel      96 May 25 21:25 apps
+-rw-r--r--@  1 benzema  wheel  401459 May 25 21:25 example-1.png
+-rw-r--r--@  1 benzema  wheel  426562 May 25 21:25 example-2.png
+-rw-r--r--@  1 benzema  wheel   96833 May 25 21:25 img.png
+-rw-r--r--@  1 benzema  wheel     935 May 25 21:25 package.json
+drwxr-xr-x@  3 benzema  wheel      96 May 25 21:25 packages
+-rw-r--r--@  1 benzema  wheel  265286 May 25 21:25 pnpm-lock.yaml
+-rw-r--r--@  1 benzema  wheel    1912 May 25 21:25 pnpm-workspace.yaml
+-rw-r--r--@  1 benzema  wheel     120 May 25 21:25 vite.config.ts
+-rw-r--r--@  1 benzema  wheel    1693 May 25 21:25 wrangler.jsonc
+README.md

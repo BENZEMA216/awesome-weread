@@ -1,0 +1,7 @@
+# github.com/ipfans/weread-cli
+open /Users/benzema/Library/Caches/go-build/24/249ec53fc683f3849f660400e1d7ec0a78f4e05f27b6d988c8514cf5050eb3ca-d: operation not permitted
+FAIL	github.com/ipfans/weread-cli [setup failed]
+# ./...
+pattern ./...: open /Users/benzema/Library/Caches/go-build/e8/e8e0461afd76f7ed4a918f76df68d55081e7bc2e966e80f1c6190b3174b00fb6-d: operation not permitted
+FAIL	./... [setup failed]
+FAIL

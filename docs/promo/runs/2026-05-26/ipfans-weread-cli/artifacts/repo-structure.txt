@@ -1,0 +1,47 @@
+repo: ipfans/weread-cli
+commit: 58c443a66995b0ee412a57c567eff043e2e47ae6
+date: 2026-05-18
+message: chore: update code structure for better readability and maintainability
+
+files:
+.claude-plugin/marketplace.json
+.claude-plugin/plugin.json
+.env.example
+.github/workflows/release.yml
+.gitignore
+.goreleaser.yaml
+README.md
+Taskfile.yml
+assets/api-key.png
+cmd/book.go
+cmd/book_test.go
+cmd/discover.go
+cmd/discover_test.go
+cmd/mock_test.go
+cmd/notes.go
+cmd/notes_test.go
+cmd/readdata.go
+cmd/readdata_test.go
+cmd/review.go
+cmd/review_test.go
+cmd/root.go
+cmd/search.go
+cmd/search_test.go
+cmd/shelf.go
+cmd/shelf_test.go
+go.mod
+go.sum
+internal/api/client.go
+internal/api/client_test.go
+internal/output/format.go
+internal/output/format_test.go
+internal/output/json.go
+internal/output/table.go
+internal/output/table_test.go
+main.go
+skills/discover/SKILL.md
+skills/notes/SKILL.md
+skills/readdata/SKILL.md
+skills/search/SKILL.md
+skills/shelf/SKILL.md
+skills/weread/SKILL.md

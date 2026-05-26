@@ -1,0 +1,34 @@
+repo: zhongyi-byte/openclaw-weread-skill
+commit: 8f15edc70856fe224ab9bda5668adc9b0470881f
+date: 2026-02-06
+message: Initial commit: WeRead Export Skill for OpenClaw
+
+files:
+.git/HEAD
+.git/config
+.git/description
+.git/hooks/applypatch-msg.sample
+.git/hooks/commit-msg.sample
+.git/hooks/fsmonitor-watchman.sample
+.git/hooks/post-update.sample
+.git/hooks/pre-applypatch.sample
+.git/hooks/pre-commit.sample
+.git/hooks/pre-merge-commit.sample
+.git/hooks/pre-push.sample
+.git/hooks/pre-rebase.sample
+.git/hooks/pre-receive.sample
+.git/hooks/prepare-commit-msg.sample
+.git/hooks/push-to-checkout.sample
+.git/hooks/sendemail-validate.sample
+.git/hooks/update.sample
+.git/index
+.git/info/exclude
+.git/logs/HEAD
+.git/packed-refs
+.git/shallow
+README.md
+SKILL.md
+config/weread.json.template
+requirements.txt
+scripts/weread_export.py
+

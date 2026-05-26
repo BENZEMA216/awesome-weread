@@ -1,0 +1,88 @@
+/review/single
+  获取单条想法/评论的详情（含评论列表和点赞信息）
+    --reviewId (string): 
+    --commentsCount (int): 
+    --commentsDirection (int): 
+    --likesCount (int): 
+    --likesDirection (int): 
+
+/book/readreviews
+  获取章节中某些划线范围下的想法/评论列表（每个划线最多 20 条）
+    --bookId (string): 
+    --chapterUid (int): 
+    --reviews (array): 
+
+/book/bestbookmarks
+  获取某本书的热门划线列表（含划线文本和人数，按热度排序，最多20条）
+    --bookId (string): 
+    --chapterUid (int): 
+    --synckey (int): 
+
+/book/underlines
+  获取某本书某章节的划线热度统计（每条划线的人数/得分/类型，不含划线文本）
+    --bookId (string): 
+    --chapterUid (int): 
+    --synckey (int): 
+
+/book/recommend
+  获取个性化推荐书籍（为你推荐）
+    --count (int): 
+    --maxIdx (int): 
+
+/book/info
+  获取书籍基本信息（书名、作者、简介等）
+    --bookId (string): 
+
+/book/bookmarklist
+  获取用户对某本书的划线列表（不含书签）
+    --bookId (string): 
+
+/book/chapterinfo
+  获取书籍的章节目录
+    --bookId (string): 
+
+/store/search
+  搜索书籍/作者/书单/听书/公众号/文章/全文等（通过 scope 切换 tab）
+    --keyword (string): 
+    --scope (int): 
+    --maxIdx (int): 
+    --count (int): 
+
+/shelf/sync
+  获取用户书架列表（含听书/讲书）
+
+/review/list
+  获取某本书的公开点评/想法
+    --bookId (string): 
+    --reviewListType (int): 
+    --count (int): 
+    --maxIdx (int): 
+    --synckey (int): 
+
+/book/getprogress
+  获取用户对某本书的阅读进度
+    --bookId (string): 
+
+/review/list/mine
+  获取用户在某本书上的个人想法/笔记
+    --bookid (string): 
+    --synckey (int): 
+    --count (int): 
+
+/readdata/detail
+  获取用户阅读统计数据（周/月/年/总），包含阅读时长、天数、读书排行、偏好分析等
+    --mode (string): 
+    --baseTime (int): 
+
+/user/notebooks
+  获取用户所有有笔记的书籍列表（笔记本概览）
+    --count (int): 
+    --lastSort (int): 
+
+/book/similar
+  获取与某本书相似的推荐书籍
+    --bookId (string): 
+    --count (int): 
+    --maxIdx (int): 
+    --sessionId (string): 
+

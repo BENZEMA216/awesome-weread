@@ -1,0 +1,13 @@
+usage: cli.py [-h] {recommend,today,after-read,weekly} ...
+
+carl-weread V0.3 unified reading coach CLI
+
+positional arguments:
+  {recommend,today,after-read,weekly}
+    recommend           推荐一本没读透但现在该读的书
+    today               推荐今天只读哪一小节
+    after-read          读后检查划线；有划线生成行动卡，无划线走追问协议
+    weekly              从阅读行动卡生成周复盘
+
+optional arguments:
+  -h, --help            show this help message and exit

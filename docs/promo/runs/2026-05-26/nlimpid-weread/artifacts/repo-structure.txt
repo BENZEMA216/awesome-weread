@@ -1,0 +1,38 @@
+repo: nlimpid/weread
+commit: 120c7bb8b9fe0ace602a79c58edd6eec07df35c0
+date: 2026-05-17
+message: ci: skip publish workflow gracefully when CARGO_REGISTRY_TOKEN is unset
+
+files:
+.github/workflows/ci.yml
+.github/workflows/publish.yml
+.github/workflows/release.yml
+.gitignore
+Cargo.lock
+Cargo.toml
+LICENSE
+README.md
+RELEASING.md
+SKILL.md
+rust-toolchain.toml
+rustfmt.toml
+weread/Cargo.toml
+weread/src/cli.rs
+weread/src/client.rs
+weread/src/error.rs
+weread/src/lib.rs
+weread/src/main.rs
+weread/src/models/book.rs
+weread/src/models/common.rs
+weread/src/models/discover.rs
+weread/src/models/mod.rs
+weread/src/models/notes.rs
+weread/src/models/readdata.rs
+weread/src/models/review.rs
+weread/src/models/search.rs
+weread/src/models/shelf.rs
+weread/src/output.rs
+weread/src/telemetry.rs
+weread/tests/integration_api.rs
+xtask/Cargo.toml
+xtask/src/main.rs

@@ -1,0 +1,43 @@
+repo: jerlinn/jerlin-weread
+commit: 44bbdcf6ee87e55e1135b417f409de675bd0b969
+date: 2026-05-17
+message: AskTool 一次采集好「转折书」
+
+files:
+.git/HEAD
+.git/config
+.git/description
+.git/hooks/applypatch-msg.sample
+.git/hooks/commit-msg.sample
+.git/hooks/fsmonitor-watchman.sample
+.git/hooks/post-update.sample
+.git/hooks/pre-applypatch.sample
+.git/hooks/pre-commit.sample
+.git/hooks/pre-merge-commit.sample
+.git/hooks/pre-push.sample
+.git/hooks/pre-rebase.sample
+.git/hooks/pre-receive.sample
+.git/hooks/prepare-commit-msg.sample
+.git/hooks/push-to-checkout.sample
+.git/hooks/sendemail-validate.sample
+.git/hooks/update.sample
+.git/index
+.git/info/exclude
+.git/logs/HEAD
+.git/packed-refs
+.git/shallow
+.gitignore
+LICENSE
+README.md
+jerlin-weread-skill/SKILL.md
+jerlin-weread-skill/references/book.md
+jerlin-weread-skill/references/discover.md
+jerlin-weread-skill/references/notes.md
+jerlin-weread-skill/references/profile.md
+jerlin-weread-skill/references/readdata.md
+jerlin-weread-skill/references/reading-profile.md
+jerlin-weread-skill/references/review.md
+jerlin-weread-skill/references/search.md
+jerlin-weread-skill/references/shelf.md
+jerlin-weread-skill/scripts/weread.sh
+

@@ -1,0 +1,41 @@
+repo: lovekeji-ai/agent-weread-skill
+commit: 1622b99201f9a066be051acf5ffc76bfa45d3ec4
+date: 2026-04-27
+message: Update README to describe silent preflight + init wizard
+
+files:
+.git/HEAD
+.git/config
+.git/description
+.git/hooks/applypatch-msg.sample
+.git/hooks/commit-msg.sample
+.git/hooks/fsmonitor-watchman.sample
+.git/hooks/post-update.sample
+.git/hooks/pre-applypatch.sample
+.git/hooks/pre-commit.sample
+.git/hooks/pre-merge-commit.sample
+.git/hooks/pre-push.sample
+.git/hooks/pre-rebase.sample
+.git/hooks/pre-receive.sample
+.git/hooks/prepare-commit-msg.sample
+.git/hooks/push-to-checkout.sample
+.git/hooks/sendemail-validate.sample
+.git/hooks/update.sample
+.git/index
+.git/info/exclude
+.git/logs/HEAD
+.git/packed-refs
+.git/shallow
+.gitignore
+CLAUDE.md
+README.md
+SKILL.md
+config/weread.json.template
+requirements.txt
+scripts/weread_auth.py
+scripts/weread_export.py
+scripts/weread_init.py
+scripts/weread_state.py
+tests/test_weread_auth.py
+tests/test_weread_init.py
+

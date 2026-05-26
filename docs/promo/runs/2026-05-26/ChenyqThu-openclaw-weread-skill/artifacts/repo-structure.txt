@@ -1,0 +1,37 @@
+repo: ChenyqThu/openclaw-weread-skill
+commit: 6b2bf2c1d1e754041e49da59d1e62af332bb654e
+date: 2026-03-20
+message: Initial release: OpenClaw WeRead Skill v1.0.0
+
+files:
+.git/HEAD
+.git/config
+.git/description
+.git/hooks/applypatch-msg.sample
+.git/hooks/commit-msg.sample
+.git/hooks/fsmonitor-watchman.sample
+.git/hooks/post-update.sample
+.git/hooks/pre-applypatch.sample
+.git/hooks/pre-commit.sample
+.git/hooks/pre-merge-commit.sample
+.git/hooks/pre-push.sample
+.git/hooks/pre-rebase.sample
+.git/hooks/pre-receive.sample
+.git/hooks/prepare-commit-msg.sample
+.git/hooks/push-to-checkout.sample
+.git/hooks/sendemail-validate.sample
+.git/hooks/update.sample
+.git/index
+.git/info/exclude
+.git/logs/HEAD
+.git/packed-refs
+.git/shallow
+.gitignore
+README.md
+SKILL.md
+scripts/__pycache__/weread_api.cpython-311.pyc
+scripts/export_notes.py
+scripts/random_review.py
+scripts/weread_api.py
+scripts/weread_login.py
+

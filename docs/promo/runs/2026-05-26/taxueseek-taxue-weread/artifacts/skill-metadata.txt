@@ -1,0 +1,17 @@
+repo: taxueseek/taxue-weread
+mode: 跨 runtime / Node CLI + Python
+scope: 符合当前 Awesome WeRead 的官方 Skill / Agent Gateway 收录标准。
+
+matched signals:
+SKILL.md:11:需要 `WEREAD_API_KEY`。LLM 调用一律加 `--json`。详细参数用 `$WR <cmd> --help`。
+package.json:4:  "description": "微信读书官方 Skill 的 Agent 优化版——CLI + 缓存 + 合并命令 + 压缩输出",
+package.json:12:    "SKILL.md",
+package.json:27:    "skill",
+README.md:3:微信读书官方 Skill 的 Agent 优化版，用一个 CLI 把工作全包了。
+README.md:34:npx skills add taxueseek/taxue-weread
+README.md:46:export WEREAD_API_KEY=[REDACTED_WEREAD_API_KEY]
+README.md:49:API Key 获取方式：访问 [微信读书 Skill 官方页面](https://weread.qq.com/r/weread-skills)，登录后复制，最好先登录微信读书网页版，然后再进入页面，获取对应的API，你没有先登录微信网页版，就经常获取不到key。
+README.md:153:├── SKILL.md              # Agent 意图路由（59 行，按需加载）
+README.md:170:SKILL.md 采用「核心指令 + 按需加载」的设计：文件在 Agent 需要时才加载。实测比全量加载省 36% 的 token。
+README.md:174:基于微信读书官方 [WeRead Skill](https://weread.qq.com/r/weread-skills) 开发。API 接口和数据归微信读书所有。
+

@@ -1,0 +1,45 @@
+repo: Ceelog/OpenWeRead
+commit: 715ec5e7e40d223621e2d6e1f60555ec8fa1bc82
+date: 2026-05-17
+message: feat: 更新版本号至 0.1.1，并在 CLI 中动态读取版本信息
+
+files:
+.gitignore
+CLAUDE.md
+README.md
+biome.json
+openweread-skills/SKILL.md
+openweread-skills/agents/openai.yaml
+package.json
+pnpm-lock.yaml
+src/api/book.ts
+src/api/discover.ts
+src/api/notes.ts
+src/api/profile.ts
+src/api/readdata.ts
+src/api/review.ts
+src/api/search.ts
+src/api/shelf.ts
+src/cli.ts
+src/cli/format.ts
+src/client.ts
+src/constants.ts
+src/errors.ts
+src/index.ts
+src/sdk.ts
+src/types.ts
+tests/client.test.ts
+tests/format.test.ts
+tests/shelf.test.ts
+tsconfig.build.json
+tsconfig.json
+vitest.config.ts
+weread-skills/SKILL.md
+weread-skills/book.md
+weread-skills/discover.md
+weread-skills/notes.md
+weread-skills/profile.md
+weread-skills/readdata.md
+weread-skills/review.md
+weread-skills/search.md
+weread-skills/shelf.md

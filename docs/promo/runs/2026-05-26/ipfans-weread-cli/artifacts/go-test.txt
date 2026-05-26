@@ -1,0 +1,4 @@
+# ./internal/api
+open /Users/benzema/Library/Caches/go-build/e1/e102dceb1425b66b570286b271cbeda76bf4a1ba315248caee4322e7f03ef4ed-d: operation not permitted
+FAIL	./internal/api [setup failed]
+FAIL

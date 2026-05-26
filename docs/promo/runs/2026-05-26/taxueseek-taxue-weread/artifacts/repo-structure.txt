@@ -1,0 +1,47 @@
+repo: taxueseek/taxue-weread
+commit: 6acb53b6ecc3ced63ece36582b97f5acb0e98791
+date: 2026-05-18
+message: feat: v1.5.1 — 精细化推荐引擎 + 批量并行脚本
+
+files:
+.git/HEAD
+.git/config
+.git/description
+.git/hooks/applypatch-msg.sample
+.git/hooks/commit-msg.sample
+.git/hooks/fsmonitor-watchman.sample
+.git/hooks/post-update.sample
+.git/hooks/pre-applypatch.sample
+.git/hooks/pre-commit.sample
+.git/hooks/pre-merge-commit.sample
+.git/hooks/pre-push.sample
+.git/hooks/pre-rebase.sample
+.git/hooks/pre-receive.sample
+.git/hooks/prepare-commit-msg.sample
+.git/hooks/push-to-checkout.sample
+.git/hooks/sendemail-validate.sample
+.git/hooks/update.sample
+.git/index
+.git/info/exclude
+.git/logs/HEAD
+.git/packed-refs
+.git/shallow
+README.md
+RELEASE.md
+SKILL.md
+bin/check-python.js
+bin/taxue-weread.js
+package.json
+references/material-grading.md
+references/mirror-guide.md
+references/organize-guide.md
+references/readdata.md
+references/scope.md
+references/troubleshooting.md
+scripts/test_weread.py
+scripts/weread.py
+scripts/weread_batch.py
+scripts/weread_chapters.py
+scripts/weread_recommend.py
+scripts/weread_search.py
+

@@ -1,0 +1,18 @@
+repo: alchaincyf/huashu-weread
+commit: f5238d0007a6b72f6e840bce792808a31d1ac27a
+date: 2026-05-17
+message: Initial release: huashu-weread skill
+
+files:
+.gitignore
+LICENSE
+README.md
+SKILL.md
+examples/advisor-neuroscience.md
+shared/knowledge-map.md
+shared/shelf-cross-notes.md
+test-prompts.json
+workflows/advisor.md
+workflows/alchemy.md
+workflows/path.md
+workflows/review.md

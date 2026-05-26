@@ -51,7 +51,6 @@ Opinionated workflows layered on top of the raw Skill — recommendations, revie
 | Project | Runtime | What it does |
 |---------|---------|--------------|
 | [alchaincyf/huashu-weread](https://github.com/alchaincyf/huashu-weread) | Claude Code | "Reading advisor" by 花叔. Four workflows on top of the official Skill: `advisor` / `path` / `alchemy` / `review`, with bookshelf × notes cross-analysis. |
-| [ColorlessBoy/weread-dl-skill](https://github.com/ColorlessBoy/weread-dl-skill) | Generic Agent Skill | AI reading assistant: QR-code login, chapter decoding, reading-progress tracking, in-Skill AI chat. |
 | [monsignorlaw1015/weread-report](https://github.com/monsignorlaw1015/weread-report) | Skill | "You think you're reading books — really, books are reading you." Generates a private reading self-portrait from your highlights. |
 | [viewer12/weread-mirror](https://github.com/viewer12/weread-mirror) | Claude Code | Generates a single-file private reading portrait from official Skill bookshelf, stats, and notes data. |
 | [kejixiaoliang/read-persona](https://github.com/kejixiaoliang/read-persona) | Codex Skill | Generates a polished HTML reading-persona report from official WeRead Skill data. |

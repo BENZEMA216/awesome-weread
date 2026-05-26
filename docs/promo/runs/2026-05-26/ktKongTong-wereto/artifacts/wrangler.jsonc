@@ -1,0 +1,81 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "wereto",
+  "main": "apps/web/entry/worker.ts",
+  "compatibility_date": "2026-05-17",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "apps/web/build/client",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+  "triggers": {
+    "crons": ["*/5 * * * *", "0 20 * * *"]
+  },
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "invocation_logs": false
+    }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "wereto",
+      "migrations_dir": "apps/web/drizzle/d1"
+    }
+  ],
+//  "workflows": [
+//    {
+//      "name": "wereto",
+//      "binding": "WEREAD_SYNC_WORKFLOW",
+//      "class_name": "WeretoSyncWorkflow"
+//    }
+//  ],
+  "queues": {
+    "producers": [
+      {
+        "binding": "WEREAD_SYNC_QUEUE",
+        "queue": "wereto-sync"
+      }
+    ],
+    "consumers": [
+      {
+        "queue": "wereto-sync",
+        "max_batch_size": 1,
+        "max_batch_timeout": 1,
+        "max_retries": 3,
+        "max_concurrency": 10,
+        "retry_delay": 15
+      }
+    ]
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "WEREAD_RATE_LIMITER",
+        "class_name": "WereadRateLimiter"
+      },
+      {
+        "name": "WEREAD_SYNC_STATE",
+        "class_name": "SyncRunStateObject"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1_weread_rate_limiter",
+      "new_sqlite_classes": ["WereadRateLimiter"]
+    },
+    {
+      "tag": "v1_sync_run_state",
+      "new_sqlite_classes": ["SyncRunStateObject"]
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "KV"
+    }
+  ]
+}

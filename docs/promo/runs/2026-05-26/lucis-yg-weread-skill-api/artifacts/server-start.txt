@@ -1,0 +1,11 @@
+◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+
+============================================================
+📚 WeRead Skill API Service
+============================================================
+   环境:       development
+   端口:       3000
+   API 前缀:   /api/v1
+   健康检查:   http://localhost:3000/api/v1/health
+============================================================
+

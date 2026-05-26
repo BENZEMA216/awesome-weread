@@ -1,0 +1,11 @@
+Cookie 文件不存在: /Users/benzema/.weread/cookie
+请先运行 weread_login.py 获取 Cookie。
+❌ Cookie 已过期或无效
+
+[exit 1]
+
+--- random_review help/state ---
+❌ 笔记文件不存在
+请先运行 export_notes.py 导出笔记。
+
+[exit 1]

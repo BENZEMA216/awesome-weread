@@ -1,0 +1,23 @@
+repo: lovekeji-ai/agent-weread-skill
+mode: Hermes / OpenClaw / Cookie Web API
+scope: 范围风险：Cookie/扫码登录方案，不是官方 Agent Gateway。
+
+matched signals:
+SKILL.md:2:name: agent-weread-skill
+SKILL.md:4:homepage: https://github.com/lovekeji-ai/agent-weread-skill
+SKILL.md:5:metadata: {"openclaw":{"emoji":"📚","requires":{"bins":["python3"]},"install":[{"id":"pip","kind":"pip","packages":["requests","beautifulsoup4","qrcode","Pillow"],"label":"安装 Python 依赖"}]}}
+SKILL.md:8:# 微信读书笔记导出 Skill
+SKILL.md:84:skill 在 `output/.state/synced.json` 维护每本书的 `sort` 和已同步的 bookmark/review id 集合：
+SKILL.md:95:之后每次导出会自动调微信读书的 `/web/login/renewal` 续期 `wr_skey`（30 分钟内会节流跳过），续期失败时自动转 QR 扫码。
+SKILL.md:113:- [Dawn11111/weread2notion-pro](https://github.com/Dawn11111/weread2notion-pro) — 新版接口组合、Cookie 处理参考
+SKILL.md:116:- [openclaw/skills](https://github.com/openclaw/skills) — skill 结构参考
+README.md:1:# agent-weread-skill
+README.md:3:一个让 Agent / Hermes 帮你导出微信读书笔记的 skill。
+README.md:16:把这个仓库放进你 Agent 的 skills 目录即可。它会被识别为名为 `agent-weread-skill` 的 skill（见 `SKILL.md`）。
+README.md:18:依赖会按 `SKILL.md` 里的声明自动装上：
+README.md:28:2. 续期 `wr_skey` 不通过 → 走扫码登录
+README.md:43:> 也可以从浏览器直接复制 `wr_vid / wr_skey / wr_rt` 三个 cookie 手填到配置里，但推荐扫码，省得过期了再翻一次 F12。
+README.md:47:每次跑导出之前，skill 会先调一次微信读书的 `/web/login/renewal` 把 `wr_skey` 续期，所以你**不用再定期手动重取 cookie**。续期失败（`wr_rt` 也过期了）时，会自动弹出 QR 让你重扫一次。
+README.md:82:`config/weread.json`、`output/`、`.venv/` 都已在 `.gitignore` 里。`wr_vid` 和 `wr_skey` 是你的认证凭证，别提交到公开仓库。
+README.md:90:[openclaw/skills](https://github.com/openclaw/skills)。
+

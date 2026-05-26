@@ -1,0 +1,43 @@
+repo: gandli/weread-skills
+commit: 7d672cb68baeb4424e0e91c5dab4126bb1c75831
+date: 2026-05-19
+message: 自动同步微信读书 SKILLS - 2026-05-19 03:40:49 UTC
+
+files:
+.git/HEAD
+.git/config
+.git/description
+.git/hooks/applypatch-msg.sample
+.git/hooks/commit-msg.sample
+.git/hooks/fsmonitor-watchman.sample
+.git/hooks/post-update.sample
+.git/hooks/pre-applypatch.sample
+.git/hooks/pre-commit.sample
+.git/hooks/pre-merge-commit.sample
+.git/hooks/pre-push.sample
+.git/hooks/pre-rebase.sample
+.git/hooks/pre-receive.sample
+.git/hooks/prepare-commit-msg.sample
+.git/hooks/push-to-checkout.sample
+.git/hooks/sendemail-validate.sample
+.git/hooks/update.sample
+.git/index
+.git/info/exclude
+.git/logs/HEAD
+.git/packed-refs
+.git/shallow
+.github/workflows/sync.yml
+.gitignore
+CHANGELOG.md
+README.md
+README.zh.md
+skills/weread/SKILL.md
+skills/weread/book.md
+skills/weread/discover.md
+skills/weread/notes.md
+skills/weread/profile.md
+skills/weread/readdata.md
+skills/weread/review.md
+skills/weread/search.md
+skills/weread/shelf.md
+

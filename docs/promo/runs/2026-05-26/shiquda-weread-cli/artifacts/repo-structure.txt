@@ -1,0 +1,26 @@
+repo: shiquda/weread-cli
+commit: 5b653ced7d41eb641db6b238b90333a679434ae1
+date: 2026-05-17
+message: Release 0.1.2
+
+files:
+.github/workflows/ci.yml
+.gitignore
+README.md
+docs/agent-cli-skill-patterns.md
+package-lock.json
+package.json
+skills/weread/SKILL.md
+skills/weread/references/domain-rules.md
+skills/weread/references/first-use.md
+src/cli.ts
+src/client.ts
+src/config.ts
+src/format.ts
+src/options.ts
+test/cli.test.ts
+test/client.test.ts
+test/config.test.ts
+test/format.test.ts
+test/options.test.ts
+tsconfig.json

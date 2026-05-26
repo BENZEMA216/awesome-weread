@@ -1,0 +1,66 @@
+repo: gandli/weread-skills
+mode: 官方 Agent Gateway / API Key
+scope: 符合当前 Awesome WeRead 的官方 Skill / Agent Gateway 收录标准。
+
+matched signals:
+README.zh.md:3:<a href="https://weread.qq.com/r/weread-skills"><img src="https://rescdn.qqmail.com/node/wr/wrpage/style/images/independent/appleTouchIcon/apple-touch-icon-144x144.png" width="48" alt="微信读书" /></a>
+README.zh.md:5:# 微信读书 SKILLS
+README.zh.md:10:[![Agent Skills](https://img.shields.io/badge/Agent-Skills-purple)](https://skills.sh/gandli/weread-skills)
+README.zh.md:16:本仓库是微信读书官方 Agent Skills 的镜像，通过 GitHub Actions 自动同步更新。
+README.zh.md:22:### 第一步：安装 Skill
+README.zh.md:27:下载 https://cdn.weread.qq.com/skills/weread-skills.zip 安装 skill
+README.zh.md:33:npx skills add gandli/weread-skills
+README.zh.md:38:1. 前往 [微信读书官方 Skill 页面](https://weread.qq.com/r/weread-skills)
+README.zh.md:40:3. 复制你的 API Key（格式：`[REDACTED_WEREAD_API_KEY]`）
+README.zh.md:47:export WEREAD_API_KEY=<你的api-key>
+README.zh.md:89:Skill 通过 API Key 连接微信读书的 Agent API Gateway：
+README.zh.md:92:POST https://i.weread.qq.com/api/agent/gateway
+README.zh.md:93:Authorization: Bearer [REDACTED_WEREAD_API_KEY]
+README.zh.md:101:weread-skills/
+README.zh.md:102:├── skills/
+README.zh.md:103:│   └── weread/               # Skill 子目录
+README.zh.md:104:│       ├── SKILL.md          # 主技能文件（包含 frontmatter）
+README.zh.md:113:│       ├── SKILL-README.md   # Skill 说明文档
+README.zh.md:124:本仓库通过 GitHub Actions 每日自动从 [微信读书官方源](https://weread.qq.com/r/weread-skills) 同步最新的 SKILLS 文件。
+README.zh.md:131:- 📖 **Skill 介绍页**：[https://weread.qq.com/r/weread-skills](https://weread.qq.com/r/weread-skills)
+README.zh.md:132:- ⬇️ **官方下载地址**：`https://cdn.weread.qq.com/skills/weread-skills.zip`
+README.zh.md:136:本仓库仅用于技术研究和学习目的。所有 SKILLS 文件的版权归微信读书所有。
+README.zh.md:140:*注：这是社区维护的微信读书 Skills 镜像。如需最新版本，请始终查看 [官方网站](https://weread.qq.com/r/weread-skills)。*
+README.md:3:<a href="https://weread.qq.com/r/weread-skills"><img src="https://rescdn.qqmail.com/node/wr/wrpage/style/images/independent/appleTouchIcon/apple-touch-icon-144x144.png" width="48" alt="WeRead" /></a>
+README.md:5:# WeRead SKILLS
+README.md:10:[![Agent Skills](https://img.shields.io/badge/Agent-Skills-purple)](https://skills.sh/gandli/weread-skills)
+README.md:16:This is the official WeRead Agent Skills collection, automatically synced via GitHub Actions.
+README.md:22:### Step 1: Install the Skill
+README.md:27:Download https://cdn.weread.qq.com/skills/weread-skills.zip and install the skill
+README.md:33:npx skills add gandli/weread-skills
+README.md:38:1. Go to [WeRead Official Skill Page](https://weread.qq.com/r/weread-skills)
+README.md:40:3. Copy your API Key (format: `[REDACTED_WEREAD_API_KEY]`)
+README.md:47:export WEREAD_API_KEY=<your-api-key>
+README.md:89:The Skill connects to WeRead's Agent API Gateway using your API Key:
+README.md:92:POST https://i.weread.qq.com/api/agent/gateway
+README.md:93:Authorization: Bearer [REDACTED_WEREAD_API_KEY]
+README.md:101:weread-skills/
+README.md:102:├── skills/
+README.md:103:│   └── weread/               # Skill subdirectory
+README.md:104:│       ├── SKILL.md          # Main skill file with frontmatter
+README.md:113:│       ├── SKILL-README.md   # Skill documentation
+README.md:124:This repository automatically syncs the latest SKILLS files from the [official WeRead source](https://weread.qq.com/r/weread-skills) daily via GitHub Actions.
+README.md:131:- 📖 **Skill Introduction**: [https://weread.qq.com/r/weread-skills](https://weread.qq.com/r/weread-skills)
+README.md:132:- ⬇️ **Official Download**: `https://cdn.weread.qq.com/skills/weread-skills.zip`
+README.md:136:This repository is for technical research and learning purposes only. All SKILLS files are copyrighted by WeRead.
+README.md:140:*Note: This is a community-maintained mirror of the official WeRead Skills. For the most up-to-date version, always check the [official website](https://weread.qq.com/r/weread-skills).*
+skills/weread/SKILL.md:2:name: weread-skills
+skills/weread/SKILL.md:33:POST https://i.weread.qq.com/api/agent/gateway
+skills/weread/SKILL.md:38:- Header：`Authorization: Bearer [REDACTED_WEREAD_API_KEY]
+skills/weread/SKILL.md:39:- `WEREAD_API_KEY` 从环境变量获取，格式 `[REDACTED_WEREAD_API_KEY]`
+skills/weread/SKILL.md:40:- 若未设置，提示用户：`export WEREAD_API_KEY=<你的apikey>`
+skills/weread/SKILL.md:47:- **Body**：JSON，`api_name` 指定接口，其余为接口参数，**每次请求必须带 `skill_version`**
+skills/weread/SKILL.md:50:curl -X POST "https://i.weread.qq.com/api/agent/gateway" \
+skills/weread/SKILL.md:51:  -H "Authorization: Bearer [REDACTED_WEREAD_API_KEY]" \
+skills/weread/SKILL.md:53:  -d '{"api_name": "/store/search", "keyword": "三体", "count": 10, "skill_version": "1.0.3"}'
+skills/weread/SKILL.md:61:{"api_name":"/user/notebooks","count":100,"skill_version":"1.0.5"}
+skills/weread/SKILL.md:67:{"api_name":"/user/notebooks","count":100,"lastSort":1516907353,"skill_version":"1.0.5"}
+skills/weread/SKILL.md:73:{"api_name":"/user/notebooks","params":{"count":100,"lastSort":1516907353},"skill_version":"1.0.5"}
+skills/weread/SKILL.md:86:1. **版本上报**：每次请求 body 必须包含 `"skill_version": "1.0.3"`（取本文件顶部 version 字段的值），用于服务端检查版本更新。**如果回包中出现 `upgrade_info` 字段，必须立即暂停当前操作，按照 `upgrade_info.message` 中的指引完成升级，升级完成后再重新执行用户请求，不得忽略该字段**
+skills/weread/SKILL.md:87:2. **参数平铺**：业务参数必须和 `api_name`、`skill_version` 放在同一层；不要包在 `params`、`data`、`body` 等对象里。只有接口文档明确声明的数组/对象字段（如 `/book/readreviews` 的 `reviews`）才允许作为业务字段传入。
+

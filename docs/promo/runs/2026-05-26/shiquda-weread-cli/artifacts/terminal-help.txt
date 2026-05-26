@@ -1,0 +1,28 @@
+Usage: weread [options] [command]
+
+基于微信读书官方支持 API 的命令行工具
+
+Options:
+  -V, --version               output the version number
+  --json                      emit JSON to stdout only
+  --compact                   with --json, emit compact agent-friendly items
+                              where supported
+  -h, --help                  display help for command
+
+Commands:
+  doctor                      Check local CLI configuration without making an
+                              authenticated API call
+  config                      Manage local credentials and defaults in
+                              ~/.weread-cli
+  api                         Low-level official API commands
+  search [options] <keyword>  Search store content. Scope defaults to book when
+                              omitted by this CLI.
+  book                        Book information and reading progress
+  shelf                       Shelf management
+  readdata                    Reading statistics
+  notes                       Personal notes, highlights, and public highlight
+                              context
+  reviews                     Public and single review APIs
+  discover                    Book recommendations
+  profile                     Convenience profile commands
+  help [command]              display help for command

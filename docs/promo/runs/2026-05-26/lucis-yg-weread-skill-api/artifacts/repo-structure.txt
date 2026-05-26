@@ -1,0 +1,42 @@
+repo: lucis-yg/weread-skill-api
+commit: 4d4dd98f72de17c618d3332f6bd8a3fdef80e714
+date: 2026-05-18
+message: Create LICENSE
+
+files:
+.env.example
+.gitignore
+LICENSE
+README.md
+package-lock.json
+package.json
+server.js
+src/app.js
+src/config/index.js
+src/controllers/bookController.js
+src/controllers/discoverController.js
+src/controllers/notesController.js
+src/controllers/profileController.js
+src/controllers/readdataController.js
+src/controllers/reviewController.js
+src/controllers/searchController.js
+src/controllers/shelfController.js
+src/middlewares/auth.js
+src/middlewares/errorHandler.js
+src/middlewares/logger.js
+src/middlewares/rateLimit.js
+src/middlewares/validate.js
+src/routes/v1/bookRoutes.js
+src/routes/v1/discoverRoutes.js
+src/routes/v1/index.js
+src/routes/v1/notesRoutes.js
+src/routes/v1/profileRoutes.js
+src/routes/v1/readdataRoutes.js
+src/routes/v1/reviewRoutes.js
+src/routes/v1/searchRoutes.js
+src/routes/v1/shelfRoutes.js
+src/services/wereadService.js
+src/utils/formatter.js
+src/utils/response.js
+src/validations/common.js
+src/validations/index.js

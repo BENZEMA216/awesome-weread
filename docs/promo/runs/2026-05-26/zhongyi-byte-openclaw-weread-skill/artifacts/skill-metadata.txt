@@ -1,0 +1,31 @@
+repo: zhongyi-byte/openclaw-weread-skill
+mode: OpenClaw / Cookie Web API
+scope: 范围风险：Cookie 导出方案，不是当前官方 Agent Gateway 项目。
+
+matched signals:
+SKILL.md:4:homepage: https://github.com/zhongyi-byte/openclaw-weread-skill
+SKILL.md:5:metadata: {"openclaw":{"emoji":"📚","requires":{"bins":["python3"]},"install":[{"id":"pip","kind":"pip","packages":["requests","beautifulsoup4"],"label":"安装 Python 依赖"}]}}
+SKILL.md:8:# 微信读书笔记导出 Skill
+SKILL.md:29:### 1. 获取微信读书 Cookie
+SKILL.md:33:3. 选择 Application → Cookies
+SKILL.md:35:   - `wr_vid` (用户 ID)
+SKILL.md:36:   - `wr_skey` (会话密钥)
+SKILL.md:44:  "vid": "你的_wr_vid",
+SKILL.md:45:  "skey": "你的_wr_skey",
+SKILL.md:78:### OpenClaw 集成
+SKILL.md:161:openclaw-weread-skill/
+SKILL.md:162:├── SKILL.md              # 本说明文件
+SKILL.md:176:1. **Cookie 有效期**: `wr_skey` 会过期，需要定期更新
+SKILL.md:183:### Cookie 失效
+SKILL.md:185:如果导出失败，可能是 Cookie 过期：
+SKILL.md:187:2. 获取新的 `wr_skey`
+README.md:1:# 📚 微信读书笔记导出 Skill
+README.md:3:OpenClaw Skill - 自动导出微信读书笔记到 Markdown/Obsidian
+README.md:13:### 2. 配置 Cookie
+README.md:16:2. F12 → Application → Cookies
+README.md:17:3. 复制 `wr_vid` 和 `wr_skey`
+README.md:36:### 4. OpenClaw 集成
+README.md:46:openclaw-weread-skill/
+README.md:47:├── SKILL.md              # 技能说明
+README.md:60:添加到 `~/.openclaw/cron/jobs.json`:
+

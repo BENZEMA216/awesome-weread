@@ -1,0 +1,54 @@
+/Users/benzema/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+usage: weread_export.py [-h] [--config CONFIG] [--all] [--this-week]
+                        [--last-day] [--days DAYS] [--book BOOK]
+                        [--format {markdown,json}] [--output OUTPUT] [--stats]
+                        [--max-books MAX_BOOKS] [--login] [--no-auto-renew]
+
+微信读书笔记导出工具
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --config CONFIG, -c CONFIG
+                        配置文件路径
+  --all                 导出所有书籍
+  --this-week           导出最近7天新增的笔记
+  --last-day            导出最近1天新增的笔记
+  --days DAYS           导出最近 N 天新增的笔记
+  --book BOOK, -b BOOK  导出特定书籍
+  --format {markdown,json}, -f {markdown,json}
+                        输出格式
+  --output OUTPUT, -o OUTPUT
+                        输出目录
+  --stats               显示阅读统计
+  --max-books MAX_BOOKS
+                        单次最多拉取的书籍数（不含 sort-skip 跳过的），默认 50；传 0 表示不限
+  --login               跳过续期，直接扫码登录
+  --no-auto-renew       跳过自动续期 skey
+
+--- init help ---
+/Users/benzema/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+usage: weread_init.py [-h] [--config CONFIG] [--output-dir OUTPUT_DIR]
+                      [--skip-login]
+
+微信读书初始化向导
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --config CONFIG, -c CONFIG
+  --output-dir OUTPUT_DIR
+                        直接写入输出目录，跳过交互提问
+  --skip-login          skey 仍有效时跳过扫码，只走 output_dir 这一步
+
+--- auth help ---
+/Users/benzema/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+usage: weread_auth.py [-h] [--config CONFIG] [--qr]
+
+微信读书鉴权工具
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --config CONFIG, -c CONFIG
+  --qr                  跳过续期，直接扫码登录

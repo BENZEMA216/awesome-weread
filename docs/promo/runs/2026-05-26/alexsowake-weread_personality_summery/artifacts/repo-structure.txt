@@ -1,0 +1,23 @@
+repo: alexsowake/weread_personality_summery
+commit: ccc7c54ccc49c5e1b71e3997fa61e86e494f87fd
+date: 2026-05-18
+message: Clarify PC requirement in API Key step hint
+
+files:
+.gitignore
+CLAUDE.md
+README.md
+deploy/DEPLOY.md
+deploy/nginx-api.conf
+lib/compress.ts
+lib/deepseek.ts
+lib/pipeline.ts
+lib/prompts.ts
+lib/weread.ts
+package-lock.json
+package.json
+public/index.html
+public/weread-logo.png
+server/index.ts
+test.ts
+tsconfig.json

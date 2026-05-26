@@ -1,0 +1,21 @@
+/Users/benzema/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+usage: weread_export.py [-h] [--config CONFIG] [--all] [--this-week]
+                        [--book BOOK] [--format {markdown,json}]
+                        [--output OUTPUT] [--stats] [--sync]
+
+微信读书笔记导出工具
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --config CONFIG, -c CONFIG
+                        配置文件路径
+  --all                 导出所有书籍
+  --this-week           导出本周新增的笔记
+  --book BOOK, -b BOOK  导出特定书籍
+  --format {markdown,json}, -f {markdown,json}
+                        输出格式
+  --output OUTPUT, -o OUTPUT
+                        输出目录
+  --stats               显示阅读统计
+  --sync                同步到 Obsidian

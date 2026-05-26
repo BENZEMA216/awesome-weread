@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>阅读人格画像 · 基于微信读书</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Noto+Serif+SC:wght@300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:    oklch(96.5% 0.018 72);
+      --cream-dk: oklch(93%   0.022 72);
+      --ink:      oklch(17%   0.018 260);
+      --ink-soft: oklch(38%   0.015 258);
+      --ink-mute: oklch(58%   0.012 256);
+      --red:      oklch(42%   0.17  22);
+      --red-lt:   oklch(90%   0.06  22);
+      --gold:     oklch(68%   0.12  72);
+      --rule:     oklch(87%   0.022 72);
+      --white:    oklch(99.5% 0.004 72);
+      --shadow:   0 1px 3px oklch(20% 0.02 260 / 0.06), 0 8px 32px oklch(20% 0.02 260 / 0.08);
+      --shadow-lg: 0 2px 8px oklch(20% 0.02 260 / 0.06), 0 20px 60px oklch(20% 0.02 260 / 0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', 'PingFang SC', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ─── Page layout ─── */
+    .page { max-width: 680px; margin: 0 auto; padding: 0 20px 80px; }
+
+    /* ─── Hero ─── */
+    .hero {
+      padding: 72px 0 56px;
+      text-align: left;
+      position: relative;
+    }
+    .hero-eyebrow {
+      font-family: 'DM Sans', 'PingFang SC', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--red);
+      margin-bottom: 20px;
+    }
+    .weread-inline-logo {
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      vertical-align: -4px;
+      margin: 0 5px 0 6px;
+    }
+    .weread-name {
+      font-weight: 600;
+      color: var(--ink);
+      margin-right: 4px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', 'Noto Serif SC', serif;
+      font-size: clamp(2.4rem, 8vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.12;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--red);
+    }
+    .hero-sub {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      line-height: 1.9;
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--ink);
+      color: var(--cream);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 14px 28px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hero-cta:hover { background: var(--red); transform: translateY(-1px); }
+    .hero-meta {
+      margin-top: 16px;
+      font-size: 0.75rem;
+      color: var(--ink-mute);
+      letter-spacing: 0.02em;
+    }
+
+    /* ─── Section divider ─── */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .section-label span {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      white-space: nowrap;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ─── Sample portrait document ─── */
+    .sample-section { margin-bottom: 56px; }
+
+    .sample-doc {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Thin red left accent */
+    .sample-doc::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--red);
+    }
+
+    .doc-header {
+      padding: 32px 36px 24px 40px;
+      border-bottom: 1px solid var(--cream-dk);
+      background: oklch(99% 0.01 72);
+    }
+
+    .doc-report-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 12px;
+    }
+
+    .doc-identity-line {
+      font-family: 'Playfair Display', 'Noto Serif SC', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .doc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .doc-tag {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+    .doc-tag-type {
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .doc-tag-dim {
+      background: var(--cream-dk);
+      color: var(--ink-soft);
+    }
+    .doc-tag-low {
+      background: var(--red-lt);
+      color: var(--red);
+    }
+
+    .doc-meta-row {
+      font-size: 0.78rem;
+      color: var(--ink-mute);
+      letter-spacing: 0.03em;
+    }
+
+    /* ─── Trait blocks ─── */
+    .doc-body { padding: 0 36px 0 40px; }
+
+    .doc-trait {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--cream-dk);
+    }
+    .doc-trait:last-of-type { border-bottom: none; }
+
+    .trait-number {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 8px;
+    }
+
+    .trait-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .trait-body {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      line-height: 1.9;
+      margin-bottom: 16px;
+    }
+
+    .doc-quote {
+      margin: 0 0 16px;
+      padding: 14px 18px;
+      border-left: 2px solid var(--red);
+      background: var(--cream);
+    }
+    .doc-quote p {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.85;
+      margin-bottom: 8px;
+    }
+    .doc-quote cite {
+      font-size: 0.72rem;
+      font-style: normal;
+      color: var(--ink-mute);
+      letter-spacing: 0.04em;
+    }
+
+    .trait-conclusion {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      padding-left: 12px;
+      border-left: 1px solid var(--rule);
+    }
+
+    /* ─── Types table partial ─── */
+    .doc-types-preview {
+      padding: 20px 0 10px;
+    }
+    .types-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    .types-table th {
+      text-align: left;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      padding: 0 12px 10px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .types-table td {
+      padding: 10px 12px 10px 0;
+      border-bottom: 1px solid var(--cream-dk);
+      color: var(--ink);
+      vertical-align: top;
+    }
+    .types-table td:first-child {
+      font-family: 'Noto Serif SC', serif;
+      font-weight: 600;
+      white-space: nowrap;
+      color: var(--ink-soft);
+      width: 100px;
+    }
+    .types-table td .dim-val {
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .types-table td .dim-note {
+      font-size: 0.75rem;
+      color: var(--ink-mute);
+      margin-top: 2px;
+    }
+
+    /* ─── Fade overlay ─── */
+    .doc-fade {
+      position: relative;
+      height: 120px;
+      margin-top: -120px;
+      background: linear-gradient(
+        to bottom,
+        oklch(99% 0.01 72 / 0) 0%,
+        oklch(99% 0.01 72 / 0.7) 35%,
+        oklch(99% 0.01 72) 100%
+      );
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 20px;
+      pointer-events: none;
+    }
+
+    .fade-text {
+      font-size: 0.75rem;
+      color: var(--ink-mute);
+      letter-spacing: 0.04em;
+      text-align: center;
+    }
+    .fade-text strong { color: var(--ink-soft); font-weight: 600; }
+
+    /* ─── Sample CTA ─── */
+    .sample-cta-row {
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .sample-cta-note {
+      font-size: 0.78rem;
+      color: var(--ink-mute);
+    }
+    .sample-cta-note strong { color: var(--ink-soft); font-weight: 600; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red);
+      color: var(--white);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 12px 24px;
+      border-radius: 2px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .btn-primary:hover { background: var(--ink); transform: translateY(-1px); }
+
+    /* ─── Get-started card ─── */
+    #get-started {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      box-shadow: var(--shadow);
+      padding: 36px 36px 36px 40px;
+      position: relative;
+    }
+    #get-started::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--gold);
+    }
+
+    /* ─── Step styles ─── */
+    .step-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .step-title-note {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--muted);
+      margin-left: 6px;
+    }
+    .step-list {
+      list-style: none;
+      counter-reset: step;
+      margin-bottom: 20px;
+    }
+    .step-list li {
+      counter-increment: step;
+      display: flex;
+      gap: 12px;
+      font-size: 0.875rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .step-list li::before {
+      content: counter(step);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 20px;
+      height: 20px;
+      background: var(--cream-dk);
+      color: var(--ink-soft);
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    .step-list code {
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      padding: 1px 6px;
+      border-radius: 2px;
+      font-size: 11px;
+      font-family: 'Courier New', monospace;
+      color: var(--red);
+    }
+
+    /* Buttons */
+    .btn-row { display: flex; flex-direction: column; gap: 10px; }
+    @media (min-width: 480px) { .btn-row { flex-direction: row; } }
+
+    .btn-weread {
+      flex: 1;
+      background: oklch(35% 0.13 160);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 13px 18px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .btn-weread:hover { background: oklch(30% 0.13 160); }
+
+    .btn-paste {
+      flex: 1;
+      background: var(--ink);
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 13px 18px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .btn-paste:hover { background: var(--red); }
+    .btn-paste:disabled { background: var(--rule); color: var(--ink-mute); cursor: default; }
+
+    .manual-expand {
+      margin-top: 12px;
+      font-size: 0.78rem;
+      color: var(--ink-mute);
+    }
+    .manual-expand summary {
+      cursor: pointer;
+      display: inline;
+    }
+    .manual-expand summary:hover { color: var(--ink-soft); }
+    .manual-input-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .manual-input {
+      flex: 1;
+      border: 1px solid var(--rule);
+      background: var(--cream);
+      padding: 8px 12px;
+      font-family: monospace;
+      font-size: 0.82rem;
+      color: var(--ink);
+      border-radius: 2px;
+      outline: none;
+    }
+    .manual-input:focus { border-color: var(--ink-soft); }
+    .btn-sm {
+      background: var(--ink-soft);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .btn-sm:hover { background: var(--ink); }
+
+    /* Tier selector */
+    .tier-info { font-size: 0.875rem; color: var(--ink-soft); margin-bottom: 16px; line-height: 1.6; }
+    .tier-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 20px; }
+    @media (min-width: 400px) { .tier-grid { grid-template-columns: repeat(5, 1fr); } }
+    .tier-btn {
+      padding: 12px 8px;
+      border: 1.5px solid var(--rule);
+      background: var(--cream);
+      border-radius: 2px;
+      cursor: pointer;
+      text-align: center;
+      transition: border-color 0.15s, background 0.15s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .tier-btn:hover:not(:disabled) { border-color: var(--ink-soft); }
+    .tier-btn.selected { border-color: var(--red); background: var(--red-lt); }
+    .tier-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+    .tier-btn-label { font-size: 0.9rem; font-weight: 600; color: var(--ink); display: block; }
+    .tier-btn-sub { font-size: 0.68rem; color: var(--ink-mute); display: block; margin-top: 2px; }
+    .tier-btn.selected .tier-btn-label { color: var(--red); }
+
+    .tier-row-btns {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .btn-back {
+      font-size: 0.8rem;
+      color: var(--ink-mute);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      padding: 0;
+    }
+    .btn-back:hover { color: var(--ink-soft); }
+    .btn-start {
+      background: var(--red);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      letter-spacing: 0.03em;
+    }
+    .btn-start:hover:not(:disabled) { background: var(--ink); transform: translateY(-1px); }
+    .btn-start:disabled { background: var(--rule); color: var(--ink-mute); cursor: not-allowed; transform: none; }
+
+    /* Progress */
+    .progress-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .pulse-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--red);
+      animation: pulse 1.4s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.8); } }
+    .progress-title-txt {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .progress-box {
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      padding: 16px 20px;
+    }
+    .progress-status {
+      font-size: 0.875rem;
+      color: var(--ink-soft);
+      margin-bottom: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .progress-track {
+      height: 3px;
+      background: var(--rule);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--red);
+      border-radius: 3px;
+      transition: width 0.4s ease-out;
+      width: 0%;
+    }
+    .progress-detail {
+      font-size: 0.75rem;
+      color: var(--ink-mute);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Portrait output */
+    .portrait-header {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+    .prose-portrait h2 { font-family: 'Noto Serif SC', serif; font-size: 1.2rem; font-weight: 600; margin: 1.8rem 0 0.7rem; color: var(--ink); border-bottom: 1px solid var(--rule); padding-bottom: 0.4rem; }
+    .prose-portrait h3 { font-family: 'Noto Serif SC', serif; font-size: 1rem; font-weight: 600; margin: 1.2rem 0 0.5rem; color: var(--ink-soft); }
+    .prose-portrait p { font-family: 'Noto Serif SC', serif; font-size: 0.9rem; line-height: 1.9; margin: 0.5rem 0; color: var(--ink-soft); font-weight: 300; }
+    .prose-portrait blockquote { border-left: 2px solid var(--red); padding: 10px 16px; margin: 1rem 0; background: var(--cream); }
+    .prose-portrait blockquote p { color: var(--ink); font-weight: 400; }
+    .prose-portrait table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+    .prose-portrait th, .prose-portrait td { border: 1px solid var(--rule); padding: 8px 12px; text-align: left; }
+    .prose-portrait th { background: var(--cream); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.04em; color: var(--ink-soft); }
+    .prose-portrait ul, .prose-portrait ol { padding-left: 1.4rem; margin: 0.5rem 0; }
+    .prose-portrait li { font-family: 'Noto Serif SC', serif; font-size: 0.88rem; line-height: 1.8; color: var(--ink-soft); font-weight: 300; }
+    .prose-portrait strong { color: var(--ink); font-weight: 600; }
+
+    .portrait-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--rule);
+      flex-wrap: wrap;
+    }
+    .btn-ghost {
+      flex: 1;
+      min-width: 120px;
+      background: none;
+      border: 1.5px solid var(--rule);
+      color: var(--ink-soft);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 11px 16px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn-ghost:hover { border-color: var(--ink-soft); color: var(--ink); }
+
+    .error-box {
+      background: oklch(95% 0.04 22);
+      border: 1px solid oklch(80% 0.08 22);
+      border-radius: 2px;
+      padding: 12px 16px;
+      font-size: 0.84rem;
+      color: var(--red);
+      margin-top: 16px;
+    }
+
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ─── Hero ─── -->
+  <header class="hero">
+    <div class="hero-eyebrow">微信读书 × 阅读人格分析</div>
+    <h1 class="hero-title">你读过的书，<br><em>是一面没有滤镜的镜子</em></h1>
+    <p class="hero-sub">我在<img class="weread-inline-logo" src="./weread-logo.png" alt="微信读书" /><strong class="weread-name">微信读书</strong>的 110 本书里做了笔记，却从来不知道它们加在一起，说了什么关于我的事。</p>
+    <a href="#get-started" class="hero-cta">生成我的阅读画像 ↓</a>
+    <p class="hero-meta">本站不存储您的数据 · 安全私密</p>
+  </header>
+
+  <!-- ─── Sample portrait ─── -->
+  <section class="sample-section">
+    <div class="section-label"><span>真实画像示例</span></div>
+
+    <div class="sample-doc">
+
+      <!-- Doc header -->
+      <div class="doc-header">
+        <div class="doc-report-label">阅读人格画像 · 样本</div>
+        <div class="doc-identity-line">建构主义者 · 权力解剖师 · 概率思维者</div>
+        <div class="doc-tags">
+          <span class="doc-tag doc-tag-type">INTJ</span>
+          <span class="doc-tag doc-tag-dim">开放性 99th percentile</span>
+          <span class="doc-tag doc-tag-low">认知闭合需求：低</span>
+          <span class="doc-tag doc-tag-dim">思维风格：建构主义 + 还原主义</span>
+        </div>
+        <div class="doc-meta-row">20 本书 · 100+ 条划线与想法 · 2016—2026 十年阅读轨迹</div>
+      </div>
+
+      <!-- Body -->
+      <div class="doc-body">
+
+        <!-- Trait 1 -->
+        <div class="doc-trait">
+          <div class="trait-number">特质一</div>
+          <div class="trait-title">建构主义世界观——你的底层操作系统</div>
+          <p class="trait-body">这是你笔记中最核心、最贯穿的线索。《人类简史》34 条划线，远超其他任何一本书。你在想法里把这段话抄了一遍——这不是划线，是认同。</p>
+          <div class="doc-quote">
+            <p>"这个宇宙中根本没有神、没有国家、没有钱、没有人权、没有法律，也没有正义。"</p>
+            <cite>— 《人类简史》划线 + 想法（2016–2018）</cite>
+          </div>
+          <p class="trait-conclusion">你的世界观核心是：绝大多数我们以为"自然"和"真实"的东西，都是被建构的故事。理解世界的第一步，是认出这些故事。</p>
+        </div>
+
+        <!-- Trait 2 -->
+        <div class="doc-trait">
+          <div class="trait-number">特质三</div>
+          <div class="trait-title">概率思维——不确定性是你的母语</div>
+          <p class="trait-body">从最早（2016）到最近（2026），这是一条持续十年的线索。从认知偏误到热力学第二定律，你把"世界本质上是概率的"应用到了几乎所有领域。</p>
+          <div class="doc-quote">
+            <p>"市场就属于二级混沌系统。假设我们可以完全准确预测明天的油价——油价会立刻因应这个预测而波动，最后也就不可能符合预测。"</p>
+            <cite>— 《人类简史》（2016–2018）</cite>
+          </div>
+          <div class="doc-quote">
+            <p>"只有存在热量的时候，过去和未来才有区别。"</p>
+            <cite>— 《七堂极简物理课》（2026）</cite>
+          </div>
+        </div>
+
+        <!-- Types table partial -->
+        <div class="doc-types-preview">
+          <div class="trait-number" style="margin-bottom:12px;">人格类型推断</div>
+          <table class="types-table">
+            <thead>
+              <tr>
+                <th>框架</th>
+                <th>推断</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>大五 · 开放性</td>
+                <td>
+                  <div class="dim-val">极高（99th percentile）</div>
+                  <div class="dim-note">领域跨度、10 年持续求知、反直觉偏好</div>
+                </td>
+              </tr>
+              <tr>
+                <td>MBTI</td>
+                <td>
+                  <div class="dim-val">INTJ &gt; INTP</div>
+                  <div class="dim-note">Ni（底层模式识别）+ Te（系统化应用）</div>
+                </td>
+              </tr>
+              <tr>
+                <td>认知闭合需求</td>
+                <td>
+                  <div class="dim-val">低</div>
+                  <div class="dim-note">享受不确定、拥抱"无知的革命"</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div><!-- /doc-body -->
+
+      <!-- Fade -->
+      <div class="doc-fade">
+        <div class="fade-text">完整画像还包含 <strong>7 项人格特质分析</strong> · <strong>认知图谱</strong> · <strong>十年阅读演变轨迹</strong></div>
+      </div>
+
+    </div><!-- /sample-doc -->
+
+    <div class="sample-cta-row">
+      <span class="sample-cta-note">基于你的微信读书笔记生成 · <strong>一键自动生成分析</strong></span>
+      <a href="#get-started" class="btn-primary">生成我的阅读画像 →</a>
+    </div>
+  </section>
+
+  <!-- ─── Get started ─── -->
+  <div id="get-started">
+
+    <!-- Step 1: get key -->
+    <section id="step-intro">
+      <div class="step-title">获取你的微信读书 API Key<span class="step-title-note">（需要扫码获取，请在电脑端打开）</span></div>
+      <ol class="step-list">
+        <li>点击下方按钮，在新标签页打开微信读书官方授权页</li>
+        <li>用微信扫码登录 → 复制页面上的 API Key（以 <code>wrk-</code> 开头）</li>
+        <li>回到本页面，点击"我已复制 Key"，自动从剪贴板填入</li>
+      </ol>
+      <div class="btn-row">
+        <button id="btn-open-weread" class="btn-weread">打开微信读书授权页 →</button>
+        <button id="btn-paste" class="btn-paste">我已复制 Key，自动粘贴</button>
+      </div>
+      <details class="manual-expand">
+        <summary>手动粘贴 Key（剪贴板权限被拒时使用）</summary>
+        <div class="manual-input-row">
+          <input id="manual-key" type="text" placeholder="wrk-xxxxxxxxxxxxxxxx" class="manual-input" />
+          <button id="btn-manual-submit" class="btn-sm">确认</button>
+        </div>
+      </details>
+    </section>
+
+    <!-- Step 2: tier -->
+    <section id="step-tier" class="hidden">
+      <div class="step-title">准备就绪</div>
+      <div id="tier-info" class="tier-info"></div>
+      <div class="tier-row-btns">
+        <button id="btn-back" class="btn-back">← 重新输入 Key</button>
+        <button id="btn-start" class="btn-start">开始分析 →</button>
+      </div>
+    </section>
+
+    <!-- Step 3: progress -->
+    <section id="step-progress" class="hidden">
+      <div class="progress-header">
+        <div class="pulse-dot"></div>
+        <div id="progress-title" class="progress-title-txt">正在分析...</div>
+      </div>
+      <div class="progress-box">
+        <div id="progress-status" class="progress-status">准备中...</div>
+        <div class="progress-track"><div id="progress-bar" class="progress-fill"></div></div>
+        <div id="progress-detail" class="progress-detail"></div>
+        <button id="btn-retry-stage2" class="btn-start hidden" style="margin-top:16px;">重试生成画像</button>
+      </div>
+    </section>
+
+    <!-- Step 4: portrait -->
+    <section id="step-portrait" class="hidden">
+      <div class="portrait-header">你的阅读人格画像</div>
+      <article id="portrait" class="prose-portrait"></article>
+      <div class="portrait-actions">
+        <button id="btn-copy" class="btn-ghost">复制全文</button>
+        <button id="btn-restart" class="btn-primary">再来一次</button>
+      </div>
+    </section>
+
+    <!-- Error -->
+    <div id="error-box" class="error-box hidden"></div>
+
+  </div><!-- /get-started -->
+
+</div><!-- /page -->
+
+<script>
+// API host. Backend runs on a separate Node.js server (api.aicw.me) because
+// EdgeOne's CDN force-compresses SSE responses and buffers them indefinitely.
+const API_BASE = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+  ? ""
+  : "https://api.aicw.me";
+
+const $ = (id) => document.getElementById(id);
+const show = (id) => $(id).classList.remove("hidden");
+const hide = (id) => $(id).classList.add("hidden");
+const showError = (msg) => {
+  const box = $("error-box");
+  box.textContent = msg;
+  show("error-box");
+  setTimeout(() => hide("error-box"), 7000);
+};
+
+let wereadKey = null;
+let totalBookCount = 0;
+let stage01Result = null;
+
+$("btn-open-weread").addEventListener("click", () => {
+  window.open("https://weread.qq.com/r/weread-skills", "_blank", "noopener");
+});
+
+$("btn-paste").addEventListener("click", async () => {
+  try {
+    const text = await navigator.clipboard.readText();
+    const match = (text || "").trim().match(/wrk-[A-Za-z0-9_-]+/);
+    if (match) {
+      submitKey(match[0]);
+    } else {
+      showError("剪贴板里没有发现 API Key（应以 wrk- 开头）。请展开下方手动粘贴。");
+    }
+  } catch {
+    showError("无法读取剪贴板，请展开下方手动粘贴。");
+  }
+});
+
+$("btn-manual-submit").addEventListener("click", () => {
+  const v = $("manual-key").value.trim();
+  if (!v.startsWith("wrk-")) { showError("Key 应以 wrk- 开头"); return; }
+  submitKey(v);
+});
+
+async function submitKey(key) {
+  wereadKey = key;
+  $("btn-paste").disabled = true;
+  $("btn-paste").textContent = "正在校验 Key...";
+  try {
+    const res = await fetch(`${API_BASE}/api/check`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ wereadKey: key }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Key 校验失败");
+    totalBookCount = data.totalBookCount;
+    renderTierStep();
+  } catch (e) {
+    showError("Key 校验失败：" + e.message);
+    $("btn-paste").disabled = false;
+    $("btn-paste").textContent = "我已复制 Key，自动粘贴";
+  }
+}
+
+function renderTierStep() {
+  hide("step-intro");
+  show("step-tier");
+  const planned = Math.min(20, totalBookCount);
+  $("tier-info").textContent =
+    totalBookCount < 20
+      ? `检测到你有 ${totalBookCount} 本带笔记的书，将全部纳入分析。`
+      : `检测到你有 ${totalBookCount} 本带笔记的书，本次将分析其中笔记最丰富的 ${planned} 本。`;
+}
+
+$("btn-back").addEventListener("click", () => {
+  hide("step-tier");
+  show("step-intro");
+  $("btn-paste").disabled = false;
+  $("btn-paste").textContent = "我已复制 Key，自动粘贴";
+});
+
+$("btn-start").addEventListener("click", async () => {
+  hide("step-tier");
+  show("step-progress");
+  hide("btn-retry-stage2");
+  $("portrait").innerHTML = "";
+  portraitBuffer = "";
+  stage01Result = null;
+  try {
+    await runAnalysis();
+  } catch (e) {
+    showError("分析失败：" + e.message);
+    hide("step-progress");
+    show("step-tier");
+  }
+});
+
+$("btn-retry-stage2").addEventListener("click", async () => {
+  if (!stage01Result) {
+    showError("没有可重试的数据，请重新分析");
+    return;
+  }
+  hide("btn-retry-stage2");
+  portraitBuffer = "";
+  $("portrait").innerHTML = "";
+  try {
+    await runStage2(stage01Result);
+  } catch (e) {
+    showError("重试失败：" + e.message);
+    show("btn-retry-stage2");
+  }
+});
+
+let portraitBuffer = "";
+
+async function runAnalysis() {
+  // Step 1: stage01 with auto-fallback (20 → 10)
+  try {
+    stage01Result = await runStage01(20);
+  } catch (e) {
+    $("progress-status").textContent = "正在以更精简模式重试...";
+    $("progress-bar").style.width = "0%";
+    stage01Result = await runStage01(10);
+  }
+  try {
+    sessionStorage.setItem("stage01Result", JSON.stringify(stage01Result));
+  } catch {}
+
+  // Step 2: stage2 (single attempt; failure shows retry button)
+  try {
+    await runStage2(stage01Result);
+  } catch (e) {
+    showError("画像生成失败：" + e.message + "，可点击重试");
+    show("btn-retry-stage2");
+  }
+}
+
+// Runs /api/stage01, returns the Stage01Result from the final `summaries` event.
+// Rejects if stream ends before `summaries` arrives, or if backend emits `error`.
+async function runStage01(count) {
+  const res = await fetch(`${API_BASE}/api/stage01`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ wereadKey, count }),
+  });
+  if (!res.ok || !res.body) throw new Error("无法启动 stage01");
+
+  let captured = null;
+  let backendError = null;
+  await readSSE(res.body, (evt) => {
+    if (evt.type === "summaries") { captured = evt.data; return; }
+    if (evt.type === "error") { backendError = evt.message; return; }
+    handleEvent(evt, "stage01");
+  });
+  if (backendError) throw new Error(backendError);
+  if (!captured) throw new Error("stage01 未返回 summaries（可能超时）");
+  return captured;
+}
+
+async function runStage2(result) {
+  const res = await fetch(`${API_BASE}/api/stage2`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ result }),
+  });
+  if (!res.ok || !res.body) throw new Error("无法启动 stage2");
+
+  let backendError = null;
+  let sawDone = false;
+  await readSSE(res.body, (evt) => {
+    if (evt.type === "error") { backendError = evt.message; return; }
+    if (evt.type === "done") sawDone = true;
+    handleEvent(evt, "stage2");
+  });
+  if (backendError) throw new Error(backendError);
+  if (!sawDone) throw new Error("stage2 未完成（可能超时）");
+}
+
+async function readSSE(body, onEvent) {
+  const reader = body.getReader();
+  const decoder = new TextDecoder();
+  let buf = "";
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buf += decoder.decode(value, { stream: true });
+    const events = buf.split("\n\n");
+    buf = events.pop() || "";
+    for (const raw of events) {
+      const line = raw.trim();
+      if (!line.startsWith("data:")) continue;
+      const data = line.slice(5).trim();
+      if (!data) continue;
+      try { onEvent(JSON.parse(data)); } catch {}
+    }
+  }
+}
+
+function handleEvent(evt, phase) {
+  switch (evt.type) {
+    case "status":
+      $("progress-status").textContent = evt.message;
+      $("progress-detail").textContent = "";
+      break;
+    case "progress": {
+      // stage01 maps progress to 0-60% of overall bar.
+      const ratio = evt.total ? evt.current / evt.total : 0;
+      const pct = Math.round(ratio * 60);
+      $("progress-bar").style.width = pct + "%";
+      $("progress-detail").textContent = `正在处理《${evt.bookTitle || ""}》(${evt.current}/${evt.total})`;
+      break;
+    }
+    case "meta":
+      $("progress-status").textContent =
+        `共 ${evt.totalBooks} 本带笔记的书，排除 ${evt.privateExcluded} 本私密阅读，本次分析 ${evt.selectedCount} 本（划线 ${evt.totalBookmarks} 条、想法 ${evt.totalThoughts} 条）`;
+      $("progress-bar").style.width = "60%";
+      break;
+    case "portrait_delta":
+      if (portraitBuffer === "") {
+        hide("step-progress");
+        show("step-portrait");
+        document.getElementById("get-started").scrollIntoView({ behavior: "smooth" });
+      }
+      portraitBuffer += evt.text;
+      $("portrait").innerHTML = marked.parse(portraitBuffer);
+      break;
+    case "done":
+      $("progress-bar").style.width = "100%";
+      break;
+  }
+}
+
+$("btn-copy").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(portraitBuffer);
+    $("btn-copy").textContent = "✓ 已复制";
+    setTimeout(() => { $("btn-copy").textContent = "复制全文"; }, 2000);
+  } catch {
+    showError("请手动选择文本复制");
+  }
+});
+
+$("btn-restart").addEventListener("click", () => {
+  wereadKey = null; totalBookCount = 0; portraitBuffer = ""; stage01Result = null;
+  $("portrait").innerHTML = "";
+  $("manual-key").value = "";
+  $("btn-paste").disabled = false;
+  $("btn-paste").textContent = "我已复制 Key，自动粘贴";
+  hide("btn-retry-stage2");
+  hide("step-portrait"); hide("step-progress"); show("step-intro");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
+
+</body>
+</html>

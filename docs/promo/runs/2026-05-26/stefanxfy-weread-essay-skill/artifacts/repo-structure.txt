@@ -1,0 +1,9 @@
+repo: stefanxfy/weread-essay-skill
+commit: dddc4de10f8f4ede1bed2a6a38c3f925b34d54a2
+date: 2026-05-19
+message: Generalize README - remove Hermes-specific paths
+
+files:
+README.md
+SKILL.md
+workflows/essay.md

@@ -1,0 +1,81 @@
+repo: ChenyqThu/openclaw-weread-skill
+mode: OpenClaw / Cookie Web API
+scope: 范围风险：README/SKILL 明确写明 Cookie 认证，不是官方 wrk API Key 方案。
+
+matched signals:
+SKILL.md:6:# 微信读书 Skill
+SKILL.md:8:通过微信读书 Web API 获取用户的阅读数据。依赖 Cookie 认证。
+SKILL.md:10:## 前置：Cookie 配置
+SKILL.md:12:**Cookie 存储路径: `~/.weread/cookie`（纯文本单行）。**
+SKILL.md:14:所有 API 命令依赖此文件。Cookie 不存在或过期时，命令会报错并提示重新登录。
+SKILL.md:16:### 获取 Cookie（三选一）
+SKILL.md:19:1. 用 `browser` 工具打开 `https://weread.qq.com`（profile=openclaw 或 user）
+SKILL.md:21:3. 执行 JavaScript 提取 cookie：`document.cookie`
+SKILL.md:22:4. 将结果写入 `~/.weread/cookie`
+SKILL.md:26:python3 ~/.openclaw/workspace/skills/weread/scripts/weread_login.py paste
+SKILL.md:30:用户提供 cookie 字符串后直接写入 `~/.weread/cookie`。
+SKILL.md:32:### 验证 Cookie
+SKILL.md:34:python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py verify
+SKILL.md:37:Cookie 过期时 API 返回 errcode -2012，提示用户重新登录。
+SKILL.md:41:脚本目录: `skills/weread/scripts/`（相对于 workspace）
+SKILL.md:42:执行示例使用绝对路径: `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py`
+SKILL.md:46:| `shelf` | 获取书架（书名、作者、进度、阅读时长） | `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py shelf` |
+SKILL.md:47:| `search <keyword>` | 搜索书架中的书籍（模糊匹配书名/作者） | `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py search 心理学` |
+SKILL.md:48:| `info <bookId>` | 获取书籍详情（评分、字数、出版信息） | `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py info 123456` |
+SKILL.md:49:| `progress <bookId>` | 获取阅读进度 | `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py progress 123456` |
+SKILL.md:50:| `detail <bookId>` | 获取详细阅读信息（时长明细、完成日期） | `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py detail 123456` |
+SKILL.md:51:| `bookmarks <bookId>` | 获取划线记录 | `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py bookmarks 123456` |
+SKILL.md:52:| `reviews <bookId>` | 获取我的笔记/想法 | `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py reviews 123456` |
+SKILL.md:53:| `best-reviews <bookId> [count]` | 获取热门书评 | `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py best-reviews 123456 5` |
+SKILL.md:54:| `chapters <bookId>` | 获取章节信息 | `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py chapters 123456` |
+SKILL.md:55:| `verify` | 验证 Cookie 是否有效 | `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py verify` |
+SKILL.md:61:| `random_review.py` | 随机抽取读书笔记（加权，更长更优先） | `python3 ~/.openclaw/workspace/skills/weread/scripts/random_review.py --count 2 --min-length 50` |
+SKILL.md:62:| `export_notes.py` | 全量导出笔记到 `~/.weread/` | `python3 ~/.openclaw/workspace/skills/weread/scripts/export_notes.py` |
+SKILL.md:63:| `export_notes.py --stats` | 显示笔记统计信息 | `python3 ~/.openclaw/workspace/skills/weread/scripts/export_notes.py --stats` |
+SKILL.md:64:| `weread_login.py paste` | 手动粘贴 Cookie 登录 | `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_login.py paste` |
+SKILL.md:70:python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py shelf
+SKILL.md:75:1. 先搜索获取 bookId：`python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py search 思考快与慢`
+SKILL.md:76:2. 用 bookId 获取划线：`python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py bookmarks <bookId>`
+SKILL.md:77:3. 用 bookId 获取笔记：`python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py reviews <bookId>`
+SKILL.md:78:4. 需要章节信息时：`python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py chapters <bookId>`
+SKILL.md:81:1. `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py shelf` 获取整体阅读时长
+SKILL.md:82:2. `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py detail <bookId>` 获取单本详细阅读数据
+SKILL.md:86:2. `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py best-reviews <bookId> 10`
+SKILL.md:91:python3 ~/.openclaw/workspace/skills/weread/scripts/random_review.py --count 2 --min-length 50 --format text
+SKILL.md:109:## Cookie 过期处理
+SKILL.md:111:当命令报错 "Cookie 已过期" 时：
+SKILL.md:113:2. 提取 `document.cookie` 写入 `~/.weread/cookie`
+SKILL.md:114:3. 运行 `python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py verify` 确认
+README.md:1:# OpenClaw WeRead Skill
+README.md:3:> OpenClaw skill for 微信读书 (WeRead) — fetch bookshelf, notes, highlights and reading stats.
+README.md:9:This skill gives your OpenClaw agent full access to your WeRead (微信读书) data:
+README.md:19:- **Cookie Verification** — check if your session is still active
+README.md:26:- [OpenClaw](https://github.com/nicepkg/openclaw) installed and configured
+README.md:34:clawhub install ChenyqThu/openclaw-weread-skill
+README.md:40:git clone https://github.com/ChenyqThu/openclaw-weread-skill.git \
+README.md:41:  ~/.openclaw/workspace/skills/weread
+README.md:46:The skill authenticates via a browser cookie stored at `~/.weread/cookie`.
+README.md:48:### How to get your cookie
+README.md:52:Ask your OpenClaw agent to open `https://weread.qq.com`, confirm you're logged in, then extract `document.cookie` and save it to `~/.weread/cookie`.
+README.md:57:python3 ~/.openclaw/workspace/skills/weread/scripts/weread_login.py paste
+README.md:60:Open WeRead in your browser → F12 → Network → pick any request → Headers → copy the `Cookie` value → paste when prompted.
+README.md:64:If you already have the cookie string, write it directly:
+README.md:68:echo 'YOUR_COOKIE_STRING' > ~/.weread/cookie
+README.md:69:chmod 600 ~/.weread/cookie
+README.md:72:### Verify your cookie
+README.md:75:python3 ~/.openclaw/workspace/skills/weread/scripts/weread_api.py verify
+README.md:78:> When the cookie expires, commands will return "Cookie 已过期". Simply re-do the setup above.
+README.md:97:| `verify` | Check if cookie is still valid | `python3 scripts/weread_api.py verify` |
+README.md:127:python3 scripts/weread_login.py paste      # paste cookie from DevTools
+README.md:137:python3 ~/.openclaw/workspace/skills/weread/scripts/random_review.py \
+README.md:146:- Your cookie file (`~/.weread/cookie`) is created with `chmod 600` (owner-only read/write).
+README.md:160:这是一个 OpenClaw 技能插件，让你的 AI 助手能够访问微信读书数据：
+README.md:171:clawhub install ChenyqThu/openclaw-weread-skill
+README.md:174:git clone https://github.com/ChenyqThu/openclaw-weread-skill.git \
+README.md:175:  ~/.openclaw/workspace/skills/weread
+README.md:180:需要微信读书的浏览器 Cookie，存储在 `~/.weread/cookie`。
+README.md:183:1. **浏览器自动提取**：让 OpenClaw 打开 weread.qq.com，提取 `document.cookie` 写入文件
+README.md:184:2. **手动粘贴**：`python3 scripts/weread_login.py paste`，从浏览器 DevTools 复制 Cookie
+README.md:185:3. **直接写入**：将 Cookie 字符串写入 `~/.weread/cookie`
+README.md:192:- Cookie 文件权限为 600（仅所有者可读写）
+
