@@ -632,5 +632,17 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-05-26T10:06:45.685Z"
+  },
+  {
+    "repo": "Mangome/weread-report",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-26T15:53:25.019Z"
+  },
+  {
+    "repo": "AItool-kellytt/weread-visual-persona",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-26T15:53:25.019Z"
   }
 ]
