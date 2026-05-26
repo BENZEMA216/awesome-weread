@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日金句 · 来自你的阅读</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-web/1.520.0/style.min.css">
+<link rel="stylesheet" href="https://fontsapi.zeoseven.com/309/main/result.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #F5F0E8;
+    --card-bg: #FFFCF5;
+    --text-primary: #2C2418;
+    --text-secondary: #6B5D4F;
+    --text-muted: #9C8E7E;
+    --accent: #8B6E4E;
+    --accent-light: #C4A97D;
+    --border: #E0D5C5;
+    --border-dark: #C9BAA5;
+    --ink: #3A2E22;
+    --cinnabar: #B5432A;
+    --indigo: #4A6B8A;
+    --jade: #5E8C6A;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: "LXGW WenKai", "KingHwaOldSong", serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* 宣纸底纹 */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.55;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139,110,78,0.012) 2px, rgba(139,110,78,0.012) 3px),
+      repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(139,110,78,0.008) 3px, rgba(139,110,78,0.008) 4px),
+      repeating-linear-gradient(42deg, transparent, transparent 80px, rgba(139,110,78,0.015) 80px, rgba(139,110,78,0.015) 82px),
+      repeating-linear-gradient(-30deg, transparent, transparent 120px, rgba(139,110,78,0.01) 120px, rgba(139,110,78,0.01) 122px),
+      radial-gradient(ellipse at 20% 30%, rgba(200,180,150,0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 75% 60%, rgba(180,160,130,0.12) 0%, transparent 45%),
+      radial-gradient(ellipse at 50% 85%, rgba(190,170,140,0.1) 0%, transparent 40%),
+      radial-gradient(ellipse at 85% 15%, rgba(170,150,120,0.08) 0%, transparent 35%),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse at 15% 20%, rgba(180,140,80,0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 70%, rgba(160,120,60,0.03) 0%, transparent 45%),
+      radial-gradient(ellipse at 40% 90%, rgba(170,130,70,0.025) 0%, transparent 40%);
+  }
+
+  .container {
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 导航栏 */
+  .nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .nav-tab {
+    padding: 8px 20px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    background: transparent;
+    color: var(--text-muted);
+    font-family: "LXGW WenKai", serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .nav-tab:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .nav-tab.active {
+    background: var(--card-bg);
+    color: var(--ink);
+    border-color: var(--border-dark);
+    box-shadow: 0 1px 3px rgba(139,110,78,0.06);
+  }
+
+  /* 头部 */
+  .header {
+    text-align: center;
+    margin-bottom: 56px;
+    padding-top: 8px;
+  }
+
+  .date-badge {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 2px;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-family: "KingHwaOldSong", serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    background: rgba(255,252,245,0.6);
+  }
+
+  .header h1 {
+    font-family: "KingHwaOldSong", serif;
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 8px;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+
+  .header .subtitle {
+    color: var(--text-muted);
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .header .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-dark), transparent);
+    margin: 20px auto 0;
+  }
+
+  /* 卡片 */
+  .quote-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 36px 32px;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: cardIn 0.6s ease backwards;
+    box-shadow: 0 1px 3px rgba(139,110,78,0.06), 0 4px 12px rgba(139,110,78,0.04);
+  }
+
+  .quote-card:nth-child(1) { animation-delay: 0.1s; }
+  .quote-card:nth-child(2) { animation-delay: 0.25s; }
+  .quote-card:nth-child(3) { animation-delay: 0.4s; }
+  .quote-card:nth-child(4) { animation-delay: 0.55s; }
+  .quote-card:nth-child(5) { animation-delay: 0.7s; }
+  .quote-card:nth-child(6) { animation-delay: 0.85s; }
+  .quote-card:nth-child(7) { animation-delay: 1.0s; }
+
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .quote-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(139,110,78,0.08), 0 6px 20px rgba(139,110,78,0.06);
+  }
+
+  .quote-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.3;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139,110,78,0.01) 2px, rgba(139,110,78,0.01) 3px),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+  }
+
+  .quote-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 24px;
+    bottom: 24px;
+    width: 2px;
+    background: var(--card-accent, var(--accent));
+  }
+
+  .card-index {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-family: "KingHwaOldSong", serif;
+    font-size: 40px;
+    color: rgba(139,110,78,0.06);
+    line-height: 1;
+  }
+
+  .quote-text {
+    font-family: "KingHwaOldSong", serif;
+    font-size: 19px;
+    line-height: 2;
+    color: var(--ink);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-indent: 2em;
+  }
+
+  .quote-source {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    padding-left: 12px;
+    border-left: 1px solid var(--border);
+  }
+
+  .source-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--card-accent, var(--accent));
+    flex-shrink: 0;
+  }
+
+  .source-book {
+    color: var(--text-secondary);
+    font-family: "LXGW WenKai", serif;
+  }
+
+  .source-author {
+    color: var(--text-muted);
+  }
+
+  .think-section {
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+    margin-top: 4px;
+  }
+
+  .think-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
+
+  .think-label svg {
+    width: 14px;
+    height: 14px;
+    opacity: 0.4;
+  }
+
+  .think-question {
+    font-family: "LXGW WenKai", serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-style: normal;
+    letter-spacing: 0.5px;
+  }
+
+  .type-tag {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    margin-left: 8px;
+    font-family: "LXGW WenKai", serif;
+  }
+
+  .type-tag.highlight {
+    background: rgba(139,110,78,0.08);
+    color: var(--accent);
+  }
+
+  .type-tag.thought {
+    background: rgba(181,67,42,0.08);
+    color: var(--cinnabar);
+  }
+
+  /* 底部 */
+  .footer {
+    text-align: center;
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+  }
+
+  .action-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-family: "LXGW WenKai", serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+  }
+
+  .action-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 1px 4px rgba(139,110,78,0.1);
+  }
+
+  .action-btn svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.5s ease;
+  }
+
+  .action-btn.refresh:hover svg {
+    transform: rotate(180deg);
+  }
+
+  .stats {
+    color: var(--text-muted);
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-family: "LXGW WenKai", serif;
+  }
+
+  /* 收藏页面 */
+  .fav-page { display: none; }
+  .fav-page.active { display: block; }
+  .daily-page { display: block; }
+  .daily-page.hidden { display: none; }
+
+  .fav-empty {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-muted);
+    font-family: "LXGW WenKai", serif;
+    letter-spacing: 2px;
+  }
+
+  .fav-empty .empty-icon {
+    font-size: 48px;
+    opacity: 0.15;
+    margin-bottom: 20px;
+    font-family: "KingHwaOldSong", serif;
+  }
+
+  .fav-count {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 32px;
+    font-family: "LXGW WenKai", serif;
+  }
+
+  .fav-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(139,110,78,0.06);
+    animation: cardIn 0.4s ease backwards;
+  }
+
+  .fav-item .fav-text {
+    font-family: "KingHwaOldSong", serif;
+    font-size: 17px;
+    line-height: 2;
+    color: var(--ink);
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+    text-indent: 2em;
+  }
+
+  .fav-item .fav-source {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: "LXGW WenKai", serif;
+    padding-left: 12px;
+    border-left: 1px solid var(--border);
+  }
+
+  .fav-remove {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: opacity 0.2s ease;
+    padding: 4px;
+  }
+
+  .fav-remove:hover { opacity: 0.6; }
+  .fav-remove svg { width: 14px; height: 14px; }
+
+  /* 收藏按钮 */
+  .fav-btn {
+    position: absolute;
+    bottom: 14px;
+    right: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    padding: 4px;
+  }
+
+  .fav-btn:hover { opacity: 0.6; transform: scale(1.15); }
+  .fav-btn.saved { opacity: 0.8; }
+  .fav-btn svg { width: 16px; height: 16px; }
+
+  /* Toast */
+  .toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 10px 24px;
+    border-radius: 2px;
+    font-size: 13px;
+    font-family: "LXGW WenKai", serif;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 100;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(139,110,78,0.1);
+  }
+
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* 导出按钮 */
+  .export-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: "LXGW WenKai", serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    margin-top: 20px;
+  }
+
+  .export-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .export-btn svg { width: 14px; height: 14px; }
+
+  /* 响应式 */
+  @media (max-width: 640px) {
+    .container { padding: 24px 16px 60px; }
+    .header h1 { font-size: 26px; letter-spacing: 6px; }
+    .quote-text { font-size: 17px; }
+    .quote-card { padding: 28px 22px; }
+    .card-index { font-size: 32px; }
+    .action-row { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- 导航 -->
+  <div class="nav-bar">
+    <button class="nav-tab active" id="tabDaily" onclick="switchTab('daily')">今日金句</button>
+    <button class="nav-tab" id="tabFav" onclick="switchTab('fav')">我的收藏 <span id="favBadge"></span></button>
+  </div>
+
+  <!-- 每日金句 -->
+  <div class="daily-page" id="dailyPage">
+    <div class="header">
+      <div class="date-badge" id="dateBadge"></div>
+      <h1>每日金句</h1>
+      <div class="subtitle">来自你的微信读书 · 笔记与划线</div>
+      <div class="divider"></div>
+    </div>
+
+    <div id="quotesContainer"></div>
+
+    <div class="footer">
+      <div class="action-row">
+        <button class="action-btn refresh" onclick="refreshQuotes()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <polyline points="1 20 1 14 7 14"></polyline>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
+          换一批
+        </button>
+        <button class="action-btn" onclick="showMore()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          再来几条
+        </button>
+      </div>
+      <div class="stats" id="statsLine"></div>
+    </div>
+  </div>
+
+  <!-- 收藏页面 -->
+  <div class="fav-page" id="favPage">
+    <div class="header">
+      <h1>我的收藏</h1>
+      <div class="subtitle">你划过心的句子</div>
+      <div class="divider"></div>
+    </div>
+
+    <div id="favContainer"></div>
+
+    <div style="text-align:center; margin-top: 20px;">
+      <button class="export-btn" onclick="exportFav()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        导出为文本
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="quotes_data.js"></script>
+<script>
+// 分类颜色 - 暖色调版
+const catColors = {
+  '文学': '#8B6E4E', '个人成长': '#6B5D4F', '艺术': '#9C6B5A',
+  '经济理财': '#7A6B52', '心理': '#5E8C6A', '教育学习': '#6B7B8A',
+  '历史': '#8A6B5E', '社会文化': '#5E7B6A', '哲学宗教': '#7A5E6B',
+  '科学技术': '#5A7B8A', '精品小说': '#8A5E6B', '人物传记': '#7A6B5E',
+};
+
+function getCatColor(category) {
+  const parent = category ? category.split('-')[0] : '';
+  return catColors[parent] || '#8B7355';
+}
+
+// 基于日期的伪随机种子
+function getDaySeed() {
+  const d = new Date();
+  return d.getFullYear() * 10000 + (d.getMonth()+1) * 100 + d.getDate();
+}
+
+function seededRandom(seed) {
+  let s = seed;
+  return function() {
+    s = (s * 9301 + 49297) % 233280;
+    return s / 233280;
+  };
+}
+
+let currentQuotes = [];
+
+function getDailyQuotes(count) {
+  const seed = getDaySeed();
+  const rng = seededRandom(seed);
+  const indices = QUOTES.map((_, i) => i);
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+  const selected = [];
+  const usedBooks = new Set();
+  for (const idx of indices) {
+    const q = QUOTES[idx];
+    if (selected.length >= count) break;
+    if (usedBooks.has(q.b) && selected.length < count - 2) continue;
+    usedBooks.add(q.b);
+    selected.push(q);
+  }
+  return selected;
+}
+
+function getRandomQuotes(count) {
+  const seed = Date.now();
+  const rng = seededRandom(seed);
+  const indices = QUOTES.map((_, i) => i);
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+  const selected = [];
+  const usedBooks = new Set();
+  const existingTexts = new Set(currentQuotes.map(q => q.t));
+  for (const idx of indices) {
+    const q = QUOTES[idx];
+    if (selected.length >= count) break;
+    if (existingTexts.has(q.t)) continue;
+    if (usedBooks.has(q.b) && selected.length < Math.floor(count * 0.6)) continue;
+    usedBooks.add(q.b);
+    selected.push(q);
+  }
+  return selected;
+}
+
+function escapeHtml(text) {
+  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function renderQuotes(quotes, append) {
+  const container = document.getElementById('quotesContainer');
+  if (!append) container.innerHTML = '';
+
+  quotes.forEach((q, i) => {
+    const color = getCatColor(q.c);
+    const typeClass = q.y === 'thought' ? 'thought' : 'highlight';
+    const typeLabel = q.y === 'thought' ? '想法' : '划线';
+    const isSaved = isFav(q.t);
+
+    const card = document.createElement('div');
+    card.className = 'quote-card';
+    card.style.setProperty('--card-accent', color);
+    card.style.animationDelay = (0.1 + (currentQuotes.length + i) * 0.12) + 's';
+
+    card.innerHTML = `
+      <div class="card-index">${String(currentQuotes.length + i + 1).padStart(2, '0')}</div>
+      <div class="quote-text">${escapeHtml(q.t)}</div>
+      <div class="quote-source">
+        <span class="source-dot" style="background:${color}"></span>
+        <span class="source-book">《${escapeHtml(q.b)}》</span>
+        <span class="source-author">${escapeHtml(q.a)}</span>
+        <span class="type-tag ${typeClass}">${typeLabel}</span>
+      </div>
+      <div class="think-section">
+        <div class="think-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+          思考一下
+        </div>
+        <div class="think-question">${escapeHtml(q.q)}</div>
+      </div>
+      <button class="fav-btn ${isSaved ? 'saved' : ''}" onclick="toggleFav(this)" data-text="${escapeHtml(q.t)}" data-book="${escapeHtml(q.b)}" data-author="${escapeHtml(q.a)}" title="收藏">
+        <svg viewBox="0 0 24 24" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </button>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+function refreshQuotes() {
+  currentQuotes = getRandomQuotes(5);
+  renderQuotes(currentQuotes, false);
+}
+
+function showMore() {
+  const more = getRandomQuotes(3);
+  currentQuotes = currentQuotes.concat(more);
+  renderQuotes(more, true);
+}
+
+// 收藏功能
+function getFavs() {
+  try { return JSON.parse(localStorage.getItem('wr_fav_list') || '[]'); }
+  catch(e) { return []; }
+}
+
+function isFav(text) {
+  return getFavs().some(f => f.t === text);
+}
+
+function toggleFav(btn) {
+  const text = btn.dataset.text;
+  const book = btn.dataset.book;
+  const author = btn.dataset.author;
+  let favs = getFavs();
+
+  if (btn.classList.contains('saved')) {
+    btn.classList.remove('saved');
+    btn.querySelector('svg').setAttribute('fill', 'none');
+    favs = favs.filter(f => f.t !== text);
+    showToast('已取消收藏');
+  } else {
+    btn.classList.add('saved');
+    btn.querySelector('svg').setAttribute('fill', 'currentColor');
+    const fullQuote = QUOTES.find(q => q.t === text);
+    favs.push({ t: text, b: book, a: author, c: fullQuote ? fullQuote.c : '', q: fullQuote ? fullQuote.q : '' });
+    showToast('已收藏');
+  }
+  localStorage.setItem('wr_fav_list', JSON.stringify(favs));
+  updateFavBadge();
+}
+
+function updateFavBadge() {
+  const count = getFavs().length;
+  document.getElementById('favBadge').textContent = count > 0 ? `(${count})` : '';
+}
+
+function switchTab(tab) {
+  const dailyPage = document.getElementById('dailyPage');
+  const favPage = document.getElementById('favPage');
+  const tabDaily = document.getElementById('tabDaily');
+  const tabFav = document.getElementById('tabFav');
+
+  if (tab === 'daily') {
+    dailyPage.classList.remove('hidden');
+    dailyPage.classList.add('daily-page');
+    favPage.classList.remove('active');
+    tabDaily.classList.add('active');
+    tabFav.classList.remove('active');
+  } else {
+    dailyPage.classList.add('hidden');
+    favPage.classList.add('active');
+    tabDaily.classList.remove('active');
+    tabFav.classList.add('active');
+    renderFavPage();
+  }
+}
+
+function renderFavPage() {
+  const favs = getFavs();
+  const container = document.getElementById('favContainer');
+  container.innerHTML = '';
+
+  if (favs.length === 0) {
+    container.innerHTML = '<div class="fav-empty"><div class="empty-icon">笺</div>还没有收藏的句子<br>回到今日金句，点击 ♡ 即可收藏</div>';
+    return;
+  }
+
+  const countDiv = document.createElement('div');
+  countDiv.className = 'fav-count';
+  countDiv.textContent = `共 ${favs.length} 条收藏`;
+  container.appendChild(countDiv);
+
+  favs.forEach((f, i) => {
+    const color = getCatColor(f.c);
+    const item = document.createElement('div');
+    item.className = 'fav-item';
+    item.style.animationDelay = (0.05 + i * 0.06) + 's';
+
+    item.innerHTML = `
+      <button class="fav-remove" onclick="removeFav(${i})" title="取消收藏">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="fav-text">${escapeHtml(f.t)}</div>
+      <div class="fav-source">
+        <span class="source-dot" style="background:${color};display:inline-block;width:5px;height:5px;border-radius:50%;margin-right:6px;vertical-align:middle;"></span>
+        《${escapeHtml(f.b)}》 ${escapeHtml(f.a)}
+      </div>
+    `;
+    container.appendChild(item);
+  });
+}
+
+function removeFav(index) {
+  let favs = getFavs();
+  favs.splice(index, 1);
+  localStorage.setItem('wr_fav_list', JSON.stringify(favs));
+  updateFavBadge();
+  renderFavPage();
+  showToast('已取消收藏');
+}
+
+function exportFav() {
+  const favs = getFavs();
+  if (favs.length === 0) { showToast('暂无收藏'); return; }
+
+  let text = '我的读书金句收藏\n';
+  text += '='.repeat(30) + '\n\n';
+  favs.forEach((f, i) => {
+    text += `${i+1}. ${f.t}\n`;
+    text += `   ——《${f.b}》${f.a}\n\n`;
+  });
+
+  const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `金句收藏_${new Date().toISOString().slice(0,10)}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('导出成功');
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 1500);
+}
+
+// 初始化 — 动态计算统计数字
+function init() {
+  const now = new Date();
+  const weekdays = ['日', '一', '二', '三', '四', '五', '六'];
+  const dateStr = `${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日 周${weekdays[now.getDay()]}`;
+  document.getElementById('dateBadge').textContent = dateStr;
+
+  currentQuotes = getDailyQuotes(5);
+  renderQuotes(currentQuotes, false);
+
+  // 迁移旧版收藏格式
+  try {
+    const oldFavs = JSON.parse(localStorage.getItem('wr_fav_quotes') || '[]');
+    if (oldFavs.length > 0 && getFavs().length === 0) {
+      const migrated = oldFavs.map(text => {
+        const found = QUOTES.find(q => q.t === text);
+        return { t: text, b: found ? found.b : '', a: found ? found.a : '', c: found ? found.c : '', q: found ? found.q : '' };
+      }).filter(f => f.b);
+      localStorage.setItem('wr_fav_list', JSON.stringify(migrated));
+      localStorage.removeItem('wr_fav_quotes');
+    }
+  } catch(e) {}
+
+  // 动态统计：金句数 + 涉及的书籍数
+  const totalQuotes = QUOTES.length;
+  const totalBooks = new Set(QUOTES.map(q => q.b)).size;
+  document.getElementById('statsLine').textContent =
+    `共 ${totalQuotes} 条金句 · 来自你的 ${totalBooks} 本读书笔记`;
+
+  updateFavBadge();
+}
+
+init();
+</script>
+</body>
+</html>

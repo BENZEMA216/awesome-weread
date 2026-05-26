@@ -113,6 +113,7 @@ Apps that render reading data into something you can hang on your desktop, wallp
 | [zzylanmengqingchuan/weread-tools](https://github.com/zzylanmengqingchuan/weread-tools) | Web | WeRead toolkit: honest-bookshelf report and reading-personality profile generator. |
 | [ZiGmaX809/Weread_ReadTime_Heatmap](https://github.com/ZiGmaX809/Weread_ReadTime_Heatmap) | Web (heatmap) | ★ Paints reading time as a GitHub-style heatmap — at-a-glance daily/weekly/monthly intensity over the year. The most striking visualization in this list. |
 | [SpaceTrave1/weread-deep-insights](https://github.com/SpaceTrave1/weread-deep-insights) | Web | A "deep insights" reading analytics tool — surfaces patterns hidden in your shelf and notes. |
+| [LoloChak/weread-golden-quotes](https://github.com/LoloChak/weread-golden-quotes) | Python, Web | Extracts golden quotes from WeRead notes and renders a rice-paper styled daily quote page with reflection prompts. |
 | [lucis-yg/weread-dashboard](https://github.com/lucis-yg/weread-dashboard) | Vue 3 / Web | An elegant WeRead data dashboard (shelf, notes, reading stats). **Pairs with lucis-yg/weread-skill-api as the backend.** |
 | [ktKongTong/wereto](https://github.com/ktKongTong/wereto) | Cloudflare Workers | One-click Cloudflare deploy for a public "reading homepage" page; minimal `fetch` + `ky` wrapper around the Agent Gateway. |
 

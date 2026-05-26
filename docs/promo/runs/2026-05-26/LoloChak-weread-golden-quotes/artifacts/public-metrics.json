@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-05-26T13:18:00+08:00",
+  "maxBooks": 20,
+  "totalQuotes": 296,
+  "highlightQuotes": 293,
+  "thoughtQuotes": 3,
+  "sourceBooks": 19,
+  "displayedCardsInScreenshot": 5,
+  "categories": {
+    "心理": 15,
+    "未分类": 185,
+    "经济理财": 11,
+    "个人成长": 16,
+    "科学技术": 6,
+    "社会文化": 6,
+    "哲学宗教": 33,
+    "教育学习": 9,
+    "文学": 3,
+    "艺术": 10,
+    "历史": 2
+  }
+}

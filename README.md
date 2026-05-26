@@ -113,6 +113,7 @@
 | [zzylanmengqingchuan/weread-tools](https://github.com/zzylanmengqingchuan/weread-tools) | Web | 微信读书工具集：书单诚实报告 + 阅读人格画像。 |
 | [ZiGmaX809/Weread_ReadTime_Heatmap](https://github.com/ZiGmaX809/Weread_ReadTime_Heatmap) | Web (heatmap) | ★ 把阅读时长画成 GitHub-style 热力图 —— 全年/全月每天读了多久一眼看见。视觉冲击最强的一个。 |
 | [SpaceTrave1/weread-deep-insights](https://github.com/SpaceTrave1/weread-deep-insights) | Web | 「深度洞察」式阅读分析 —— 从书架 / 笔记里挖你的阅读 pattern。 |
+| [LoloChak/weread-golden-quotes](https://github.com/LoloChak/weread-golden-quotes) | Python, Web | 从微信读书笔记中提取金句，生成宣纸质感网页，每日随机展示并配思考问题。 |
 | [lucis-yg/weread-dashboard](https://github.com/lucis-yg/weread-dashboard) | Vue 3 / Web | 优雅的微信读书数据可视化 dashboard：书架 / 笔记 / 阅读统计。**配合 lucis-yg/weread-skill-api 使用**。 |
 | [ktKongTong/wereto](https://github.com/ktKongTong/wereto) | Cloudflare Workers | 一键部署到 Cloudflare 的阅读数据页 —— 公开个人阅读数据的「homepage」式展示。`fetch` + `ky` 简洁封装。 |
 
