@@ -31,4 +31,3 @@ SKILL.md
 config/weread.json.template
 requirements.txt
 scripts/weread_export.py
-

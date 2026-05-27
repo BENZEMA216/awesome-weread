@@ -14,4 +14,3 @@ README.md:34:基于微信读书官方团队的 [WeRead Skill](https://weread.qq.
 jerlin-weread-skill/SKILL.md:2:name: jerlin-weread-skill
 jerlin-weread-skill/SKILL.md:30:- 环境变量 `$WEREAD_API_KEY`，格式 `[REDACTED_WEREAD_API_KEY]`
 jerlin-weread-skill/SKILL.md:31:- 未设置时提示用户：`export WEREAD_API_KEY=<你的apikey>`
-

@@ -14,4 +14,3 @@ README.md:49:API Key 获取方式：访问 [微信读书 Skill 官方页面](htt
 README.md:153:├── SKILL.md              # Agent 意图路由（59 行，按需加载）
 README.md:170:SKILL.md 采用「核心指令 + 按需加载」的设计：文件在 Agent 需要时才加载。实测比全量加载省 36% 的 token。
 README.md:174:基于微信读书官方 [WeRead Skill](https://weread.qq.com/r/weread-skills) 开发。API 接口和数据归微信读书所有。
-

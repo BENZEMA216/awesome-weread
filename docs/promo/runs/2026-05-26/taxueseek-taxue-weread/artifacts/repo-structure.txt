@@ -44,4 +44,3 @@ scripts/weread_batch.py
 scripts/weread_chapters.py
 scripts/weread_recommend.py
 scripts/weread_search.py
-

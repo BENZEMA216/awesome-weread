@@ -34,4 +34,3 @@ scripts/export_notes.py
 scripts/random_review.py
 scripts/weread_api.py
 scripts/weread_login.py
-

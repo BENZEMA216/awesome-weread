@@ -38,4 +38,3 @@ scripts/weread_init.py
 scripts/weread_state.py
 tests/test_weread_auth.py
 tests/test_weread_init.py
-

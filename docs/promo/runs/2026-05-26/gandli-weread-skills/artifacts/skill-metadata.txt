@@ -63,4 +63,3 @@ skills/weread/SKILL.md:67:{"api_name":"/user/notebooks","count":100,"lastSort":1
 skills/weread/SKILL.md:73:{"api_name":"/user/notebooks","params":{"count":100,"lastSort":1516907353},"skill_version":"1.0.5"}
 skills/weread/SKILL.md:86:1. **版本上报**：每次请求 body 必须包含 `"skill_version": "1.0.3"`（取本文件顶部 version 字段的值），用于服务端检查版本更新。**如果回包中出现 `upgrade_info` 字段，必须立即暂停当前操作，按照 `upgrade_info.message` 中的指引完成升级，升级完成后再重新执行用户请求，不得忽略该字段**
 skills/weread/SKILL.md:87:2. **参数平铺**：业务参数必须和 `api_name`、`skill_version` 放在同一层；不要包在 `params`、`data`、`body` 等对象里。只有接口文档明确声明的数组/对象字段（如 `/book/readreviews` 的 `reviews`）才允许作为业务字段传入。
-

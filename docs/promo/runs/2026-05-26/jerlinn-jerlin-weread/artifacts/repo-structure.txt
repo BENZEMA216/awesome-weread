@@ -40,4 +40,3 @@ jerlin-weread-skill/references/review.md
 jerlin-weread-skill/references/search.md
 jerlin-weread-skill/references/shelf.md
 jerlin-weread-skill/scripts/weread.sh
-
