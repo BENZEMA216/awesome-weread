@@ -650,5 +650,30 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-27T04:18:21.903Z"
+  },
+  {
+    "repo": "marcus776957/weread-master",
+    "decision": "accepted",
+    "reason": "项目明确指出通过官方开发者平台获取 wrk- 格式的 API Key，并使用 WEREAD_API_KEY 环境变量进行认证，符合收录标准。",
+    "category": "clis",
+    "date": "2026-05-27T15:58:03.456Z"
+  },
+  {
+    "repo": "cicbyte/weread-web",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-27T15:58:03.456Z"
+  },
+  {
+    "repo": "chenxinxinyue/weread-viz",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-27T15:58:03.456Z"
+  },
+  {
+    "repo": "ifredom/weread-viz",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-27T15:58:03.456Z"
   }
 ]
