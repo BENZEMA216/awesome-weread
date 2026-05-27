@@ -70,6 +70,7 @@
 | [ipfans/weread-cli](https://github.com/ipfans/weread-cli) | Python | 命令行客户端 + Claude Code 等 Agent 插件：搜书、管理书架、看划线笔记、阅读统计、推荐。 |
 | [Ceelog/OpenWeRead](https://github.com/Ceelog/OpenWeRead) | TypeScript | 官方 Skill 之上的 SDK + npm CLI (`openweread`)：搜书、书架、阅读统计、笔记划线、公开点评、推荐、用户概况全覆盖，是目前覆盖最完整的 SDK 选项。 |
 | [lucis-yg/weread-skill-api](https://github.com/lucis-yg/weread-skill-api) | Node.js / Express | 把官方 weread-skills 封成 17 个 REST 接口的本地 API gateway（书架 / 笔记 / 划线 / 推荐 / 阅读统计）。配套前端见 weread-dashboard。 |
+| [marcus776957/weread-master](https://github.com/marcus776957/weread-master) | Python | 全功能微信读书 CLI + Agent Skill：书架、笔记/划线、阅读统计、推荐等（`WEREAD_API_KEY` + 官方 Agent Gateway）。 |
 
 ## MCP 服务
 

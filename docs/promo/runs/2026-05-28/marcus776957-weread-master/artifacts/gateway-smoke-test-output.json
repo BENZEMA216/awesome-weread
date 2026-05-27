@@ -1,0 +1,10 @@
+{
+  "ok": false,
+  "gateway": "https://i.weread.qq.com/api/agent/gateway",
+  "error": {
+    "type": "network_or_gateway_error",
+    "message": "<urlopen error [Errno 1] Operation not permitted>",
+    "note": "This environment may block outbound network connections (sandbox)."
+  },
+  "elapsed_ms": 4
+}

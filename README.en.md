@@ -70,6 +70,7 @@ Command-line and SDK wrappers around the Agent Gateway — usable by humans and 
 | [ipfans/weread-cli](https://github.com/ipfans/weread-cli) | Python | CLI client and Claude Code-style agent plugin: book search, bookshelf management, highlights, notes, reading stats, recommendations. |
 | [Ceelog/OpenWeRead](https://github.com/Ceelog/OpenWeRead) | TypeScript | TypeScript SDK + npm CLI (`openweread`) on top of the official Skill — search, books, shelf, stats, notes, reviews, recommendations, profile. The most comprehensive SDK option so far. |
 | [lucis-yg/weread-skill-api](https://github.com/lucis-yg/weread-skill-api) | Node.js / Express | Local API gateway that exposes the official weread-skills as 17 REST endpoints (shelf, notes, highlights, recommendations, stats). Pairs with weread-dashboard. |
+| [marcus776957/weread-master](https://github.com/marcus776957/weread-master) | Python | Full-featured WeRead CLI + agent skill: shelf, notes/highlights, reading stats, recommendations (via `WEREAD_API_KEY` + official Agent Gateway). |
 
 ## MCP Servers
 
