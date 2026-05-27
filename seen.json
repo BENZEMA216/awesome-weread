@@ -644,5 +644,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-05-26T15:53:25.019Z"
+  },
+  {
+    "repo": "Y664-series/bookshelf-lark-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-27T04:18:21.903Z"
   }
 ]
