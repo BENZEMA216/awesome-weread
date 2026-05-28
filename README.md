@@ -4,6 +4,8 @@
 
 **语言**: **简体中文** · [English](./README.en.md)
 
+**最后更新**: 2026-05-28 (UTC+08:00)
+
 2026 年 5 月 17 日，微信读书发布了[官方 Agent Skill](https://cdn.weread.qq.com/skills/weread-skills.zip) —— 一个用个人 API Key（`wrk-...`）即可访问的 `Agent Gateway`，提供书架、阅读统计、划线、想法、书籍搜索等能力。48 小时内，社区已经在它之上长出一波二创项目。
 
 这个清单收录的就是它们。

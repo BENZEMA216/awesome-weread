@@ -4,6 +4,8 @@
 
 **Languages**: **English** · [简体中文](./README.md)
 
+**Last updated**: 2026-05-28 (UTC+08:00)
+
 On 2026-05-17, WeRead (微信读书) released its [official Agent Skill](https://cdn.weread.qq.com/skills/weread-skills.zip) — an `Agent Gateway` reachable with a personal API Key (`wrk-...`) that exposes bookshelf, reading stats, highlights, thoughts, and book search. Within 48 hours, a wave of community projects appeared on top of it.
 
 This list tracks them.
