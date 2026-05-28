@@ -688,5 +688,25 @@
     "reason": "该项目明确依赖于微信读书官方API Key (wrk-...)，并使用官方Skill来获取微信读书数据，符合收录标准。",
     "category": "workflows",
     "date": "2026-05-28T10:13:51.410Z"
+  },
+  {
+    "repo": "zoglmk/weread-dashboard",
+    "decision": "accepted",
+    "reason": "项目明确指出使用微信读书官方 Skill 开放平台获取的 wrk- 格式 API Key。",
+    "category": "widgets",
+    "date": "2026-05-28T16:12:17.918Z"
+  },
+  {
+    "repo": "YounceLiang/weread-nuke",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-28T16:12:17.918Z"
+  },
+  {
+    "repo": "liumu927/weread-skills-cli",
+    "decision": "accepted",
+    "reason": "项目明确使用 wrk- 格式的 API Key 和官方 Agent Gateway endpoint，符合收录标准。",
+    "category": "clis",
+    "date": "2026-05-28T16:12:17.918Z"
   }
 ]
