@@ -675,5 +675,18 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-05-27T15:58:03.456Z"
+  },
+  {
+    "repo": "hanglinchen1028/WeRead",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-28T10:13:51.410Z"
+  },
+  {
+    "repo": "Eleven1111/weread-insight-skill",
+    "decision": "accepted",
+    "reason": "该项目明确依赖于微信读书官方API Key (wrk-...)，并使用官方Skill来获取微信读书数据，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-05-28T10:13:51.410Z"
   }
 ]
