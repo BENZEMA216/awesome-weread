@@ -21,6 +21,7 @@ docs/promo/runs/YYYY-MM-DD/<owner-repo>/
 - 有 UI 或可视化页面时必须提交截图；截图默认必须是完整页面长截图，不只截首屏。只有在页面本身没有滚动、或完整结果依赖额外账号 / 模型 key / 第三方服务无法产生时，才允许提交局部截图，并必须在 Summary 里写明原因。
 - 可以提交用户授权的阅读相关产物，包括书名、阅读统计、阅读画像、生成页面和截图。
 - 不能提交任何密钥、Authorization header、`.env`、GitHub token、模型 API key，或大段原始版权划线合集。
+- 新增或更新体验归档后，运行 `node scripts/sync-readme-experience-links.mjs`，同步刷新根目录 README / README.en.md 项目表格里的体验记录与截图链接。
 
 模板见 [_template/summary.md](./_template/summary.md)。
 
@@ -88,6 +89,7 @@ docs/promo/runs/YYYY-MM-DD/<owner-repo>/
 ```bash
 node scripts/check-experience-runs.mjs
 node scripts/check-experience-runs.mjs --repo owner/repo
+node scripts/sync-readme-experience-links.mjs
 ```
 
 默认命令只报告当前覆盖率；`--repo owner/repo` 会在指定项目缺少 `summary.md` 或 `artifacts/` 时失败，适合每次新项目被 pick 后作为归档验收。
