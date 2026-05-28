@@ -4,7 +4,7 @@
 
 **语言**: **简体中文** · [English](./README.en.md)
 
-**最后更新**: 2026-05-28 (UTC+08:00)
+**最后更新**: 2026-05-29 (UTC+08:00)
 
 2026 年 5 月 17 日，微信读书发布了[官方 Agent Skill](https://cdn.weread.qq.com/skills/weread-skills.zip) —— 一个用个人 API Key（`wrk-...`）即可访问的 `Agent Gateway`，提供书架、阅读统计、划线、想法、书籍搜索等能力。48 小时内，社区已经在它之上长出一波二创项目。
 
@@ -60,6 +60,7 @@
 | [zephyrwang6/space-weread](https://github.com/zephyrwang6/space-weread) | Skill | 「space」主题读书 workflow，把书架 / 笔记包装成「太空舱内」式的私人阅读空间。 | [记录](docs/promo/runs/2026-05-25/zephyrwang6-space-weread/summary.md) · [截图](docs/promo/runs/2026-05-25/zephyrwang6-space-weread/artifacts/space-weread-preview-screenshot.jpg) |
 | [LearnPrompt/carl-weread](https://github.com/LearnPrompt/carl-weread) | Skill | LearnPrompt 出品的 carl 风格读书顾问 workflow，基于官方 API Key 构建。 | [记录](docs/promo/runs/2026-05-26/LearnPrompt-carl-weread/summary.md) · [产物](docs/promo/runs/2026-05-26/LearnPrompt-carl-weread/artifacts/terminal-help.txt) |
 | [stefanxfy/weread-essay-skill](https://github.com/stefanxfy/weread-essay-skill) | Skill | 把书架与笔记输入，生成读书 essay 的 Skill —— 基于官方 weread-skills 包。 | [记录](docs/promo/runs/2026-05-26/stefanxfy-weread-essay-skill/summary.md) · [产物](docs/promo/runs/2026-05-26/stefanxfy-weread-essay-skill/artifacts/skill.md) |
+| [Eleven1111/weread-insight-skill](https://github.com/Eleven1111/weread-insight-skill) | Codex / Obsidian | 阅读理解助手 Skill：用微信读书划线和批注推断困惑、解释段落，并沉淀为 Obsidian 理解卡片。 | [记录](docs/promo/runs/2026-05-29/Eleven1111-weread-insight-skill/summary.md) · [产物](docs/promo/runs/2026-05-29/Eleven1111-weread-insight-skill/artifacts/obsidian-card-sample.md) |
 
 ## 命令行与 SDK
 

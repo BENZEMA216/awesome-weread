@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "project": "Eleven1111/weread-insight-skill",
+  "gateway": "https://i.weread.qq.com/api/agent/gateway",
+  "api_calls": [
+    {
+      "api_name": "/user/notebooks",
+      "ok": true,
+      "items": 10
+    },
+    {
+      "api_name": "/book/bookmarklist",
+      "bookId": "566431",
+      "ok": true,
+      "items": 24
+    },
+    {
+      "api_name": "/book/chapterinfo",
+      "bookId": "566431",
+      "ok": true,
+      "items": 81
+    },
+    {
+      "api_name": "/readdata/detail",
+      "params": {
+        "mode": "weekly",
+        "baseTime": 0
+      },
+      "ok": true
+    }
+  ],
+  "selected_book": {
+    "bookId": "566431",
+    "title": "从0到1：开启商业与未来的秘密",
+    "author": "彼得·蒂尔 布莱克·马斯特斯",
+    "translator": "高玉芳",
+    "noteCount": 24,
+    "bookmarkCount": 0,
+    "reviewCount": 1
+  },
+  "selected_highlight": {
+    "chapterUid": 153,
+    "chapterTitle": "能源2.0",
+    "range": "1100-1130",
+    "createTime": 1778563307,
+    "quote_short": "无论能源如何稀缺，只有对特定问题拿出最佳方案的公司才能赢利。",
+    "quote_length": 30
+  },
+  "read_data_summary": {
+    "mode": "weekly",
+    "readDays": 2,
+    "totalReadTime": 404,
+    "dayAverageReadTime": 80
+  },
+  "obsidian_vault_configured": false,
+  "elapsed_ms": 1253,
+  "secret_handling": "WEREAD_API_KEY was read only from the environment and was not written to artifacts."
+}

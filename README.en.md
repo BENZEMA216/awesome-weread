@@ -4,7 +4,7 @@
 
 **Languages**: **English** · [简体中文](./README.md)
 
-**Last updated**: 2026-05-28 (UTC+08:00)
+**Last updated**: 2026-05-29 (UTC+08:00)
 
 On 2026-05-17, WeRead (微信读书) released its [official Agent Skill](https://cdn.weread.qq.com/skills/weread-skills.zip) — an `Agent Gateway` reachable with a personal API Key (`wrk-...`) that exposes bookshelf, reading stats, highlights, thoughts, and book search. Within 48 hours, a wave of community projects appeared on top of it.
 
@@ -60,6 +60,7 @@ Opinionated workflows layered on top of the raw Skill — recommendations, revie
 | [zephyrwang6/space-weread](https://github.com/zephyrwang6/space-weread) | Skill | Workflow that wraps your shelf and notes into a personalized "reading space" theme. | [Summary](docs/promo/runs/2026-05-25/zephyrwang6-space-weread/summary.md) · [Screenshot](docs/promo/runs/2026-05-25/zephyrwang6-space-weread/artifacts/space-weread-preview-screenshot.jpg) |
 | [LearnPrompt/carl-weread](https://github.com/LearnPrompt/carl-weread) | Skill | LearnPrompt's carl-style reading advisor workflow, built on the official API Key. | [Summary](docs/promo/runs/2026-05-26/LearnPrompt-carl-weread/summary.md) · [Artifact](docs/promo/runs/2026-05-26/LearnPrompt-carl-weread/artifacts/terminal-help.txt) |
 | [stefanxfy/weread-essay-skill](https://github.com/stefanxfy/weread-essay-skill) | Skill | A Skill that turns your shelf and highlights into an essay, built on the official weread-skills package. | [Summary](docs/promo/runs/2026-05-26/stefanxfy-weread-essay-skill/summary.md) · [Artifact](docs/promo/runs/2026-05-26/stefanxfy-weread-essay-skill/artifacts/skill.md) |
+| [Eleven1111/weread-insight-skill](https://github.com/Eleven1111/weread-insight-skill) | Codex / Obsidian | A reading-comprehension Skill that infers questions from WeRead highlights, explains passages, and saves Obsidian understanding cards. | [Summary](docs/promo/runs/2026-05-29/Eleven1111-weread-insight-skill/summary.md) · [Artifact](docs/promo/runs/2026-05-29/Eleven1111-weread-insight-skill/artifacts/obsidian-card-sample.md) |
 
 ## CLIs & Libraries
 

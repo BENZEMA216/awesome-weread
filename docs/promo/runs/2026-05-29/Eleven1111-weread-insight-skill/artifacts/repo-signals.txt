@@ -1,0 +1,68 @@
+README.md:10:WeRead highlight -> reader question -> source check -> explanation -> Obsidian note
+README.md:17:WeRead Insight treats each highlight as evidence. It reads the surrounding reading signals, infers the likely question, verifies source text when needed, and writes a concise explanation that can be saved to Obsidian.
+README.md:26:Explain the most important highlight from today and save it as an Obsidian card.
+README.md:51:   If configured, it saves the result as an Obsidian note. The note stores the user's question, a short quote, links, source notes, and the explanation. It does not store long copyrighted excerpts.
+README.md:59:| `WEREAD_API_KEY` | Yes | Authenticates requests to the WeRead gateway. |
+README.md:61:| Obsidian vault | Optional | Stores explanation cards, daily summaries, and unresolved questions. |
+README.md:70:| `/user/notebooks` | Find books with recent notes or highlights. |
+README.md:71:| `/book/bookmarklist` | Fetch highlight text, chapter IDs, ranges, and chapter metadata. |
+README.md:74:| `/readdata/detail` | Summarize recent reading activity. |
+README.md:94:export WEREAD_API_KEY="wrk-..."
+README.md:97:If you want WeRead Insight to write Obsidian notes, also configure a vault path:
+README.md:100:export OBSIDIAN_VAULT="/path/to/your/obsidian/vault"
+README.md:105:## Obsidian Output
+README.md:110:<OBSIDIAN_VAULT>/微信读书/阅读助手/
+README.md:121:Cards are for a single passage or a single question. They follow [templates/obsidian-card.md](templates/obsidian-card.md) and include:
+README.md:134:Daily notes are for lightweight review. They follow [templates/obsidian-daily.md](templates/obsidian-daily.md) and include:
+README.md:141:Daily notes and cards are intentionally bidirectional: a daily note links to each card created from that day's reading, and every card links back to the daily note. This keeps review, triage, and later cleanup navigable inside Obsidian.
+README.md:150:  If yes, write or append an Obsidian daily note.
+README.md:177:- private Obsidian notes
+README.md:192:    ├── obsidian-card.md
+README.md:193:    └── obsidian-daily.md
+README.md:230:Explain the most important highlight from today and save it to Obsidian.
+README.md:248:Check that the companion `微信读书` skill is installed and that `WEREAD_API_KEY` is visible to the Codex runtime.
+README.md:252:Set `OBSIDIAN_VAULT`, or configure a local private path in your own environment. Do not commit the actual vault path to this repository.
+README.md:264:- Obsidian card generation
+README.zh-CN.md:10:微信读书划线 -> 读者问题 -> 原文查证 -> 解释 -> Obsidian 笔记
+README.zh-CN.md:17:WeRead Insight 把每条划线当作证据。它读取相关的阅读信号，推断你可能在追问的问题，在必要时查证原文，并生成一段可以保存到 Obsidian 的简洁解释。
+README.zh-CN.md:26:把今天最值得解的一条划线保存成 Obsidian 卡片。
+README.zh-CN.md:51:   如果配置了 Obsidian，它会把解释保存为一条笔记。笔记保存用户问题、必要短引文、链接、来源说明和解释，不保存长段版权文本。
+README.zh-CN.md:59:| `WEREAD_API_KEY` | 必需 | 调用微信读书 gateway 的鉴权凭证。 |
+README.zh-CN.md:61:| Obsidian vault | 可选但推荐 | 保存解释卡片、每日摘要和未解问题。 |
+README.zh-CN.md:70:| `/user/notebooks` | 找到最近有笔记或划线的书。 |
+README.zh-CN.md:71:| `/book/bookmarklist` | 获取划线文本、章节 ID、range 和章节元数据。 |
+README.zh-CN.md:74:| `/readdata/detail` | 汇总最近阅读活动。 |
+README.zh-CN.md:94:export WEREAD_API_KEY="wrk-..."
+README.zh-CN.md:97:如果希望 WeRead Insight 写入 Obsidian，再配置 vault 路径：
+README.zh-CN.md:100:export OBSIDIAN_VAULT="/path/to/your/obsidian/vault"
+README.zh-CN.md:105:## Obsidian 输出
+README.zh-CN.md:110:<OBSIDIAN_VAULT>/微信读书/阅读助手/
+README.zh-CN.md:121:Cards 用于保存单条文本或单个问题。结构见 [templates/obsidian-card.md](templates/obsidian-card.md)，包括：
+README.zh-CN.md:134:Daily notes 用于轻量回顾。结构见 [templates/obsidian-daily.md](templates/obsidian-daily.md)，包括：
+README.zh-CN.md:141:Daily notes 和 Cards 必须双向链接：Daily 记录当天阅读并链接到当天生成的卡片；每张 Card 也要反链回当天 Daily。这样后续整理、回顾和清理未解问题时，Obsidian 里不会断链。
+README.zh-CN.md:150:  如果有，写入或追加 Obsidian 日报。
+README.zh-CN.md:177:- 私人 Obsidian 笔记
+README.zh-CN.md:192:    ├── obsidian-card.md
+README.zh-CN.md:193:    └── obsidian-daily.md
+README.zh-CN.md:230:用阅读助手解释我今天最值得解的一条划线，并保存到 Obsidian。
+README.zh-CN.md:248:检查 companion `微信读书` skill 是否已安装，以及 `WEREAD_API_KEY` 是否对 Codex 运行环境可见。
+README.zh-CN.md:252:设置 `OBSIDIAN_VAULT`，或在本地私有环境中配置 vault 路径。不要把真实 vault 路径提交到仓库。
+README.zh-CN.md:264:- Obsidian 卡片生成
+SKILL.md:3:description: Use this skill whenever the user asks to understand what they are reading, asks about WeRead highlights/notes, says “这句怎么理解”, “帮我解释划线”, “最近我困惑什么”, “找原文和上下文”, or wants Codex to analyze 微信读书划线/批注 to infer current confusions and explain book passages with original wording, surrounding context, and translation checks. This skill builds on the 微信读书 skill and should trigger even when the user does not explicitly mention WeRead if the request refers to their highlights, annotations, notes, or current reading.
+SKILL.md:18:6. 默认归档：凡是形成了实质解释、每日摘要、困惑画像或未解问题，都保存到用户配置的 Obsidian vault。
+SKILL.md:38:- 使用 `/user/notebooks` 定位最近有笔记的书。
+SKILL.md:39:- 使用 `/book/bookmarklist` 获取单本书划线和章节标题。
+SKILL.md:42:- 使用 `/readdata/detail` 获取最近阅读趋势。
+SKILL.md:44:遵守 `微信读书` skill 的所有接口规则：`WEREAD_API_KEY`、`skill_version`、参数平铺、时间戳转换、`upgrade_info` 处理和深度链接格式。
+SKILL.md:46:这个 skill 还使用 Obsidian Flavored Markdown：
+SKILL.md:48:- 默认 vault 由用户配置。优先使用环境变量 `OBSIDIAN_VAULT`；如果没有配置，询问用户或只在对话中输出内容。
+SKILL.md:50:- 生成 Obsidian 笔记时使用 YAML properties、wikilinks、tags、callouts。
+SKILL.md:60:- 用户问最近在读什么/划线了什么：查 `/readdata/detail` 和 `/user/notebooks`，再按时间过滤 `/book/bookmarklist`。
+SKILL.md:151:### 7. Save to Obsidian
+SKILL.md:153:默认保存。除非用户明确说“不要保存”，每次生成以下内容时都写入 Obsidian：
+SKILL.md:164:<OBSIDIAN_VAULT>/微信读书/阅读助手/
+SKILL.md:180:单条解释卡片使用 `templates/obsidian-card.md` 的结构。每日摘要使用 `templates/obsidian-daily.md` 的结构。如果当天文件已存在，在对应日期文件里追加新小节，不要重写整篇。
+SKILL.md:182:Obsidian 反链是必需项：
+SKILL.md:188:- 不要只在对话中报告保存路径；Obsidian 文件之间必须能通过 wikilink 双向导航。
+SKILL.md:204:- 写入 Obsidian 后，在回复末尾简短说明保存路径。
+SKILL.md:213:- 除非用户明确禁止保存，完成实质解惑后必须写入 Obsidian，并确保笔记能被 Obsidian 正常解析。
