@@ -1,0 +1,86 @@
+README.md:1:# weread-to-getnote
+README.md:3:> 微信读书笔记一键导入 Get 笔记 — Claude Code Skill
+README.md:5:将微信读书中的划线摘录和读书想法，自动导入 Get 笔记并归入知识库。全程 AI 辅助，一条指令完成。
+README.md:10:你：/weread-to-getnote ← 把《智人之上》的笔记导一下
+README.md:11:AI：已拉取 12 条划线、3 条想法，格式如下，确认保存？
+README.md:13:AI：已保存 ✓ 推荐加入「读书摘录」知识库，是否加入？
+README.md:15:AI：已加入知识库 ✓
+README.md:23:- 微信读书账号
+README.md:26:### 1. 安装微信读书 Skill
+README.md:29:claude skills add Tencent/WeChatReading
+README.md:34:从 [releases](https://github.com/iswalle/getnote-cli/releases) 下载并安装 `getnote-cli`，然后认证：
+README.md:37:getnote auth login --api-key gk_live_...
+README.md:40:### 3. 安装本 Skill
+README.md:42:将此仓库克隆或下载到 Claude Code 项目目录，或直接复制 `.claude/skills/weread-to-getnote/` 到你的项目：
+README.md:45:# 方式一：作为项目 skill
+README.md:46:cp -r weread-to-getnote/ your-project/.claude/skills/
+README.md:48:# 方式二：作为全局 skill
+README.md:49:cp -r weread-to-getnote/ ~/.claude/skills/
+README.md:59:    "WEREAD_API_KEY": "wrk-..."
+README.md:64:微信读书 API Key 获取方式：App → 我 → 设置 → 网络接入助手。
+README.md:69:# 验证微信读书 API
+README.md:70:curl -s -X POST https://i.weread.qq.com/api/agent/gateway \
+README.md:71:  -H "Authorization: Bearer $WEREAD_API_KEY" \
+README.md:73:  -d '{"api_name":"/user/notebooks","count":5,"skill_version":"1.0.3"}'
+README.md:76:getnote auth status
+README.md:81:调用 `/weread-to-getnote` 后按提示操作：
+README.md:83:1. **告诉 AI 要导入什么** — 书名、指定划线、全部笔记、最新一条等
+README.md:85:3. **AI 拉取并整理** — 自动从微信读书拉取数据
+README.md:87:5. **加入知识库** — AI 推荐知识库，你批准后加入
+README.md:92:/weread-to-getnote 帮我把《黑客与画家》里关于设计的划线导几条
+README.md:95:## Skill 优化
+README.md:97:本项目使用 [达尔文 skill](https://github.com/anthropics/claude-code/tree/main/skills/darwin-skill) 进行持续优化。当前评分 **84/100**（基线 40）。
+.claude/skills/weread-to-getnote/SKILL.md:2:name: weread-to-getnote
+.claude/skills/weread-to-getnote/SKILL.md:3:description: 微信读书笔记 → Get笔记 → 知识库 全流程导入。引擎：notebridge + getnote CLI。
+.claude/skills/weread-to-getnote/SKILL.md:4:trigger: 导入读书笔记、微信读书、读书摘录、划线整理、知识库入库
+.claude/skills/weread-to-getnote/SKILL.md:8:# weread-to-getnote
+.claude/skills/weread-to-getnote/SKILL.md:10:将微信读书笔记导入 Get 笔记并加入知识库。底层由 [notebridge](https://github.com/chucan1/notebridge) 驱动。
+.claude/skills/weread-to-getnote/SKILL.md:14:- **删除**：不再需要安装 `weread-skills`、`getnote-note`、`getnote-kb` 子 skill
+.claude/skills/weread-to-getnote/SKILL.md:15:- **新增**：`npm install -g @chucan1013/notebridge`
+.claude/skills/weread-to-getnote/SKILL.md:16:- **拉取数据**：`notebridge weread --book "..." --to getnote` 替代所有 raw curl 命令
+.claude/skills/weread-to-getnote/SKILL.md:21:### 1. 安装 notebridge
+.claude/skills/weread-to-getnote/SKILL.md:24:npm install -g @chucan1013/notebridge
+.claude/skills/weread-to-getnote/SKILL.md:27:### 2. 获取微信读书 API Key
+.claude/skills/weread-to-getnote/SKILL.md:29:微信读书 App →「我」→「设置」→「网络接入助手」复制 API Key（格式：`wrk-...`）。
+.claude/skills/weread-to-getnote/SKILL.md:34:export WEREAD_API_KEY=<redacted-key>
+.claude/skills/weread-to-getnote/SKILL.md:39:{ "env": { "WEREAD_API_KEY": "wrk-..." } }
+.claude/skills/weread-to-getnote/SKILL.md:44:从 [releases](https://github.com/iswalle/getnote-cli/releases) 下载，然后：
+.claude/skills/weread-to-getnote/SKILL.md:47:getnote auth login --api-key gk_live_...
+.claude/skills/weread-to-getnote/SKILL.md:48:getnote auth status
+.claude/skills/weread-to-getnote/SKILL.md:54:notebridge --list-sources        # 应显示 "weread, local-markdown"
+.claude/skills/weread-to-getnote/SKILL.md:55:notebridge weread --book "任意" --to getnote --dry-run  # 测试连接
+.claude/skills/weread-to-getnote/SKILL.md:67:- **指定几条划线** —「把《黑客与画家》里关于设计的挑几条」
+.claude/skills/weread-to-getnote/SKILL.md:68:- **某本书全部笔记** — 全书划线+想法
+.claude/skills/weread-to-getnote/SKILL.md:81:> 共 N 条划线，N 条想法
+.claude/skills/weread-to-getnote/SKILL.md:83:## 划线摘录
+.claude/skills/weread-to-getnote/SKILL.md:86:> 划线原文
+.claude/skills/weread-to-getnote/SKILL.md:88:## 个人想法
+.claude/skills/weread-to-getnote/SKILL.md:89:- 想法内容
+.claude/skills/weread-to-getnote/SKILL.md:93:**默认标签**：`微信读书`、`读书笔记`
+.claude/skills/weread-to-getnote/SKILL.md:97:用 notebridge CLI 拉取并格式化：
+.claude/skills/weread-to-getnote/SKILL.md:101:notebridge weread --book "<书名>" --to getnote --dry-run
+.claude/skills/weread-to-getnote/SKILL.md:104:notebridge weread --book "<书名>" --to getnote --dry-run -o json
+.claude/skills/weread-to-getnote/SKILL.md:107:**批量导入**：先 `notebridge --list-sources` 看有哪些书，逐本处理。
+.claude/skills/weread-to-getnote/SKILL.md:110:- `--grouping per_item` — 每条划线独立一条笔记
+.claude/skills/weread-to-getnote/SKILL.md:116:将 notebridge 的输出按用户确认的格式整理成 Markdown，**展示给用户确认**后再保存。
+.claude/skills/weread-to-getnote/SKILL.md:123:getnote save "笔记内容" --title "《书名》读书笔记" --tag 微信读书 --tag 读书笔记 -o json
+.claude/skills/weread-to-getnote/SKILL.md:126:内容较长时用 Python/node 写临时文件再 `getnote save`，不要用 Shell 单行字符串。
+.claude/skills/weread-to-getnote/SKILL.md:128:### 6. 加入知识库
+.claude/skills/weread-to-getnote/SKILL.md:132:1. 列出知识库：`getnote kbs -o json`
+.claude/skills/weread-to-getnote/SKILL.md:133:2. 根据笔记内容推荐最合适的知识库，说明理由
+.claude/skills/weread-to-getnote/SKILL.md:134:3. 用户确认后加入：`getnote kb add <topic_id> <note_id>`
+.claude/skills/weread-to-getnote/SKILL.md:140:1. 先 `notebridge weread --list-resources` 告知工作量
+.claude/skills/weread-to-getnote/SKILL.md:143:4. 每本单独推荐知识库
+.claude/skills/weread-to-getnote/SKILL.md:152:| `WEREAD_API_KEY` 未设置 | `export WEREAD_API_KEY=<redacted-key>` |
+.claude/skills/weread-to-getnote/SKILL.md:153:| `notebridge` 未安装 | `npm install -g @chucan1013/notebridge` |
+.claude/skills/weread-to-getnote/SKILL.md:154:| `getnote` 未安装 | 指向 https://github.com/iswalle/getnote-cli/releases |
+.claude/skills/weread-to-getnote/SKILL.md:155:| `getnote` 未认证 | `getnote auth login --api-key <key>` |
+.claude/skills/weread-to-getnote/SKILL.md:156:| 书未找到 | 用 `notebridge weread --list-resources` 列出可用的书 |
+.claude/skills/weread-to-getnote/SKILL.md:157:| `getnote save` 失败 | 先 `getnote auth status` 检查认证 |
+.claude/skills/weread-to-getnote/SKILL.md:158:| 知识库添加失败 | 订阅知识库只读，用 `getnote kbs` 找自有知识库 |
+.claude/skills/weread-to-getnote/test-prompts.json:4:    "prompt": "帮我把《黑客与画家》里最新的一条划线导入到 Get 笔记",
+.claude/skills/weread-to-getnote/test-prompts.json:5:    "expected": "能正确找到该书、拉取划线、确认导入内容、格式化保存到 Get笔记、推荐知识库"
+.claude/skills/weread-to-getnote/test-prompts.json:9:    "prompt": "我刚装了 Claude Code，想用这个 skill 但还没配置任何东西，该怎么做？",
+.claude/skills/weread-to-getnote/test-prompts.json:10:    "expected": "能指导用户完成：安装 weread-skills → 获取微信读书 API Key → 安装 getnote CLI → 认证 → 开始使用"
+.claude/skills/weread-to-getnote/test-prompts.json:14:    "prompt": "把所有书的笔记批量导入到知识库里",
+.claude/skills/weread-to-getnote/test-prompts.json:15:    "expected": "能正确处理批量导入场景：说明工作量、分步进行、询问格式、每个笔记推荐知识库"

@@ -1,0 +1,15 @@
+{
+  "dry_run": true,
+  "command_shape": "getnote save <temp-file> --title \"《书名》读书笔记\" --tag 微信读书 --tag 读书笔记 -o json",
+  "title": "《从0到1：开启商业与未来的秘密》读书笔记",
+  "tags": [
+    "微信读书",
+    "读书笔记",
+    "从0到1：开启商业与未来的秘密"
+  ],
+  "knowledge_base_suggestion": {
+    "name": "读书摘录 / 商业创业",
+    "reason": "划线围绕创业判断、市场选择和具体问题，适合归入读书摘录或商业创业知识库。"
+  },
+  "content_file": "getnote-import-preview.md"
+}

@@ -1,0 +1,7 @@
+Cloned https://github.com/chucan1/weread-to-getnote into a temporary workspace.
+Validated README.md, .claude/skills/weread-to-getnote/SKILL.md, and test-prompts.json.
+notebridge/getnote were not installed locally; npm registry reports @chucan1013/notebridge version 0.3.0.
+Called WeRead Agent Gateway through WEREAD_API_KEY from environment only.
+API calls: [{"api_name": "/user/notebooks", "ok": true, "items": 10}, {"api_name": "/book/bookmarklist", "bookId": "566431", "ok": true, "items": 24}, {"api_name": "/book/chapterinfo", "bookId": "566431", "ok": true, "items": 81}]
+Selected book: 从0到1：开启商业与未来的秘密 / 彼得·蒂尔 布莱克·马斯特斯
+Generated a dry-run Get Note import preview; no third-party account write was performed.

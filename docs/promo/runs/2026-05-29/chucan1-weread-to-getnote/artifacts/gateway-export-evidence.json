@@ -1,0 +1,66 @@
+{
+  "ok": true,
+  "project": "chucan1/weread-to-getnote",
+  "gateway": "https://i.weread.qq.com/api/agent/gateway",
+  "api_calls": [
+    {
+      "api_name": "/user/notebooks",
+      "ok": true,
+      "items": 10
+    },
+    {
+      "api_name": "/book/bookmarklist",
+      "bookId": "566431",
+      "ok": true,
+      "items": 24
+    },
+    {
+      "api_name": "/book/chapterinfo",
+      "bookId": "566431",
+      "ok": true,
+      "items": 81
+    }
+  ],
+  "selected_book": {
+    "bookId": "566431",
+    "title": "从0到1：开启商业与未来的秘密",
+    "author": "彼得·蒂尔 布莱克·马斯特斯",
+    "translator": "高玉芳",
+    "noteCount": 24,
+    "bookmarkCount": 0,
+    "reviewCount": 1,
+    "totalFetchedHighlights": 24
+  },
+  "selected_highlights": [
+    {
+      "chapterUid": 153,
+      "chapterTitle": "能源2.0",
+      "range": "1100-1130",
+      "createTime": 1778563307,
+      "quote_short": "无论能源如何稀缺，只有对特定问题拿出最佳方案的公司才能赢利。",
+      "quote_length": 30
+    },
+    {
+      "chapterUid": 146,
+      "chapterTitle": "垄断问题",
+      "range": "2251-2303",
+      "createTime": 1778516796,
+      "quote_short": "他们故意把市场形容得比较小，所以看起来有所区分，但又反过来要求基于利润可能丰厚的巨大市场来对其进行估值。",
+      "quote_length": 52
+    },
+    {
+      "chapterUid": 140,
+      "chapterTitle": "全球化vs.科技",
+      "range": "752-790",
+      "createTime": 1778496659,
+      "quote_short": "相对优势差异巨大时，贸易利益最大，但是全球愿意从事低薪重复工作的人比比皆是。",
+      "quote_length": 38
+    }
+  ],
+  "notebridge_installed": false,
+  "getnote_installed": false,
+  "third_party_write_performed": false,
+  "third_party_write_blocker": "Get Note CLI/account credentials are not configured in this maintenance environment; generated a dry-run import preview instead.",
+  "secret_handling": "WEREAD_API_KEY was read only from the environment and was not written to artifacts.",
+  "elapsed_ms": 1054
+}
