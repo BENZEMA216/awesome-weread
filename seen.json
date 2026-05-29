@@ -721,5 +721,12 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-05-28T20:30:39.261Z"
+  },
+  {
+    "repo": "Cslr4/weread-ai-bookshelf",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书 Agent API (weread-skills) 和 API Key 构建，并调用了官方域名。",
+    "category": "workflows",
+    "date": "2026-05-29T04:09:21.234Z"
   }
 ]
