@@ -12,7 +12,7 @@ README.zh.md:27:下载 https://cdn.weread.qq.com/skills/weread-skills.zip 安装
 README.zh.md:33:npx skills add gandli/weread-skills
 README.zh.md:38:1. 前往 [微信读书官方 Skill 页面](https://weread.qq.com/r/weread-skills)
 README.zh.md:40:3. 复制你的 API Key（格式：`[REDACTED_WEREAD_API_KEY]`）
-README.zh.md:47:export WEREAD_API_KEY=<你的api-key>
+README.zh.md:47:export WEREAD_API_KEY=<YOUR_WEREAD_API_KEY>
 README.zh.md:89:Skill 通过 API Key 连接微信读书的 Agent API Gateway：
 README.zh.md:92:POST https://i.weread.qq.com/api/agent/gateway
 README.zh.md:93:Authorization: Bearer [REDACTED_WEREAD_API_KEY]
@@ -35,7 +35,7 @@ README.md:27:Download https://cdn.weread.qq.com/skills/weread-skills.zip and ins
 README.md:33:npx skills add gandli/weread-skills
 README.md:38:1. Go to [WeRead Official Skill Page](https://weread.qq.com/r/weread-skills)
 README.md:40:3. Copy your API Key (format: `[REDACTED_WEREAD_API_KEY]`)
-README.md:47:export WEREAD_API_KEY=<your-api-key>
+README.md:47:export WEREAD_API_KEY=<YOUR_WEREAD_API_KEY>
 README.md:89:The Skill connects to WeRead's Agent API Gateway using your API Key:
 README.md:92:POST https://i.weread.qq.com/api/agent/gateway
 README.md:93:Authorization: Bearer [REDACTED_WEREAD_API_KEY]
@@ -53,7 +53,7 @@ skills/weread/SKILL.md:2:name: weread-skills
 skills/weread/SKILL.md:33:POST https://i.weread.qq.com/api/agent/gateway
 skills/weread/SKILL.md:38:- Header：`Authorization: Bearer [REDACTED_WEREAD_API_KEY]
 skills/weread/SKILL.md:39:- `WEREAD_API_KEY` 从环境变量获取，格式 `[REDACTED_WEREAD_API_KEY]`
-skills/weread/SKILL.md:40:- 若未设置，提示用户：`export WEREAD_API_KEY=<你的apikey>`
+skills/weread/SKILL.md:40:- 若未设置，提示用户：`export WEREAD_API_KEY=<YOUR_WEREAD_API_KEY>
 skills/weread/SKILL.md:47:- **Body**：JSON，`api_name` 指定接口，其余为接口参数，**每次请求必须带 `skill_version`**
 skills/weread/SKILL.md:50:curl -X POST "https://i.weread.qq.com/api/agent/gateway" \
 skills/weread/SKILL.md:51:  -H "Authorization: Bearer [REDACTED_WEREAD_API_KEY]" \

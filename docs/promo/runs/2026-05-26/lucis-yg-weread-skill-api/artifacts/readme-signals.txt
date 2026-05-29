@@ -1,5 +1,5 @@
 ./src/services/wereadService.js:47:            throw new Error('WEREAD_API_KEY 未配置，请检查环境变量');
-./README.md:47:WEREAD_API_KEY=wrk-你的API密钥
+./README.md:47:WEREAD_API_KEY=<YOUR_WEREAD_API_KEY>
 ./README.md:49:GATEWAY_URL=https://i.weread.qq.com/api/agent/gateway
 ./README.md:73:- API Key 必须以 wrk- 开头
 ./src/config/index.js:20:        apiKey: process.env.WEREAD_API_KEY,

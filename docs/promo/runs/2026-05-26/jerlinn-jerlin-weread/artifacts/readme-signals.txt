@@ -1,11 +1,11 @@
 README.md:1:# jerlin-weread-skill
 README.md:3:微信读书官方 Skill 的重构版。Agent 不用每次把整份接口文档读一遍再自己重复拼请求，改为一条命令直接调，需要什么查什么。
 README.md:7:1. 获取 API Key：前往 [weread-skills](https://weread.qq.com/r/weread-skills) 登录微信读书账号
-README.md:10:export WEREAD_API_KEY=wrk-你的apikey
+README.md:10:export WEREAD_API_KEY=<YOUR_WEREAD_API_KEY>
 README.md:12:3. 安装 Skill：
 README.md:14:npx skills add jerlinn/jerlin-weread
 README.md:20:├── SKILL.md                意图路由 + 通用规则
 README.md:34:基于微信读书官方团队的 [WeRead Skill](https://weread.qq.com/r/weread-skills) 优化。API 接口和数据归微信读书所有，使用需遵守其服务条款。
 jerlin-weread-skill/SKILL.md:2:name: jerlin-weread-skill
 jerlin-weread-skill/SKILL.md:30:- 环境变量 `$WEREAD_API_KEY`，格式 `[REDACTED_WEREAD_API_KEY]`
-jerlin-weread-skill/SKILL.md:31:- 未设置时提示用户：`export WEREAD_API_KEY=<你的apikey>`
+jerlin-weread-skill/SKILL.md:31:- 未设置时提示用户：`export WEREAD_API_KEY=<YOUR_WEREAD_API_KEY>

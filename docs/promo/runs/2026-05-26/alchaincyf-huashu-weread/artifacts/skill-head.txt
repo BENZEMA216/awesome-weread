@@ -102,7 +102,7 @@ description: 微信读书高阶顾问。在底层 weread skill 的原子 API 之
 
 | 场景 | 触发条件 | 处理动作 |
 |------|---------|---------|
-| `WEREAD_API_KEY` 未设置 | 环境变量不存在或不是 `wrk-` 开头 | 报错：「请先 export WEREAD_API_KEY=<你的apikey>，从微信读书后台获取」，终止 |
+| `WEREAD_API_KEY` 未设置 | 环境变量不存在或不是 `wrk-` 开头 | 报错：「请先 export WEREAD_API_KEY=<YOUR_WEREAD_API_KEY> |
 | API 返回 `errcode != 0` | 接口报错 | 显示中文错误信息，重试 1 次；仍失败告知用户并停止当前 workflow |
 | 接口返回 `upgrade_info` | 服务端要求 skill 版本升级 | 暂停当前操作，按 `upgrade_info.message` 完成升级后重试，**不得忽略** |
 | **`/store/search` 响应解析** | 解析返回 JSON | 顶层不是 `books[]`！实际结构是 `results[]`，按 section 分类。取上架：`results[?title=='电子书'].books[*].bookInfo`；取未上架：`title=='待上架'`。每本书的 bookId 在 `bookInfo.bookId`。**别用 `res.get('books', [])`，会全部 0 结果** |

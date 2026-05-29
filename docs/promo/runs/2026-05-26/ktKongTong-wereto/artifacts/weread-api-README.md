@@ -11,7 +11,7 @@ pnpm install
 ## 环境变量
 
 ```bash
-export WEREAD_API_KEY=wrk-xxxxxxxx
+export WEREAD_API_KEY=<YOUR_WEREAD_API_KEY>
 ```
 
 ## 用法

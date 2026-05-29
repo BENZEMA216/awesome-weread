@@ -1,8 +1,8 @@
 ./README.md:10:2. 访问 [WeRead API Key 管理页面](https://weread.qq.com/r/weread-skills) 创建 API Key，记录生成的 `[REDACTED_WEREAD_API_KEY]` 字符串。
-./README.md:18:> 从 GitHub 仓库 `ipfans/weread-cli` 的 release 页面下载最新版本的二进制文件，根据当前系统的 OS 和架构选择正确的压缩包，解压后将 `weread-cli` 安装到系统 PATH 中（如 `/usr/local/bin` 或 `~/.local/bin`）。然后询问我的 API Key，将其写入 `weread-cli` 二进制所在目录的 `weread.env` 文件中，格式为 `WEREAD_API_KEY=<key>`。
+./README.md:18:> 从 GitHub 仓库 `ipfans/weread-cli` 的 release 页面下载最新版本的二进制文件，根据当前系统的 OS 和架构选择正确的压缩包，解压后将 `weread-cli` 安装到系统 PATH 中（如 `/usr/local/bin` 或 `~/.local/bin`）。然后询问我的 API Key，将其写入 `weread-cli` 二进制所在目录的 `weread.env` 文件中，格式为 `WEREAD_API_KEY=<YOUR_WEREAD_API_KEY>
 ./README.md:49:2. `WEREAD_API_KEY` 环境变量
-./README.md:55:export WEREAD_API_KEY=[REDACTED_WEREAD_API_KEY]
-./README.md:58:echo "WEREAD_API_KEY=[REDACTED_WEREAD_API_KEY]" > $(dirname $(which weread-cli))/weread.env
+./README.md:55:export WEREAD_API_KEY=<YOUR_WEREAD_API_KEY>
+./README.md:58:echo "WEREAD_API_KEY=<YOUR_WEREAD_API_KEY>" > $(dirname $(which weread-cli))/weread.env
 ./skills/search/SKILL.md:62:- 如果返回认证错误，提示检查 `WEREAD_API_KEY` 配置
 ./skills/weread/SKILL.md:16:- `WEREAD_API_KEY` 必须通过以下任一方式配置（按优先级排列）：
 ./skills/weread/SKILL.md:18:  2. `WEREAD_API_KEY` 环境变量
@@ -14,12 +14,12 @@
 ./internal/api/client_test.go:27:	t.Setenv("WEREAD_API_KEY", "[REDACTED_WEREAD_API_KEY]")
 ./internal/api/client_test.go:32:	if key != "[REDACTED_WEREAD_API_KEY]" {
 ./internal/api/client_test.go:33:		t.Errorf("got %q, want %q", key, "[REDACTED_WEREAD_API_KEY]")
-./internal/api/client_test.go:40:	os.WriteFile(envFile, []byte("WEREAD_API_KEY=[REDACTED_WEREAD_API_KEY]\n"), 0644)
+./internal/api/client_test.go:40:	os.WriteFile(envFile, []byte("WEREAD_API_KEY=<YOUR_WEREAD_API_KEY>"), 0644)
 ./internal/api/client_test.go:46:	t.Setenv("WEREAD_API_KEY", "")
 ./internal/api/client_test.go:47:	os.Unsetenv("WEREAD_API_KEY")
 ./internal/api/client_test.go:53:	if key != "[REDACTED_WEREAD_API_KEY]" {
 ./internal/api/client_test.go:54:		t.Errorf("got %q, want %q", key, "[REDACTED_WEREAD_API_KEY]")
-./internal/api/client_test.go:61:	os.WriteFile(envFile, []byte("WEREAD_API_KEY=[REDACTED_WEREAD_API_KEY]\n"), 0644)
+./internal/api/client_test.go:61:	os.WriteFile(envFile, []byte("WEREAD_API_KEY=<YOUR_WEREAD_API_KEY>"), 0644)
 ./internal/api/client_test.go:63:	os.Unsetenv("WEREAD_API_KEY")
 ./internal/api/client_test.go:66:	val := os.Getenv("WEREAD_API_KEY")
 ./internal/api/client_test.go:67:	t.Cleanup(func() { os.Unsetenv("WEREAD_API_KEY") })

@@ -10,7 +10,7 @@
 ## 运行方式
 
 ```bash
-WEREAD_API_KEY=$WEREAD_API_KEY node bin/taxue-weread.js list-apis
+WEREAD_API_KEY=<YOUR_WEREAD_API_KEY> node bin/taxue-weread.js list-apis
 ```
 
 ## 本次调用/检查的数据

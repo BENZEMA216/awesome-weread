@@ -11,7 +11,7 @@
 
 ```bash
 cd /private/tmp/awesome-weread-backfill-workflows-cli-1779781183/lucis-yg-weread-skill-api
-WEREAD_API_KEY=wrk-REDACTED node server.js
+WEREAD_API_KEY=<YOUR_WEREAD_API_KEY> node server.js
 ```
 
 说明：这里使用占位 `wrk-REDACTED` 仅用于验证服务启动与读取配置，避免触发真实请求/避免泄露密钥。

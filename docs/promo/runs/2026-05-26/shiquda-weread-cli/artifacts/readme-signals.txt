@@ -1,7 +1,7 @@
 ./src/client.ts:3:export const DEFAULT_BASE_URL = "https://i.weread.qq.com/api/agent/gateway";
 ./src/client.ts:68:    const envApiKey = nonEmpty(process.env.WEREAD_API_KEY);
 ./src/client.ts:110:            message: "WeRead API key is not configured. Run: weread config set-key <wrk-...>"
-./src/cli.ts:63:      hint: authConfigured ? "Ready." : "Set WEREAD_API_KEY=wrk-...",
+./src/cli.ts:63:      hint: authConfigured ? "Ready." : "Set WEREAD_API_KEY=<YOUR_WEREAD_API_KEY>",
 ./src/cli.ts:68:              message: "WeRead API key is not configured. Run: weread config set-key <wrk-...>"
 ./src/cli.ts:128:    if (!apiKey.startsWith("wrk-")) {
 ./src/cli.ts:129:      throw new Error("API key should look like wrk-...");

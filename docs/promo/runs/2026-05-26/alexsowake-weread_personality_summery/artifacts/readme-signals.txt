@@ -1,4 +1,4 @@
-./test.ts:3://   Add WEREAD_API_KEY=<your key> to .env, then:
+./test.ts:3://   Add WEREAD_API_KEY=<YOUR_WEREAD_API_KEY> key> to .env, then:
 ./test.ts:18:const WEREAD_KEY = process.env.WEREAD_API_KEY ?? "";
 ./test.ts:25:  console.error("ERROR: WEREAD_API_KEY not set. Add it to .env");
 ./server/index.ts:49:    if (!wereadKey || !wereadKey.startsWith("wrk-")) {
