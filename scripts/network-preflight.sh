@@ -4,6 +4,11 @@
 # Usage:
 #   bash scripts/network-preflight.sh
 #   eval "$(scripts/network-preflight.sh --emit-env)"
+#
+# By default this script makes maintenance jobs direct-first and clears proxy
+# variables for the current shell. Set NETWORK_PREFLIGHT_ALLOW_PROXY_FALLBACK=1
+# when a retry should keep a confirmed-listening local proxy after direct
+# GitHub connectivity fails.
 
 set -u
 set -o pipefail
@@ -12,6 +17,7 @@ TIMEOUT="${NETWORK_PREFLIGHT_TIMEOUT:-10}"
 GITHUB_URL="${NETWORK_PREFLIGHT_URL:-https://github.com}"
 EMIT_ENV=0
 STRICT="${NETWORK_PREFLIGHT_STRICT:-0}"
+ALLOW_PROXY_FALLBACK="${NETWORK_PREFLIGHT_ALLOW_PROXY_FALLBACK:-0}"
 
 if [[ "${1:-}" == "--emit-env" ]]; then
   EMIT_ENV=1
@@ -135,6 +141,16 @@ main() {
 
   if [[ -n "$proxy" ]]; then
     read -r host port < <(parse_proxy_host_port "$proxy")
+
+    if [[ "$ALLOW_PROXY_FALLBACK" != "1" ]]; then
+      log "proxy fallback disabled; clearing proxy env so this run does not depend on local proxy state"
+      if [[ "$EMIT_ENV" -eq 1 ]]; then
+        emit_unset_proxy_env
+      fi
+      [[ "$STRICT" == "1" ]] && return 1
+      return 0
+    fi
+
     if local_proxy_listening "$host" "$port"; then
       log "local proxy is listening; keeping proxy env"
       return 0
@@ -149,7 +165,7 @@ main() {
       return 0
     fi
 
-    log "non-local proxy configured; keeping proxy env"
+    log "non-local proxy configured and proxy fallback is enabled; keeping proxy env"
     return 0
   fi
 

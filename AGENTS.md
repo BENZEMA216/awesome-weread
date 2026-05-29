@@ -66,13 +66,13 @@ The Codex automation can inherit stale local proxy variables such as `HTTP_PROXY
 eval "$(scripts/network-preflight.sh --emit-env)"
 ```
 
-This prefers direct GitHub connectivity when it works and clears stale local proxy variables for the current shell. If direct connectivity is unavailable but a configured local proxy is actually listening, the script keeps the proxy environment. After committing maintenance changes, prefer:
+This prefers direct GitHub connectivity and clears local proxy variables for the current shell by default, even when the login shell inherited `127.0.0.1:7897`. If a one-off retry must use a confirmed-listening local proxy after direct GitHub connectivity fails, run the same command with `NETWORK_PREFLIGHT_ALLOW_PROXY_FALLBACK=1`. After committing maintenance changes, prefer:
 
 ```bash
 scripts/git-push-main-with-retry.sh
 ```
 
-That wrapper retries once by re-running the network preflight, fetching `origin/main`, rebasing, and pushing again. Do not commit generated network logs that contain local machine paths unless they are part of a documented blocked experience run.
+That wrapper pushes direct-first, then retries once by allowing a verified proxy fallback, fetching `origin/main`, rebasing, and pushing again. Do not commit generated network logs that contain local machine paths unless they are part of a documented blocked experience run.
 
 ## Bot PR Review Workflow
 

@@ -10,16 +10,18 @@ RETRY_DELAY="${PUSH_RETRY_DELAY:-20}"
 
 cd "$ROOT"
 
+# First attempt uses the direct route only, so background maintenance jobs do
+# not depend on a potentially stale localhost proxy inherited from login shells.
 eval "$("$ROOT/scripts/network-preflight.sh" --emit-env)"
 
 if git push "$REMOTE" "HEAD:$BRANCH"; then
   exit 0
 fi
 
-echo "[git-push-main-with-retry] initial push failed; retrying after network preflight + rebase" >&2
+echo "[git-push-main-with-retry] initial push failed; retrying with verified proxy fallback + rebase" >&2
 sleep "$RETRY_DELAY"
 
-eval "$("$ROOT/scripts/network-preflight.sh" --emit-env)"
+eval "$(NETWORK_PREFLIGHT_ALLOW_PROXY_FALLBACK=1 "$ROOT/scripts/network-preflight.sh" --emit-env)"
 git fetch "$REMOTE" "$BRANCH" --prune
 git rebase "$REMOTE/$BRANCH"
 git push "$REMOTE" "HEAD:$BRANCH"
