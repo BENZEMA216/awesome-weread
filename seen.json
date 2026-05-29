@@ -752,5 +752,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-29T15:53:43.537Z"
+  },
+  {
+    "repo": "steptian/weread-mp",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-29T20:32:57.135Z"
   }
 ]
