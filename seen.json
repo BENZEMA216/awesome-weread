@@ -746,5 +746,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-29T10:04:02.751Z"
+  },
+  {
+    "repo": "SteamChick/weread_scraper2MD",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-05-29T15:53:43.537Z"
   }
 ]
