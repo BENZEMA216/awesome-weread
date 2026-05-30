@@ -758,5 +758,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-29T20:32:57.135Z"
+  },
+  {
+    "repo": "jiyumi-wang/weread",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-30T03:55:28.898Z"
   }
 ]
