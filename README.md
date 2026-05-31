@@ -4,7 +4,7 @@
 
 **语言**: **简体中文** · [English](./README.en.md)
 
-**最后更新**: 2026-05-29 (UTC+08:00)
+**最后更新**: 2026-06-01 (UTC+08:00)
 
 2026 年 5 月 17 日，微信读书发布了[官方 Agent Skill](https://cdn.weread.qq.com/skills/weread-skills.zip) —— 一个用个人 API Key（`wrk-...`）即可访问的 `Agent Gateway`，提供书架、阅读统计、划线、想法、书籍搜索等能力。48 小时内，社区已经在它之上长出一波二创项目。
 
@@ -57,6 +57,7 @@
 | [viewer12/weread-mirror](https://github.com/viewer12/weread-mirror) | Claude Code | 用官方 Skill 拉书架、统计和笔记，生成单文件 HTML 私人读书画像。 | [记录](docs/promo/runs/2026-05-21/viewer12-weread-mirror/summary.md) · [截图](docs/promo/runs/2026-05-21/viewer12-weread-mirror/artifacts/weread-mirror-portrait.jpg) |
 | [kejixiaoliang/read-persona](https://github.com/kejixiaoliang/read-persona) | Codex Skill | 基于微信读书官方 Skill，生成一份精美的 HTML 阅读人格画像报告。 | [记录](docs/promo/runs/2026-05-24/kejixiaoliang-read-persona/summary.md) · [截图](docs/promo/runs/2026-05-24/kejixiaoliang-read-persona/artifacts/read-persona-report.jpg) |
 | [cocovs/weread-agent-chat](https://github.com/cocovs/weread-agent-chat) | Web | 一个基于微信读书 API Key 的聊天应用，通过 Pi Agent 分析阅读数据并自然语言汇报。 | [记录](docs/promo/runs/2026-05-25/cocovs-weread-agent-chat/summary.md) · [截图](docs/promo/runs/2026-05-25/cocovs-weread-agent-chat/artifacts/weread-agent-chat-ui.jpg) |
+| [Llxsfd/weread-review-web](https://github.com/Llxsfd/weread-review-web) | Web (FastAPI + Vue3) | 微信读书划线复习与数据管理工具，基于官方 Skill API Key / Agent Gateway，内置 Edge-TTS 流式朗读（可选 BYOK AI 伴读）。 | [记录](docs/promo/runs/2026-06-01/Llxsfd-weread-review-web/summary.md) · [产物](docs/promo/runs/2026-06-01/Llxsfd-weread-review-web/artifacts/evidence.env.example) |
 | [zephyrwang6/space-weread](https://github.com/zephyrwang6/space-weread) | Skill | 「space」主题读书 workflow，把书架 / 笔记包装成「太空舱内」式的私人阅读空间。 | [记录](docs/promo/runs/2026-05-25/zephyrwang6-space-weread/summary.md) · [截图](docs/promo/runs/2026-05-25/zephyrwang6-space-weread/artifacts/space-weread-preview-screenshot.jpg) |
 | [LearnPrompt/carl-weread](https://github.com/LearnPrompt/carl-weread) | Skill | LearnPrompt 出品的 carl 风格读书顾问 workflow，基于官方 API Key 构建。 | [记录](docs/promo/runs/2026-05-26/LearnPrompt-carl-weread/summary.md) · [产物](docs/promo/runs/2026-05-26/LearnPrompt-carl-weread/artifacts/terminal-help.txt) |
 | [stefanxfy/weread-essay-skill](https://github.com/stefanxfy/weread-essay-skill) | Skill | 把书架与笔记输入，生成读书 essay 的 Skill —— 基于官方 weread-skills 包。 | [记录](docs/promo/runs/2026-05-26/stefanxfy-weread-essay-skill/summary.md) · [产物](docs/promo/runs/2026-05-26/stefanxfy-weread-essay-skill/artifacts/skill.md) |

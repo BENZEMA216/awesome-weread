@@ -4,7 +4,7 @@
 
 **Languages**: **English** · [简体中文](./README.md)
 
-**Last updated**: 2026-05-29 (UTC+08:00)
+**Last updated**: 2026-06-01 (UTC+08:00)
 
 On 2026-05-17, WeRead (微信读书) released its [official Agent Skill](https://cdn.weread.qq.com/skills/weread-skills.zip) — an `Agent Gateway` reachable with a personal API Key (`wrk-...`) that exposes bookshelf, reading stats, highlights, thoughts, and book search. Within 48 hours, a wave of community projects appeared on top of it.
 
@@ -57,6 +57,7 @@ Opinionated workflows layered on top of the raw Skill — recommendations, revie
 | [viewer12/weread-mirror](https://github.com/viewer12/weread-mirror) | Claude Code | Generates a single-file private reading portrait from official Skill bookshelf, stats, and notes data. | [Summary](docs/promo/runs/2026-05-21/viewer12-weread-mirror/summary.md) · [Screenshot](docs/promo/runs/2026-05-21/viewer12-weread-mirror/artifacts/weread-mirror-portrait.jpg) |
 | [kejixiaoliang/read-persona](https://github.com/kejixiaoliang/read-persona) | Codex Skill | Generates a polished HTML reading-persona report from official WeRead Skill data. | [Summary](docs/promo/runs/2026-05-24/kejixiaoliang-read-persona/summary.md) · [Screenshot](docs/promo/runs/2026-05-24/kejixiaoliang-read-persona/artifacts/read-persona-report.jpg) |
 | [cocovs/weread-agent-chat](https://github.com/cocovs/weread-agent-chat) | Web | A Pi Agent chat app that analyzes WeRead data through a user-provided API Key and reports in natural language. | [Summary](docs/promo/runs/2026-05-25/cocovs-weread-agent-chat/summary.md) · [Screenshot](docs/promo/runs/2026-05-25/cocovs-weread-agent-chat/artifacts/weread-agent-chat-ui.jpg) |
+| [Llxsfd/weread-review-web](https://github.com/Llxsfd/weread-review-web) | Web (FastAPI + Vue3) | Highlight review and data management web app built on the official Skill API Key / Agent Gateway, with Edge-TTS streaming TTS (optional BYOK AI copilot). | [Summary](docs/promo/runs/2026-06-01/Llxsfd-weread-review-web/summary.md) · [Artifact](docs/promo/runs/2026-06-01/Llxsfd-weread-review-web/artifacts/evidence.env.example) |
 | [zephyrwang6/space-weread](https://github.com/zephyrwang6/space-weread) | Skill | Workflow that wraps your shelf and notes into a personalized "reading space" theme. | [Summary](docs/promo/runs/2026-05-25/zephyrwang6-space-weread/summary.md) · [Screenshot](docs/promo/runs/2026-05-25/zephyrwang6-space-weread/artifacts/space-weread-preview-screenshot.jpg) |
 | [LearnPrompt/carl-weread](https://github.com/LearnPrompt/carl-weread) | Skill | LearnPrompt's carl-style reading advisor workflow, built on the official API Key. | [Summary](docs/promo/runs/2026-05-26/LearnPrompt-carl-weread/summary.md) · [Artifact](docs/promo/runs/2026-05-26/LearnPrompt-carl-weread/artifacts/terminal-help.txt) |
 | [stefanxfy/weread-essay-skill](https://github.com/stefanxfy/weread-essay-skill) | Skill | A Skill that turns your shelf and highlights into an essay, built on the official weread-skills package. | [Summary](docs/promo/runs/2026-05-26/stefanxfy-weread-essay-skill/summary.md) · [Artifact](docs/promo/runs/2026-05-26/stefanxfy-weread-essay-skill/artifacts/skill.md) |
