@@ -796,5 +796,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-31T13:56:39.373Z"
+  },
+  {
+    "repo": "kaiker19/weread-skill-plus",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-31T19:24:52.548Z"
   }
 ]
