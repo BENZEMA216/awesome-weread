@@ -777,5 +777,18 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-05-31T04:20:28.972Z"
+  },
+  {
+    "repo": "yuanxiuqi131-cell/weread-reading-notes",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Agent Gateway 和 API Key (WEREAD_API_KEY) 构建，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-05-31T08:53:29.153Z"
+  },
+  {
+    "repo": "unix2dos/weread-ai-reader",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-05-31T08:53:29.153Z"
   }
 ]
