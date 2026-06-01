@@ -808,5 +808,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-01T11:46:39.361Z"
+  },
+  {
+    "repo": "a3100821009/weread-to-notion",
+    "decision": "accepted",
+    "reason": "项目明确使用微信读书官方 Agent Gateway 提供的 wrk- 格式 API Key。",
+    "category": "sync",
+    "date": "2026-06-01T17:52:24.931Z"
   }
 ]
