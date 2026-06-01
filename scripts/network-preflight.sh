@@ -15,6 +15,7 @@ set -o pipefail
 
 TIMEOUT="${NETWORK_PREFLIGHT_TIMEOUT:-10}"
 GITHUB_URL="${NETWORK_PREFLIGHT_URL:-https://github.com}"
+GITHUB_GIT_URL="${NETWORK_PREFLIGHT_GIT_URL:-https://github.com/BENZEMA216/awesome-weread.git}"
 EMIT_ENV=0
 STRICT="${NETWORK_PREFLIGHT_STRICT:-0}"
 ALLOW_PROXY_FALLBACK="${NETWORK_PREFLIGHT_ALLOW_PROXY_FALLBACK:-0}"
@@ -55,13 +56,16 @@ without_proxy() {
 }
 
 direct_github_ok() {
-  if command -v curl >/dev/null 2>&1; then
-    without_proxy curl -fsSIL --max-time "$TIMEOUT" --noproxy '*' "$GITHUB_URL" >/dev/null 2>&1
+  if command -v git >/dev/null 2>&1; then
+    GIT_TERMINAL_PROMPT=0 without_proxy git \
+      -c http.lowSpeedLimit=1 \
+      -c "http.lowSpeedTime=$TIMEOUT" \
+      ls-remote "$GITHUB_GIT_URL" HEAD >/dev/null 2>&1
     return $?
   fi
 
-  if command -v git >/dev/null 2>&1; then
-    without_proxy git ls-remote https://github.com/BENZEMA216/awesome-weread.git HEAD >/dev/null 2>&1
+  if command -v curl >/dev/null 2>&1; then
+    without_proxy curl -fsSIL --max-time "$TIMEOUT" --noproxy '*' "$GITHUB_URL" >/dev/null 2>&1
     return $?
   fi
 
