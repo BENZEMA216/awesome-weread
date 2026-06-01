@@ -802,5 +802,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-05-31T19:24:52.548Z"
+  },
+  {
+    "repo": "bradenwu/weread-cliper",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-01T11:46:39.361Z"
   }
 ]
