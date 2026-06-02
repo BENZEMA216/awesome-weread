@@ -1,0 +1,5 @@
+[network-preflight] proxy env detected: 127.0.0.1:7897
+[network-preflight] direct GitHub connectivity failed within 10s
+[network-preflight] proxy fallback disabled; clearing proxy env so this run does not depend on local proxy state
+Cloning into '/private/tmp/a3100821009-weread-to-notion-run'...
+fatal: unable to access 'https://github.com/a3100821009/weread-to-notion/': Could not resolve host: github.com

@@ -1,0 +1,6 @@
+[network-preflight] proxy env detected: 127.0.0.1:7897
+[network-preflight] direct GitHub connectivity failed within 10s
+[network-preflight] proxy fallback disabled; clearing proxy env so this run does not depend on local proxy state
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0curl: (6) Could not resolve host: i.weread.qq.com
