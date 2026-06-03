@@ -815,5 +815,11 @@
     "reason": "项目明确使用微信读书官方 Agent Gateway 提供的 wrk- 格式 API Key。",
     "category": "sync",
     "date": "2026-06-01T17:52:24.931Z"
+  },
+  {
+    "repo": "syfun/weread-mp-pull",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-06-03T04:47:35.476Z"
   }
 ]
