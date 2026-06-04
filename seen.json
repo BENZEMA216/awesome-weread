@@ -827,5 +827,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-04T10:04:25.667Z"
+  },
+  {
+    "repo": "chanity256/weread-export",
+    "decision": "accepted",
+    "reason": "项目明确要求使用微信读书 Agent Gateway API Key (WEREAD_API_KEY)，且不涉及任何排除项。",
+    "category": "sync",
+    "date": "2026-06-04T15:28:43.625Z"
   }
 ]
