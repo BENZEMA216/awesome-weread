@@ -847,5 +847,24 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-05T04:15:49.482Z"
+  },
+  {
+    "repo": "shkadio/weread-mcp-server",
+    "decision": "accepted",
+    "reason": "该项目明确说明是基于微信读书官方 Agent API 构建的 MCP 服务器，并使用 wrk- 格式的 API Key。",
+    "category": "mcp-servers",
+    "date": "2026-06-05T10:01:47.882Z"
+  },
+  {
+    "repo": "jinguo0524/weixin-article-collector",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-06-05T10:01:47.882Z"
+  },
+  {
+    "repo": "jinguo0524/weixin-article-collector-full",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-06-05T10:01:47.882Z"
   }
 ]
