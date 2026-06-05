@@ -866,5 +866,68 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-06-05T10:01:47.882Z"
+  },
+  {
+    "repo": "yikejiucai/weread-saver",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-05T15:15:55.533Z"
+  },
+  {
+    "repo": "lbq110/weread-exporter",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-05T15:15:55.533Z"
+  },
+  {
+    "repo": "YunhaoDou/weread-to-notion",
+    "decision": "accepted",
+    "reason": "项目明确声明基于官方 WeRead Agent Skill API，并指导用户获取 wrk- 格式的 API Key。",
+    "category": "sync",
+    "date": "2026-06-05T15:15:55.533Z"
+  },
+  {
+    "repo": "YunhaoDou/weread-cli",
+    "decision": "accepted",
+    "reason": "该项目明确指出基于官方 Agent Skill API，使用 wrk- 格式的 API Key，且提供了命令行工具和 Python SDK。",
+    "category": "clis",
+    "date": "2026-06-05T15:15:55.533Z"
+  },
+  {
+    "repo": "YunhaoDou/mcp-weread",
+    "decision": "accepted",
+    "reason": "该项目明确使用微信读书官方 Agent Gateway 和 wrk- 格式的 API Key，符合收录标准。",
+    "category": "mcp-servers",
+    "date": "2026-06-05T15:15:55.533Z"
+  },
+  {
+    "repo": "YunhaoDou/weread-streak-tracker",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-05T15:15:55.533Z"
+  },
+  {
+    "repo": "YunhaoDou/weread-shelf-grid",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-05T15:15:55.533Z"
+  },
+  {
+    "repo": "YunhaoDou/weread-portrait",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-05T15:15:55.533Z"
+  },
+  {
+    "repo": "YunhaoDou/weread-heatmap",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-05T15:15:55.533Z"
+  },
+  {
+    "repo": "jiangxi1129/co-read",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-05T15:15:55.533Z"
   }
 ]
