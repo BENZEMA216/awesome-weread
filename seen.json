@@ -834,5 +834,18 @@
     "reason": "项目明确要求使用微信读书 Agent Gateway API Key (WEREAD_API_KEY)，且不涉及任何排除项。",
     "category": "sync",
     "date": "2026-06-04T15:28:43.625Z"
+  },
+  {
+    "repo": "YunhaoDou/awesome-weread",
+    "decision": "out_of_scope_llm",
+    "reason": "该仓库是一个精选列表，本身不提供微信读书相关功能，不符合收录标准。",
+    "category": "none",
+    "date": "2026-06-05T04:15:49.482Z"
+  },
+  {
+    "repo": "yeora26/halo-weread-plugin",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-05T04:15:49.482Z"
   }
 ]
