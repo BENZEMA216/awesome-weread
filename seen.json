@@ -935,5 +935,18 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-06-05T20:01:39.893Z"
+  },
+  {
+    "repo": "yikayiyo/weread-notes",
+    "decision": "accepted",
+    "reason": "项目明确使用 WeRead Agent API 和 wrk- 格式的 API Key 来同步微信读书数据。",
+    "category": "sync",
+    "date": "2026-06-07T04:25:06.572Z"
+  },
+  {
+    "repo": "lapiko12138-spec/weread-dashboard",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-07T04:25:06.572Z"
   }
 ]
