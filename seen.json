@@ -961,5 +961,11 @@
     "reason": "该项目明确使用微信读书官方 API Key和官方Skill，并将微信读书数据同步到Obsidian，符合收录标准。",
     "category": "sync",
     "date": "2026-06-07T14:05:29.032Z"
+  },
+  {
+    "repo": "songxrui/weread-skills",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-06-07T19:40:17.482Z"
   }
 ]
