@@ -1,0 +1,13 @@
+usage: export.py [-h] --bookmarks BOOKMARKS --reviews REVIEWS --chapters
+                 CHAPTERS --info INFO --progress PROGRESS --output OUTPUT
+
+Export WeRead book highlights and reviews to Obsidian-compatible Markdown.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --bookmarks BOOKMARKS
+  --reviews REVIEWS
+  --chapters CHAPTERS
+  --info INFO
+  --progress PROGRESS
+  --output OUTPUT

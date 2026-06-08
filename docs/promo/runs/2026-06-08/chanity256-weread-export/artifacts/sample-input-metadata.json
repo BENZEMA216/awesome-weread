@@ -1,0 +1,10 @@
+{
+  "bookId": "3300122247",
+  "bookTitle": "样例书名",
+  "highlights": 2,
+  "reviews": 2,
+  "chapterCount": 2,
+  "bookReviewCount": 1,
+  "chapterReviewCount": 1,
+  "purpose": "本地验证 export.py 的 Markdown 渲染结构，避免提交大段真实划线内容"
+}
