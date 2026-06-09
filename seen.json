@@ -985,5 +985,12 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-06-09T04:01:38.792Z"
+  },
+  {
+    "repo": "yvonne1919py-ctrl/weread-daily-push",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Agent API 网关和 wrk- 格式 API Key，且不使用 Cookie。",
+    "category": "workflows",
+    "date": "2026-06-09T09:55:00.492Z"
   }
 ]
