@@ -1022,5 +1022,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-10T10:12:23.070Z"
+  },
+  {
+    "repo": "ningyan1228/weread-skills-web",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-06-10T15:50:56.082Z"
   }
 ]
