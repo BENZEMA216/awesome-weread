@@ -1046,5 +1046,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-06-11T10:46:54.336Z"
+  },
+  {
+    "repo": "haoliangjun-95/weread-mark",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-11T16:12:19.678Z"
   }
 ]
