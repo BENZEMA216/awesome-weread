@@ -1052,5 +1052,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-11T16:12:19.678Z"
+  },
+  {
+    "repo": "lexielin99-code/CoRead-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-12T04:38:45.829Z"
   }
 ]
