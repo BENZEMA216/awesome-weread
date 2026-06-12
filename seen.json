@@ -1058,5 +1058,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-12T04:38:45.829Z"
+  },
+  {
+    "repo": "carlosriverogv/wereader-backend",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-12T10:22:27.162Z"
+  },
+  {
+    "repo": "defeatbug/weixin-library-api",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-12T10:22:27.162Z"
   }
 ]
