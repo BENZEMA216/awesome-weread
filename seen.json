@@ -1070,5 +1070,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-12T10:22:27.162Z"
+  },
+  {
+    "repo": "liuguoyu520488-hue/weread-knowledge-forest-20260612201132",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-12T15:27:29.864Z"
+  },
+  {
+    "repo": "Shelro/WereadPersonalityTest",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-06-12T15:27:29.864Z"
   }
 ]
