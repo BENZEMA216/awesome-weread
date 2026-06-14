@@ -1094,5 +1094,19 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-14T04:44:41.781Z"
+  },
+  {
+    "repo": "Jelly-LZL/weread-skills-extension",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 skill 和 API Key 构建，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-06-14T09:44:49.405Z"
+  },
+  {
+    "repo": "Friend-Albert/WereadScan",
+    "decision": "accepted",
+    "reason": "项目明确指出通过微信读书 Agent Gateway 和 wrk- 格式的 API Key 获取数据，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-06-14T09:44:49.405Z"
   }
 ]
