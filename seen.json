@@ -1082,5 +1082,17 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-06-12T15:27:29.864Z"
+  },
+  {
+    "repo": "KakuKevin28/weread",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-06-14T04:44:41.781Z"
+  },
+  {
+    "repo": "tamnd/weread-cli",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-14T04:44:41.781Z"
   }
 ]
