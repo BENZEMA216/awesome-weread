@@ -1120,5 +1120,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-15T21:11:03.448Z"
+  },
+  {
+    "repo": "zhangyu0806/weread-enhanced",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-16T05:00:45.099Z"
   }
 ]
