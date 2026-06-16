@@ -1126,5 +1126,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-16T05:00:45.099Z"
+  },
+  {
+    "repo": "lvysssss/weread-exporter-lys",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-16T11:21:42.042Z"
+  },
+  {
+    "repo": "vinxu/castreader-extension",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-16T11:21:42.042Z"
   }
 ]
