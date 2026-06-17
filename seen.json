@@ -1138,5 +1138,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-16T11:21:42.042Z"
+  },
+  {
+    "repo": "extrastu/readneo",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-17T04:45:09.348Z"
   }
 ]
