@@ -1176,5 +1176,11 @@
     "reason": "项目明确基于微信读书官方 Agent Skill 协议和 wrk- 格式 API Key 构建，符合收录标准。",
     "category": "skill-bundles",
     "date": "2026-06-18T10:38:17.598Z"
+  },
+  {
+    "repo": "wenize/weread-scratch-to-markdown",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-18T15:37:48.708Z"
   }
 ]
