@@ -1169,5 +1169,12 @@
     "reason": "项目明确声明使用微信读书官方 Agent API Gateway和wrk-格式的API Key，符合收录标准。",
     "category": "sync",
     "date": "2026-06-18T04:38:50.517Z"
+  },
+  {
+    "repo": "monilulu/weread-reading-profile",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Agent Skill 协议和 wrk- 格式 API Key 构建，符合收录标准。",
+    "category": "skill-bundles",
+    "date": "2026-06-18T10:38:17.598Z"
   }
 ]
