@@ -1162,5 +1162,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-17T11:06:38.639Z"
+  },
+  {
+    "repo": "yanhanxingchen1/weread-highlights-to-apple-notes",
+    "decision": "accepted",
+    "reason": "项目明确声明使用微信读书官方 Agent API Gateway和wrk-格式的API Key，符合收录标准。",
+    "category": "sync",
+    "date": "2026-06-18T04:38:50.517Z"
   }
 ]
