@@ -1188,5 +1188,19 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-19T10:45:46.654Z"
+  },
+  {
+    "repo": "zhjccoffee/ebook-weread-anki-skill",
+    "decision": "accepted",
+    "reason": "项目明确要求使用 WEREAD_API_KEY 和官方 WeRead Skill，并通过 npx skills add 命令安装，符合收录标准。",
+    "category": "skill-bundles",
+    "date": "2026-06-19T15:31:28.638Z"
+  },
+  {
+    "repo": "tgwl/weread-report-cf",
+    "decision": "accepted",
+    "reason": "项目明确使用微信读书官方 API Key (wrk-...)，并通过 Cloudflare Pages Function 实时调用微信读书 API 获取数据。",
+    "category": "widgets",
+    "date": "2026-06-19T15:31:28.638Z"
   }
 ]
