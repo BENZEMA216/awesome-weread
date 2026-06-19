@@ -1202,5 +1202,12 @@
     "reason": "项目明确使用微信读书官方 API Key (wrk-...)，并通过 Cloudflare Pages Function 实时调用微信读书 API 获取数据。",
     "category": "widgets",
     "date": "2026-06-19T15:31:28.638Z"
+  },
+  {
+    "repo": "GithubViolet/weread2notion-local",
+    "decision": "accepted",
+    "reason": "项目明确声明使用微信读书 API Key（Gateway 新接口），不再使用 Cookie，且通过环境变量 WEREAD_API_KEY 配置。",
+    "category": "sync",
+    "date": "2026-06-19T19:55:00.237Z"
   }
 ]
