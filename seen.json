@@ -1209,5 +1209,24 @@
     "reason": "项目明确声明使用微信读书 API Key（Gateway 新接口），不再使用 Cookie，且通过环境变量 WEREAD_API_KEY 配置。",
     "category": "sync",
     "date": "2026-06-19T19:55:00.237Z"
+  },
+  {
+    "repo": "Liooowei/ChatGPT-co-reader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-20T09:26:29.388Z"
+  },
+  {
+    "repo": "YangFengSC/weread2notion-next",
+    "decision": "accepted",
+    "reason": "项目明确声明使用微信读书官方 Agent Gateway API Key (wrk- 格式) 进行数据同步，且不使用 Cookie。",
+    "category": "sync",
+    "date": "2026-06-20T09:26:29.388Z"
+  },
+  {
+    "repo": "muyanhou73-coder/N.A",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-06-20T09:26:29.388Z"
   }
 ]
