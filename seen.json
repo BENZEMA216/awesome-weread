@@ -1228,5 +1228,12 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-06-20T09:26:29.388Z"
+  },
+  {
+    "repo": "ningyan1228/weread-notion-sync",
+    "decision": "accepted",
+    "reason": "项目明确指出使用微信读书 Gateway API 和 WEREAD_API_KEY，并引导用户从官方 Skills 页面获取 Key，符合收录标准。",
+    "category": "sync",
+    "date": "2026-06-20T14:15:05.740Z"
   }
 ]
