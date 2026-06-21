@@ -1235,5 +1235,17 @@
     "reason": "项目明确指出使用微信读书 Gateway API 和 WEREAD_API_KEY，并引导用户从官方 Skills 页面获取 Key，符合收录标准。",
     "category": "sync",
     "date": "2026-06-20T14:15:05.740Z"
+  },
+  {
+    "repo": "feideixiao/weread",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-06-21T09:57:34.912Z"
+  },
+  {
+    "repo": "lkfdev/plugin_siyuan_weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-21T09:57:34.912Z"
   }
 ]
