@@ -1247,5 +1247,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-21T09:57:34.912Z"
+  },
+  {
+    "repo": "iguannalin/wereads-airtable",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-21T19:50:58.602Z"
   }
 ]
