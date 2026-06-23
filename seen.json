@@ -1277,5 +1277,17 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-06-22T12:14:14.281Z"
+  },
+  {
+    "repo": "Sleepycat1010/Weread-Auto",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-23T09:52:43.098Z"
+  },
+  {
+    "repo": "jqknono/weread-challenge-selenium",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-23T09:52:43.098Z"
   }
 ]
