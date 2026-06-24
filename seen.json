@@ -1295,5 +1295,12 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-06-23T15:12:28.166Z"
+  },
+  {
+    "repo": "yuxizhou1997/weread-analysis",
+    "decision": "accepted",
+    "reason": "项目明确声明是基于官方 Agent Skill，并使用 WEREAD_API_KEY。",
+    "category": "workflows",
+    "date": "2026-06-24T14:42:39.171Z"
   }
 ]
