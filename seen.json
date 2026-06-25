@@ -1315,5 +1315,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-25T09:32:15.550Z"
+  },
+  {
+    "repo": "one2agi/wechatreading-notion-sync",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-25T14:43:59.126Z"
   }
 ]
