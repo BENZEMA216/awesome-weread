@@ -1302,5 +1302,12 @@
     "reason": "项目明确声明是基于官方 Agent Skill，并使用 WEREAD_API_KEY。",
     "category": "workflows",
     "date": "2026-06-24T14:42:39.171Z"
+  },
+  {
+    "repo": "yuxizhou1997/weread-reading-analysis",
+    "decision": "accepted",
+    "reason": "项目明确指出是基于官方 Agent Skill，并使用 WEREAD_API_KEY 进行配置，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-06-25T04:03:28.850Z"
   }
 ]
