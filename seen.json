@@ -1309,5 +1309,11 @@
     "reason": "项目明确指出是基于官方 Agent Skill，并使用 WEREAD_API_KEY 进行配置，符合收录标准。",
     "category": "workflows",
     "date": "2026-06-25T04:03:28.850Z"
+  },
+  {
+    "repo": "kap1bala/weReadExport",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-25T09:32:15.550Z"
   }
 ]
