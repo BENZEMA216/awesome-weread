@@ -1321,5 +1321,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-25T14:43:59.126Z"
+  },
+  {
+    "repo": "chengzilala/weread-enhancer",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-26T04:10:34.133Z"
   }
 ]
