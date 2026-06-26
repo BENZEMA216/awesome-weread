@@ -1340,5 +1340,11 @@
     "reason": "项目明确基于微信读书官方 Agent Gateway / API Key (wrk- 格式) 构建，并提供同步到本地 Markdown 的功能。",
     "category": "sync",
     "date": "2026-06-26T09:36:54.628Z"
+  },
+  {
+    "repo": "mingzhewei/wechatbook",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-26T14:35:35.490Z"
   }
 ]
