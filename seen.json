@@ -1346,5 +1346,18 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-06-26T14:35:35.490Z"
+  },
+  {
+    "repo": "Shellylh123/pdf2weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-06-27T13:53:58.376Z"
+  },
+  {
+    "repo": "da1234cao/weread-shelf",
+    "decision": "accepted",
+    "reason": "项目明确声明使用微信读书官方 Agent API Gateway 和 wrk- 格式的 API Key，且不使用 Cookie 或浏览器自动化。",
+    "category": "widgets",
+    "date": "2026-06-27T13:53:58.376Z"
   }
 ]
