@@ -1366,5 +1366,11 @@
     "reason": "项目明确要求配置 `WEREAD_API_KEY`，符合官方 API Key 的使用标准。",
     "category": "sync",
     "date": "2026-06-27T19:36:30.138Z"
+  },
+  {
+    "repo": "liubingren/weread_discovery_log",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-06-29T11:10:21.720Z"
   }
 ]
