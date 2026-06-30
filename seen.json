@@ -1372,5 +1372,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-06-29T11:10:21.720Z"
+  },
+  {
+    "repo": "TT5447/weread-book-reflection",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-06-30T09:50:02.324Z"
   }
 ]
