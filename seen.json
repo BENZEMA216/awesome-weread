@@ -1385,5 +1385,11 @@
     "reason": "项目明确声明使用微信读书官方 Agent Gateway 和 wrk- 格式的 API Key，符合收录标准。",
     "category": "workflows",
     "date": "2026-06-30T14:30:21.610Z"
+  },
+  {
+    "repo": "pozznak2001-bit/weread-assets",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-07-01T04:21:32.020Z"
   }
 ]
