@@ -1391,5 +1391,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-07-01T04:21:32.020Z"
+  },
+  {
+    "repo": "zhouxuan3550/WeRead-Notes-Manager",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-01T09:59:00.644Z"
   }
 ]
