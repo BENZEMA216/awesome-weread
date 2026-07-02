@@ -1403,5 +1403,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-01T20:02:33.017Z"
+  },
+  {
+    "repo": "ZiyaoZhangforPCL/WeReadMac",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-02T09:21:43.716Z"
   }
 ]
