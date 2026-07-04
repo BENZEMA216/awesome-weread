@@ -1409,5 +1409,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-02T09:21:43.716Z"
+  },
+  {
+    "repo": "MasakiMu319/WeRead-Runner",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-04T13:45:08.017Z"
   }
 ]
