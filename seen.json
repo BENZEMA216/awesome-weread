@@ -1415,5 +1415,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-04T13:45:08.017Z"
+  },
+  {
+    "repo": "StarLemontree/weread",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-07-05T09:12:44.641Z"
+  },
+  {
+    "repo": "chess99/weread-exporter",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-05T09:12:44.641Z"
   }
 ]
