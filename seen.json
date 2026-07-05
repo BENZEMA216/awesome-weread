@@ -1427,5 +1427,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-05T09:12:44.641Z"
+  },
+  {
+    "repo": "shengyuanshi/daily-receipt-opensource",
+    "decision": "accepted",
+    "reason": "项目明确提及使用 WEREAD_API_KEY 和 WeRead gateway 来收集微信读书数据，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-07-05T13:51:02.754Z"
   }
 ]
