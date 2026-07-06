@@ -1441,5 +1441,11 @@
     "reason": "项目明确指出通过微信读书 Agent API Gateway 获取数据，并使用 wrk- 格式的 API Key，符合收录标准。",
     "category": "widgets",
     "date": "2026-07-06T10:48:08.872Z"
+  },
+  {
+    "repo": "wangyyyqw/weread-bot",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-06T15:44:31.676Z"
   }
 ]
