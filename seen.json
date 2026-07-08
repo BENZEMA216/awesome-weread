@@ -1447,5 +1447,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-06T15:44:31.676Z"
+  },
+  {
+    "repo": "LukeLiou/weread-cookie-ext",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-08T14:26:43.780Z"
   }
 ]
