@@ -1453,5 +1453,18 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-08T14:26:43.780Z"
+  },
+  {
+    "repo": "AlphaX-Com/WeRead",
+    "decision": "accepted",
+    "reason": "项目明确声明直接调用微信读书 Agent Gateway API，并指导用户获取 wrk- 开头的官方 API Key，完全符合收录标准。",
+    "category": "workflows",
+    "date": "2026-07-09T09:54:12.400Z"
+  },
+  {
+    "repo": "CheekyRen/weread-finished-bookshelf",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-07-09T09:54:12.400Z"
   }
 ]
