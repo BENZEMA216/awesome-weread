@@ -1466,5 +1466,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-07-09T09:54:12.400Z"
+  },
+  {
+    "repo": "edwardzhu/obsidian-weread-shelf",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-07-09T15:20:57.578Z"
   }
 ]
