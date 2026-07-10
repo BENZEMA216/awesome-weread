@@ -1472,5 +1472,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-07-09T15:20:57.578Z"
+  },
+  {
+    "repo": "superpigx/weread-reading-assistant",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-10T19:39:41.298Z"
   }
 ]
