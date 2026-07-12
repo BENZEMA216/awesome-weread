@@ -1478,5 +1478,24 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-10T19:39:41.298Z"
+  },
+  {
+    "repo": "AbiesAyakura/JIX",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-12T08:24:42.389Z"
+  },
+  {
+    "repo": "fgbn1207/WereadSummary",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-07-12T08:24:42.389Z"
+  },
+  {
+    "repo": "hugh282003/weread-knowledge-graph",
+    "decision": "accepted",
+    "reason": "项目明确指出使用官方 Agent Gateway 和 wrk- 格式的 WEREAD_API_KEY，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-07-12T08:24:42.389Z"
   }
 ]
