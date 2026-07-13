@@ -1504,5 +1504,11 @@
     "reason": "项目同时使用了官方 API Key 和 Cookie 进行认证，且 Cookie 是主要认证方式，不符合收录标准。",
     "category": "none",
     "date": "2026-07-13T03:30:10.722Z"
+  },
+  {
+    "repo": "kuhung/weread-book-skills",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-13T14:46:00.707Z"
   }
 ]
