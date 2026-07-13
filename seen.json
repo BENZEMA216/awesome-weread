@@ -1497,5 +1497,12 @@
     "reason": "项目明确指出使用官方 Agent Gateway 和 wrk- 格式的 WEREAD_API_KEY，符合收录标准。",
     "category": "workflows",
     "date": "2026-07-12T08:24:42.389Z"
+  },
+  {
+    "repo": "finlater/weread.koplugin",
+    "decision": "out_of_scope_llm",
+    "reason": "项目同时使用了官方 API Key 和 Cookie 进行认证，且 Cookie 是主要认证方式，不符合收录标准。",
+    "category": "none",
+    "date": "2026-07-13T03:30:10.722Z"
   }
 ]
