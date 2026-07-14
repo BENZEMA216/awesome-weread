@@ -1528,5 +1528,18 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-07-14T08:17:03.280Z"
+  },
+  {
+    "repo": "yajunjiao/weread-planner",
+    "decision": "accepted",
+    "reason": "该项目明确指出其数据来源于微信读书，并通过 `weread-skills` 获取数据，且工作流示意图明确标注了 `API: WEREAD_API_KEY`。",
+    "category": "workflows",
+    "date": "2026-07-14T13:56:17.404Z"
+  },
+  {
+    "repo": "build-your-own-x-with-ai/WeRead",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-14T13:56:17.404Z"
   }
 ]
