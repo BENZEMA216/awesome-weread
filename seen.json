@@ -1510,5 +1510,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-13T14:46:00.707Z"
+  },
+  {
+    "repo": "liubingren/kimi-custom-skills",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-07-14T02:52:12.862Z"
+  },
+  {
+    "repo": "lxffong/weread-playwright",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-14T02:52:12.862Z"
   }
 ]
