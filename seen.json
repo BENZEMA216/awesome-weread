@@ -1541,5 +1541,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-14T13:56:17.404Z"
+  },
+  {
+    "repo": "Mrquj/weread-notion-worker",
+    "decision": "accepted",
+    "reason": "项目明确要求配置 WEREAD_API_KEY，符合收录标准。",
+    "category": "sync",
+    "date": "2026-07-15T02:50:54.596Z"
   }
 ]
