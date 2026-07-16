@@ -1567,5 +1567,19 @@
     "reason": "项目明确支持使用微信读书官方 API Key 获取数据，并提供了官方 API Key 页面的链接。",
     "category": "workflows",
     "date": "2026-07-16T02:57:47.773Z"
+  },
+  {
+    "repo": "wohaha7/weread-3d-bookshelf",
+    "decision": "accepted",
+    "reason": "该项目明确使用 wrk- 格式的 API Key 和官方 Agent Gateway，并提及通过官方 Skill 获取 Key，完全符合收录标准。",
+    "category": "widgets",
+    "date": "2026-07-16T08:21:57.141Z"
+  },
+  {
+    "repo": "PsychArch/weread",
+    "decision": "accepted",
+    "reason": "项目明确指出使用官方 API Key (wrk-...) 进行认证，并调用官方 Agent Gateway。",
+    "category": "clis",
+    "date": "2026-07-16T08:21:57.141Z"
   }
 ]
