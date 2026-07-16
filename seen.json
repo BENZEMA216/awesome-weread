@@ -1581,5 +1581,11 @@
     "reason": "项目明确指出使用官方 API Key (wrk-...) 进行认证，并调用官方 Agent Gateway。",
     "category": "clis",
     "date": "2026-07-16T08:21:57.141Z"
+  },
+  {
+    "repo": "flybear16/weread-shelf",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-16T14:04:33.065Z"
   }
 ]
