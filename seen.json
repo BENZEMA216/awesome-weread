@@ -1606,5 +1606,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-18T07:59:56.174Z"
+  },
+  {
+    "repo": "nasonliu/papers3-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-18T13:26:19.387Z"
+  },
+  {
+    "repo": "Matthew23-C/Weread_To_Notion",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-07-18T13:26:19.387Z"
   }
 ]
