@@ -1600,5 +1600,11 @@
     "reason": "项目明确基于微信读书官方 Agent Gateway 和 WEREAD_API_KEY 构建，且旨在同步数据。",
     "category": "sync",
     "date": "2026-07-17T13:48:45.062Z"
+  },
+  {
+    "repo": "hism76/weread-auto-next-chapter",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-18T07:59:56.174Z"
   }
 ]
