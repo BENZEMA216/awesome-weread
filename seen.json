@@ -1618,5 +1618,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-07-18T13:26:19.387Z"
+  },
+  {
+    "repo": "miumiupy98-art/miuread-koreader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-18T19:11:26.004Z"
   }
 ]
