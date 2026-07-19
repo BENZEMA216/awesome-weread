@@ -1624,5 +1624,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-18T19:11:26.004Z"
+  },
+  {
+    "repo": "topzw/weread-rank",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-19T08:26:04.441Z"
   }
 ]
