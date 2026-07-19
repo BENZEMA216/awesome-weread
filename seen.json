@@ -1630,5 +1630,24 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-19T08:26:04.441Z"
+  },
+  {
+    "repo": "Cairl/WeReadIt",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-19T13:35:08.367Z"
+  },
+  {
+    "repo": "KingHWJ/WeReadBoard",
+    "decision": "accepted",
+    "reason": "项目明确使用 wrk- 格式的 WEREAD_API_KEY，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-07-19T13:35:08.367Z"
+  },
+  {
+    "repo": "DoubleRu1/weread-turner",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-19T13:35:08.367Z"
   }
 ]
