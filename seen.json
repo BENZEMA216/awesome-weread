@@ -1649,5 +1649,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-19T13:35:08.367Z"
+  },
+  {
+    "repo": "hannahcai961-skycatty/weread",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Agent API Gateway 和 wrk- 格式的 API Key 构建，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-07-19T19:12:37.567Z"
   }
 ]
