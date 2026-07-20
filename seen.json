@@ -1656,5 +1656,24 @@
     "reason": "项目明确基于微信读书官方 Agent API Gateway 和 wrk- 格式的 API Key 构建，符合收录标准。",
     "category": "workflows",
     "date": "2026-07-19T19:12:37.567Z"
+  },
+  {
+    "repo": "hodgekou/weread2notion-AI",
+    "decision": "accepted",
+    "reason": "项目明确声明使用微信读书 Gateway API，并通过环境变量 WEREAD_API_KEY 配置，符合收录标准。",
+    "category": "sync",
+    "date": "2026-07-20T09:24:16.551Z"
+  },
+  {
+    "repo": "zhangjk1207/WeReadStealth",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-20T09:24:16.551Z"
+  },
+  {
+    "repo": "MondayLabOS/weread-insight-notes",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-20T09:24:16.551Z"
   }
 ]
