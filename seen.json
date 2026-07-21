@@ -1687,5 +1687,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-21T03:17:53.099Z"
+  },
+  {
+    "repo": "xShokan/weread",
+    "decision": "accepted",
+    "reason": "项目明确声明使用微信读书官方 Agent API Gateway和WEREAD_API_KEY，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-07-21T08:36:30.271Z"
   }
 ]
