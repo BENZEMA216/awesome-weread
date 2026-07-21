@@ -1681,5 +1681,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-20T14:18:09.804Z"
+  },
+  {
+    "repo": "HJCMOTOR/weread-scroll-paging-extension",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-21T03:17:53.099Z"
   }
 ]
