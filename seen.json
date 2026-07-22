@@ -1707,5 +1707,18 @@
     "reason": "项目明确声明是 Codex Skill，并依赖官方 `weread-skills` 访问微信读书数据，符合收录标准。",
     "category": "workflows",
     "date": "2026-07-22T08:35:55.490Z"
+  },
+  {
+    "repo": "xiongwei-git/WeReadNotes",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Agent API 和 wrk- 格式的 API Key 构建，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-07-22T14:07:38.701Z"
+  },
+  {
+    "repo": "ningan123/weread-dashboard",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-22T14:07:38.701Z"
   }
 ]
