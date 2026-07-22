@@ -1694,5 +1694,18 @@
     "reason": "项目明确声明使用微信读书官方 Agent API Gateway和WEREAD_API_KEY，符合收录标准。",
     "category": "workflows",
     "date": "2026-07-21T08:36:30.271Z"
+  },
+  {
+    "repo": "elk522/auto_weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-22T08:35:55.490Z"
+  },
+  {
+    "repo": "yysfwls/weread-viewpoint-books",
+    "decision": "accepted",
+    "reason": "项目明确声明是 Codex Skill，并依赖官方 `weread-skills` 访问微信读书数据，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-07-22T08:35:55.490Z"
   }
 ]
