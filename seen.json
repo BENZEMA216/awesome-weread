@@ -1720,5 +1720,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-22T14:07:38.701Z"
+  },
+  {
+    "repo": "Asukatsurugi/weread-to-markdown",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-23T14:12:33.208Z"
   }
 ]
