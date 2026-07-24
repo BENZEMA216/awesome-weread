@@ -1726,5 +1726,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-23T14:12:33.208Z"
+  },
+  {
+    "repo": "z-z-studio/transparent_reader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-24T08:33:48.491Z"
   }
 ]
