@@ -1744,5 +1744,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-25T08:13:35.727Z"
+  },
+  {
+    "repo": "wfbbhhdxsoye3vqjp9bcth2-hash/weread-tools",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-25T13:45:53.983Z"
   }
 ]
