@@ -1750,5 +1750,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-25T13:45:53.983Z"
+  },
+  {
+    "repo": "JIACHENG135/rm-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-26T03:28:41.204Z"
   }
 ]
