@@ -1756,5 +1756,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-26T03:28:41.204Z"
+  },
+  {
+    "repo": "gwang-indoc/weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-27T03:37:22.418Z"
   }
 ]
