@@ -1762,5 +1762,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-27T03:37:22.418Z"
+  },
+  {
+    "repo": "Y-Antares/WeReadDash",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-27T14:47:09.595Z"
+  },
+  {
+    "repo": "leshier/weui.koplugin",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-27T14:47:09.595Z"
   }
 ]
