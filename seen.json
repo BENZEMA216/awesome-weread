@@ -1801,5 +1801,11 @@
     "reason": "项目明确支持使用微信读书 API Key，并访问官方 Agent API 和 CDN 资源，符合收录标准。",
     "category": "sync",
     "date": "2026-07-28T02:53:31.735Z"
+  },
+  {
+    "repo": "phonghong13/weread-notes",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-07-28T14:21:27.851Z"
   }
 ]
