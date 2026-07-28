@@ -1774,5 +1774,32 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-27T14:47:09.595Z"
+  },
+  {
+    "repo": "dongwei6688/weread-notes-export-skill",
+    "decision": "accepted",
+    "reason": "该项目明确使用微信读书官方 Agent Gateway / API Key (wrk-xxx 格式) 进行交互，并适配了多个 Agent 平台。",
+    "category": "sync",
+    "date": "2026-07-28T02:53:31.735Z"
+  },
+  {
+    "repo": "Miahuang02/weread-cards-project",
+    "decision": "accepted",
+    "reason": "项目明确指导用户通过官方渠道获取 API Key，并使用 WEREAD_API_KEY 环境变量进行配置，符合收录标准。",
+    "category": "sync",
+    "date": "2026-07-28T02:53:31.735Z"
+  },
+  {
+    "repo": "jiaxianhua/tuya-ai-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-28T02:53:31.735Z"
+  },
+  {
+    "repo": "zhengxn1/weread-vault",
+    "decision": "accepted",
+    "reason": "项目明确支持使用微信读书 API Key，并访问官方 Agent API 和 CDN 资源，符合收录标准。",
+    "category": "sync",
+    "date": "2026-07-28T02:53:31.735Z"
   }
 ]
