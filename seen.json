@@ -1826,5 +1826,12 @@
     "reason": "项目明确使用 WEREAD_API_KEY 环境变量进行微信读书数据同步，符合收录标准。",
     "category": "widgets",
     "date": "2026-07-29T14:21:08.232Z"
+  },
+  {
+    "repo": "tylers2016/Weread2Readwise",
+    "decision": "accepted",
+    "reason": "项目明确使用 WEREAD_API_KEY 环境变量，符合官方 API Key 的使用标准。",
+    "category": "sync",
+    "date": "2026-07-29T19:24:03.355Z"
   }
 ]
