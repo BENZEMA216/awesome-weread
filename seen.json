@@ -1807,5 +1807,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-07-28T14:21:27.851Z"
+  },
+  {
+    "repo": "zhangweiii/wereaddesktop.koplugin",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-07-29T08:47:54.123Z"
   }
 ]
