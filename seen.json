@@ -1813,5 +1813,18 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-07-29T08:47:54.123Z"
+  },
+  {
+    "repo": "CherryLover/weread-height",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-29T14:21:08.232Z"
+  },
+  {
+    "repo": "malinkang/weread-shelf",
+    "decision": "accepted",
+    "reason": "项目明确使用 WEREAD_API_KEY 环境变量进行微信读书数据同步，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-07-29T14:21:08.232Z"
   }
 ]
