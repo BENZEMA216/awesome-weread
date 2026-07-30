@@ -1833,5 +1833,18 @@
     "reason": "项目明确使用 WEREAD_API_KEY 环境变量，符合官方 API Key 的使用标准。",
     "category": "sync",
     "date": "2026-07-29T19:24:03.355Z"
+  },
+  {
+    "repo": "UrBanLiu/weread-review",
+    "decision": "accepted",
+    "reason": "项目明确说明通过微信读书 Skills API Key 拉取数据，并提供了获取 wrk- 格式 API Key 的方法。",
+    "category": "sync",
+    "date": "2026-07-30T14:14:20.731Z"
+  },
+  {
+    "repo": "stargazer077/weread",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-07-30T14:14:20.731Z"
   }
 ]
