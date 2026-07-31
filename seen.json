@@ -1864,5 +1864,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-31T08:56:13.438Z"
+  },
+  {
+    "repo": "yuenci/weread-shelf",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-07-31T14:21:01.113Z"
   }
 ]
