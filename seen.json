@@ -1846,5 +1846,17 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-07-30T14:14:20.731Z"
+  },
+  {
+    "repo": "ivorkchan/weread-enhancer",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-31T03:28:11.933Z"
+  },
+  {
+    "repo": "Exyeus/weread-ask-outer-AI",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-31T03:28:11.933Z"
   }
 ]
