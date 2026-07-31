@@ -1858,5 +1858,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-07-31T03:28:11.933Z"
+  },
+  {
+    "repo": "daxia971/weread-quote-cards",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-07-31T08:56:13.438Z"
   }
 ]
