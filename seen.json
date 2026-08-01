@@ -1870,5 +1870,12 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-07-31T14:21:01.113Z"
+  },
+  {
+    "repo": "zhaoyue-zhang/weread2notion-pro-skill_version",
+    "decision": "accepted",
+    "reason": "项目明确声明使用微信读书官方 Agent API Gateway 和 wrk- 格式的 API Key，符合收录标准。",
+    "category": "sync",
+    "date": "2026-08-01T08:27:30.194Z"
   }
 ]
