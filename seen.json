@@ -1877,5 +1877,11 @@
     "reason": "项目明确声明使用微信读书官方 Agent API Gateway 和 wrk- 格式的 API Key，符合收录标准。",
     "category": "sync",
     "date": "2026-08-01T08:27:30.194Z"
+  },
+  {
+    "repo": "Exyeus/weread-web-assistant",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-02T08:30:17.245Z"
   }
 ]
