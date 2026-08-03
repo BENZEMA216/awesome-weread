@@ -1908,5 +1908,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-03T09:55:13.760Z"
+  },
+  {
+    "repo": "teng-lin/weread-omni",
+    "decision": "out_of_scope_llm",
+    "reason": "项目明确声明为“非官方 SDK”，且未提及使用官方 Agent Gateway 或 API Key (wrk- 格式)。",
+    "category": "none",
+    "date": "2026-08-03T19:44:13.355Z"
   }
 ]
