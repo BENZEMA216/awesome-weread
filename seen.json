@@ -1896,5 +1896,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-03T03:28:48.166Z"
+  },
+  {
+    "repo": "qianh/weread-collect-agent",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-03T09:55:13.760Z"
+  },
+  {
+    "repo": "einklover/m4-weread-plugin",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-03T09:55:13.760Z"
   }
 ]
