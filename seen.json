@@ -1890,5 +1890,11 @@
     "reason": "项目明确使用 WEREAD_API_KEY 环境变量进行数据同步和评分抓取，符合官方 API Key 的使用标准。",
     "category": "widgets",
     "date": "2026-08-02T19:17:45.379Z"
+  },
+  {
+    "repo": "stanley6635/shelfsignal-wechat",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-03T03:28:48.166Z"
   }
 ]
