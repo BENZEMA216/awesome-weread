@@ -1953,5 +1953,11 @@
     "reason": "项目虽然使用了官方 Skill API，但主要通过模拟浏览器行为获取 Cookie 和内部接口来获取正文，不符合纯官方 API 标准。",
     "category": "none",
     "date": "2026-08-04T14:27:34.446Z"
+  },
+  {
+    "repo": "tiankk66/weread-add-shelf",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-08-04T19:42:48.390Z"
   }
 ]
