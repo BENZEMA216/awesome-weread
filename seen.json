@@ -1928,5 +1928,30 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-04T02:57:00.554Z"
+  },
+  {
+    "repo": "Pengyf04/weread-mp-fetcher",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-04T14:27:34.446Z"
+  },
+  {
+    "repo": "dororo42/weread_K4.koplugin",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-04T14:27:34.446Z"
+  },
+  {
+    "repo": "EwenYoung/weread-plus",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-04T14:27:34.446Z"
+  },
+  {
+    "repo": "lishao666/vscode-weread",
+    "decision": "out_of_scope_llm",
+    "reason": "项目虽然使用了官方 Skill API，但主要通过模拟浏览器行为获取 Cookie 和内部接口来获取正文，不符合纯官方 API 标准。",
+    "category": "none",
+    "date": "2026-08-04T14:27:34.446Z"
   }
 ]
