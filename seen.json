@@ -1915,5 +1915,18 @@
     "reason": "项目明确声明为“非官方 SDK”，且未提及使用官方 Agent Gateway 或 API Key (wrk- 格式)。",
     "category": "none",
     "date": "2026-08-03T19:44:13.355Z"
+  },
+  {
+    "repo": "kkluote-kingkai/weread-report",
+    "decision": "accepted",
+    "reason": "项目明确使用 WEREAD_API_KEY 环境变量，并通过官方 Skill 网关和 API 接口获取微信读书数据，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-08-04T02:57:00.554Z"
+  },
+  {
+    "repo": "kkluote-kingkai/weread-export",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-04T02:57:00.554Z"
   }
 ]
