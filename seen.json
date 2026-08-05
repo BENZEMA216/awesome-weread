@@ -1959,5 +1959,18 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-08-04T19:42:48.390Z"
+  },
+  {
+    "repo": "MokuMMk/eego-a4-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-05T08:43:23.615Z"
+  },
+  {
+    "repo": "ysqqqq37/reading-mirror",
+    "decision": "accepted",
+    "reason": "项目明确依赖官方 `weread-skills` 并要求配置 `WEREAD_API_KEY`，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-08-05T08:43:23.615Z"
   }
 ]
