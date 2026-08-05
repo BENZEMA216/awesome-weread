@@ -1996,5 +1996,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-05T14:20:22.361Z"
+  },
+  {
+    "repo": "hellosyq4265/weread-exporter-gui",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-05T19:41:59.910Z"
   }
 ]
