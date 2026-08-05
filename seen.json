@@ -1972,5 +1972,29 @@
     "reason": "项目明确依赖官方 `weread-skills` 并要求配置 `WEREAD_API_KEY`，符合收录标准。",
     "category": "workflows",
     "date": "2026-08-05T08:43:23.615Z"
+  },
+  {
+    "repo": "danleegle/wxBook",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-05T14:20:22.361Z"
+  },
+  {
+    "repo": "comet-W/weread-notes-manager",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-05T14:20:22.361Z"
+  },
+  {
+    "repo": "phatmanhduongdinh1979-dev/weread-tools",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-05T14:20:22.361Z"
+  },
+  {
+    "repo": "KazooTTT/weread-copy-keymap",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-05T14:20:22.361Z"
   }
 ]
