@@ -2002,5 +2002,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-05T19:41:59.910Z"
+  },
+  {
+    "repo": "1486772654/wechat-article-link-list",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-06T02:56:48.182Z"
   }
 ]
