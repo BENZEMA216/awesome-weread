@@ -2008,5 +2008,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-06T02:56:48.182Z"
+  },
+  {
+    "repo": "n1ght-11/wx",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-07T13:14:34.579Z"
   }
 ]
