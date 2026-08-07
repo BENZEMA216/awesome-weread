@@ -2014,5 +2014,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-07T13:14:34.579Z"
+  },
+  {
+    "repo": "fun3588/weread-auto-reader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-07T19:03:25.845Z"
   }
 ]
