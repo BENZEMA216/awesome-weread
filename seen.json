@@ -2020,5 +2020,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-07T19:03:25.845Z"
+  },
+  {
+    "repo": "Unmoored-Lab/reading-compass",
+    "decision": "accepted",
+    "reason": "该项目明确要求使用官方 WeRead Skill 和 wrk- 格式的 API Key，并引用了官方 Skill 包。",
+    "category": "workflows",
+    "date": "2026-08-08T07:00:31.136Z"
   }
 ]
