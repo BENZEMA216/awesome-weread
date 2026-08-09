@@ -2045,5 +2045,17 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-08-08T18:43:56.338Z"
+  },
+  {
+    "repo": "genflowKX/-",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-09T02:09:31.612Z"
+  },
+  {
+    "repo": "ivorkchan/weread-2-readwise",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-08-09T02:09:31.612Z"
   }
 ]
