@@ -2057,5 +2057,29 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-08-09T02:09:31.612Z"
+  },
+  {
+    "repo": "AndyScarlet233/WeReadPortable",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-09T07:03:20.143Z"
+  },
+  {
+    "repo": "EwingYangs/weread2obsidian",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-09T07:03:20.143Z"
+  },
+  {
+    "repo": "hanhui-zhao/weread-page-reader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-09T07:03:20.143Z"
+  },
+  {
+    "repo": "genflowKX/WeReadWeb-Auto-Reader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-09T07:03:20.143Z"
   }
 ]
