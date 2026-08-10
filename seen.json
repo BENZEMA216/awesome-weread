@@ -2094,5 +2094,18 @@
     "reason": "项目明确指出使用“Official WeRead Agent Gateway”和“WEREAD_API_KEY”，符合收录标准。",
     "category": "workflows",
     "date": "2026-08-10T07:49:48.321Z"
+  },
+  {
+    "repo": "467022192-blip/weread-h5",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Agent Gateway 能力构建，使用 wrk- 格式的 API Key，且有详细的部署说明。",
+    "category": "widgets",
+    "date": "2026-08-10T13:19:28.242Z"
+  },
+  {
+    "repo": "lovelyboy1/weread-runtime",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-08-10T13:19:28.242Z"
   }
 ]
