@@ -2081,5 +2081,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-09T07:03:20.143Z"
+  },
+  {
+    "repo": "FelixJI/VibeTable-WeRead-Notes-Dashboard",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-10T02:09:12.940Z"
   }
 ]
