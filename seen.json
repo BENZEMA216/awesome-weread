@@ -2087,5 +2087,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-10T02:09:12.940Z"
+  },
+  {
+    "repo": "benabcben/bieji-codex-skills",
+    "decision": "accepted",
+    "reason": "项目明确指出使用“Official WeRead Agent Gateway”和“WEREAD_API_KEY”，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-08-10T07:49:48.321Z"
   }
 ]
