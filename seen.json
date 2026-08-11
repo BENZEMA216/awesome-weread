@@ -2107,5 +2107,25 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-08-10T13:19:28.242Z"
+  },
+  {
+    "repo": "mingmingaichirou123/mt-readgrowth",
+    "decision": "accepted",
+    "reason": "项目明确提及需要安装 `weread-skills` 并使用 `WEREAD_API_KEY` 环境变量或文件，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-08-11T13:16:15.189Z"
+  },
+  {
+    "repo": "Havery-1004/weread-visual",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-08-11T13:16:15.189Z"
+  },
+  {
+    "repo": "stargazer077/weread-crisppy",
+    "decision": "accepted",
+    "reason": "项目明确指出通过安装官方 Skill 并提供 WEREAD_API_KEY 来接入微信读书真实数据，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-08-11T13:16:15.189Z"
   }
 ]
