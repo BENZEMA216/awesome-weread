@@ -2127,5 +2127,11 @@
     "reason": "项目明确指出通过安装官方 Skill 并提供 WEREAD_API_KEY 来接入微信读书真实数据，符合收录标准。",
     "category": "widgets",
     "date": "2026-08-11T13:16:15.189Z"
+  },
+  {
+    "repo": "rupertqin/weread-screenshot",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-12T02:21:21.022Z"
   }
 ]
