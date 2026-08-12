@@ -2133,5 +2133,18 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-12T02:21:21.022Z"
+  },
+  {
+    "repo": "ryocobb/weread2notion-pro-standalone",
+    "decision": "accepted",
+    "reason": "该项目明确声明使用微信读书官方 Agent Gateway 和 WEREAD_API_KEY，并同步数据到 Notion。",
+    "category": "sync",
+    "date": "2026-08-12T13:20:02.779Z"
+  },
+  {
+    "repo": "enhansome/enhansome-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-12T13:20:02.779Z"
   }
 ]
