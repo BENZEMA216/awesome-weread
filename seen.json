@@ -2159,5 +2159,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-13T07:41:16.818Z"
+  },
+  {
+    "repo": "qstargazer/weread-weekly-report",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Agent API 和 WEREAD_API_KEY，并调用官方 gateway 接口。",
+    "category": "workflows",
+    "date": "2026-08-13T13:21:54.718Z"
   }
 ]
