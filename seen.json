@@ -2172,5 +2172,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-14T13:16:26.802Z"
+  },
+  {
+    "repo": "Mr54233/pickthought.koplugin",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-14T19:00:03.965Z"
   }
 ]
