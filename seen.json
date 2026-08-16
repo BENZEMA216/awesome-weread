@@ -2190,5 +2190,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-16T01:40:08.368Z"
+  },
+  {
+    "repo": "HonyB1/weread-obsidian-exporter",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-16T12:48:20.814Z"
+  },
+  {
+    "repo": "memory0553/weread-shelf-persistent",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-16T12:48:20.814Z"
   }
 ]
