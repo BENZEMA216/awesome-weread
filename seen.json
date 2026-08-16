@@ -2184,5 +2184,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-15T06:45:55.254Z"
+  },
+  {
+    "repo": "noodlespring/loon-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-16T01:40:08.368Z"
   }
 ]
