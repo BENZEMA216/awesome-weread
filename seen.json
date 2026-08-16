@@ -2202,5 +2202,24 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-16T12:48:20.814Z"
+  },
+  {
+    "repo": "zhouxiang12138-dotcom/weread-koreader-downloader",
+    "decision": "accepted",
+    "reason": "项目明确使用微信读书官方 Agent Gateway 和 wrk- 格式的 API Key，符合收录标准。",
+    "category": "clis",
+    "date": "2026-08-16T18:35:11.913Z"
+  },
+  {
+    "repo": "chloeeee72/weread-enhancer-userscript",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-16T18:35:11.913Z"
+  },
+  {
+    "repo": "beichen5252/weread",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-08-16T18:35:11.913Z"
   }
 ]
