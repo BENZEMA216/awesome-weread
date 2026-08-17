@@ -2239,5 +2239,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-08-17T12:52:40.757Z"
+  },
+  {
+    "repo": "ll1zt/earss_source_weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-17T18:45:54.966Z"
   }
 ]
