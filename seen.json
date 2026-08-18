@@ -2265,5 +2265,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-18T12:54:56.346Z"
+  },
+  {
+    "repo": "jachinq/weread_helper",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Agent Gateway 和 Skills API Key (wrk-...) 构建，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-08-18T18:44:34.343Z"
   }
 ]
