@@ -2245,5 +2245,25 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-17T18:45:54.966Z"
+  },
+  {
+    "repo": "wenqiaowuli-coder/weread-cli",
+    "decision": "accepted",
+    "reason": "项目明确声明基于微信读书 Agent Gateway 和 wrk- 格式的 API Key 构建，符合收录标准。",
+    "category": "clis",
+    "date": "2026-08-18T12:54:56.346Z"
+  },
+  {
+    "repo": "laixintao/weread-bookshelf",
+    "decision": "accepted",
+    "reason": "项目明确指出使用微信读书 API Key，并引用了官方 WeRead Skills 文档。",
+    "category": "widgets",
+    "date": "2026-08-18T12:54:56.346Z"
+  },
+  {
+    "repo": "UTAKO-TAKI/ztools-weread-reader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-18T12:54:56.346Z"
   }
 ]
