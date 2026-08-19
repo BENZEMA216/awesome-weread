@@ -2308,5 +2308,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-19T06:51:54.367Z"
+  },
+  {
+    "repo": "ANewCoderMin/idea-weread",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-08-19T12:55:33.449Z"
   }
 ]
