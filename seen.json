@@ -2314,5 +2314,18 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-08-19T12:55:33.449Z"
+  },
+  {
+    "repo": "ryocobb/weread-dashboard",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-08-20T06:53:50.908Z"
+  },
+  {
+    "repo": "jyqi/weread-to-skill",
+    "decision": "accepted",
+    "reason": "项目明确使用微信读书官方 API Key (wrk-...) 并推荐安装官方 Skill，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-08-20T06:53:50.908Z"
   }
 ]
