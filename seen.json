@@ -2327,5 +2327,11 @@
     "reason": "项目明确使用微信读书官方 API Key (wrk-...) 并推荐安装官方 Skill，符合收录标准。",
     "category": "workflows",
     "date": "2026-08-20T06:53:50.908Z"
+  },
+  {
+    "repo": "58wpg9fr7d-code/weread-ai-reading-assistant",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-20T12:57:25.405Z"
   }
 ]
