@@ -2333,5 +2333,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-20T12:57:25.405Z"
+  },
+  {
+    "repo": "Allencheng97/wechat-mac",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-21T01:39:21.038Z"
   }
 ]
