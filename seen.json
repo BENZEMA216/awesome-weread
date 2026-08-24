@@ -2403,5 +2403,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-24T12:58:57.953Z"
+  },
+  {
+    "repo": "See-YouL/NotionWeread",
+    "decision": "accepted",
+    "reason": "项目明确声明使用微信读书官方 Agent Gateway API 和 wrk- 开头的 API Key，且排除使用 Cookie。",
+    "category": "sync",
+    "date": "2026-08-24T18:47:20.855Z"
   }
 ]
