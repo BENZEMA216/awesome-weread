@@ -2391,5 +2391,17 @@
     "reason": "项目明确指出使用 wrk- 格式的微信读书 API Key，符合收录标准。",
     "category": "sync",
     "date": "2026-08-24T01:39:51.043Z"
+  },
+  {
+    "repo": "sancijun/weread-toolbox",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-24T12:58:57.953Z"
+  },
+  {
+    "repo": "112321412/before-and-after-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-24T12:58:57.953Z"
   }
 ]
