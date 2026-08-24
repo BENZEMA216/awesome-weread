@@ -2384,5 +2384,12 @@
     "reason": "项目明确基于微信读书官方 Agent Gateway 接口和 wrk- 格式的 API Key 构建，并提供 Obsidian 和网页两种输出模式。",
     "category": "sync",
     "date": "2026-08-23T18:35:32.784Z"
+  },
+  {
+    "repo": "SunnyRx/weread2discord",
+    "decision": "accepted",
+    "reason": "项目明确指出使用 wrk- 格式的微信读书 API Key，符合收录标准。",
+    "category": "sync",
+    "date": "2026-08-24T01:39:51.043Z"
   }
 ]
