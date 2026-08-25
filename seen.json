@@ -2410,5 +2410,12 @@
     "reason": "项目明确声明使用微信读书官方 Agent Gateway API 和 wrk- 开头的 API Key，且排除使用 Cookie。",
     "category": "sync",
     "date": "2026-08-24T18:47:20.855Z"
+  },
+  {
+    "repo": "jonsins202/weread-workbench",
+    "decision": "accepted",
+    "reason": "项目明确指出通过微信读书 App 获取 wrk- 开头的官方 API Key，并调用官方 Agent 网关，完全符合收录标准。",
+    "category": "sync",
+    "date": "2026-08-25T01:35:08.988Z"
   }
 ]
