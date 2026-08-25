@@ -2417,5 +2417,24 @@
     "reason": "项目明确指出通过微信读书 App 获取 wrk- 开头的官方 API Key，并调用官方 Agent 网关，完全符合收录标准。",
     "category": "sync",
     "date": "2026-08-25T01:35:08.988Z"
+  },
+  {
+    "repo": "AIALRA-0/Mubu-Catalog-Extractor-Formatter",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-25T06:55:40.805Z"
+  },
+  {
+    "repo": "bingze6-creator/kindle-weread-skills",
+    "decision": "accepted",
+    "reason": "项目明确自称是 Skill，并提供了使用 `npx skills add` 命令安装 Skill 的方式，符合官方 Agent Gateway 的使用模式。",
+    "category": "skill-bundles",
+    "date": "2026-08-25T06:55:40.805Z"
+  },
+  {
+    "repo": "MilesUsa/weread-notion",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-25T06:55:40.805Z"
   }
 ]
