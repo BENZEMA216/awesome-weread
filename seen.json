@@ -2456,5 +2456,11 @@
     "reason": "项目明确指出通过安装官方 skill 并使用 WEREAD_API_KEY 接入微信读书真实数据，符合收录标准。",
     "category": "widgets",
     "date": "2026-08-25T12:54:58.896Z"
+  },
+  {
+    "repo": "build-your-own-x-with-ai/tuya-ai-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-26T01:39:50.505Z"
   }
 ]
