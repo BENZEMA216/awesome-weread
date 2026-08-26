@@ -2462,5 +2462,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-26T01:39:50.505Z"
+  },
+  {
+    "repo": "Mitzh/WeRead-Desktop",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-26T06:56:26.484Z"
+  },
+  {
+    "repo": "Lin-202604/weread-watermark",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-26T06:56:26.484Z"
   }
 ]
