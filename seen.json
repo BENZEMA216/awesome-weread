@@ -2474,5 +2474,19 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-26T06:56:26.484Z"
+  },
+  {
+    "repo": "xxisme/hana-weread",
+    "decision": "accepted",
+    "reason": "项目明确指出使用微信读书 Skill 平台颁发的 wrk- 开头的 API Key，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-08-26T13:01:15.047Z"
+  },
+  {
+    "repo": "MsReverie/Weread_Annotation_Lite.koplugin",
+    "decision": "accepted",
+    "reason": "项目明确说明通过扫码登录获取官方 API Key，并基于此进行数据同步，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-08-26T13:01:15.047Z"
   }
 ]
