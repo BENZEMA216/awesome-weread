@@ -2488,5 +2488,18 @@
     "reason": "项目明确说明通过扫码登录获取官方 API Key，并基于此进行数据同步，符合收录标准。",
     "category": "widgets",
     "date": "2026-08-26T13:01:15.047Z"
+  },
+  {
+    "repo": "sinewmy/weread-link",
+    "decision": "accepted",
+    "reason": "项目明确声明使用官方微信读书 Skill Agent API，并通过 wrk- 格式的 API Key 进行认证，完全符合收录标准。",
+    "category": "sync",
+    "date": "2026-08-27T22:03:53.885Z"
+  },
+  {
+    "repo": "ruiii28/kindle-to-wechat",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-27T22:03:53.885Z"
   }
 ]
