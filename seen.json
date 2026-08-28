@@ -2501,5 +2501,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-27T22:03:53.885Z"
+  },
+  {
+    "repo": "WYHCIPUC/zhaixing",
+    "decision": "accepted",
+    "reason": "项目明确指出通过获取 wrk- 格式的 API Key 并调用微信读书 API 进行同步，符合收录标准。",
+    "category": "sync",
+    "date": "2026-08-28T10:46:20.573Z"
   }
 ]
