@@ -2508,5 +2508,18 @@
     "reason": "项目明确指出通过获取 wrk- 格式的 API Key 并调用微信读书 API 进行同步，符合收录标准。",
     "category": "sync",
     "date": "2026-08-28T10:46:20.573Z"
+  },
+  {
+    "repo": "tanyaqiong31029/weread-shelf-organizer",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-28T22:01:08.693Z"
+  },
+  {
+    "repo": "Anxin-tec/ai-reading-companion",
+    "decision": "accepted",
+    "reason": "项目明确使用 WEREAD_API_KEY 环境变量，并依赖微信读书官方 Skill，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-08-28T22:01:08.693Z"
   }
 ]
