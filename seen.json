@@ -2534,5 +2534,17 @@
     "reason": "项目明确指出使用 WEREAD_API_KEY 环境变量来获取微信读书摘抄，符合收录标准。",
     "category": "widgets",
     "date": "2026-08-29T06:33:17.849Z"
+  },
+  {
+    "repo": "bonniegeng-max/weread-socrates",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-08-30T04:45:59.843Z"
+  },
+  {
+    "repo": "csok1/weread-daily-bot",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-08-30T04:45:59.843Z"
   }
 ]
