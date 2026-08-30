@@ -2546,5 +2546,18 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-08-30T04:45:59.843Z"
+  },
+  {
+    "repo": "JDChi/WeReadBar",
+    "decision": "accepted",
+    "reason": "项目明确声明基于官方 Agent Skill 和 API Gateway，并使用 wrk- 格式的 API Key，完全符合收录标准。",
+    "category": "widgets",
+    "date": "2026-08-30T11:37:49.170Z"
+  },
+  {
+    "repo": "axinging/weread",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-08-30T11:37:49.170Z"
   }
 ]
