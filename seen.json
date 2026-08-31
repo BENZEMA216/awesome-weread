@@ -2590,5 +2590,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-08-31T04:49:35.916Z"
+  },
+  {
+    "repo": "swimmin-alien/jianzhu-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-31T22:40:49.794Z"
   }
 ]
