@@ -2566,5 +2566,29 @@
     "reason": "项目明确基于微信读书 Agent API Gateway 和 wrk- 格式的 API Key 构建，符合收录标准。",
     "category": "skill-bundles",
     "date": "2026-08-30T16:25:00.398Z"
+  },
+  {
+    "repo": "hohoweiyao-cmyk/zlibrary-to-weread-kindle-wechatreader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-31T04:49:35.916Z"
+  },
+  {
+    "repo": "huasong2026AI/weread-highlights",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-31T04:49:35.916Z"
+  },
+  {
+    "repo": "elroy1213/weread-collector-skill",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-08-31T04:49:35.916Z"
+  },
+  {
+    "repo": "leftumbrella/WeReadCodex",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-08-31T04:49:35.916Z"
   }
 ]
