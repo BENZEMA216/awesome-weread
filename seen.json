@@ -2603,5 +2603,18 @@
     "reason": "项目明确声明基于官方 WeRead agent API，并使用 wrk- 格式的 API Key 和官方 gateway endpoint。",
     "category": "widgets",
     "date": "2026-09-01T04:29:15.294Z"
+  },
+  {
+    "repo": "zyh364267040/weread-reading-progress",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-01T16:20:59.316Z"
+  },
+  {
+    "repo": "ilikui/WeRead",
+    "decision": "accepted",
+    "reason": "该项目明确使用 WEREAD_API_KEY 和官方 Agent Gateway，符合收录标准。",
+    "category": "sync",
+    "date": "2026-09-01T16:20:59.316Z"
   }
 ]
