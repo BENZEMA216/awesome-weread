@@ -2596,5 +2596,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-08-31T22:40:49.794Z"
+  },
+  {
+    "repo": "ya-luotao/omarchy-weread",
+    "decision": "accepted",
+    "reason": "项目明确声明基于官方 WeRead agent API，并使用 wrk- 格式的 API Key 和官方 gateway endpoint。",
+    "category": "widgets",
+    "date": "2026-09-01T04:29:15.294Z"
   }
 ]
