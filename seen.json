@@ -2616,5 +2616,11 @@
     "reason": "该项目明确使用 WEREAD_API_KEY 和官方 Agent Gateway，符合收录标准。",
     "category": "sync",
     "date": "2026-09-01T16:20:59.316Z"
+  },
+  {
+    "repo": "Redwinam/weread-progress-extension",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-01T20:50:37.108Z"
   }
 ]
