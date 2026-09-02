@@ -2622,5 +2622,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-01T20:50:37.108Z"
+  },
+  {
+    "repo": "zzzz589/weread-wheel",
+    "decision": "accepted",
+    "reason": "项目明确使用 `WEREAD_API_KEY` 环境变量和 `wrk-` 格式的 API Key，并声明数据源为“微信读书 Agent API”，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-09-02T16:19:23.114Z"
   }
 ]
