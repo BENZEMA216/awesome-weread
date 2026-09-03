@@ -2629,5 +2629,11 @@
     "reason": "项目明确使用 `WEREAD_API_KEY` 环境变量和 `wrk-` 格式的 API Key，并声明数据源为“微信读书 Agent API”，符合收录标准。",
     "category": "widgets",
     "date": "2026-09-02T16:19:23.114Z"
+  },
+  {
+    "repo": "luofei614/weread2md",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-09-03T16:09:51.479Z"
   }
 ]
