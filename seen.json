@@ -2635,5 +2635,17 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-09-03T16:09:51.479Z"
+  },
+  {
+    "repo": "coswit/weread-exporter",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-09-04T10:57:57.639Z"
+  },
+  {
+    "repo": "gulin5/weread-vault",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-09-04T10:57:57.639Z"
   }
 ]
