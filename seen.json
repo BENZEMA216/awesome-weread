@@ -2659,5 +2659,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-09-05T14:54:42.408Z"
+  },
+  {
+    "repo": "delu543/weread-to-pdf",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-06T20:13:53.882Z"
   }
 ]
