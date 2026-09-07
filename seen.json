@@ -2665,5 +2665,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-06T20:13:53.882Z"
+  },
+  {
+    "repo": "cantonadong/Weread_JS",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-07T12:04:25.097Z"
+  },
+  {
+    "repo": "jikkai/switch-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-07T12:04:25.097Z"
   }
 ]
