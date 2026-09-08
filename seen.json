@@ -2721,5 +2721,11 @@
     "reason": "项目虽然使用了官方 Agent Gateway 进行只读查询，但写入操作依赖 Web cookie 和 Playwright 自动化，不完全基于官方 Agent Gateway / API Key。",
     "category": "none",
     "date": "2026-09-08T16:22:31.291Z"
+  },
+  {
+    "repo": "5244DragonLin/weread_bookshelf_exporter",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-08T20:57:12.337Z"
   }
 ]
