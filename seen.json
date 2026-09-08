@@ -2683,5 +2683,36 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-08T03:57:13.007Z"
+  },
+  {
+    "repo": "Vanishia/weread-search",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-09-08T10:57:24.428Z"
+  },
+  {
+    "repo": "bingdyee/weread-exporter",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-08T10:57:24.428Z"
+  },
+  {
+    "repo": "leofang230316-prog/siyuan-plugin-weread-sync",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-08T10:57:24.428Z"
+  },
+  {
+    "repo": "YaxianYang/weread-notes-yyx",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-08T10:57:24.428Z"
+  },
+  {
+    "repo": "aaronsxzhao/push_reading_progress_to_notion",
+    "decision": "accepted",
+    "reason": "项目明确指出优先使用官方 Agent Gateway / API Key (wrk- 格式)，并提供官方获取链接，同时将 Cookie 视为旧版备用方案。",
+    "category": "sync",
+    "date": "2026-09-08T10:57:24.428Z"
   }
 ]
