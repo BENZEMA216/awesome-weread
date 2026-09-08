@@ -2677,5 +2677,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-07T12:04:25.097Z"
+  },
+  {
+    "repo": "dw763j/weread-job-seek",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-08T03:57:13.007Z"
   }
 ]
