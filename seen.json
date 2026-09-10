@@ -2740,5 +2740,11 @@
     "reason": "项目明确声明为“非官方 SDK”，且未提及使用官方 Agent Gateway 或 API Key (wrk- 格式)。",
     "category": "none",
     "date": "2026-09-09T20:45:17.657Z"
+  },
+  {
+    "repo": "goking81/weread-story-publisher",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-10T04:01:18.631Z"
   }
 ]
