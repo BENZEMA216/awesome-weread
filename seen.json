@@ -2746,5 +2746,24 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-10T04:01:18.631Z"
+  },
+  {
+    "repo": "245678000000/weread-mp-monitor-skill",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-10T10:58:41.561Z"
+  },
+  {
+    "repo": "JunJieYa/weread-dashboard",
+    "decision": "accepted",
+    "reason": "项目明确使用 WEREAD_API_KEY 环境变量，并提及“API 要求升级技能”，符合官方 API 标准。",
+    "category": "widgets",
+    "date": "2026-09-10T10:58:41.561Z"
+  },
+  {
+    "repo": "dsackr/wereadthebible-com",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-09-10T10:58:41.561Z"
   }
 ]
