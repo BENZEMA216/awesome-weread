@@ -2771,5 +2771,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-11T03:58:12.889Z"
+  },
+  {
+    "repo": "th4b49642z-jpg/WeReadEInk",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-11T16:12:23.850Z"
   }
 ]
