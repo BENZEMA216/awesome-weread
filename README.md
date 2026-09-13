@@ -123,6 +123,7 @@
 | [LoloChak/weread-golden-quotes](https://github.com/LoloChak/weread-golden-quotes) | Python, Web | 从微信读书笔记中提取金句，生成宣纸质感网页，每日随机展示并配思考问题。 | [记录](docs/promo/runs/2026-05-26/LoloChak-weread-golden-quotes/summary.md) · [截图](docs/promo/runs/2026-05-26/LoloChak-weread-golden-quotes/artifacts/daily-golden-quotes-fullpage.jpg) |
 | [lucis-yg/weread-dashboard](https://github.com/lucis-yg/weread-dashboard) | Vue 3 / Web | 优雅的微信读书数据可视化 dashboard：书架 / 笔记 / 阅读统计。**配合 lucis-yg/weread-skill-api 使用**。 | [记录](docs/promo/runs/2026-05-25/lucis-yg-weread-dashboard/summary.md) · [产物](docs/promo/runs/2026-05-25/lucis-yg-weread-dashboard/artifacts/dashboard-preview.html) |
 | [ktKongTong/wereto](https://github.com/ktKongTong/wereto) | Cloudflare Workers | 一键部署到 Cloudflare 的阅读数据页 —— 公开个人阅读数据的「homepage」式展示。`fetch` + `ky` 简洁封装。 | [记录](docs/promo/runs/2026-05-26/ktKongTong-wereto/summary.md) · [截图](docs/promo/runs/2026-05-26/ktKongTong-wereto/artifacts/example-1.png) |
+| [horizon0514/weread-website](https://github.com/horizon0514/weread-website) | Web | 托管的公开阅读主页 WeGoodReads：用官方 Skill / API Key 同步书架、划线与年度报告，生成可分享的个人阅读主页。 | [站点](https://wegoodreads.com) · [示例](https://wegoodreads.com/u/horizon0514) |
 
 ## 体验归档
 
