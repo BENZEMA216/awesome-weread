@@ -2777,5 +2777,25 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-11T16:12:23.850Z"
+  },
+  {
+    "repo": "ZicaiLiao/weread2notion-pro",
+    "decision": "accepted",
+    "reason": "项目明确说明使用微信读书 Agent Gateway 读取数据，并通过 CLI 将数据同步到 Notion，符合收录标准。",
+    "category": "sync",
+    "date": "2026-09-13T13:05:47.041Z"
+  },
+  {
+    "repo": "lurui1997/weread-progress",
+    "decision": "out_of_scope_llm",
+    "reason": "项目通过油猴脚本直接读取网页版同域接口数据，不使用官方 Agent Gateway / API Key。",
+    "category": "none",
+    "date": "2026-09-13T13:05:47.041Z"
+  },
+  {
+    "repo": "hou-jie-qing/weread-progress-helper",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-13T13:05:47.041Z"
   }
 ]
