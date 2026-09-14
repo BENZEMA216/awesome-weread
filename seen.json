@@ -2816,5 +2816,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-14T04:18:04.956Z"
+  },
+  {
+    "repo": "efengcheung/weread-galaxy-cards-workflow",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-09-14T12:20:03.756Z"
+  },
+  {
+    "repo": "Ljhhhhhh/weread-drawer-macos",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-14T12:20:03.756Z"
   }
 ]
