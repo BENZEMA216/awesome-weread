@@ -2804,5 +2804,17 @@
     "reason": "项目明确使用 WEREAD_API_KEY 从微信读书官方接口同步数据，符合收录标准。",
     "category": "widgets",
     "date": "2026-09-13T20:33:49.478Z"
+  },
+  {
+    "repo": "RamboXWang/RemarkableWeRead",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-14T04:18:04.956Z"
+  },
+  {
+    "repo": "dahuang455/weread-transparent",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-14T04:18:04.956Z"
   }
 ]
