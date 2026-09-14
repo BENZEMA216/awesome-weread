@@ -2828,5 +2828,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-14T12:20:03.756Z"
+  },
+  {
+    "repo": "miroic00-ui/obsidian-weread-wiki-linker",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-14T21:40:42.302Z"
+  },
+  {
+    "repo": "27Aaron/WeRead-Kit",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-14T21:40:42.302Z"
   }
 ]
