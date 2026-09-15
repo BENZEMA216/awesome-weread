@@ -2858,5 +2858,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-15T11:26:59.030Z"
+  },
+  {
+    "repo": "Amer-CN/weread-distiller",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-15T16:39:27.433Z"
   }
 ]
