@@ -2840,5 +2840,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-14T21:40:42.302Z"
+  },
+  {
+    "repo": "YYuCChen/weread-export-skill",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-15T04:18:02.870Z"
+  },
+  {
+    "repo": "yjn-pj/wereader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-15T04:18:02.870Z"
   }
 ]
