@@ -2852,5 +2852,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-15T04:18:02.870Z"
+  },
+  {
+    "repo": "longhaiqwe/scanned-pdf-to-epub",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-15T11:26:59.030Z"
   }
 ]
