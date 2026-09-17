@@ -2864,5 +2864,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-15T16:39:27.433Z"
+  },
+  {
+    "repo": "Weiky27/weread-covers",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-17T04:20:50.117Z"
+  },
+  {
+    "repo": "glass-mycelia/weread2ds",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-09-17T04:20:50.117Z"
   }
 ]
