@@ -2876,5 +2876,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-09-17T04:20:50.117Z"
+  },
+  {
+    "repo": "stevenjobs530-afk/weread-auto-scroll",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-18T04:04:20.556Z"
   }
 ]
