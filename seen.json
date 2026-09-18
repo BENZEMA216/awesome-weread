@@ -2882,5 +2882,23 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-18T04:04:20.556Z"
+  },
+  {
+    "repo": "mylizhixiang/idea-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-18T10:55:31.907Z"
+  },
+  {
+    "repo": "qwer10963875-cmd/weread-transparent",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-18T10:55:31.907Z"
+  },
+  {
+    "repo": "liujuntao123/weread-plus",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-09-18T10:55:31.907Z"
   }
 ]
