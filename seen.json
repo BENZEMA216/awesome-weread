@@ -2900,5 +2900,17 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-09-18T10:55:31.907Z"
+  },
+  {
+    "repo": "NeilYXIN/WeRead_Desktop",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-19T15:41:39.234Z"
+  },
+  {
+    "repo": "c30w/weread-tts",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-19T15:41:39.234Z"
   }
 ]
