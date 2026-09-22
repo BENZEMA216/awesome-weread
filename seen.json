@@ -2918,5 +2918,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-20T04:20:29.899Z"
+  },
+  {
+    "repo": "goodnighttt/weread-feishu-ui",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-22T04:13:49.787Z"
   }
 ]
