@@ -2936,5 +2936,85 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-22T16:39:11.065Z"
+  },
+  {
+    "repo": "Quinnverse/weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-23T11:10:32.140Z"
+  },
+  {
+    "repo": "shijiajiabats/weread-bot-scheduled",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-23T11:10:32.140Z"
+  },
+  {
+    "repo": "Mosley-Z/WereadMoji",
+    "decision": "accepted",
+    "reason": "项目明确指出通过微信读书官方技能网关获取 API Key 来读取数据，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-09-23T11:10:32.140Z"
+  },
+  {
+    "repo": "ma-tie/WeReadHighlights",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Skill API Gateway，使用 wrk- 格式的 API Key，且无任何排除项。",
+    "category": "widgets",
+    "date": "2026-09-23T11:10:32.140Z"
+  },
+  {
+    "repo": "qiaoqiao2521/weread-omni",
+    "decision": "out_of_scope_llm",
+    "reason": "项目明确声明为“非官方 SDK”，且未提及使用官方 Agent Gateway 或 API Key (wrk- 格式)。",
+    "category": "none",
+    "date": "2026-09-23T11:10:32.140Z"
+  },
+  {
+    "repo": "MilkyWay-qt/weread-mcp",
+    "decision": "accepted",
+    "reason": "该项目明确基于微信读书官方 Agent Gateway 和 API Key 构建，并将其封装为 MCP Server，符合收录标准。",
+    "category": "mcp-servers",
+    "date": "2026-09-23T11:10:32.140Z"
+  },
+  {
+    "repo": "comeonlzq/weread-stats-extension",
+    "decision": "accepted",
+    "reason": "该项目明确指出通过微信读书官方接口网关获取数据，并使用 wrk- 格式的 API Key，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-09-23T11:10:32.140Z"
+  },
+  {
+    "repo": "actions-marketplace-validations/hodgekou_weread2notion-AI",
+    "decision": "accepted",
+    "reason": "项目明确使用 WEREAD_API_KEY 环境变量，并提及从微信读书助手获取 Gateway API Key，符合收录标准。",
+    "category": "sync",
+    "date": "2026-09-23T11:10:32.140Z"
+  },
+  {
+    "repo": "aistacey2006/weread-community-highlights",
+    "decision": "accepted",
+    "reason": "项目明确声明使用官方 Agent Gateway 和 wrk- 格式的 API Key，且不使用 Cookie 或浏览器自动化。",
+    "category": "widgets",
+    "date": "2026-09-23T11:10:32.140Z"
+  },
+  {
+    "repo": "shangtianqiang/weread-chronicle",
+    "decision": "llm_error",
+    "reason": "got status: 503 Service Unavailable. {\"error\":{\"code\":503,\"message\":\"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\"status\":\"UNAVAI",
+    "date": "2026-09-23T11:10:32.140Z"
+  },
+  {
+    "repo": "JenkinsZhang/weread-exporter",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-23T11:10:32.140Z"
+  },
+  {
+    "repo": "Louise-1111/reading-notes-push",
+    "decision": "accepted",
+    "reason": "项目明确使用官方网关 API 和 Skills API，并提及获取 API Key 的官方链接。",
+    "category": "sync",
+    "date": "2026-09-23T11:10:32.140Z"
   }
 ]
