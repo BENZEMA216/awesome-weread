@@ -3016,5 +3016,11 @@
     "reason": "项目明确使用官方网关 API 和 Skills API，并提及获取 API Key 的官方链接。",
     "category": "sync",
     "date": "2026-09-23T11:10:32.140Z"
+  },
+  {
+    "repo": "ForestSun2023/weread-bg-theme",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-24T16:52:06.552Z"
   }
 ]
