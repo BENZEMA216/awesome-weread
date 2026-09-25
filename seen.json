@@ -3022,5 +3022,23 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-24T16:52:06.552Z"
+  },
+  {
+    "repo": "vancalcode/weread-note-landing",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-09-25T04:20:00.519Z"
+  },
+  {
+    "repo": "TangHuaiZhe/WeReadMacElink",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-25T04:20:00.519Z"
+  },
+  {
+    "repo": "jiangjun-wangu/weread-docker",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-25T04:20:00.519Z"
   }
 ]
