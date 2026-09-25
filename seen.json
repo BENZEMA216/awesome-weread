@@ -3040,5 +3040,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-25T04:20:00.519Z"
+  },
+  {
+    "repo": "zhangziluo/weread2readwise",
+    "decision": "accepted",
+    "reason": "项目明确声明使用微信读书官方 Agent 网关和 wrk- 格式的 API Key，且不使用 Cookie 或爬虫。",
+    "category": "sync",
+    "date": "2026-09-25T11:32:17.189Z"
   }
 ]
