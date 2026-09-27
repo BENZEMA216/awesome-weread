@@ -3053,5 +3053,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-25T16:56:00.134Z"
+  },
+  {
+    "repo": "Weiky27/weread-covers-leaked",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-27T11:45:30.206Z"
   }
 ]
