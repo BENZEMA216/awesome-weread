@@ -3059,5 +3059,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-27T11:45:30.206Z"
+  },
+  {
+    "repo": "iceginqxf-rgb/weread-upload",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-27T16:43:45.362Z"
   }
 ]
