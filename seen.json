@@ -3065,5 +3065,24 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-27T16:43:45.362Z"
+  },
+  {
+    "repo": "KEQingFeng/weread-guizang",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Agent Gateway 和 wrk- 格式的 API Key 构建，并提供配套 skills。",
+    "category": "workflows",
+    "date": "2026-09-30T12:14:35.732Z"
+  },
+  {
+    "repo": "happydog-intj/weread-zen",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-30T12:14:35.732Z"
+  },
+  {
+    "repo": "TianLanhe/WereadReadingDataSync",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-09-30T12:14:35.732Z"
   }
 ]
