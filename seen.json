@@ -3084,5 +3084,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-09-30T12:14:35.732Z"
+  },
+  {
+    "repo": "DylanWu-1024/shumai-bookpulse",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-02T12:12:38.677Z"
   }
 ]
