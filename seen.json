@@ -3090,5 +3090,18 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-02T12:12:38.677Z"
+  },
+  {
+    "repo": "Razewang/weread-bot",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-03T16:00:35.153Z"
+  },
+  {
+    "repo": "Zzz210s/weread-signin",
+    "decision": "accepted",
+    "reason": "项目明确使用官方 API Key (wrk-...) 进行数据验证，并提及官方 API endpoint，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-10-03T16:00:35.153Z"
   }
 ]
