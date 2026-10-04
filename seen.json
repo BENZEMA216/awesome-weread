@@ -3115,5 +3115,30 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-04T05:14:17.408Z"
+  },
+  {
+    "repo": "Zzz210s/scripts-hub",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-04T12:04:29.879Z"
+  },
+  {
+    "repo": "Git-xian/weread-ai-company",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Agent Skill 和 wrk- 开头的 API Key 构建，且不使用 cookie 或浏览器自动化。",
+    "category": "workflows",
+    "date": "2026-10-04T12:04:29.879Z"
+  },
+  {
+    "repo": "Cookie-HOO/ccuv-dataset-weread",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-10-04T12:04:29.879Z"
+  },
+  {
+    "repo": "ShannonChenCHN/weread-epub-style-support",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-04T12:04:29.879Z"
   }
 ]
