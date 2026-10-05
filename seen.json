@@ -3140,5 +3140,30 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-04T12:04:29.879Z"
+  },
+  {
+    "repo": "Git-xian/weread-mcp-worker",
+    "decision": "accepted",
+    "reason": "该项目明确基于微信读书官方 Agent Gateway 和 wrk- 格式的 API Key 构建，并提供远程 MCP 服务。",
+    "category": "mcp-servers",
+    "date": "2026-10-05T14:08:37.794Z"
+  },
+  {
+    "repo": "tq9tjcnqyc-boop/weread-notes",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-05T14:08:37.794Z"
+  },
+  {
+    "repo": "shengrihui/weread-accessibility",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-05T14:08:37.794Z"
+  },
+  {
+    "repo": "Antonalia/weread-pocket",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-05T14:08:37.794Z"
   }
 ]
