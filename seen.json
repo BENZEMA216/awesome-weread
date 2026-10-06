@@ -3177,5 +3177,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-06T05:46:10.446Z"
+  },
+  {
+    "repo": "spirodelazz/weread-keepalive",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-06T13:05:59.565Z"
   }
 ]
