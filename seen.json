@@ -3165,5 +3165,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-05T14:08:37.794Z"
+  },
+  {
+    "repo": "JDChi/wee-read-web",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-06T05:46:10.446Z"
+  },
+  {
+    "repo": "xbtom/weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-06T05:46:10.446Z"
   }
 ]
