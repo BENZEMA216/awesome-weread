@@ -3183,5 +3183,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-06T13:05:59.565Z"
+  },
+  {
+    "repo": "SomnusWei/wxread_docker",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-06T22:32:05.374Z"
   }
 ]
