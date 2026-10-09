@@ -3201,5 +3201,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-07T13:00:19.147Z"
+  },
+  {
+    "repo": "LXNNN/weread-bookshelf",
+    "decision": "accepted",
+    "reason": "项目明确使用 WEREAD_API_KEY 环境变量和微信读书 Agent API Gateway 获取数据，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-10-09T05:30:49.348Z"
   }
 ]
