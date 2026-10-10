@@ -3226,5 +3226,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-10T12:12:27.603Z"
+  },
+  {
+    "repo": "azipaikk/weread-book-quote-card",
+    "decision": "accepted",
+    "reason": "项目明确要求使用微信读书官方 API Key (wrk-开头)，并自称是给 Agent 使用的 skill。",
+    "category": "skill-bundles",
+    "date": "2026-10-10T21:24:02.847Z"
   }
 ]
