@@ -3239,5 +3239,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-11T05:05:34.673Z"
+  },
+  {
+    "repo": "RuichengGeng/weread-mcp",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Agent Gateway API 构建，并使用 wrk- 格式的 API Key。",
+    "category": "mcp-servers",
+    "date": "2026-10-11T12:26:49.283Z"
   }
 ]
