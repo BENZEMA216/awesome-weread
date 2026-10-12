@@ -3246,5 +3246,12 @@
     "reason": "项目明确基于微信读书官方 Agent Gateway API 构建，并使用 wrk- 格式的 API Key。",
     "category": "mcp-servers",
     "date": "2026-10-11T12:26:49.283Z"
+  },
+  {
+    "repo": "marioMLLL/MaBooks",
+    "decision": "accepted",
+    "reason": "该项目明确声明使用微信读书官方 API Key 和官方 Gateway，且不使用 Cookie 或浏览器自动化，完全符合收录标准。",
+    "category": "widgets",
+    "date": "2026-10-12T05:19:34.154Z"
   }
 ]
