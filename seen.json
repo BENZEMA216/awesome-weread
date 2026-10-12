@@ -3253,5 +3253,11 @@
     "reason": "该项目明确声明使用微信读书官方 API Key 和官方 Gateway，且不使用 Cookie 或浏览器自动化，完全符合收录标准。",
     "category": "widgets",
     "date": "2026-10-12T05:19:34.154Z"
+  },
+  {
+    "repo": "Alice060404/WeReadLyrics",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-10-12T14:57:48.555Z"
   }
 ]
