@@ -3259,5 +3259,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-10-12T14:57:48.555Z"
+  },
+  {
+    "repo": "emacs-taf/etaf-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-13T00:24:34.284Z"
   }
 ]
