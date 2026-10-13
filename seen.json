@@ -3305,5 +3305,18 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-13T13:54:20.121Z"
+  },
+  {
+    "repo": "Zoin-Hub/selfloom",
+    "decision": "accepted",
+    "reason": "项目明确指出通过微信读书官方 skill 页面获取 wrk- 开头的 API Key 进行数据抓取，符合收录标准。",
+    "category": "clis",
+    "date": "2026-10-13T22:27:54.945Z"
+  },
+  {
+    "repo": "50pac/weread-mp-lite",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-13T22:27:54.945Z"
   }
 ]
