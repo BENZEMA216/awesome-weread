@@ -3265,5 +3265,45 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-13T00:24:34.284Z"
+  },
+  {
+    "repo": "conanxin/weread-archive-agent",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-13T13:54:20.121Z"
+  },
+  {
+    "repo": "nianqianha/WeReadDownloader",
+    "decision": "out_of_scope_llm",
+    "reason": "项目使用 wr_skey 进行登录，不符合基于官方 Agent Gateway / API Key (wrk-...) 的收录标准。",
+    "category": "none",
+    "date": "2026-10-13T13:54:20.121Z"
+  },
+  {
+    "repo": "Loya-art/weread-skills",
+    "decision": "accepted",
+    "reason": "项目名称和描述强烈暗示其是基于微信读书官方 Skill 构建，符合收录标准。",
+    "category": "skill-bundles",
+    "date": "2026-10-13T13:54:20.121Z"
+  },
+  {
+    "repo": "Loya-art/weread-reading-reminder",
+    "decision": "accepted",
+    "reason": "项目明确提及“补充 weread-skills”，表明其基于官方 Skill 构建。",
+    "category": "workflows",
+    "date": "2026-10-13T13:54:20.121Z"
+  },
+  {
+    "repo": "taincheng/dsh-weread",
+    "decision": "accepted",
+    "reason": "项目主要基于微信读书官方 Agent Gateway 和 API Key 构建，同时辅以 Cookie 获取正文，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-10-13T13:54:20.121Z"
+  },
+  {
+    "repo": "Shine0412/WeRead-Desk",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-13T13:54:20.121Z"
   }
 ]
