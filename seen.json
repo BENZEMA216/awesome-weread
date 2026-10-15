@@ -3325,5 +3325,18 @@
     "reason": "项目明确基于微信读书官方 Agent Gateway 提供的数据，并提供 MCP 适配器，符合收录标准。",
     "category": "clis",
     "date": "2026-10-14T21:27:28.278Z"
+  },
+  {
+    "repo": "siennelab/weread-community-highlights",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Agent API 和 wrk- 格式的 API Key 构建，且不使用 Cookie。",
+    "category": "widgets",
+    "date": "2026-10-15T16:40:32.618Z"
+  },
+  {
+    "repo": "lonemoonspace/Weread-Assistant",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-15T16:40:32.618Z"
   }
 ]
