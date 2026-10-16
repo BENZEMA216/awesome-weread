@@ -3344,5 +3344,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-16T03:58:44.002Z"
+  },
+  {
+    "repo": "ideaplanet/weread-api",
+    "decision": "accepted",
+    "reason": "该项目是基于微信读书官方 Agent Gateway 和 API Key (wrk-...) 构建的 TypeScript SDK，完全符合收录标准。",
+    "category": "clis",
+    "date": "2026-10-16T16:23:19.589Z"
   }
 ]
