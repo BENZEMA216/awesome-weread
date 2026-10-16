@@ -3338,5 +3338,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-15T16:40:32.618Z"
+  },
+  {
+    "repo": "frankhumbleble/weread-autoread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-16T03:58:44.002Z"
   }
 ]
