@@ -3363,5 +3363,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-17T15:17:45.044Z"
+  },
+  {
+    "repo": "MandyWednesday/weread-auto-reader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-17T20:22:17.169Z"
+  },
+  {
+    "repo": "pixelxzen/Zisuzi-Weread-MP",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-17T20:22:17.169Z"
   }
 ]
