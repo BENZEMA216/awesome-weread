@@ -3375,5 +3375,24 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-17T20:22:17.169Z"
+  },
+  {
+    "repo": "jiangjun-wangu/crossmux-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-18T15:39:06.218Z"
+  },
+  {
+    "repo": "timyang2005/weread-bot-run",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-18T15:39:06.218Z"
+  },
+  {
+    "repo": "cylzzscl/weread-skills-cy",
+    "decision": "accepted",
+    "reason": "该项目明确声明基于腾讯官方 Agent Gateway 和 API Key，并提供了详细的配置和使用说明，符合收录标准。",
+    "category": "skill-bundles",
+    "date": "2026-10-18T15:39:06.218Z"
   }
 ]
