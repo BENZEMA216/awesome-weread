@@ -3407,5 +3407,11 @@
     "reason": "项目明确声明基于微信读书官方 Agent Gateway 接口，并使用 WEREAD_API_KEY 环境变量。",
     "category": "sync",
     "date": "2026-10-19T04:04:13.850Z"
+  },
+  {
+    "repo": "tanyaqiongcode/weread-shelf-organizer",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-19T12:41:39.377Z"
   }
 ]
