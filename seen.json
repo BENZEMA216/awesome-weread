@@ -3413,5 +3413,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-19T12:41:39.377Z"
+  },
+  {
+    "repo": "mason-yb-zhang/c1weread",
+    "decision": "accepted",
+    "reason": "项目明确使用官方 Agent Gateway 和 API Key (wrk- 格式)，符合收录标准。",
+    "category": "clis",
+    "date": "2026-10-19T22:10:38.724Z"
   }
 ]
