@@ -3426,5 +3426,18 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-20T04:17:12.600Z"
+  },
+  {
+    "repo": "oppenheimor/weread-flomo",
+    "decision": "out_of_scope_llm",
+    "reason": "项目明确指出旧的 `WEREAD_API_KEY` 已不再读取，且没有提及支持新的官方 Agent Gateway / API Key (wrk- 格式)。",
+    "category": "none",
+    "date": "2026-10-20T11:12:59.074Z"
+  },
+  {
+    "repo": "brotao/weread-improved",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-20T11:12:59.074Z"
   }
 ]
