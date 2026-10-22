@@ -3457,5 +3457,23 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-22T04:06:14.958Z"
+  },
+  {
+    "repo": "bubugamer/wechat-article-archive",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-22T11:29:04.577Z"
+  },
+  {
+    "repo": "Lxp811/weread_ai_pc",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-22T11:29:04.577Z"
+  },
+  {
+    "repo": "jtsang4/weread-exporter-go",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-22T11:29:04.577Z"
   }
 ]
