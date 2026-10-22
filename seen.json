@@ -3475,5 +3475,42 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-22T11:29:04.577Z"
+  },
+  {
+    "repo": "kalapu0628/weread-mcp6",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方网关能力，使用 wrk- 格式 API Key，并提供 MCP 服务和看板功能。",
+    "category": "mcp-servers",
+    "date": "2026-10-22T16:55:44.812Z"
+  },
+  {
+    "repo": "Steve6688/kindle-weread-shelf-",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-22T16:55:44.812Z"
+  },
+  {
+    "repo": "Ryankiinovo/weread-brief",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-22T16:55:44.812Z"
+  },
+  {
+    "repo": "kalapu0628/weread-mcp3",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-22T16:55:44.812Z"
+  },
+  {
+    "repo": "kalapu0628/weread-mcp",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-10-22T16:55:44.812Z"
+  },
+  {
+    "repo": "ouyinheng/weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-22T16:55:44.812Z"
   }
 ]
