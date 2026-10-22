@@ -3451,5 +3451,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-21T21:26:47.215Z"
+  },
+  {
+    "repo": "LiamZJU/kindle-weread-skill",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-22T04:06:14.958Z"
   }
 ]
