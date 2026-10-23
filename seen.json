@@ -3538,5 +3538,24 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-23T04:09:53.304Z"
+  },
+  {
+    "repo": "yehan-xiao/weread-library",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-23T11:18:52.477Z"
+  },
+  {
+    "repo": "kalapu0628/weread-mcpa",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方网关 API Key (wrk- 格式) 构建，并提供远程 MCP 服务。",
+    "category": "mcp-servers",
+    "date": "2026-10-23T11:18:52.477Z"
+  },
+  {
+    "repo": "kalapu0628/weread-mcpk",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-23T11:18:52.477Z"
   }
 ]
