@@ -3512,5 +3512,31 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-22T16:55:44.812Z"
+  },
+  {
+    "repo": "zhatlas/weread-flomo",
+    "decision": "accepted",
+    "reason": "项目明确指出使用微信读书官方接入页获取 API Key，并将其用于同步笔记到 Flomo。",
+    "category": "sync",
+    "date": "2026-10-23T04:09:53.304Z"
+  },
+  {
+    "repo": "kalapu0628/weread-kalapu",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-10-23T04:09:53.304Z"
+  },
+  {
+    "repo": "knight02-bit/HereWeread",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书 Agent API Gateway 和 wrk- 格式的 API Key 构建，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-10-23T04:09:53.304Z"
+  },
+  {
+    "repo": "dekthaiinchina/weread2html",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-23T04:09:53.304Z"
   }
 ]
