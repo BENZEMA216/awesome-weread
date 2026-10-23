@@ -3557,5 +3557,31 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-23T11:18:52.477Z"
+  },
+  {
+    "repo": "C-s-salute/weread-buybooks",
+    "decision": "out_of_scope_llm",
+    "reason": "项目明确使用 Playwright 进行浏览器自动化抓取数据，不符合基于官方 Agent Gateway / API Key 的收录标准。",
+    "category": "none",
+    "date": "2026-10-23T16:47:28.224Z"
+  },
+  {
+    "repo": "C-s-salute/weread-trial-card-list",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-23T16:47:28.224Z"
+  },
+  {
+    "repo": "rennylf/pale-view",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-23T16:47:28.224Z"
+  },
+  {
+    "repo": "hadronliu/weread-ink",
+    "decision": "accepted",
+    "reason": "项目明确声明使用微信读书官方 Agent API Gateway 和 wrk- 开头的 API Key。",
+    "category": "widgets",
+    "date": "2026-10-23T16:47:28.224Z"
   }
 ]
