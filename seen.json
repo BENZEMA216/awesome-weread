@@ -3583,5 +3583,11 @@
     "reason": "项目明确声明使用微信读书官方 Agent API Gateway 和 wrk- 开头的 API Key。",
     "category": "widgets",
     "date": "2026-10-23T16:47:28.224Z"
+  },
+  {
+    "repo": "ShannonChenCHN/demystifying-weread-ios-typography",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-10-24T04:02:12.912Z"
   }
 ]
