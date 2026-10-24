@@ -3589,5 +3589,12 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-10-24T04:02:12.912Z"
+  },
+  {
+    "repo": "ncaylmh/kindle_kpw3_weread_test",
+    "decision": "accepted",
+    "reason": "项目明确指出使用官方 Agent Gateway 和 API Key，符合收录标准。",
+    "category": "clis",
+    "date": "2026-10-24T10:38:18.912Z"
   }
 ]
