@@ -3596,5 +3596,11 @@
     "reason": "项目明确指出使用官方 Agent Gateway 和 API Key，符合收录标准。",
     "category": "clis",
     "date": "2026-10-24T10:38:18.912Z"
+  },
+  {
+    "repo": "joeseesun/qiaomu-simpleui",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-24T15:40:25.825Z"
   }
 ]
