@@ -3615,5 +3615,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-25T04:03:23.282Z"
+  },
+  {
+    "repo": "alexkwok213/weread-exporter",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-25T11:02:23.915Z"
   }
 ]
