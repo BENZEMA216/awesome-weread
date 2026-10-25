@@ -3609,5 +3609,11 @@
     "reason": "项目明确声明基于微信读书官方 Agent Gateway 和 API Key 构建，不使用 Cookie。",
     "category": "clis",
     "date": "2026-10-24T20:30:09.431Z"
+  },
+  {
+    "repo": "mazaoshe/ypp-book-shelf",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-25T04:03:23.282Z"
   }
 ]
