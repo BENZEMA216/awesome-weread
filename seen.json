@@ -3653,5 +3653,31 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-26T04:07:39.759Z"
+  },
+  {
+    "repo": "gnbtsgpfgw-dotcom/weread-mcp22",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方网关和 wrk- 格式的 API Key 构建，并提供 MCP 服务。",
+    "category": "mcp-servers",
+    "date": "2026-10-26T22:29:09.378Z"
+  },
+  {
+    "repo": "gnbtsgpfgw-dotcom/weread-mcp",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方网关 API (wrk- key) 构建，并提供远程 MCP 服务。",
+    "category": "mcp-servers",
+    "date": "2026-10-26T22:29:09.378Z"
+  },
+  {
+    "repo": "junjuecool/weread-auto-reader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-26T22:29:09.378Z"
+  },
+  {
+    "repo": "Rorouse0020/kindle-enhancement-skill",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-26T22:29:09.378Z"
   }
 ]
