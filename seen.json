@@ -3697,5 +3697,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-27T11:52:33.391Z"
+  },
+  {
+    "repo": "Sorosliu1029/weReaDou",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-27T21:59:09.728Z"
   }
 ]
