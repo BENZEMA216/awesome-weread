@@ -3703,5 +3703,12 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-27T21:59:09.728Z"
+  },
+  {
+    "repo": "jiaowenjun/weimo-weread",
+    "decision": "accepted",
+    "reason": "项目明确基于微信读书官方 Agent Gateway 和 wrk- 格式 API Key 构建，符合收录标准。",
+    "category": "mcp-servers",
+    "date": "2026-10-28T04:58:13.223Z"
   }
 ]
