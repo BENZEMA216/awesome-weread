@@ -3710,5 +3710,23 @@
     "reason": "项目明确基于微信读书官方 Agent Gateway 和 wrk- 格式 API Key 构建，符合收录标准。",
     "category": "mcp-servers",
     "date": "2026-10-28T04:58:13.223Z"
+  },
+  {
+    "repo": "konglong87/wechat-download-skill",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-28T12:27:34.009Z"
+  },
+  {
+    "repo": "abcdlsj/weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-28T12:27:34.009Z"
+  },
+  {
+    "repo": "kemengs-oss/weread-calendar-demo",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-28T12:27:34.009Z"
   }
 ]
