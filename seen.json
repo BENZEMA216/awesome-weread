@@ -3734,5 +3734,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-29T05:10:19.965Z"
+  },
+  {
+    "repo": "hanq/my-weread-desk",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-29T12:38:16.831Z"
   }
 ]
