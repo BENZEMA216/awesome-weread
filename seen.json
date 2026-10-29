@@ -3728,5 +3728,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-28T12:27:34.009Z"
+  },
+  {
+    "repo": "kongyan66/kindle-weread-ai-setup",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-29T05:10:19.965Z"
   }
 ]
