@@ -3746,5 +3746,11 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-10-29T22:36:45.101Z"
+  },
+  {
+    "repo": "YukunSun/weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-30T05:09:55.638Z"
   }
 ]
