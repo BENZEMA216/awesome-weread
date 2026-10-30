@@ -3764,5 +3764,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-30T12:29:32.345Z"
+  },
+  {
+    "repo": "cccrow798/kindle-jailbreak-assistant",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-30T22:05:34.006Z"
   }
 ]
