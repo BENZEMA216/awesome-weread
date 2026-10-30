@@ -3752,5 +3752,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-30T05:09:55.638Z"
+  },
+  {
+    "repo": "qinq2019-tech/weread_theme_plugins",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-30T12:29:32.345Z"
+  },
+  {
+    "repo": "wwjzzy/dsh-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-30T12:29:32.345Z"
   }
 ]
