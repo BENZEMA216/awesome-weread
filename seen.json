@@ -3776,5 +3776,18 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-31T11:57:29.975Z"
+  },
+  {
+    "repo": "WANGXIN-567/weread-book-exporter",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-31T17:11:10.440Z"
+  },
+  {
+    "repo": "Credochen/weread-export",
+    "decision": "out_of_scope_llm",
+    "reason": "项目明确说明不使用官方 Skill / API Key，而是通过获取浏览器 Cookie 进行操作，不符合收录标准。",
+    "category": "none",
+    "date": "2026-10-31T17:11:10.440Z"
   }
 ]
