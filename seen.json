@@ -3770,5 +3770,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-10-30T22:05:34.006Z"
+  },
+  {
+    "repo": "syu-lk4b/kindle-revive-config",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-10-31T11:57:29.975Z"
   }
 ]
