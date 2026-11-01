@@ -3789,5 +3789,18 @@
     "reason": "项目明确说明不使用官方 Skill / API Key，而是通过获取浏览器 Cookie 进行操作，不符合收录标准。",
     "category": "none",
     "date": "2026-10-31T17:11:10.440Z"
+  },
+  {
+    "repo": "zhangyxx1996/dsh-weread-checkin",
+    "decision": "out_of_scope_llm",
+    "reason": "项目明确使用 Cookie 进行认证，并通过模拟 POST 请求上报阅读时长，不符合官方 API Key 的收录标准。",
+    "category": "none",
+    "date": "2026-11-01T05:23:34.356Z"
+  },
+  {
+    "repo": "FabioBaroni/WeRead-text-bridge-for-Migaku",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-01T05:23:34.356Z"
   }
 ]
