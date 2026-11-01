@@ -3802,5 +3802,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-01T05:23:34.356Z"
+  },
+  {
+    "repo": "WanhaoZhang/kindle-native-reading-sync",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-01T21:52:35.161Z"
   }
 ]
