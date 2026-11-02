@@ -3814,5 +3814,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-02T05:21:52.280Z"
+  },
+  {
+    "repo": "luyalei123-ux/FloatingReader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-02T15:16:05.215Z"
   }
 ]
