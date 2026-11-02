@@ -3808,5 +3808,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-01T21:52:35.161Z"
+  },
+  {
+    "repo": "powcai001/weread-tutor",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-02T05:21:52.280Z"
   }
 ]
