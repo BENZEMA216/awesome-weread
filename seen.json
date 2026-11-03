@@ -3820,5 +3820,18 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-02T15:16:05.215Z"
+  },
+  {
+    "repo": "moooyo/weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-03T00:47:02.011Z"
+  },
+  {
+    "repo": "linadong/daily-book-feed",
+    "decision": "accepted",
+    "reason": "项目明确使用 wrk- 格式的 WEREAD_API_KEY，并通过官方 Agent API Gateway 获取数据，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-11-03T00:47:02.011Z"
   }
 ]
