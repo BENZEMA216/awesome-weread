@@ -3833,5 +3833,25 @@
     "reason": "项目明确使用 wrk- 格式的 WEREAD_API_KEY，并通过官方 Agent API Gateway 获取数据，符合收录标准。",
     "category": "workflows",
     "date": "2026-11-03T00:47:02.011Z"
+  },
+  {
+    "repo": "FelixJI/WeRead-Note-Sync-on-Siyuan",
+    "decision": "accepted",
+    "reason": "项目明确声明使用微信读书官方 Agent API Gateway 和 wrk- 格式的 API Key，并排除使用 Cookie。",
+    "category": "sync",
+    "date": "2026-11-03T13:54:35.558Z"
+  },
+  {
+    "repo": "xiaohaijia/dsh-weread-dashboard",
+    "decision": "accepted",
+    "reason": "项目明确指出通过微信读书 Agent API Gateway 获取数据，并依赖 `WEREAD_API_KEY` 和 `weread-skills`，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-11-03T13:54:35.558Z"
+  },
+  {
+    "repo": "StrayRabbit/weread-quiz",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-03T13:54:35.558Z"
   }
 ]
