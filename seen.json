@@ -3866,5 +3866,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-04T05:40:46.174Z"
+  },
+  {
+    "repo": "Podul/wxt-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-04T14:04:42.291Z"
   }
 ]
