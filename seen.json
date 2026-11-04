@@ -3872,5 +3872,24 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-04T14:04:42.291Z"
+  },
+  {
+    "repo": "YiYi-11-YY/weread-douyin-cards",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-11-04T23:27:00.471Z"
+  },
+  {
+    "repo": "leovoon/weread-remote",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-04T23:27:00.471Z"
+  },
+  {
+    "repo": "zhaohongxuan/dsh-weread",
+    "decision": "accepted",
+    "reason": "项目明确指出使用微信读书官方 API Key (wrk- 格式) 进行认证，并调用官方 apikeyGet 接口，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-11-04T23:27:00.471Z"
   }
 ]
