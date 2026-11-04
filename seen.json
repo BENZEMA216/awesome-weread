@@ -3853,5 +3853,18 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-03T13:54:35.558Z"
+  },
+  {
+    "repo": "SeaWork-Labs/weread-skills",
+    "decision": "accepted",
+    "reason": "项目通过 `npx skills add` 命令安装，表明其是基于微信读书官方 Skill 机制构建。",
+    "category": "skill-bundles",
+    "date": "2026-11-04T05:40:46.174Z"
+  },
+  {
+    "repo": "wulin1985/weread-local",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-04T05:40:46.174Z"
   }
 ]
