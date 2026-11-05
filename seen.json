@@ -3909,5 +3909,23 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-05T14:30:57.812Z"
+  },
+  {
+    "repo": "qianyuniao/Weread-Hot-Booklists",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-05T23:28:35.437Z"
+  },
+  {
+    "repo": "minglaiyo/zlibx",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-05T23:28:35.437Z"
+  },
+  {
+    "repo": "hbyxabc/readom",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-05T23:28:35.437Z"
   }
 ]
