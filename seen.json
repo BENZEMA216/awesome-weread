@@ -3891,5 +3891,23 @@
     "reason": "项目明确指出使用微信读书官方 API Key (wrk- 格式) 进行认证，并调用官方 apikeyGet 接口，符合收录标准。",
     "category": "workflows",
     "date": "2026-11-04T23:27:00.471Z"
+  },
+  {
+    "repo": "ksoulness/kindle-koreader-weread-ssh",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-05T14:30:57.812Z"
+  },
+  {
+    "repo": "minglaiyo/olib-lite",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-05T14:30:57.812Z"
+  },
+  {
+    "repo": "qso/weread-library",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-05T14:30:57.812Z"
   }
 ]
