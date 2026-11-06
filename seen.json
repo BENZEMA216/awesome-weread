@@ -3961,5 +3961,17 @@
     "reason": "项目明确声明使用腾讯官方 WeChatReading Skill 网关和 WEREAD_API_KEY，并调用官方 Agent Gateway。",
     "category": "workflows",
     "date": "2026-11-06T13:59:54.385Z"
+  },
+  {
+    "repo": "xlongDev/weread-exporter-desktop",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-06T22:54:19.407Z"
+  },
+  {
+    "repo": "Enrunde/weread-notion-sync",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-11-06T22:54:19.407Z"
   }
 ]
