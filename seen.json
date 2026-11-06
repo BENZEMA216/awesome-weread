@@ -3927,5 +3927,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-05T23:28:35.437Z"
+  },
+  {
+    "repo": "deardeeplearn/weread-article-collector",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-06T05:55:16.087Z"
   }
 ]
