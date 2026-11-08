@@ -3980,5 +3980,17 @@
     "reason": "项目明确指出使用 wrk- 开头的官方 Agent API Key，并调用官方 Agent Gateway。",
     "category": "widgets",
     "date": "2026-11-07T12:44:18.365Z"
+  },
+  {
+    "repo": "dororo42/K4weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-08T05:26:12.840Z"
+  },
+  {
+    "repo": "szxypi/weread.koplugin",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-08T05:26:12.840Z"
   }
 ]
