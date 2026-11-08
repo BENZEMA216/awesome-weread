@@ -4005,5 +4005,11 @@
     "reason": "项目明确指出使用微信读书官方 API Key，并通过官方 Agent Gateway 进行认证和数据同步，符合收录标准。",
     "category": "workflows",
     "date": "2026-11-08T13:01:30.684Z"
+  },
+  {
+    "repo": "FabioBaroni/weread-text-bridge-for-sluka",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-08T21:52:14.217Z"
   }
 ]
