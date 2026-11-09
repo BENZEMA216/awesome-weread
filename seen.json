@@ -4029,5 +4029,42 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-09T05:37:27.915Z"
+  },
+  {
+    "repo": "douyacun/WereadExport",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-09T15:44:29.276Z"
+  },
+  {
+    "repo": "l5oo00/weread-tv",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-09T15:44:29.276Z"
+  },
+  {
+    "repo": "churjan/weread-downloader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-09T15:44:29.276Z"
+  },
+  {
+    "repo": "lysforge/dsh-lamplit",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-09T15:44:29.276Z"
+  },
+  {
+    "repo": "freeabyss/WeReadExporter-Chrome-Extension",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-09T15:44:29.276Z"
+  },
+  {
+    "repo": "daheitian/weread-bookshelf",
+    "decision": "accepted",
+    "reason": "项目明确指出使用 wrk- 格式的 WEREAD_API_KEY，并通过官方 Agent 接口获取数据，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-11-09T15:44:29.276Z"
   }
 ]
