@@ -4011,5 +4011,23 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-08T21:52:14.217Z"
+  },
+  {
+    "repo": "zoeyzhang233666/dsh-weread-bilingual",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-09T05:37:27.915Z"
+  },
+  {
+    "repo": "xiaoxura/ReadTrace",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-09T05:37:27.915Z"
+  },
+  {
+    "repo": "heartleo/zlib",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-09T05:37:27.915Z"
   }
 ]
