@@ -4136,5 +4136,17 @@
     "reason": "项目明确声明使用微信读书官方 API 和 WEREAD_API_KEY，并提供了官方 API Key 获取入口。",
     "category": "sync",
     "date": "2026-11-10T14:37:56.810Z"
+  },
+  {
+    "repo": "hadronliu/weread-zectrix-bridge",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-10T23:01:35.315Z"
+  },
+  {
+    "repo": "nomad-code-M/kindle-weread-0.3.9-install",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-11-10T23:01:35.315Z"
   }
 ]
