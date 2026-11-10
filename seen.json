@@ -4066,5 +4066,24 @@
     "reason": "项目明确指出使用 wrk- 格式的 WEREAD_API_KEY，并通过官方 Agent 接口获取数据，符合收录标准。",
     "category": "widgets",
     "date": "2026-11-09T15:44:29.276Z"
+  },
+  {
+    "repo": "ShaodongDev/weread-vocabulary-guide",
+    "decision": "accepted",
+    "reason": "项目明确要求使用官方 API Key (wrk- 格式) 并调用官方 Agent Gateway，符合收录标准。",
+    "category": "skill-bundles",
+    "date": "2026-11-10T01:21:23.250Z"
+  },
+  {
+    "repo": "weavingtan/weread-enhancer",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-10T01:21:23.250Z"
+  },
+  {
+    "repo": "xingyun7842/xingyun-weread-optimizer",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-10T01:21:23.250Z"
   }
 ]
