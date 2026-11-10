@@ -4085,5 +4085,56 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-10T01:21:23.250Z"
+  },
+  {
+    "repo": "nomad-code-M/kindle-WeRead",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-10T14:37:56.810Z"
+  },
+  {
+    "repo": "WUROCK/readscope",
+    "decision": "accepted",
+    "reason": "项目明确指出使用微信读书官方 Agent Gateway 和 wrk- 开头的 API Key，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-11-10T14:37:56.810Z"
+  },
+  {
+    "repo": "mango105/wereadlite",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-10T14:37:56.810Z"
+  },
+  {
+    "repo": "Ten2016/weread-cli",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-10T14:37:56.810Z"
+  },
+  {
+    "repo": "pihuiarch/kindle-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-10T14:37:56.810Z"
+  },
+  {
+    "repo": "kemengs-oss/weread-calendar-skill",
+    "decision": "accepted",
+    "reason": "项目明确指出使用 `WEREAD_API_KEY` 从微信读书官方页面获取数据，符合收录标准。",
+    "category": "skill-bundles",
+    "date": "2026-11-10T14:37:56.810Z"
+  },
+  {
+    "repo": "alanwang87/dsh-weread-moyu",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-10T14:37:56.810Z"
+  },
+  {
+    "repo": "hzphzp/logseq-reading-import",
+    "decision": "accepted",
+    "reason": "项目明确声明使用微信读书官方 API 和 WEREAD_API_KEY，并提供了官方 API Key 获取入口。",
+    "category": "sync",
+    "date": "2026-11-10T14:37:56.810Z"
   }
 ]
