@@ -4174,5 +4174,49 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-11-11T13:53:10.414Z"
+  },
+  {
+    "repo": "Geckoyoco/weread-dashboard",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-11-12T14:54:34.415Z"
+  },
+  {
+    "repo": "Geckoyoco/weread2notion-pro-standalone",
+    "decision": "accepted",
+    "reason": "项目明确使用官方 Gateway API Key，并声明不依赖 CookieCloud，符合收录标准。",
+    "category": "sync",
+    "date": "2026-11-12T14:54:34.415Z"
+  },
+  {
+    "repo": "malinkang/weread-reading",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-12T14:54:34.415Z"
+  },
+  {
+    "repo": "Yumafore/my-weread-templates",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-12T14:54:34.415Z"
+  },
+  {
+    "repo": "lagrangee/weread_deepreading",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-12T14:54:34.415Z"
+  },
+  {
+    "repo": "picong/weread.nvim",
+    "decision": "accepted",
+    "reason": "项目明确指出需要开通微信读书 Skill 并获取官方 API Key，符合收录标准。",
+    "category": "clis",
+    "date": "2026-11-12T14:54:34.415Z"
+  },
+  {
+    "repo": "xrt-wg/weread-clean-shelf",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-12T14:54:34.415Z"
   }
 ]
