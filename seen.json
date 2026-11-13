@@ -4218,5 +4218,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-12T14:54:34.415Z"
+  },
+  {
+    "repo": "cdyyang8-droid/boox-weread-toolkit",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-13T05:56:50.645Z"
   }
 ]
