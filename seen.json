@@ -4224,5 +4224,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-13T05:56:50.645Z"
+  },
+  {
+    "repo": "huaban28/kindle-pw3-weread-guide",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-13T14:26:30.525Z"
+  },
+  {
+    "repo": "yato369/weread-mp-plus",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-13T14:26:30.525Z"
   }
 ]
