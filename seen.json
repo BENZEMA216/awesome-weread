@@ -4242,5 +4242,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-14T05:46:07.189Z"
+  },
+  {
+    "repo": "xyc0677/veradroid",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-14T13:15:24.419Z"
+  },
+  {
+    "repo": "scokyfei/Koboweread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-14T13:15:24.419Z"
   }
 ]
