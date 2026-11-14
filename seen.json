@@ -4236,5 +4236,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-13T14:26:30.525Z"
+  },
+  {
+    "repo": "no10playerzyf/kindle-spidercat-koreader-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-14T05:46:07.189Z"
   }
 ]
