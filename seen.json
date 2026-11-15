@@ -4254,5 +4254,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-14T13:15:24.419Z"
+  },
+  {
+    "repo": "YIYO-Designer/kiikoreader-wereader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-15T13:43:57.376Z"
   }
 ]
