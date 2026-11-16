@@ -4260,5 +4260,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-15T13:43:57.376Z"
+  },
+  {
+    "repo": "wangjianghu/weread-dsh",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-11-16T15:20:48.169Z"
+  },
+  {
+    "repo": "Keanens/wereadmeters-site",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-11-16T15:20:48.169Z"
   }
 ]
