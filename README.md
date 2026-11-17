@@ -106,6 +106,7 @@
 | [TianLanhe/weread-readdata-for-tencent-doc](https://github.com/TianLanhe/weread-readdata-for-tencent-doc) | 腾讯文档智能表格 | 把书架数据 upsert 到腾讯文档智能表格的 Skill —— 配合腾讯文档 MCP 使用。 | [记录](docs/promo/runs/2026-05-26/TianLanhe-weread-readdata-for-tencent-doc/summary.md) · [产物](docs/promo/runs/2026-05-26/TianLanhe-weread-readdata-for-tencent-doc/artifacts/tencent-docs-reading-stats.csv) |
 | [TianLanhe/weread-readtime-for-tencent-doc](https://github.com/TianLanhe/weread-readtime-for-tencent-doc) | 腾讯文档智能表格 | 每日阅读时长 upsert 到腾讯文档智能表格的「阅读时长」工作表。同一作者的姊妹 Skill。 | [记录](docs/promo/runs/2026-05-26/TianLanhe-weread-readtime-for-tencent-doc/summary.md) · [产物](docs/promo/runs/2026-05-26/TianLanhe-weread-readtime-for-tencent-doc/artifacts/tencent-docs-reading-stats.csv) |
 | [TianLanhe/weread-readtime-for-lark](https://github.com/TianLanhe/weread-readtime-for-lark) | 飞书多维表格 (Base) | 每日阅读时长 → 飞书多维表格 Base 的「阅读时长」表。配合 lark-cli 使用。 | [记录](docs/promo/runs/2026-05-26/TianLanhe-weread-readtime-for-lark/summary.md) · [产物](docs/promo/runs/2026-05-26/TianLanhe-weread-readtime-for-lark/artifacts/lark-reading-stats.csv) |
+| [yehan-xiao/weread-library](https://github.com/yehan-xiao/weread-library) | Corvio | 把划线和想法整理成 Corvio 里的私人图书馆：书墙封面、每本书一页（藏书票 + AI 回顾 + 按章节排好的笔记），支持增量同步，AI 引文会用脚本逐字核对。 |
 
 ## 桌面挂件与可视化
 
