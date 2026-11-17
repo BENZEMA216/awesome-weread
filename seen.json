@@ -4272,5 +4272,12 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-11-16T15:20:48.169Z"
+  },
+  {
+    "repo": "Castile/dsh-weread-studio",
+    "decision": "accepted",
+    "reason": "项目明确指出使用 wrk- 格式的 API Key 并调用 Agent Gateway 接口，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-11-17T01:45:42.572Z"
   }
 ]
