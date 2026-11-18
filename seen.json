@@ -4311,5 +4311,17 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-11-17T15:45:07.820Z"
+  },
+  {
+    "repo": "ultree/isword-weread-kindle",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-18T00:47:31.821Z"
+  },
+  {
+    "repo": "zhouxinyi720-beep/weread-dashboard",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-11-18T00:47:31.821Z"
   }
 ]
