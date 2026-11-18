@@ -4323,5 +4323,18 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-11-18T00:47:31.821Z"
+  },
+  {
+    "repo": "Forrest9527/weread",
+    "decision": "accepted",
+    "reason": "项目明确指出依赖 `WEREAD_API_KEY` 且为 `wrk-` 前缀密钥，符合官方 API 标准。",
+    "category": "workflows",
+    "date": "2026-11-18T15:25:08.195Z"
+  },
+  {
+    "repo": "uinipan/meowpost",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-18T15:25:08.195Z"
   }
 ]
