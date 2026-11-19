@@ -4342,5 +4342,35 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-19T00:05:08.990Z"
+  },
+  {
+    "repo": "dororo42/WereadK4_BasedDK",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-19T15:30:25.931Z"
+  },
+  {
+    "repo": "xrt-wg/wereadfocus-read",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-19T15:30:25.931Z"
+  },
+  {
+    "repo": "Shaw1988/weread-shell",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-19T15:30:25.931Z"
+  },
+  {
+    "repo": "Faniyang/weread_mini",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-19T15:30:25.931Z"
+  },
+  {
+    "repo": "eightttttt/weread-mini",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-19T15:30:25.931Z"
   }
 ]
