@@ -4372,5 +4372,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-19T15:30:25.931Z"
+  },
+  {
+    "repo": "Chenhe-Ma/article-to-epub",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-20T00:27:41.281Z"
   }
 ]
