@@ -4378,5 +4378,24 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-20T00:27:41.281Z"
+  },
+  {
+    "repo": "LBlack0318/weread-vocab-bubei",
+    "decision": "accepted",
+    "reason": "项目明确指出使用微信读书 Agent API Key (wrk-xxxx 格式) 和官方 Agent Gateway，并支持作为 Agent Skill 安装。",
+    "category": "workflows",
+    "date": "2026-11-20T15:09:12.724Z"
+  },
+  {
+    "repo": "YanYinnng/daily_news_report",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-20T15:09:12.724Z"
+  },
+  {
+    "repo": "nfwb/weread-notion-sync-scai",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-20T15:09:12.724Z"
   }
 ]
