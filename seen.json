@@ -4411,5 +4411,11 @@
     "reason": "项目明确声明使用官方 WeRead Agent API 和 WEREAD_API_KEY，并提供 Skill ZIP 包，符合收录标准。",
     "category": "sync",
     "date": "2026-11-22T05:58:37.523Z"
+  },
+  {
+    "repo": "eternalgod123/weread2kindle-demo",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-22T14:27:28.457Z"
   }
 ]
