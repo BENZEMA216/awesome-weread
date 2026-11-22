@@ -4397,5 +4397,19 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-20T15:09:12.724Z"
+  },
+  {
+    "repo": "jianghw/docs-multi-kindle-weread",
+    "decision": "out_of_scope_llm",
+    "reason": "项目核心是 Kindle 越狱和安装第三方插件，虽然提到了“官方 Skill API”，但没有直接使用 wrk- 格式的 API Key 或 Agent Gateway。",
+    "category": "none",
+    "date": "2026-11-22T05:58:37.523Z"
+  },
+  {
+    "repo": "yuanyuanleah/weread-obsidian-review",
+    "decision": "accepted",
+    "reason": "项目明确声明使用官方 WeRead Agent API 和 WEREAD_API_KEY，并提供 Skill ZIP 包，符合收录标准。",
+    "category": "sync",
+    "date": "2026-11-22T05:58:37.523Z"
   }
 ]
