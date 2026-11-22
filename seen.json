@@ -4417,5 +4417,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-22T14:27:28.457Z"
+  },
+  {
+    "repo": "R9-FURY/dsh-weread-gather",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-22T23:26:57.005Z"
+  },
+  {
+    "repo": "PeijinZhao/reading-brain",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-22T23:26:57.005Z"
   }
 ]
