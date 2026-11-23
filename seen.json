@@ -4442,5 +4442,12 @@
     "reason": "项目明确指出使用 WEREAD_API_KEY 环境变量，并安装了腾讯官方的微信读书技能。",
     "category": "workflows",
     "date": "2026-11-23T06:50:17.848Z"
+  },
+  {
+    "repo": "limowan/dsh-reading-desk",
+    "decision": "accepted",
+    "reason": "项目明确指出使用 Agent Gateway 的 wrk- 格式 API Key。",
+    "category": "workflows",
+    "date": "2026-11-23T23:38:57.454Z"
   }
 ]
