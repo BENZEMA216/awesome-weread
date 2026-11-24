@@ -4449,5 +4449,35 @@
     "reason": "项目明确指出使用 Agent Gateway 的 wrk- 格式 API Key。",
     "category": "workflows",
     "date": "2026-11-23T23:38:57.454Z"
+  },
+  {
+    "repo": "dick182/weread-transparent",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-24T09:17:22.418Z"
+  },
+  {
+    "repo": "hxmanson90/weread-static-assets",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-24T09:17:22.418Z"
+  },
+  {
+    "repo": "zoeyzhang233666/dsh-weread-reader",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-24T09:17:22.418Z"
+  },
+  {
+    "repo": "Lijiashuo936/weread-middle-click-extension",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-24T09:17:22.418Z"
+  },
+  {
+    "repo": "xingkaixin/yomitomo",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-24T09:17:22.418Z"
   }
 ]
