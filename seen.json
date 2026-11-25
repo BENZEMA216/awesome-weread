@@ -4485,5 +4485,37 @@
     "decision": "no_readme",
     "reason": "Failed to fetch README",
     "date": "2026-11-24T22:09:58.699Z"
+  },
+  {
+    "repo": "deTian0/doc-read-toolkit",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-11-25T07:51:30.381Z"
+  },
+  {
+    "repo": "zoeyzhang233666/weread-reader-app",
+    "decision": "accepted",
+    "reason": "项目明确指出使用官方 wrk- API Key，并对齐官方 Skill，同时补充了官方 Skill 不足的功能。",
+    "category": "mcp-servers",
+    "date": "2026-11-25T07:51:30.381Z"
+  },
+  {
+    "repo": "yijiazhao34/weread-reading-tracker",
+    "decision": "accepted",
+    "reason": "项目明确要求使用 wrk- 格式的官方 API Key，并提供了详细的配置步骤。",
+    "category": "widgets",
+    "date": "2026-11-25T07:51:30.381Z"
+  },
+  {
+    "repo": "Runtu4378/weread-next-page-tampermonkey",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-25T07:51:30.381Z"
+  },
+  {
+    "repo": "sphinxbz-hash/last30days-weread-cn",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-25T07:51:30.381Z"
   }
 ]
