@@ -4517,5 +4517,17 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-25T07:51:30.381Z"
+  },
+  {
+    "repo": "hamxiaoz/weread",
+    "decision": "no_readme",
+    "reason": "Failed to fetch README",
+    "date": "2026-11-25T21:26:10.318Z"
+  },
+  {
+    "repo": "eightttttt/weread-mini-update",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-25T21:26:10.318Z"
   }
 ]
