@@ -4529,5 +4529,11 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-25T21:26:10.318Z"
+  },
+  {
+    "repo": "G33s3Fr13s/dsh-weread-free-library",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-26T07:42:23.856Z"
   }
 ]
