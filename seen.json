@@ -4562,5 +4562,11 @@
     "reason": "项目明确指出使用 wrk- 开头的微信读书 API Key 进行数据同步，符合收录标准。",
     "category": "workflows",
     "date": "2026-11-27T07:41:30.007Z"
+  },
+  {
+    "repo": "Tank-2026/weread2notion-Tank",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-27T20:55:52.436Z"
   }
 ]
