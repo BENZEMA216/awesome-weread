@@ -4542,5 +4542,25 @@
     "reason": "项目明确使用 WEREAD_API_KEY 环境变量，并生成 GitHub Pages 托管的 weread_day.json，符合收录标准。",
     "category": "widgets",
     "date": "2026-11-26T21:12:39.493Z"
+  },
+  {
+    "repo": "noahhqy-star/dsh-weread",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-27T07:41:30.007Z"
+  },
+  {
+    "repo": "liuxiaoxi-1127-read/liuxiaoxi-weread-stats",
+    "decision": "accepted",
+    "reason": "项目明确要求使用微信读书官方 API Key (wrk- 格式) 来拉取数据，符合收录标准。",
+    "category": "widgets",
+    "date": "2026-11-27T07:41:30.007Z"
+  },
+  {
+    "repo": "LinglingZhangAI/ReadingDesk",
+    "decision": "accepted",
+    "reason": "项目明确指出使用 wrk- 开头的微信读书 API Key 进行数据同步，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-11-27T07:41:30.007Z"
   }
 ]
