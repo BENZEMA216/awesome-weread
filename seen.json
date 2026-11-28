@@ -4568,5 +4568,18 @@
     "decision": "out_of_scope_keyword",
     "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
     "date": "2026-11-27T20:55:52.436Z"
+  },
+  {
+    "repo": "Youhai020616/diandianreading",
+    "decision": "out_of_scope_keyword",
+    "reason": "README 未提及官方 Skill / Agent Gateway / API Key",
+    "date": "2026-11-28T07:09:27.411Z"
+  },
+  {
+    "repo": "codel6i/dsh-weread-shelf",
+    "decision": "accepted",
+    "reason": "项目明确指出使用微信读书 Agent Gateway 和 WEREAD_API_KEY，符合收录标准。",
+    "category": "workflows",
+    "date": "2026-11-28T07:09:27.411Z"
   }
 ]
